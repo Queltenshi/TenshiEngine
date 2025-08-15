@@ -11,7 +11,6 @@ latex/
 *.log
 *.DS_Store
 *.graphml
-Doxyfile
 CMakeCache.txt
 Makefile
 cmake_install.cmake
