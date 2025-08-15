@@ -15,10 +15,8 @@ target_include_directories(TenshiEngine
         ${CMAKE_CURRENT_BINARY_DIR} 
 )
 
-# SFML 3 verlangt Komponenten in Großschreibung
 find_package(SFML 3 REQUIRED COMPONENTS Graphics Window System)
 
-# Und verlinkt sie so:
 target_link_libraries(TenshiEngine PUBLIC
     sfml-graphics
     sfml-window
@@ -26,9 +24,8 @@ target_link_libraries(TenshiEngine PUBLIC
 )
 
 include(GNUInstallDirs)
-include(CMakePackageConfigHelpers)   # für Config-Pakete
+include(CMakePackageConfigHelpers)
 
-# Export-Targets definieren (Namespace "te::" gesetzt)
 install(TARGETS TenshiEngine EXPORT TenshiEngineTargets
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
@@ -41,21 +38,18 @@ install(EXPORT TenshiEngineTargets
     NAMESPACE te::
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/TenshiEngine)
 
-# ConfigVersion Datei schreiben (Versionskompatibilität)
 write_basic_package_version_file(
     "${CMAKE_CURRENT_BINARY_DIR}/TenshiEngineConfigVersion.cmake"
     VERSION ${PROJECT_VERSION}
     COMPATIBILITY AnyNewerVersion
 )
 
-# Config Datei aus Vorlage generieren (muss noch erstellt werden)
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/cmake/TenshiEngineConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/TenshiEngineConfig.cmake"
     INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/TenshiEngine
 )
 
-# Config-Dateien installieren
 install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/TenshiEngineConfig.cmake"
     "${CMAKE_CURRENT_BINARY_DIR}/TenshiEngineConfigVersion.cmake"
