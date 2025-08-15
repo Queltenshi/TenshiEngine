@@ -19,12 +19,16 @@
 - [SFML](https://www.sfml-dev.org/) 3.0+
 - [CMake](https://cmake.org/) 3.16+
 
-**Build with CMake**:
+**Linux**:
 ```bash
 git clone https://github.com/Queldris/TenshiEngine.git
 cd TenshiEngine
-cmake -B build -DCMAKE_BUILD_TYPE=Release
-cmake --build build
+mkdir build
+cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release
+cmake --build . --config Release
+sudo cmake --install . --prefix /usr/local
+
 ```
 
 ---
