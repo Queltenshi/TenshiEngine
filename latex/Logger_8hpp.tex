@@ -1,0 +1,46 @@
+\doxysection{include/\+Tenshi\+Engine/\+Engine/\+Core/\+Logger.hpp File Reference}
+\hypertarget{Logger_8hpp}{}\label{Logger_8hpp}\index{include/TenshiEngine/Engine/Core/Logger.hpp@{include/TenshiEngine/Engine/Core/Logger.hpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classte_1_1Logger}{te\+::\+Logger}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacete}{te}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Logger_8hpp_a975082d766d9cdd6436c9c8c445610ec}{LOG\+\_\+\+DEBUG}}(source,  message)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacete_a3ffe2e4dc4bb5297c43d701fcfbcd825}{te\+::\+Log\+Level}} \{ \mbox{\hyperlink{namespacete_a3ffe2e4dc4bb5297c43d701fcfbcd825adc30ec20708ef7b0f641ef78b7880a15}{te\+::\+DEBUG}}
+, \mbox{\hyperlink{namespacete_a3ffe2e4dc4bb5297c43d701fcfbcd825a551b723eafd6a31d444fcb2f5920fbd3}{te\+::\+INFO}}
+, \mbox{\hyperlink{namespacete_a3ffe2e4dc4bb5297c43d701fcfbcd825a059e9861e0400dfbe05c98a841f3f96b}{te\+::\+WARNING}}
+, \mbox{\hyperlink{namespacete_a3ffe2e4dc4bb5297c43d701fcfbcd825abb1ca97ec761fc37101737ba0aa2e7c5}{te\+::\+ERROR}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{Logger_8hpp_a975082d766d9cdd6436c9c8c445610ec}\label{Logger_8hpp_a975082d766d9cdd6436c9c8c445610ec} 
+\index{Logger.hpp@{Logger.hpp}!LOG\_DEBUG@{LOG\_DEBUG}}
+\index{LOG\_DEBUG@{LOG\_DEBUG}!Logger.hpp@{Logger.hpp}}
+\doxysubsubsection{\texorpdfstring{LOG\_DEBUG}{LOG\_DEBUG}}
+{\footnotesize\ttfamily \#define LOG\+\_\+\+DEBUG(\begin{DoxyParamCaption}\item[{}]{source,  }\item[{}]{message }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{do}\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (Logger::currentLevel\ ==\ LogLevel::DEBUG)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ Logger::debug(source,\ message);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}

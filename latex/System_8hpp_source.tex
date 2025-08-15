@@ -1,0 +1,31 @@
+\doxysection{System.\+hpp}
+\hypertarget{System_8hpp_source}{}\label{System_8hpp_source}\index{include/TenshiEngine/Engine/Systems/System.hpp@{include/TenshiEngine/Engine/Systems/System.hpp}}
+\mbox{\hyperlink{System_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Entity_8hpp}{TenshiEngine/Engine/Entity/Entity.hpp}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacete}{te}}\{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }Registry;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }systems\{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1systems_1_1System}{System}}\{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:\ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classte_1_1systems_1_1System_ab6d0dbe91eab8c19ca78d46dea4da274}{System}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry,\ std::string\ name):\ }
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classte_1_1systems_1_1System_aacef5c1d0b0ec002f21c7fcf8cc4a06b}{mRegistry}}(registry),\ \mbox{\hyperlink{classte_1_1systems_1_1System_aa7110c3857f3df77211658ad1206ca7f}{mName}}(name)\{\}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1systems_1_1System_a3640e994e8b9aad924d11ba67d07d421}{update}}()\ =\ 0;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&\mbox{\hyperlink{classte_1_1systems_1_1System_aacef5c1d0b0ec002f21c7fcf8cc4a06b}{mRegistry}};}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ \mbox{\hyperlink{classte_1_1systems_1_1System_aa7110c3857f3df77211658ad1206ca7f}{mName}};}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \}}
+\DoxyCodeLine{00025\ \}}
+
+\end{DoxyCode}
