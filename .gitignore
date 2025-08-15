@@ -8,9 +8,10 @@ install-debug/
 *.log
 *.DS_Store
 *.graphml
-*.txt
 CMakeFiles/
 CMakeCache.txt
 Makefile
 cmake_install.cmake
 compile_commands.json
+Ideen.txt
+Installation.txt
