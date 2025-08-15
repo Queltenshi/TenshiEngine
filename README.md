@@ -13,6 +13,11 @@
 
 ---
 
+## Documentation
+You can find the latest API documentation here: [TenshiEngine API Docs](https://Queldris.github.io/TenshiEngine/)
+
+---
+
 ## Installation:
 **Requirements**:
 - C++ 17+
