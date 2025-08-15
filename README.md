@@ -64,10 +64,13 @@ private:
 };
 ```
 
+---
+
+## Changelog
+See the full changelog [here](CHANGELOG.md).
 
 ---
 
 ## License
-
 This project is licensed under the GNU GPL v3  
 It uses [SFML](https://www.sfml-dev.org/), which is licensed under the zlib/libpng license
