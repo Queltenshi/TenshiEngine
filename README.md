@@ -59,7 +59,6 @@ public:
         if(!mPlayerTexture.loadFromFile("Path/to/Texture"))
             std::cout << "Texture could not be loaded" << std::endl;
         mPlayer = mRegistry.createEntity(mPlayerTexture);
-        mRegistry.addComponent(mPlayer.id, te::components::PlayerInputComponent());
 }
 
 private:
@@ -67,6 +66,12 @@ private:
     te::Entity mPlayer;
 };
 ```
+---
+
+## Contributing
+This project is currently maintained solely by the author.  
+External contributions, pull requests, or forks are welcome for personal use or experimentation,  
+but they will **not be merged** into the main repository at this time.
 
 ---
 
