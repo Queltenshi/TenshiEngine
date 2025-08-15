@@ -1,6 +1,9 @@
 build/
 build-debug/
 install-debug/
+CMakeFiles/
+html/
+latex/
 /*.sublime-*
 *.swp
 *.o
@@ -8,7 +11,7 @@ install-debug/
 *.log
 *.DS_Store
 *.graphml
-CMakeFiles/
+Doxyfile
 CMakeCache.txt
 Makefile
 cmake_install.cmake
