@@ -1,0 +1,16 @@
+build/
+build-debug/
+install-debug/
+/*.sublime-*
+*.swp
+*.o
+*.obj
+*.log
+*.DS_Store
+*.graphml
+*.txt
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+compile_commands.json
