@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['view_0',['view',['../classte_1_1Registry.html#ab22d33126a0e011ab16c4eea13e33921',1,'te::Registry']]]
+  ['texture_0',['texture',['../structte_1_1components_1_1SpriteComponent.html#a7b34cce206697ed537bacca5dfb230f4',1,'te::components::SpriteComponent']]],
+  ['tostring_1',['tostring',['../structte_1_1components_1_1Component.html#ab62e6b61f57db90657a5f0e67dcfc365',1,'te::components::Component::toString()'],['../structte_1_1components_1_1PlayerInputComponent.html#afa1c1ebbb05389ae4d89fd663878b34b',1,'te::components::PlayerInputComponent::toString()'],['../structte_1_1components_1_1SpriteComponent.html#a126c45e2f7a251c34963f3e8ec1dd238',1,'te::components::SpriteComponent::toString()'],['../structte_1_1components_1_1TransformComponent.html#af16b111e1465f4deea0ab1df6bab4a3a',1,'te::components::TransformComponent::toString()']]],
+  ['transformcomponent_2',['transformcomponent',['../structte_1_1components_1_1TransformComponent.html',1,'te::components::TransformComponent'],['../structte_1_1components_1_1TransformComponent.html#a3c1eaade27bc83c1a30b8673a3e6a7d6',1,'te::components::TransformComponent::TransformComponent()']]]
 ];

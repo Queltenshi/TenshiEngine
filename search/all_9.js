@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['texture_0',['texture',['../structte_1_1components_1_1SpriteComponent.html#a7b34cce206697ed537bacca5dfb230f4',1,'te::components::SpriteComponent']]],
-  ['tostring_1',['tostring',['../structte_1_1components_1_1Component.html#ab62e6b61f57db90657a5f0e67dcfc365',1,'te::components::Component::toString()'],['../structte_1_1components_1_1PlayerInputComponent.html#afa1c1ebbb05389ae4d89fd663878b34b',1,'te::components::PlayerInputComponent::toString()'],['../structte_1_1components_1_1SpriteComponent.html#a126c45e2f7a251c34963f3e8ec1dd238',1,'te::components::SpriteComponent::toString()'],['../structte_1_1components_1_1TransformComponent.html#af16b111e1465f4deea0ab1df6bab4a3a',1,'te::components::TransformComponent::toString()']]],
-  ['transformcomponent_2',['transformcomponent',['../structte_1_1components_1_1TransformComponent.html',1,'te::components::TransformComponent'],['../structte_1_1components_1_1TransformComponent.html#a3c1eaade27bc83c1a30b8673a3e6a7d6',1,'te::components::TransformComponent::TransformComponent()']]]
+  ['registry_0',['registry',['../classte_1_1Registry.html',1,'te::Registry'],['../classte_1_1Registry.html#ac9fde2f8cf63b88d955daff21299fa3e',1,'te::Registry::Registry()']]],
+  ['rendersystem_1',['rendersystem',['../classte_1_1systems_1_1RenderSystem.html',1,'te::systems::RenderSystem'],['../classte_1_1systems_1_1RenderSystem.html#a232da5a6b46708c6ee9c991e4ae2fe7f',1,'te::systems::RenderSystem::RenderSystem()']]],
+  ['run_2',['run',['../classte_1_1GameBase.html#accb4b63d1277e46131d66a66c0e1e63b',1,'te::GameBase']]]
 ];

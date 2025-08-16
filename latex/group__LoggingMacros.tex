@@ -1,0 +1,39 @@
+\doxysection{Logging Macros}
+\hypertarget{group__LoggingMacros}{}\label{group__LoggingMacros}\index{Logging Macros@{Logging Macros}}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__LoggingMacros_ga975082d766d9cdd6436c9c8c445610ec}{LOG\+\_\+\+DEBUG}}(source,  message)
+\begin{DoxyCompactList}\small\item\em Logs a debug message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Macros used for logging messages at different log levels. 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{group__LoggingMacros_ga975082d766d9cdd6436c9c8c445610ec}\label{group__LoggingMacros_ga975082d766d9cdd6436c9c8c445610ec} 
+\index{Logging Macros@{Logging Macros}!LOG\_DEBUG@{LOG\_DEBUG}}
+\index{LOG\_DEBUG@{LOG\_DEBUG}!Logging Macros@{Logging Macros}}
+\doxysubsubsection{\texorpdfstring{LOG\_DEBUG}{LOG\_DEBUG}}
+{\footnotesize\ttfamily \#define LOG\+\_\+\+DEBUG(\begin{DoxyParamCaption}\item[{}]{source,  }\item[{}]{message }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{do}\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (te::Logger::currentLevel\ ==\ te::LogLevel::DEBUG)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ te::Logger::debug(source,\ message);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Logs a debug message. 
+
+Logs a debug message if the current\+Level is set to DEBUG 
+\begin{DoxyParams}{Parameters}
+{\em source} & The source or module where the log originates \\
+\hline
+{\em message} & The message to log \\
+\hline
+\end{DoxyParams}

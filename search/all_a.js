@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['update_0',['update',['../classte_1_1systems_1_1InputSystem.html#a966ac41f24309ed1402722cccf57cb37',1,'te::systems::InputSystem::update()'],['../classte_1_1systems_1_1RenderSystem.html#a4e07fc6094ffc1700b10dda13dd1da24',1,'te::systems::RenderSystem::update()'],['../classte_1_1systems_1_1System.html#a3640e994e8b9aad924d11ba67d07d421',1,'te::systems::System::update()']]],
-  ['updatesystems_1',['updateSystems',['../classte_1_1Registry.html#a53226e9ccc2c34336e0771b165db33d1',1,'te::Registry']]]
+  ['scale_0',['scale',['../structte_1_1components_1_1TransformComponent.html#a8c8510c207c3eff8bfd5484ebffdac77',1,'te::components::TransformComponent']]],
+  ['sprite_1',['sprite',['../structte_1_1components_1_1SpriteComponent.html#a721f4769344cc7593df7e18600a18edd',1,'te::components::SpriteComponent']]],
+  ['spritecomponent_2',['spritecomponent',['../structte_1_1components_1_1SpriteComponent.html',1,'te::components::SpriteComponent'],['../structte_1_1components_1_1SpriteComponent.html#a7ff1859428915ac6843015615000f75f',1,'te::components::SpriteComponent::SpriteComponent()']]],
+  ['system_3',['system',['../classte_1_1systems_1_1System.html',1,'te::systems::System'],['../classte_1_1systems_1_1System.html#ab6d0dbe91eab8c19ca78d46dea4da274',1,'te::systems::System::System()']]]
 ];
