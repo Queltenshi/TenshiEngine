@@ -38,14 +38,20 @@ private:
 
 }
 
+
+/** 
+ * @defgroup LoggingMacros Logging Macros
+ * Macros used for logging messages at different log levels.
+ * @{
+ */
+
 /**
- * @brief Logs a debug message
+ * \def LOG_DEBUG(source, message)
+ * \brief Logs a debug message
  *
  * Logs a debug message if the currentLevel is set to DEBUG
- * @param source The source or module where the log originates
- * @param message The message to log
- *
- * @macro LOG_DEBUG
+ * \param source The source or module where the log originates
+ * \param message The message to log
  */
 #define LOG_DEBUG(source, message) \
     do { \
@@ -53,3 +59,6 @@ private:
             te::Logger::debug(source, message); \
         } \
     } while(0)
+
+/** @} */
+
