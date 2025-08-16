@@ -9,10 +9,9 @@ namespace components{
 
 struct NameComponent : public Component{
 public:
-    explicit NameComponent(const std::string &characterName): characterName(characterName){}
+    explicit NameComponent(const std::string &characterName): Component("NameComponent"), characterName(characterName){}
 
     std::string toString() const override;
-    std::string name() const override;
 
     std::string characterName;
 };

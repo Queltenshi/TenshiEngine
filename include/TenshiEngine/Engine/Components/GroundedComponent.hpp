@@ -9,10 +9,9 @@ namespace components{
 
 struct GroundedComponent : public Component{
 public:
-    GroundedComponent() = default;
+    GroundedComponent(): Component("GroundedComponent"){}
 
     std::string toString() const override;
-    std::string name() const override;
 };
 
 }

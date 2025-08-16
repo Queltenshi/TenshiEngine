@@ -9,11 +9,10 @@ namespace components{
 
 struct RigidbodyComponent : public Component{
 public:
-    RigidbodyComponent(): mass(defaultMass){}
-    explicit RigidbodyComponent(float mass): mass(mass){}
+    RigidbodyComponent(): Component("RigidbodyComponent"), mass(defaultMass){}
+    explicit RigidbodyComponent(float mass): Component("RigidbodyComponent"), mass(mass){}
 
     std::string toString() const override;
-    std::string name() const override;
 
     float mass;
 

@@ -8,7 +8,7 @@ namespace components{
 
 struct HorizontalMovementComponent : Component{
 public:
-    HorizontalMovementComponent() = default;
+    HorizontalMovementComponent(): Component("HorizontalMovementComponent"){}
     
     std::string toString() const override;
 };

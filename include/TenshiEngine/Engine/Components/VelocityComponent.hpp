@@ -9,10 +9,9 @@ namespace components{
 
 struct VelocityComponent : public Component{
 public:
-    VelocityComponent() = default;
+    VelocityComponent(): Component("VelocityComponent"){}
 
     std::string toString() const override;
-    std::string name() const override;
 };
 
 }

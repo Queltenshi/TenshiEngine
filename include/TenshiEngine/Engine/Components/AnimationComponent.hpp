@@ -8,10 +8,9 @@ namespace components{
 
 struct AnimationComponent : public Component{
 public:
-    AnimationComponent() = default;
+    AnimationComponent(): Component("AnimationComponent"){}
 
     std::string toString() const override;
-    std::string name() const override;
 };
 
 }

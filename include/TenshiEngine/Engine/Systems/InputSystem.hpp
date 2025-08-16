@@ -11,8 +11,22 @@
 namespace te{
 namespace systems{
 
+/**
+ * @brief System for input handling
+ *
+ * Checks the pressed keys from the system and
+ * chanegs the inputComponents depending on Hotkeys
+ */
 class InputSystem : public System{
 public:
+
+    /**
+     * @brief Constructor
+     *
+     * creates the System
+     *
+     * @param registry reference to the registry
+     */
     InputSystem(Registry &registry);
 
     void update() override; 
@@ -26,21 +40,14 @@ private:
         InputType inputType;
         std::string keyName;
         std::string keyBind;
+        uint8_t keyCode;
     };
 
     void keyPressed(Key &key, EntityID entityID);
     uint8_t keyNameToCode(std::string &keyName);
     void updateComponent(std::string &keyBind, components::PlayerInputComponent *component, EntityID entityID);
 
-    Key playerUp;
-    Key playerDown;
-    Key playerLeft;
-    Key playerRight;
-    Key playerJump;
-    Key playerSprint;
-    Key playerCrouch;
-    Key playerAttack;
-    std::array<Key*, 8> keys;
+    Key keys[8];
 };
 
 }

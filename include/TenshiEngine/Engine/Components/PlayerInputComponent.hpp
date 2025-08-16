@@ -7,24 +7,31 @@
 namespace te{
 namespace components{
 
+/**
+ * @brief component with input states
+ *
+ * stores the input states of which actions are pressed
+ */
 struct PlayerInputComponent : public Component{
 public:
-    PlayerInputComponent() = default;
+
+    /**
+     * @brief Constructor
+     *
+     * creates the component
+     */
+    PlayerInputComponent(): Component("PlayerInputComponent"){}
 
     std::string toString () const override{
-        return "(up: " + boolToString(up) + " | " + 
-               "down: " + boolToString(down) + " | " +
-               "left: " + boolToString(left) + " | " +
-               "right: " + boolToString(right) + " | " +
-               "jump: " + boolToString(jump) + " | " +
-               "sprint: " + boolToString(sprint) + " | " +
-               "crouch: " + boolToString(crouch) + " | " +
-               "attack: " + boolToString(attack) + 
+        return "(up: " + utils::boolToString(up) + " | " + 
+               "down: " + utils::boolToString(down) + " | " +
+               "left: " + utils::boolToString(left) + " | " +
+               "right: " + utils::boolToString(right) + " | " +
+               "jump: " + utils::boolToString(jump) + " | " +
+               "sprint: " + utils::boolToString(sprint) + " | " +
+               "crouch: " + utils::boolToString(crouch) + " | " +
+               "attack: " + utils::boolToString(attack) + 
                ")";
-    };
-
-    std::string name() const override{
-        return "PlayerInputComponent";
     };
 
     bool up = false;
@@ -35,13 +42,6 @@ public:
     bool sprint = false;
     bool crouch = false;
     bool attack = false;
-
-private:
-    std::string boolToString(bool boolean) const{
-        if(boolean)
-            return "true";
-        return "false";
-    };
 };
 
 }

@@ -7,16 +7,36 @@
 #include <memory>
 #include <vector>
 #include "TenshiEngine/Engine/Entity/Entity.hpp"
-#include "TenshiEngine/Engine/Components/Components.hpp"
+#include "TenshiEngine/Components.hpp"
 #include "TenshiEngine/Engine/Core/Logger.hpp"
 #include "TenshiEngine/Engine/Systems/System.hpp"
 
 namespace te{
 
+/**
+ * @brief Managing entities and components
+ *
+ * Creates entities, adds components,
+ * shows components and entities,
+ * adds systems, update systems
+ */
 class Registry{
 public:
+
+    /** @brief Constructor
+     *  
+     *  @param mNextId used for automatically adding IDs to entities
+     */
     Registry(): mNextId(0){}
 
+    /**
+     * @brief creates new entity
+     *
+     * creates new entity with given texture,
+     * new ID, TransformComponent, SpriteComponent
+     *
+     * @param texture Texture to display
+     */
     Entity createEntity(sf::Texture &texture){
         Entity entity(mNextId++);
         addComponent(entity.id, components::SpriteComponent(texture));
@@ -24,16 +44,31 @@ public:
         return entity;
     }
 
+    /**
+     * @brief adds new component
+     *
+     * adds new component to given entityID
+     *
+     * @param entityID ID of entity
+     * @param component component to add
+     */
     template<typename Component>
     void addComponent(EntityID entityID, const Component &component){
         mComponents[typeid(Component)][entityID] = std::make_shared<Component>(component);
 
         //Debug Info
         if(Logger::currentLevel == LogLevel::DEBUG){
-            Logger::debug("Registry", component.name()  + " added to Entity " + std::to_string(entityID) + " " + component.toString());
+            Logger::debug("Registry", component.name  + " added to Entity " + std::to_string(entityID) + " " + component.toString());
         }
     }
 
+    /**
+     * @brief shows component of entity
+     *
+     * shows the specified component of a given entityID
+     *
+     * @param entityID ID of entity
+     */
     template<typename Component>
     Component* getComponent(EntityID entityID){
         auto it = mComponents.find(typeid(Component));
@@ -46,17 +81,11 @@ public:
         return nullptr;
     }
 
-    /*template<typename Component>
-    void UpdateComponent(const std::string &systemName, EntityID entityID, Component& newComponent) {
-        Component *currentComponent = getComponent<Component>(entityID);
-        if (currentComponent != &newComponent) {
-            currentComponent = &newComponent;
-
-            //Debug Info
-            LOG_DEBUG(systemName, newComponent.name()  + " changed for Entity " + std::to_string(entityID) + " " + newComponent.toString());
-        }
-    }*/
-
+    /**
+     * @brief Lists entities
+     *
+     * lists entities with specified components
+     */
     template<typename... Components>
     std::vector<EntityID> view(){
         std::vector<EntityID> result;
@@ -80,12 +109,24 @@ public:
         return result;
     }
 
+    /** 
+     * @brief adds system
+     *
+     * adds new system
+     *
+     * @param args arguments of the specified system to create
+     */
     template<typename TSystem, typename... Args>
     void addSystem(Args&&... args) {
         auto system = std::make_unique<TSystem>(*this, std::forward<Args>(args)...);
         mSystems.push_back(std::move(system));
     }
 
+    /**
+     * @brief updates all systems
+     *
+     * updates all the systems
+     */
     void updateSystems() {
         for (auto& system : mSystems) {
             system->update();

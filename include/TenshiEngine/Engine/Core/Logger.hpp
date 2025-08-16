@@ -5,7 +5,7 @@
 
 namespace te{
 
-enum class LogLevel{DEBUG, INFO, WARNING, ERROR};
+enum class LogLevel{DEBUG, INFO, WARNING, ERROR, CRITICAL};
 
 class Logger{
 
@@ -16,26 +16,40 @@ public:
 
     inline static LogLevel currentLevel = LogLevel::DEBUG;
 
-    static void log(LogLevel logLevel, const std::string &system, const std::string &message);
     static void debug(const std::string &source, const std::string &message);
+    static void warning(const std::string &source, const std::string &message);
+    static void error(const std::string &source, const std::string &message);
+    static void info(const std::string &source, const std::string &message);
+    static void critical(const std::string &source, const std::string &message);
 
 private:
+    static void log(LogLevel logLevel, const std::string &system, const std::string &message);
     static std::string toString(LogLevel logLevel) {
         switch (logLevel) {
             case LogLevel::DEBUG: return "DEBUG";
             case LogLevel::INFO:  return "INFO";
             case LogLevel::WARNING:  return "WARNING";
             case LogLevel::ERROR: return "ERROR";
+            case LogLevel::CRITICAL: return "CRITICAL";
         }
         return "UNKNOWN";
     }
 };
 
+}
+
+/**
+ * @brief Logs a debug message
+ *
+ * Logs a debug message if the currentLevel is set to DEBUG
+ * @param source The source or module where the log originates
+ * @param message The message to log
+ *
+ * @macro LOG_DEBUG
+ */
 #define LOG_DEBUG(source, message) \
     do { \
-        if (Logger::currentLevel == LogLevel::DEBUG) { \
-            Logger::debug(source, message); \
+        if (te::Logger::currentLevel == te::LogLevel::DEBUG) { \
+            te::Logger::debug(source, message); \
         } \
     } while(0)
-
-}

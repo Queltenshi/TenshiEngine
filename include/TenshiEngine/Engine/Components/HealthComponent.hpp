@@ -9,11 +9,10 @@ namespace components{
 
 struct HealthComponent : public Component{
 public:
-    HealthComponent(): hp(defaultHp), maxHp(hp) {}
-    explicit HealthComponent(int hp): hp(hp), maxHp(hp){}
+    HealthComponent(): Component("HealthComponent"), hp(defaultHp), maxHp(hp) {}
+    explicit HealthComponent(int hp): Component("HealthComponent"), hp(hp), maxHp(hp){}
 
     std::string toString() const override;
-    std::string name() const override;
 
     int hp;
     int maxHp;

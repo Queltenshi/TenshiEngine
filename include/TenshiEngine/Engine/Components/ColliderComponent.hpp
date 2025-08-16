@@ -9,10 +9,9 @@ namespace components{
 
 struct ColliderComponent : public Component{
 public:
-    ColliderComponent() = default;
+    ColliderComponent(): Component("ColliderComponent"){}
 
     std::string toString() const override;
-    std::string name() const override;
 };
 
 }

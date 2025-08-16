@@ -9,18 +9,28 @@
 namespace te{
 namespace components{
 
+/**
+ * @brief component with position and scale
+ *
+ * stores the position and scaling of the sprite
+ */
 struct TransformComponent : public Component{
 public:
-    TransformComponent(): position(defaultPosition), scale(defaultScale){}
+    /**
+     * @brief Constructor
+     *
+     * creates the component
+     */
+    TransformComponent(): Component("TransformComponent"), position(defaultPosition), scale(defaultScale){}
 
     std::string toString() const override{
         return "TestTransform";
     };
-    std::string name() const override{
-        return "TransformComponent";
-    };
 
+    ///Position of the sprite
     sf::Vector2f position;
+
+    ///Scaling of the sprite
     sf::Vector2f scale;
 
 private:

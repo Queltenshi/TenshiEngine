@@ -4,7 +4,7 @@
 namespace te{
 
 GameBase::GameBase(std::string windowName)
-    : mWindow(sf::VideoMode({800, 600}), windowName) { //mWindow(sf::VideoMode::getDesktopMode(), windowName, sf::State::Fullscreen)
+    : mWindow(sf::VideoMode({800, 600}), windowName){ //mWindow(sf::VideoMode::getDesktopMode(), windowName, sf::State::Fullscreen)
     
 }
 

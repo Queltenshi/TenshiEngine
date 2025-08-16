@@ -1,16 +1,36 @@
 #pragma once
 
 #include <iostream>
+#include <string>
+#include "TenshiEngine/Engine/Utils/boolToString.hpp"
 
 namespace te{
 namespace components{
 
+/**
+ * @brief Base component
+ */
 struct Component{
 public:
-    Component() = default;
-
+    /**
+     * @brief Constructor
+     *
+     * Creates a component with given name
+     *
+     * @param name name of the component
+     */
+    Component(std::string name): name(name){}
+    
+    /**
+     * @brief shows data as a string
+     *
+     * converts the data into a string,
+     * components do override this method
+     */
     virtual std::string toString() const = 0;
-    virtual std::string name() const = 0;
+
+    /// name of component
+    std::string name;
 };
 
 }

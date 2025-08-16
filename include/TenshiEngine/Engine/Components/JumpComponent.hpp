@@ -9,10 +9,9 @@ namespace components{
 
 struct JumpComponent : public Component{
 public:
-    JumpComponent() = default;
+    JumpComponent(): Component("JumpComponent"){}
 
     std::string toString() const override;
-    std::string name() const override;
 };
 
 }

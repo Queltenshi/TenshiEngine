@@ -8,10 +8,9 @@ namespace components{
 
 struct PlayerStateComponent : public Component{
 public:
-    PlayerStateComponent() = default;
+    PlayerStateComponent(): Component("PlayerStateComponent"){}
 
     std::string toString() const override;
-    std::string name() const override;
 };
 
 }

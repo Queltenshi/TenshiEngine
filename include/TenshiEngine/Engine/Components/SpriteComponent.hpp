@@ -8,18 +8,30 @@
 namespace te{
 namespace components{
 
+/**
+ * @brief component with sprite/texture
+ *
+ * stores a sprite and texture
+ */
 struct SpriteComponent : public Component{
 public:
-    explicit SpriteComponent(sf::Texture &texture): texture(texture), sprite(texture){}
+    /**
+     * @brief Constructor
+     *
+     * creates the component with given texture
+     *
+     * @param texture texture for the sprite
+     */
+    explicit SpriteComponent(sf::Texture &texture): Component("SpriteComponent"), texture(texture), sprite(texture){}
 
+    ///Texture for the sprite
     sf::Texture &texture;
+
+    ///Sprite used for rendering
     sf::Sprite sprite;
     
     std::string toString() const override{
         return "Dabu";
-    }
-    std::string name() const override{
-        return "SpriteComponent";
     }
 };
 

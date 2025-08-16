@@ -1,0 +1,17 @@
+#pragma once
+
+#include "TenshiEngine/Engine/Components/HealthComponent.hpp"
+#include "TenshiEngine/Engine/Components/NameComponent.hpp"
+#include "TenshiEngine/Engine/Components/RigidbodyComponent.hpp"
+#include "TenshiEngine/Engine/Components/SpriteComponent.hpp"
+#include "TenshiEngine/Engine/Components/TransformComponent.hpp"
+#include "TenshiEngine/Engine/Components/ColliderComponent.hpp"
+#include "TenshiEngine/Engine/Components/PlayerInputComponent.hpp"
+#include "TenshiEngine/Engine/Components/VelocityComponent.hpp"
+#include "TenshiEngine/Engine/Components/GroundedComponent.hpp"
+#include "TenshiEngine/Engine/Components/AnimationComponent.hpp"
+#include "TenshiEngine/Engine/Components/PlayerStateComponent.hpp"
+#include "TenshiEngine/Engine/Components/PlayerInputComponent.hpp"
+#include "TenshiEngine/Engine/Components/HorizontalMovementComponent.hpp"
+#include "TenshiEngine/Engine/Components/JumpComponent.hpp"
+#include "TenshiEngine/Engine/Components/Component.hpp"
