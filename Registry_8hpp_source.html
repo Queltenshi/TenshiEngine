@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('Registry_8hpp_source.html',''); initRe
   <div class="headertitle"><div class="title">Registry.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="Registry_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;SFML/Graphics/Texture.hpp&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
@@ -105,141 +105,122 @@ $(document).ready(function(){initNavTree('Registry_8hpp_source.html',''); initRe
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;typeindex&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="Entity_8hpp.html">TenshiEngine/Engine/Entity/Entity.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="Components_8hpp.html">TenshiEngine/Engine/Components/Components.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="Logger_8hpp.html">TenshiEngine/Engine/Core/Logger.hpp</a>&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="System_8hpp.html">TenshiEngine/Engine/Systems/System.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;TenshiEngine/Engine/Entity/Entity.hpp&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;TenshiEngine/Components.hpp&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;TenshiEngine/Engine/Core/Logger.hpp&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;TenshiEngine/Engine/Systems/System.hpp&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacete.html">te</a>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">namespace </span>te{</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classte_1_1Registry.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="classte_1_1Registry.html">Registry</a>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classte_1_1Registry.html#ac9fde2f8cf63b88d955daff21299fa3e">   18</a></span>    <a class="code hl_function" href="classte_1_1Registry.html#ac9fde2f8cf63b88d955daff21299fa3e">Registry</a>(): mNextId(0){}</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classte_1_1Registry.html#a8711ff219ebf13ead555c90a545e55a2">   20</a></span>    <a class="code hl_struct" href="structte_1_1Entity.html">Entity</a> <a class="code hl_function" href="classte_1_1Registry.html#a8711ff219ebf13ead555c90a545e55a2">createEntity</a>(sf::Texture &amp;texture){</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_struct" href="structte_1_1Entity.html">Entity</a> entity(mNextId++);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_function" href="classte_1_1Registry.html#a0badb8e8779dc8c2dcf8a559644fe3e4">addComponent</a>(entity.<a class="code hl_variable" href="structte_1_1Entity.html#ac3af9d9e15deae2db02239518ff67f8d">id</a>, <a class="code hl_struct" href="structte_1_1components_1_1SpriteComponent.html">components::SpriteComponent</a>(texture));</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <a class="code hl_function" href="classte_1_1Registry.html#a0badb8e8779dc8c2dcf8a559644fe3e4">addComponent</a>(entity.<a class="code hl_variable" href="structte_1_1Entity.html#ac3af9d9e15deae2db02239518ff67f8d">id</a>, <a class="code hl_struct" href="structte_1_1components_1_1TransformComponent.html">components::TransformComponent</a>());</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">return</span> entity;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classte_1_1Registry.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="classte_1_1Registry.html">Registry</a>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classte_1_1Registry.html#ac9fde2f8cf63b88d955daff21299fa3e">   30</a></span>    <a class="code hl_function" href="classte_1_1Registry.html#ac9fde2f8cf63b88d955daff21299fa3e">Registry</a>(): mNextId(0){}</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classte_1_1Registry.html#a8711ff219ebf13ead555c90a545e55a2">   40</a></span>    <a class="code hl_struct" href="structte_1_1Entity.html">Entity</a> <a class="code hl_function" href="classte_1_1Registry.html#a8711ff219ebf13ead555c90a545e55a2">createEntity</a>(sf::Texture &amp;texture){</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_struct" href="structte_1_1Entity.html">Entity</a> entity(mNextId++);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_function" href="classte_1_1Registry.html#a0badb8e8779dc8c2dcf8a559644fe3e4">addComponent</a>(entity.<a class="code hl_variable" href="structte_1_1Entity.html#ac3af9d9e15deae2db02239518ff67f8d">id</a>, <a class="code hl_struct" href="structte_1_1components_1_1SpriteComponent.html">components::SpriteComponent</a>(texture));</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <a class="code hl_function" href="classte_1_1Registry.html#a0badb8e8779dc8c2dcf8a559644fe3e4">addComponent</a>(entity.<a class="code hl_variable" href="structte_1_1Entity.html#ac3af9d9e15deae2db02239518ff67f8d">id</a>, <a class="code hl_struct" href="structte_1_1components_1_1TransformComponent.html">components::TransformComponent</a>());</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordflow">return</span> entity;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
 </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Component&gt;</div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="}">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classte_1_1Registry.html#a0badb8e8779dc8c2dcf8a559644fe3e4">   28</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classte_1_1Registry.html#a0badb8e8779dc8c2dcf8a559644fe3e4">addComponent</a>(<a class="code hl_typedef" href="namespacete.html#ae89584d0043c2eb870a72fa1769ebea3">EntityID</a> entityID, <span class="keyword">const</span> Component &amp;component){</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        mComponents[<span class="keyword">typeid</span>(Component)][entityID] = std::make_shared&lt;Component&gt;(component);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="comment">//Debug Info</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">if</span>(<a class="code hl_variable" href="classte_1_1Logger.html#a2fb771ee5f3a5226cfb59a07cd2524a0">Logger::currentLevel</a> == <a class="code hl_enumvalue" href="namespacete.html#a3ffe2e4dc4bb5297c43d701fcfbcd825adc30ec20708ef7b0f641ef78b7880a15">LogLevel::DEBUG</a>){</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <a class="code hl_function" href="classte_1_1Logger.html#a92286ef59a24ea39ec7f83af1cbd1e69">Logger::debug</a>(<span class="stringliteral">&quot;Registry&quot;</span>, component.name()  + <span class="stringliteral">&quot; added to Entity &quot;</span> + std::to_string(entityID) + <span class="stringliteral">&quot; &quot;</span> + component.toString());</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Component&gt;</div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classte_1_1Registry.html#a0badb8e8779dc8c2dcf8a559644fe3e4">   56</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classte_1_1Registry.html#a0badb8e8779dc8c2dcf8a559644fe3e4">addComponent</a>(EntityID entityID, <span class="keyword">const</span> Component &amp;component){</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        mComponents[<span class="keyword">typeid</span>(Component)][entityID] = std::make_shared&lt;Component&gt;(component);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="comment">//Debug Info</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">if</span>(Logger::currentLevel == LogLevel::DEBUG){</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            Logger::debug(<span class="stringliteral">&quot;Registry&quot;</span>, component.name  + <span class="stringliteral">&quot; added to Entity &quot;</span> + std::to_string(entityID) + <span class="stringliteral">&quot; &quot;</span> + component.toString());</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    }</div>
 </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Component&gt;</div>
-<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classte_1_1Registry.html#a710e6ffdf531dff9dd47e22206a3725a">   38</a></span>    Component* <a class="code hl_function" href="classte_1_1Registry.html#a710e6ffdf531dff9dd47e22206a3725a">getComponent</a>(<a class="code hl_typedef" href="namespacete.html#ae89584d0043c2eb870a72fa1769ebea3">EntityID</a> entityID){</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">auto</span> it = mComponents.find(<span class="keyword">typeid</span>(Component));</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">if</span>(it != mComponents.end()){</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keyword">auto</span> entityIt = it-&gt;second.find(entityID);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <span class="keywordflow">if</span>(entityIt != it-&gt;second.end()){</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="keywordflow">return</span> std::static_pointer_cast&lt;Component&gt;(entityIt-&gt;second).get();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            }</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> Component&gt;</div>
+<div class="foldopen" id="foldopen00073" data-start="{" data-end="}">
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classte_1_1Registry.html#a710e6ffdf531dff9dd47e22206a3725a">   73</a></span>    Component* <a class="code hl_function" href="classte_1_1Registry.html#a710e6ffdf531dff9dd47e22206a3725a">getComponent</a>(EntityID entityID){</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keyword">auto</span> it = mComponents.find(<span class="keyword">typeid</span>(Component));</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordflow">if</span>(it != mComponents.end()){</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keyword">auto</span> entityIt = it-&gt;second.find(entityID);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="keywordflow">if</span>(entityIt != it-&gt;second.end()){</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <span class="keywordflow">return</span> std::static_pointer_cast&lt;Component&gt;(entityIt-&gt;second).get();</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
 </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">/*template&lt;typename Component&gt;</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">    void UpdateComponent(const std::string &amp;systemName, EntityID entityID, Component&amp; newComponent) {</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">        Component *currentComponent = getComponent&lt;Component&gt;(entityID);</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">        if (currentComponent != &amp;newComponent) {</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">            currentComponent = &amp;newComponent;</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment"></span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">            //Debug Info</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">            LOG_DEBUG(systemName, newComponent.name()  + &quot; changed for Entity &quot; + std::to_string(entityID) + &quot; &quot; + newComponent.toString());</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">        }</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">    }*/</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Components&gt;</div>
-<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classte_1_1Registry.html#ab22d33126a0e011ab16c4eea13e33921">   61</a></span>    std::vector&lt;EntityID&gt; <a class="code hl_function" href="classte_1_1Registry.html#ab22d33126a0e011ab16c4eea13e33921">view</a>(){</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        std::vector&lt;EntityID&gt; result;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">if</span>(<span class="keyword">sizeof</span>...(Components) == 0)</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">using </span>FirstComponent = std::tuple_element_t&lt;0, std::tuple&lt;Components...&gt;&gt;;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keyword">auto</span> firstComponentIt = mComponents.find(<span class="keyword">typeid</span>(FirstComponent));</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">if</span> (firstComponentIt == mComponents.end())</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; firstComponentEntities = firstComponentIt-&gt;second;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [entityId, _] : firstComponentEntities) {</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            <span class="keywordtype">bool</span> hasAll = (... &amp;&amp; (mComponents[<span class="keyword">typeid</span>(Components)].count(entityId) &gt; 0));</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <span class="keywordflow">if</span> (hasAll)</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                result.push_back(entityId);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
-</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSystem, <span class="keyword">typename</span>... Args&gt;</div>
-<div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classte_1_1Registry.html#a4315b2e98a75c5648ef54220f652903e">   84</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classte_1_1Registry.html#a4315b2e98a75c5648ef54220f652903e">addSystem</a>(Args&amp;&amp;... args) {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keyword">auto</span> system = std::make_unique&lt;TSystem&gt;(*<span class="keyword">this</span>, std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        mSystems.push_back(std::move(system));</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
-</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classte_1_1Registry.html#a53226e9ccc2c34336e0771b165db33d1">   89</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classte_1_1Registry.html#a53226e9ccc2c34336e0771b165db33d1">updateSystems</a>() {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; system : mSystems) {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            system-&gt;update();</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        }</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
-</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span>... Components&gt;</div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classte_1_1Registry.html#ab22d33126a0e011ab16c4eea13e33921">   90</a></span>    std::vector&lt;EntityID&gt; <a class="code hl_function" href="classte_1_1Registry.html#ab22d33126a0e011ab16c4eea13e33921">view</a>(){</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        std::vector&lt;EntityID&gt; result;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <span class="keywordflow">if</span>(<span class="keyword">sizeof</span>...(Components) == 0)</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <span class="keywordflow">return</span> result;</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <a class="code hl_typedef" href="namespacete.html#ae89584d0043c2eb870a72fa1769ebea3">EntityID</a> mNextId;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    std::unordered_map&lt;std::type_index, std::unordered_map&lt;EntityID, std::shared_ptr&lt;void&gt;&gt;&gt; mComponents;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    std::vector&lt;std::unique_ptr&lt;systems::System&gt;&gt; mSystems;</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>};</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keyword">using </span>FirstComponent = std::tuple_element_t&lt;0, std::tuple&lt;Components...&gt;&gt;;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keyword">auto</span> firstComponentIt = mComponents.find(<span class="keyword">typeid</span>(FirstComponent));</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">if</span> (firstComponentIt == mComponents.end())</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; firstComponentEntities = firstComponentIt-&gt;second;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [entityId, _] : firstComponentEntities) {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="keywordtype">bool</span> hasAll = (... &amp;&amp; (mComponents[<span class="keyword">typeid</span>(Components)].count(entityId) &gt; 0));</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordflow">if</span> (hasAll)</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>                result.push_back(entityId);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
 </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
-<div class="ttc" id="aComponents_8hpp_html"><div class="ttname"><a href="Components_8hpp.html">Components.hpp</a></div></div>
-<div class="ttc" id="aEntity_8hpp_html"><div class="ttname"><a href="Entity_8hpp.html">Entity.hpp</a></div></div>
-<div class="ttc" id="aLogger_8hpp_html"><div class="ttname"><a href="Logger_8hpp.html">Logger.hpp</a></div></div>
-<div class="ttc" id="aSystem_8hpp_html"><div class="ttname"><a href="System_8hpp.html">System.hpp</a></div></div>
-<div class="ttc" id="aclasste_1_1Logger_html_a2fb771ee5f3a5226cfb59a07cd2524a0"><div class="ttname"><a href="classte_1_1Logger.html#a2fb771ee5f3a5226cfb59a07cd2524a0">te::Logger::currentLevel</a></div><div class="ttdeci">static LogLevel currentLevel</div><div class="ttdef"><b>Definition</b> Logger.hpp:17</div></div>
-<div class="ttc" id="aclasste_1_1Logger_html_a92286ef59a24ea39ec7f83af1cbd1e69"><div class="ttname"><a href="classte_1_1Logger.html#a92286ef59a24ea39ec7f83af1cbd1e69">te::Logger::debug</a></div><div class="ttdeci">static void debug(const std::string &amp;source, const std::string &amp;message)</div><div class="ttdef"><b>Definition</b> Logger.cpp:10</div></div>
-<div class="ttc" id="aclasste_1_1Registry_html"><div class="ttname"><a href="classte_1_1Registry.html">te::Registry</a></div><div class="ttdef"><b>Definition</b> Registry.hpp:16</div></div>
-<div class="ttc" id="aclasste_1_1Registry_html_a0badb8e8779dc8c2dcf8a559644fe3e4"><div class="ttname"><a href="classte_1_1Registry.html#a0badb8e8779dc8c2dcf8a559644fe3e4">te::Registry::addComponent</a></div><div class="ttdeci">void addComponent(EntityID entityID, const Component &amp;component)</div><div class="ttdef"><b>Definition</b> Registry.hpp:28</div></div>
-<div class="ttc" id="aclasste_1_1Registry_html_a4315b2e98a75c5648ef54220f652903e"><div class="ttname"><a href="classte_1_1Registry.html#a4315b2e98a75c5648ef54220f652903e">te::Registry::addSystem</a></div><div class="ttdeci">void addSystem(Args &amp;&amp;... args)</div><div class="ttdef"><b>Definition</b> Registry.hpp:84</div></div>
-<div class="ttc" id="aclasste_1_1Registry_html_a53226e9ccc2c34336e0771b165db33d1"><div class="ttname"><a href="classte_1_1Registry.html#a53226e9ccc2c34336e0771b165db33d1">te::Registry::updateSystems</a></div><div class="ttdeci">void updateSystems()</div><div class="ttdef"><b>Definition</b> Registry.hpp:89</div></div>
-<div class="ttc" id="aclasste_1_1Registry_html_a710e6ffdf531dff9dd47e22206a3725a"><div class="ttname"><a href="classte_1_1Registry.html#a710e6ffdf531dff9dd47e22206a3725a">te::Registry::getComponent</a></div><div class="ttdeci">Component * getComponent(EntityID entityID)</div><div class="ttdef"><b>Definition</b> Registry.hpp:38</div></div>
-<div class="ttc" id="aclasste_1_1Registry_html_a8711ff219ebf13ead555c90a545e55a2"><div class="ttname"><a href="classte_1_1Registry.html#a8711ff219ebf13ead555c90a545e55a2">te::Registry::createEntity</a></div><div class="ttdeci">Entity createEntity(sf::Texture &amp;texture)</div><div class="ttdef"><b>Definition</b> Registry.hpp:20</div></div>
-<div class="ttc" id="aclasste_1_1Registry_html_ab22d33126a0e011ab16c4eea13e33921"><div class="ttname"><a href="classte_1_1Registry.html#ab22d33126a0e011ab16c4eea13e33921">te::Registry::view</a></div><div class="ttdeci">std::vector&lt; EntityID &gt; view()</div><div class="ttdef"><b>Definition</b> Registry.hpp:61</div></div>
-<div class="ttc" id="aclasste_1_1Registry_html_ac9fde2f8cf63b88d955daff21299fa3e"><div class="ttname"><a href="classte_1_1Registry.html#ac9fde2f8cf63b88d955daff21299fa3e">te::Registry::Registry</a></div><div class="ttdeci">Registry()</div><div class="ttdef"><b>Definition</b> Registry.hpp:18</div></div>
-<div class="ttc" id="anamespacete_html"><div class="ttname"><a href="namespacete.html">te</a></div><div class="ttdef"><b>Definition</b> AnimationComponent.hpp:6</div></div>
-<div class="ttc" id="anamespacete_html_a3ffe2e4dc4bb5297c43d701fcfbcd825adc30ec20708ef7b0f641ef78b7880a15"><div class="ttname"><a href="namespacete.html#a3ffe2e4dc4bb5297c43d701fcfbcd825adc30ec20708ef7b0f641ef78b7880a15">te::LogLevel::DEBUG</a></div><div class="ttdeci">@ DEBUG</div></div>
-<div class="ttc" id="anamespacete_html_ae89584d0043c2eb870a72fa1769ebea3"><div class="ttname"><a href="namespacete.html#ae89584d0043c2eb870a72fa1769ebea3">te::EntityID</a></div><div class="ttdeci">std::uint32_t EntityID</div><div class="ttdef"><b>Definition</b> Entity.hpp:7</div></div>
-<div class="ttc" id="astructte_1_1Entity_html"><div class="ttname"><a href="structte_1_1Entity.html">te::Entity</a></div><div class="ttdef"><b>Definition</b> Entity.hpp:11</div></div>
-<div class="ttc" id="astructte_1_1Entity_html_ac3af9d9e15deae2db02239518ff67f8d"><div class="ttname"><a href="structte_1_1Entity.html#ac3af9d9e15deae2db02239518ff67f8d">te::Entity::id</a></div><div class="ttdeci">EntityID id</div><div class="ttdef"><b>Definition</b> Entity.hpp:18</div></div>
-<div class="ttc" id="astructte_1_1components_1_1SpriteComponent_html"><div class="ttname"><a href="structte_1_1components_1_1SpriteComponent.html">te::components::SpriteComponent</a></div><div class="ttdef"><b>Definition</b> SpriteComponent.hpp:11</div></div>
-<div class="ttc" id="astructte_1_1components_1_1TransformComponent_html"><div class="ttname"><a href="structte_1_1components_1_1TransformComponent.html">te::components::TransformComponent</a></div><div class="ttdef"><b>Definition</b> TransformComponent.hpp:12</div></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TSystem, <span class="keyword">typename</span>... Args&gt;</div>
+<div class="foldopen" id="foldopen00120" data-start="{" data-end="}">
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classte_1_1Registry.html#a4315b2e98a75c5648ef54220f652903e">  120</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classte_1_1Registry.html#a4315b2e98a75c5648ef54220f652903e">addSystem</a>(Args&amp;&amp;... args) {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keyword">auto</span> system = std::make_unique&lt;TSystem&gt;(*<span class="keyword">this</span>, std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        mSystems.push_back(std::move(system));</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    }</div>
+</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="foldopen" id="foldopen00130" data-start="{" data-end="}">
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="classte_1_1Registry.html#a53226e9ccc2c34336e0771b165db33d1">  130</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classte_1_1Registry.html#a53226e9ccc2c34336e0771b165db33d1">updateSystems</a>() {</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; system : mSystems) {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            system-&gt;update();</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    }</div>
+</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    EntityID mNextId;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    std::unordered_map&lt;std::type_index, std::unordered_map&lt;EntityID, std::shared_ptr&lt;void&gt;&gt;&gt; mComponents;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    std::vector&lt;std::unique_ptr&lt;systems::System&gt;&gt; mSystems;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>};</div>
+</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>}</div>
+<div class="ttc" id="aclasste_1_1Registry_html"><div class="ttname"><a href="classte_1_1Registry.html">te::Registry</a></div><div class="ttdoc">Managing entities and components.</div><div class="ttdef"><b>Definition</b> Registry.hpp:23</div></div>
+<div class="ttc" id="aclasste_1_1Registry_html_a0badb8e8779dc8c2dcf8a559644fe3e4"><div class="ttname"><a href="classte_1_1Registry.html#a0badb8e8779dc8c2dcf8a559644fe3e4">te::Registry::addComponent</a></div><div class="ttdeci">void addComponent(EntityID entityID, const Component &amp;component)</div><div class="ttdoc">adds new component</div><div class="ttdef"><b>Definition</b> Registry.hpp:56</div></div>
+<div class="ttc" id="aclasste_1_1Registry_html_a4315b2e98a75c5648ef54220f652903e"><div class="ttname"><a href="classte_1_1Registry.html#a4315b2e98a75c5648ef54220f652903e">te::Registry::addSystem</a></div><div class="ttdeci">void addSystem(Args &amp;&amp;... args)</div><div class="ttdoc">adds system</div><div class="ttdef"><b>Definition</b> Registry.hpp:120</div></div>
+<div class="ttc" id="aclasste_1_1Registry_html_a53226e9ccc2c34336e0771b165db33d1"><div class="ttname"><a href="classte_1_1Registry.html#a53226e9ccc2c34336e0771b165db33d1">te::Registry::updateSystems</a></div><div class="ttdeci">void updateSystems()</div><div class="ttdoc">updates all systems</div><div class="ttdef"><b>Definition</b> Registry.hpp:130</div></div>
+<div class="ttc" id="aclasste_1_1Registry_html_a710e6ffdf531dff9dd47e22206a3725a"><div class="ttname"><a href="classte_1_1Registry.html#a710e6ffdf531dff9dd47e22206a3725a">te::Registry::getComponent</a></div><div class="ttdeci">Component * getComponent(EntityID entityID)</div><div class="ttdoc">shows component of entity</div><div class="ttdef"><b>Definition</b> Registry.hpp:73</div></div>
+<div class="ttc" id="aclasste_1_1Registry_html_a8711ff219ebf13ead555c90a545e55a2"><div class="ttname"><a href="classte_1_1Registry.html#a8711ff219ebf13ead555c90a545e55a2">te::Registry::createEntity</a></div><div class="ttdeci">Entity createEntity(sf::Texture &amp;texture)</div><div class="ttdoc">creates new entity</div><div class="ttdef"><b>Definition</b> Registry.hpp:40</div></div>
+<div class="ttc" id="aclasste_1_1Registry_html_ab22d33126a0e011ab16c4eea13e33921"><div class="ttname"><a href="classte_1_1Registry.html#ab22d33126a0e011ab16c4eea13e33921">te::Registry::view</a></div><div class="ttdeci">std::vector&lt; EntityID &gt; view()</div><div class="ttdoc">Lists entities.</div><div class="ttdef"><b>Definition</b> Registry.hpp:90</div></div>
+<div class="ttc" id="aclasste_1_1Registry_html_ac9fde2f8cf63b88d955daff21299fa3e"><div class="ttname"><a href="classte_1_1Registry.html#ac9fde2f8cf63b88d955daff21299fa3e">te::Registry::Registry</a></div><div class="ttdeci">Registry()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> Registry.hpp:30</div></div>
+<div class="ttc" id="astructte_1_1Entity_html"><div class="ttname"><a href="structte_1_1Entity.html">te::Entity</a></div><div class="ttdoc">Entity.</div><div class="ttdef"><b>Definition</b> Entity.hpp:12</div></div>
+<div class="ttc" id="astructte_1_1Entity_html_ac3af9d9e15deae2db02239518ff67f8d"><div class="ttname"><a href="structte_1_1Entity.html#ac3af9d9e15deae2db02239518ff67f8d">te::Entity::id</a></div><div class="ttdeci">EntityID id</div><div class="ttdoc">ID of the Entity.</div><div class="ttdef"><b>Definition</b> Entity.hpp:20</div></div>
+<div class="ttc" id="astructte_1_1components_1_1SpriteComponent_html"><div class="ttname"><a href="structte_1_1components_1_1SpriteComponent.html">te::components::SpriteComponent</a></div><div class="ttdoc">component with sprite/texture</div><div class="ttdef"><b>Definition</b> SpriteComponent.hpp:16</div></div>
+<div class="ttc" id="astructte_1_1components_1_1TransformComponent_html"><div class="ttname"><a href="structte_1_1components_1_1TransformComponent.html">te::components::TransformComponent</a></div><div class="ttdoc">component with position and scale</div><div class="ttdef"><b>Definition</b> TransformComponent.hpp:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8d3d1e23c3ffe723e56c923af0032a3f.html">TenshiEngine</a></li><li class="navelem"><a class="el" href="dir_33cdd7c21c2a7467f2512bf8be114203.html">Engine</a></li><li class="navelem"><a class="el" href="dir_bcb5a5e30869d88f2aa2dc87e98520a0.html">Core</a></li><li class="navelem"><a class="el" href="Registry_8hpp.html">Registry.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8d3d1e23c3ffe723e56c923af0032a3f.html">TenshiEngine</a></li><li class="navelem"><a class="el" href="dir_33cdd7c21c2a7467f2512bf8be114203.html">Engine</a></li><li class="navelem"><a class="el" href="dir_bcb5a5e30869d88f2aa2dc87e98520a0.html">Core</a></li><li class="navelem"><b>Registry.hpp</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

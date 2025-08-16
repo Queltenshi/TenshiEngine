@@ -97,40 +97,31 @@ $(document).ready(function(){initNavTree('JumpComponent_8hpp_source.html',''); i
   <div class="headertitle"><div class="title">JumpComponent.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="JumpComponent_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="Component_8hpp.html">TenshiEngine/Engine/Components/Component.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;TenshiEngine/Engine/Components/Component.hpp&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacete.html">te</a>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>te{</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>components{</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1JumpComponent.html">   10</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structte_1_1components_1_1JumpComponent.html">JumpComponent</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structte_1_1components_1_1Component.html">Component</a>{</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">struct </span>JumpComponent : <span class="keyword">public</span> Component{</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1JumpComponent.html#a161de5f13c31a5c06156dec58524b967">   12</a></span>    <a class="code hl_function" href="structte_1_1components_1_1JumpComponent.html#a161de5f13c31a5c06156dec58524b967">JumpComponent</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    JumpComponent(): <a class="code hl_function" href="structte_1_1components_1_1Component.html#a8c101e6b8887c8b8d922b6d550a1ace4">Component</a>(<span class="stringliteral">&quot;JumpComponent&quot;</span>){}</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1JumpComponent.html#a2f17747ee5f58155850c2ebc0017d370">   14</a></span>    std::string <a class="code hl_function" href="structte_1_1components_1_1JumpComponent.html#a2f17747ee5f58155850c2ebc0017d370">toString</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1JumpComponent.html#a9c4c65075723f53e8c2a37b31a07fc3d">   15</a></span>    std::string <a class="code hl_function" href="structte_1_1components_1_1JumpComponent.html#a9c4c65075723f53e8c2a37b31a07fc3d">name</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>};</div>
-</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    std::string toString() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>};</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
-<div class="ttc" id="aComponent_8hpp_html"><div class="ttname"><a href="Component_8hpp.html">Component.hpp</a></div></div>
-<div class="ttc" id="anamespacete_html"><div class="ttname"><a href="namespacete.html">te</a></div><div class="ttdef"><b>Definition</b> AnimationComponent.hpp:6</div></div>
-<div class="ttc" id="astructte_1_1components_1_1Component_html"><div class="ttname"><a href="structte_1_1components_1_1Component.html">te::components::Component</a></div><div class="ttdef"><b>Definition</b> Component.hpp:8</div></div>
-<div class="ttc" id="astructte_1_1components_1_1JumpComponent_html"><div class="ttname"><a href="structte_1_1components_1_1JumpComponent.html">te::components::JumpComponent</a></div><div class="ttdef"><b>Definition</b> JumpComponent.hpp:10</div></div>
-<div class="ttc" id="astructte_1_1components_1_1JumpComponent_html_a161de5f13c31a5c06156dec58524b967"><div class="ttname"><a href="structte_1_1components_1_1JumpComponent.html#a161de5f13c31a5c06156dec58524b967">te::components::JumpComponent::JumpComponent</a></div><div class="ttdeci">JumpComponent()=default</div></div>
-<div class="ttc" id="astructte_1_1components_1_1JumpComponent_html_a2f17747ee5f58155850c2ebc0017d370"><div class="ttname"><a href="structte_1_1components_1_1JumpComponent.html#a2f17747ee5f58155850c2ebc0017d370">te::components::JumpComponent::toString</a></div><div class="ttdeci">std::string toString() const override</div></div>
-<div class="ttc" id="astructte_1_1components_1_1JumpComponent_html_a9c4c65075723f53e8c2a37b31a07fc3d"><div class="ttname"><a href="structte_1_1components_1_1JumpComponent.html#a9c4c65075723f53e8c2a37b31a07fc3d">te::components::JumpComponent::name</a></div><div class="ttdeci">std::string name() const override</div></div>
+<div class="ttc" id="astructte_1_1components_1_1Component_html_a8c101e6b8887c8b8d922b6d550a1ace4"><div class="ttname"><a href="structte_1_1components_1_1Component.html#a8c101e6b8887c8b8d922b6d550a1ace4">te::components::Component::Component</a></div><div class="ttdeci">Component(std::string name)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> Component.hpp:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8d3d1e23c3ffe723e56c923af0032a3f.html">TenshiEngine</a></li><li class="navelem"><a class="el" href="dir_33cdd7c21c2a7467f2512bf8be114203.html">Engine</a></li><li class="navelem"><a class="el" href="dir_f1c322a58498b6464dbccbb9438fee84.html">Components</a></li><li class="navelem"><a class="el" href="JumpComponent_8hpp.html">JumpComponent.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8d3d1e23c3ffe723e56c923af0032a3f.html">TenshiEngine</a></li><li class="navelem"><a class="el" href="dir_33cdd7c21c2a7467f2512bf8be114203.html">Engine</a></li><li class="navelem"><a class="el" href="dir_f1c322a58498b6464dbccbb9438fee84.html">Components</a></li><li class="navelem"><b>JumpComponent.hpp</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

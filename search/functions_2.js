@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['debug_0',['debug',['../classte_1_1Logger.html#a92286ef59a24ea39ec7f83af1cbd1e69',1,'te::Logger']]],
-  ['debugrendersystem_1',['DebugRenderSystem',['../classte_1_1systems_1_1DebugRenderSystem.html#a7a4b59ba894124763a6286acdebf2904',1,'te::systems::DebugRenderSystem']]]
+  ['gamebase_0',['GameBase',['../classte_1_1GameBase.html#a5d1af9fab83dd425749f4ef4437a524f',1,'te::GameBase']]],
+  ['getcomponent_1',['getComponent',['../classte_1_1Registry.html#a710e6ffdf531dff9dd47e22206a3725a',1,'te::Registry']]]
 ];

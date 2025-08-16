@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 487.804871
+%%BoundingBox: 0 0 500 56.497173
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,13 +19,13 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 1.025000 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 8.850000 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 14 def
-/cols 2 def
+/rows 2 def
+/cols 3 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
 
@@ -174,19 +174,9 @@
 boxfont setfont
 1 boundaspect scale
 (te::components::Component) cw
-(te::components::AnimationComponent) cw
-(te::components::ColliderComponent) cw
-(te::components::GroundedComponent) cw
-(te::components::HealthComponent) cw
-(te::components::HorizontalMovementComponent) cw
-(te::components::JumpComponent) cw
-(te::components::NameComponent) cw
 (te::components::PlayerInputComponent) cw
-(te::components::PlayerStateComponent) cw
-(te::components::RigidbodyComponent) cw
 (te::components::SpriteComponent) cw
 (te::components::TransformComponent) cw
-(te::components::VelocityComponent) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
 /yspacing boxheight disty add def
@@ -198,50 +188,20 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (te::components::Component) 0.000000 13.000000 box
- (te::components::AnimationComponent) 1.000000 12.000000 box
- (te::components::ColliderComponent) 1.000000 11.000000 box
- (te::components::GroundedComponent) 1.000000 10.000000 box
- (te::components::HealthComponent) 1.000000 9.000000 box
- (te::components::HorizontalMovementComponent) 1.000000 8.000000 box
- (te::components::JumpComponent) 1.000000 7.000000 box
- (te::components::NameComponent) 1.000000 6.000000 box
- (te::components::PlayerInputComponent) 1.000000 5.000000 box
- (te::components::PlayerStateComponent) 1.000000 4.000000 box
- (te::components::RigidbodyComponent) 1.000000 3.000000 box
- (te::components::SpriteComponent) 1.000000 2.000000 box
- (te::components::TransformComponent) 1.000000 1.000000 box
- (te::components::VelocityComponent) 1.000000 0.000000 box
+ (te::components::Component) 1.000000 1.000000 box
+ (te::components::PlayerInputComponent) 0.000000 0.000000 box
+ (te::components::SpriteComponent) 1.000000 0.000000 box
+ (te::components::TransformComponent) 2.000000 0.000000 box
 
 % ----- relations -----
 
 solid
-1 0.000000 12.250000 out
+1 1.000000 0.250000 out
 solid
-0 0.000000 12.500000 hedge
+0.000000 2.000000 1.000000 conn
 solid
-0 0.000000 11.500000 hedge
+0 0.000000 0.750000 in
 solid
-0 0.000000 10.500000 hedge
+0 1.000000 0.750000 in
 solid
-0 0.000000 9.500000 hedge
-solid
-0 0.000000 8.500000 hedge
-solid
-0 0.000000 7.500000 hedge
-solid
-0 0.000000 6.500000 hedge
-solid
-0 0.000000 5.500000 hedge
-solid
-0 0.000000 4.500000 hedge
-solid
-0 0.000000 3.500000 hedge
-solid
-0 0.000000 2.500000 hedge
-solid
-0 0.000000 1.500000 hedge
-solid
-0 0.000000 0.500000 hedge
-solid
-0.000000 13.000000 0.500000 vedge
+0 2.000000 0.750000 in

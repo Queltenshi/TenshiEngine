@@ -2,6 +2,11 @@
 \hypertarget{structte_1_1components_1_1SpriteComponent}{}\label{structte_1_1components_1_1SpriteComponent}\index{te::components::SpriteComponent@{te::components::SpriteComponent}}
 
 
+component with sprite/texture  
+
+
+
+
 {\ttfamily \#include $<$Sprite\+Component.\+hpp$>$}
 
 Inheritance diagram for te\+::components\+::Sprite\+Component\+:\begin{figure}[H]
@@ -14,24 +19,34 @@ Inheritance diagram for te\+::components\+::Sprite\+Component\+:\begin{figure}[H
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{structte_1_1components_1_1SpriteComponent_a7ff1859428915ac6843015615000f75f}{Sprite\+Component}} (sf\+::\+Texture \&\mbox{\hyperlink{structte_1_1components_1_1SpriteComponent_a7b34cce206697ed537bacca5dfb230f4}{texture}})
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{structte_1_1components_1_1SpriteComponent_a126c45e2f7a251c34963f3e8ec1dd238}{to\+String}} () const override
-\item 
-std\+::string \mbox{\hyperlink{structte_1_1components_1_1SpriteComponent_a5d758354ea95f992409bfc81cb17bf93}{name}} () const override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em shows data as a string \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structte_1_1components_1_1Component}{te\+::components\+::\+Component}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structte_1_1components_1_1Component_a944fedf322932b0fa5c3355bd3e5f1bd}{Component}} ()=default
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{structte_1_1components_1_1Component_a8c101e6b8887c8b8d922b6d550a1ace4}{Component}} (std\+::string \mbox{\hyperlink{structte_1_1components_1_1Component_ab0302b26f5aa5b3185126f6b5b0174a5}{name}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-sf\+::\+Texture \& \mbox{\hyperlink{structte_1_1components_1_1SpriteComponent_a7b34cce206697ed537bacca5dfb230f4}{texture}}
+\Hypertarget{structte_1_1components_1_1SpriteComponent_a7b34cce206697ed537bacca5dfb230f4}\label{structte_1_1components_1_1SpriteComponent_a7b34cce206697ed537bacca5dfb230f4} 
+sf\+::\+Texture \& {\bfseries texture}
+\begin{DoxyCompactList}\small\item\em Texture for the sprite. \end{DoxyCompactList}\item 
+\Hypertarget{structte_1_1components_1_1SpriteComponent_a721f4769344cc7593df7e18600a18edd}\label{structte_1_1components_1_1SpriteComponent_a721f4769344cc7593df7e18600a18edd} 
+sf\+::\+Sprite {\bfseries sprite}
+\begin{DoxyCompactList}\small\item\em Sprite used for rendering. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{structte_1_1components_1_1Component}{te\+::components\+::\+Component}}}
+\begin{DoxyCompactItemize}
 \item 
-sf\+::\+Sprite \mbox{\hyperlink{structte_1_1components_1_1SpriteComponent_a721f4769344cc7593df7e18600a18edd}{sprite}}
-\end{DoxyCompactItemize}
+std\+::string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em name of component \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+component with sprite/texture 
+
+stores a sprite and texture 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{structte_1_1components_1_1SpriteComponent_a7ff1859428915ac6843015615000f75f}\label{structte_1_1components_1_1SpriteComponent_a7ff1859428915ac6843015615000f75f} 
@@ -42,17 +57,18 @@ sf\+::\+Sprite \mbox{\hyperlink{structte_1_1components_1_1SpriteComponent_a721f4
 
 
 
+Constructor. 
+
+creates the component with given texture
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & texture for the sprite \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
-\Hypertarget{structte_1_1components_1_1SpriteComponent_a5d758354ea95f992409bfc81cb17bf93}\label{structte_1_1components_1_1SpriteComponent_a5d758354ea95f992409bfc81cb17bf93} 
-\index{te::components::SpriteComponent@{te::components::SpriteComponent}!name@{name}}
-\index{name@{name}!te::components::SpriteComponent@{te::components::SpriteComponent}}
-\doxysubsubsection{\texorpdfstring{name()}{name()}}
-{\footnotesize\ttfamily std\+::string te\+::components\+::\+Sprite\+Component\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
-
-
-
-Implements \mbox{\hyperlink{structte_1_1components_1_1Component_ac7dceb04ea655cb073a600d830d51a34}{te\+::components\+::\+Component}}.
-
 \Hypertarget{structte_1_1components_1_1SpriteComponent_a126c45e2f7a251c34963f3e8ec1dd238}\label{structte_1_1components_1_1SpriteComponent_a126c45e2f7a251c34963f3e8ec1dd238} 
 \index{te::components::SpriteComponent@{te::components::SpriteComponent}!toString@{toString}}
 \index{toString@{toString}!te::components::SpriteComponent@{te::components::SpriteComponent}}
@@ -61,25 +77,14 @@ Implements \mbox{\hyperlink{structte_1_1components_1_1Component_ac7dceb04ea655cb
 
 
 
+shows data as a string 
+
+converts the data into a string, components do override this method 
+
 Implements \mbox{\hyperlink{structte_1_1components_1_1Component_ab62e6b61f57db90657a5f0e67dcfc365}{te\+::components\+::\+Component}}.
-
-
-
-\doxysubsection{Member Data Documentation}
-\Hypertarget{structte_1_1components_1_1SpriteComponent_a721f4769344cc7593df7e18600a18edd}\label{structte_1_1components_1_1SpriteComponent_a721f4769344cc7593df7e18600a18edd} 
-\index{te::components::SpriteComponent@{te::components::SpriteComponent}!sprite@{sprite}}
-\index{sprite@{sprite}!te::components::SpriteComponent@{te::components::SpriteComponent}}
-\doxysubsubsection{\texorpdfstring{sprite}{sprite}}
-{\footnotesize\ttfamily sf\+::\+Sprite te\+::components\+::\+Sprite\+Component\+::sprite}
-
-\Hypertarget{structte_1_1components_1_1SpriteComponent_a7b34cce206697ed537bacca5dfb230f4}\label{structte_1_1components_1_1SpriteComponent_a7b34cce206697ed537bacca5dfb230f4} 
-\index{te::components::SpriteComponent@{te::components::SpriteComponent}!texture@{texture}}
-\index{texture@{texture}!te::components::SpriteComponent@{te::components::SpriteComponent}}
-\doxysubsubsection{\texorpdfstring{texture}{texture}}
-{\footnotesize\ttfamily sf\+::\+Texture\& te\+::components\+::\+Sprite\+Component\+::texture}
 
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/\+Tenshi\+Engine/\+Engine/\+Components/\mbox{\hyperlink{SpriteComponent_8hpp}{Sprite\+Component.\+hpp}}\end{DoxyCompactItemize}
+include/\+Tenshi\+Engine/\+Engine/\+Components/Sprite\+Component.\+hpp\end{DoxyCompactItemize}

@@ -1,23 +1,26 @@
 \doxysection{Component.\+hpp}
 \hypertarget{Component_8hpp_source}{}\label{Component_8hpp_source}\index{include/TenshiEngine/Engine/Components/Component.hpp@{include/TenshiEngine/Engine/Components/Component.hpp}}
-\mbox{\hyperlink{Component_8hpp}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00004\ }
-\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacete}{te}}\{}
-\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }components\{}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structte_1_1components_1_1Component}{Component}}\{}
-\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Component_a944fedf322932b0fa5c3355bd3e5f1bd}{Component}}()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Component_ab62e6b61f57db90657a5f0e67dcfc365}{toString}}()\ \textcolor{keyword}{const}\ =\ 0;}
-\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Component_ac7dceb04ea655cb073a600d830d51a34}{name}}()\ \textcolor{keyword}{const}\ =\ 0;}
-\DoxyCodeLine{00014\ \};}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \}}
-\DoxyCodeLine{00017\ \}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Utils/boolToString.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }components\{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structte_1_1components_1_1Component}{Component}}\{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Component_a8c101e6b8887c8b8d922b6d550a1ace4}{Component}}(std::string\ \mbox{\hyperlink{structte_1_1components_1_1Component_ab0302b26f5aa5b3185126f6b5b0174a5}{name}}):\ \mbox{\hyperlink{structte_1_1components_1_1Component_ab0302b26f5aa5b3185126f6b5b0174a5}{name}}(\mbox{\hyperlink{structte_1_1components_1_1Component_ab0302b26f5aa5b3185126f6b5b0174a5}{name}})\{\}}
+\DoxyCodeLine{00023\ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Component_ab62e6b61f57db90657a5f0e67dcfc365}{toString}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \ \ \ \ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Component_ab0302b26f5aa5b3185126f6b5b0174a5}{name}};}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \}}
+\DoxyCodeLine{00037\ \}}
 
 \end{DoxyCode}

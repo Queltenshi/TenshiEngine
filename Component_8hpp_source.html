@@ -97,36 +97,38 @@ $(document).ready(function(){initNavTree('Component_8hpp_source.html',''); initR
   <div class="headertitle"><div class="title">Component.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="Component_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacete.html">te</a>{</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>components{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1Component.html">    8</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structte_1_1components_1_1Component.html">Component</a>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1Component.html#a944fedf322932b0fa5c3355bd3e5f1bd">   10</a></span>    <a class="code hl_function" href="structte_1_1components_1_1Component.html#a944fedf322932b0fa5c3355bd3e5f1bd">Component</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1Component.html#ab62e6b61f57db90657a5f0e67dcfc365">   12</a></span>    <span class="keyword">virtual</span> std::string <a class="code hl_function" href="structte_1_1components_1_1Component.html#ab62e6b61f57db90657a5f0e67dcfc365">toString</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1Component.html#ac7dceb04ea655cb073a600d830d51a34">   13</a></span>    <span class="keyword">virtual</span> std::string <a class="code hl_function" href="structte_1_1components_1_1Component.html#ac7dceb04ea655cb073a600d830d51a34">name</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>};</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;TenshiEngine/Engine/Utils/boolToString.hpp&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>te{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>components{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1Component.html">   13</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structte_1_1components_1_1Component.html">Component</a>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1Component.html#a8c101e6b8887c8b8d922b6d550a1ace4">   22</a></span>    <a class="code hl_function" href="structte_1_1components_1_1Component.html#a8c101e6b8887c8b8d922b6d550a1ace4">Component</a>(std::string <a class="code hl_variable" href="structte_1_1components_1_1Component.html#ab0302b26f5aa5b3185126f6b5b0174a5">name</a>): <a class="code hl_variable" href="structte_1_1components_1_1Component.html#ab0302b26f5aa5b3185126f6b5b0174a5">name</a>(<a class="code hl_variable" href="structte_1_1components_1_1Component.html#ab0302b26f5aa5b3185126f6b5b0174a5">name</a>){}</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1Component.html#ab62e6b61f57db90657a5f0e67dcfc365">   30</a></span>    <span class="keyword">virtual</span> std::string <a class="code hl_function" href="structte_1_1components_1_1Component.html#ab62e6b61f57db90657a5f0e67dcfc365">toString</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1Component.html#ab0302b26f5aa5b3185126f6b5b0174a5">   33</a></span>    std::string <a class="code hl_variable" href="structte_1_1components_1_1Component.html#ab0302b26f5aa5b3185126f6b5b0174a5">name</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
 </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
-<div class="ttc" id="anamespacete_html"><div class="ttname"><a href="namespacete.html">te</a></div><div class="ttdef"><b>Definition</b> AnimationComponent.hpp:6</div></div>
-<div class="ttc" id="astructte_1_1components_1_1Component_html"><div class="ttname"><a href="structte_1_1components_1_1Component.html">te::components::Component</a></div><div class="ttdef"><b>Definition</b> Component.hpp:8</div></div>
-<div class="ttc" id="astructte_1_1components_1_1Component_html_a944fedf322932b0fa5c3355bd3e5f1bd"><div class="ttname"><a href="structte_1_1components_1_1Component.html#a944fedf322932b0fa5c3355bd3e5f1bd">te::components::Component::Component</a></div><div class="ttdeci">Component()=default</div></div>
-<div class="ttc" id="astructte_1_1components_1_1Component_html_ab62e6b61f57db90657a5f0e67dcfc365"><div class="ttname"><a href="structte_1_1components_1_1Component.html#ab62e6b61f57db90657a5f0e67dcfc365">te::components::Component::toString</a></div><div class="ttdeci">virtual std::string toString() const =0</div></div>
-<div class="ttc" id="astructte_1_1components_1_1Component_html_ac7dceb04ea655cb073a600d830d51a34"><div class="ttname"><a href="structte_1_1components_1_1Component.html#ac7dceb04ea655cb073a600d830d51a34">te::components::Component::name</a></div><div class="ttdeci">virtual std::string name() const =0</div></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
+<div class="ttc" id="astructte_1_1components_1_1Component_html"><div class="ttname"><a href="structte_1_1components_1_1Component.html">te::components::Component</a></div><div class="ttdoc">Base component.</div><div class="ttdef"><b>Definition</b> Component.hpp:13</div></div>
+<div class="ttc" id="astructte_1_1components_1_1Component_html_a8c101e6b8887c8b8d922b6d550a1ace4"><div class="ttname"><a href="structte_1_1components_1_1Component.html#a8c101e6b8887c8b8d922b6d550a1ace4">te::components::Component::Component</a></div><div class="ttdeci">Component(std::string name)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> Component.hpp:22</div></div>
+<div class="ttc" id="astructte_1_1components_1_1Component_html_ab0302b26f5aa5b3185126f6b5b0174a5"><div class="ttname"><a href="structte_1_1components_1_1Component.html#ab0302b26f5aa5b3185126f6b5b0174a5">te::components::Component::name</a></div><div class="ttdeci">std::string name</div><div class="ttdoc">name of component</div><div class="ttdef"><b>Definition</b> Component.hpp:33</div></div>
+<div class="ttc" id="astructte_1_1components_1_1Component_html_ab62e6b61f57db90657a5f0e67dcfc365"><div class="ttname"><a href="structte_1_1components_1_1Component.html#ab62e6b61f57db90657a5f0e67dcfc365">te::components::Component::toString</a></div><div class="ttdeci">virtual std::string toString() const =0</div><div class="ttdoc">shows data as a string</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8d3d1e23c3ffe723e56c923af0032a3f.html">TenshiEngine</a></li><li class="navelem"><a class="el" href="dir_33cdd7c21c2a7467f2512bf8be114203.html">Engine</a></li><li class="navelem"><a class="el" href="dir_f1c322a58498b6464dbccbb9438fee84.html">Components</a></li><li class="navelem"><a class="el" href="Component_8hpp.html">Component.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8d3d1e23c3ffe723e56c923af0032a3f.html">TenshiEngine</a></li><li class="navelem"><a class="el" href="dir_33cdd7c21c2a7467f2512bf8be114203.html">Engine</a></li><li class="navelem"><a class="el" href="dir_f1c322a58498b6464dbccbb9438fee84.html">Components</a></li><li class="navelem"><b>Component.hpp</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

@@ -1,31 +1,31 @@
 \doxysection{Game\+Base.\+hpp}
 \hypertarget{GameBase_8hpp_source}{}\label{GameBase_8hpp_source}\index{include/TenshiEngine/Game/GameBase.hpp@{include/TenshiEngine/Game/GameBase.hpp}}
-\mbox{\hyperlink{GameBase_8hpp}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{TenshiEngine/Engine/Core/Registry.hpp}}"{}}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{RenderSystem_8hpp}{TenshiEngine/Engine/Systems/RenderSystem.hpp}}"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Systems_8hpp}{TenshiEngine/Engine/Systems/Systems.hpp}}"{}}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Logger_8hpp}{TenshiEngine/Engine/Core/Logger.hpp}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Core/Registry.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Systems.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }te\{}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacete}{te}}\{}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1GameBase}{GameBase}}\{}
-\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{classte_1_1GameBase}{GameBase}}(std::string\ windowName);}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1GameBase_accb4b63d1277e46131d66a66c0e1e63b}{run}}();}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1GameBase_a0a8905a011a8ab2cd4b44ec611ff2aeb}{init}}();}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \mbox{\hyperlink{classte_1_1GameBase_ad88938b232f7f7f7d38850bce672cf89}{mRegistry}};}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00021\ \ \ \ \ sf::RenderWindow\ mWindow;}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//systems::RenderSystem\ mRenderSystem;}}
-\DoxyCodeLine{00023\ \};}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \}}
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1GameBase}{GameBase}}\{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classte_1_1GameBase}{GameBase}}(std::string\ windowName);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1GameBase_accb4b63d1277e46131d66a66c0e1e63b}{run}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1GameBase_a0a8905a011a8ab2cd4b44ec611ff2aeb}{init}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry}{Registry}}\ mRegistry;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \ \ sf::RenderWindow\ mWindow;}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//systems::RenderSystem\ mRenderSystem;}}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \}}
 
 \end{DoxyCode}

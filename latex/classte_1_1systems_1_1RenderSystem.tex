@@ -2,6 +2,11 @@
 \hypertarget{classte_1_1systems_1_1RenderSystem}{}\label{classte_1_1systems_1_1RenderSystem}\index{te::systems::RenderSystem@{te::systems::RenderSystem}}
 
 
+\doxylink{classte_1_1systems_1_1System}{System} for rendering the sprite.  
+
+
+
+
 {\ttfamily \#include $<$Render\+System.\+hpp$>$}
 
 Inheritance diagram for te\+::systems\+::Render\+System\+:\begin{figure}[H]
@@ -14,23 +19,28 @@ Inheritance diagram for te\+::systems\+::Render\+System\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classte_1_1systems_1_1RenderSystem_a232da5a6b46708c6ee9c991e4ae2fe7f}{Render\+System}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, sf\+::\+Render\+Window \&window)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classte_1_1systems_1_1RenderSystem_a4e07fc6094ffc1700b10dda13dd1da24}{update}} () override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em updates the system \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classte_1_1systems_1_1System}{te\+::systems\+::\+System}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classte_1_1systems_1_1System_ab6d0dbe91eab8c19ca78d46dea4da274}{System}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, std\+::string name)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classte_1_1systems_1_1System}{te\+::systems\+::\+System}}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classte_1_1Registry}{Registry}} \& \mbox{\hyperlink{classte_1_1systems_1_1System_aacef5c1d0b0ec002f21c7fcf8cc4a06b}{m\+Registry}}
+\mbox{\hyperlink{classte_1_1Registry}{Registry}} \& {\bfseries m\+Registry}
 \item 
-std\+::string \mbox{\hyperlink{classte_1_1systems_1_1System_aa7110c3857f3df77211658ad1206ca7f}{m\+Name}}
+std\+::string {\bfseries m\+Name}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+\doxylink{classte_1_1systems_1_1System}{System} for rendering the sprite. 
+
+Does rendering of the sprite in the window 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classte_1_1systems_1_1RenderSystem_a232da5a6b46708c6ee9c991e4ae2fe7f}\label{classte_1_1systems_1_1RenderSystem_a232da5a6b46708c6ee9c991e4ae2fe7f} 
@@ -39,6 +49,19 @@ std\+::string \mbox{\hyperlink{classte_1_1systems_1_1System_aa7110c3857f3df77211
 \doxysubsubsection{\texorpdfstring{RenderSystem()}{RenderSystem()}}
 {\footnotesize\ttfamily te\+::systems\+::\+Render\+System\+::\+Render\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry,  }\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
 
+
+
+Constructor. 
+
+creates the \doxylink{classte_1_1systems_1_1System}{System}
+
+
+\begin{DoxyParams}{Parameters}
+{\em registry} & reference to the registry \\
+\hline
+{\em window} & reference to the window \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -50,11 +73,15 @@ std\+::string \mbox{\hyperlink{classte_1_1systems_1_1System_aa7110c3857f3df77211
 
 
 
+updates the system 
+
+Used for updating and handling the logic, systems do override this method 
+
 Implements \mbox{\hyperlink{classte_1_1systems_1_1System_a3640e994e8b9aad924d11ba67d07d421}{te\+::systems\+::\+System}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\+Tenshi\+Engine/\+Engine/\+Systems/\mbox{\hyperlink{RenderSystem_8hpp}{Render\+System.\+hpp}}\item 
-src/\+Engine/\+Systems/\mbox{\hyperlink{RenderSystem_8cpp}{Render\+System.\+cpp}}\end{DoxyCompactItemize}
+include/\+Tenshi\+Engine/\+Engine/\+Systems/Render\+System.\+hpp\item 
+src/\+Engine/\+Systems/Render\+System.\+cpp\end{DoxyCompactItemize}

@@ -1,47 +1,52 @@
 \doxysection{Logger.\+hpp}
 \hypertarget{Logger_8hpp_source}{}\label{Logger_8hpp_source}\index{include/TenshiEngine/Engine/Core/Logger.hpp@{include/TenshiEngine/Engine/Core/Logger.hpp}}
-\mbox{\hyperlink{Logger_8hpp}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
 \DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacete}{te}}\{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }te\{}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespacete_a3ffe2e4dc4bb5297c43d701fcfbcd825}{LogLevel}}\{\mbox{\hyperlink{namespacete_a3ffe2e4dc4bb5297c43d701fcfbcd825adc30ec20708ef7b0f641ef78b7880a15}{DEBUG}},\ \mbox{\hyperlink{namespacete_a3ffe2e4dc4bb5297c43d701fcfbcd825a551b723eafd6a31d444fcb2f5920fbd3}{INFO}},\ \mbox{\hyperlink{namespacete_a3ffe2e4dc4bb5297c43d701fcfbcd825a059e9861e0400dfbe05c98a841f3f96b}{WARNING}},\ \mbox{\hyperlink{namespacete_a3ffe2e4dc4bb5297c43d701fcfbcd825abb1ca97ec761fc37101737ba0aa2e7c5}{ERROR}}\};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{enum\ class}\ LogLevel\{DEBUG,\ INFO,\ WARNING,\ ERROR,\ CRITICAL\};}
 \DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1Logger}{Logger}}\{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }Logger\{}
 \DoxyCodeLine{00011\ }
 \DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classte_1_1Logger_ad343dd4cae78869ece11b3ca07a5cf7e}{Logger}}()=\textcolor{keyword}{delete};}
-\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classte_1_1Logger_a0b11211ae02db32305bca9f40fdd452b}{Logger}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classte_1_1Logger}{Logger}}\&)=\textcolor{keyword}{delete};}
-\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classte_1_1Logger_afd495ecbeb66f7df1969a9acace379cd}{Logger}}(\mbox{\hyperlink{classte_1_1Logger}{Logger}}\&\&)=\textcolor{keyword}{delete};\ }
+\DoxyCodeLine{00013\ \ \ \ \ Logger()=\textcolor{keyword}{delete};}
+\DoxyCodeLine{00014\ \ \ \ \ Logger(\textcolor{keyword}{const}\ Logger\&)=\textcolor{keyword}{delete};}
+\DoxyCodeLine{00015\ \ \ \ \ Logger(Logger\&\&)=\textcolor{keyword}{delete};\ }
 \DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{namespacete_a3ffe2e4dc4bb5297c43d701fcfbcd825}{LogLevel}}\ \mbox{\hyperlink{classte_1_1Logger_a2fb771ee5f3a5226cfb59a07cd2524a0}{currentLevel}}\ =\ \mbox{\hyperlink{namespacete_a3ffe2e4dc4bb5297c43d701fcfbcd825adc30ec20708ef7b0f641ef78b7880a15}{LogLevel::DEBUG}};}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ LogLevel\ currentLevel\ =\ LogLevel::DEBUG;}
 \DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1Logger_a574ec3c8dd82ca1f047a8344d3570ce1}{log}}(\mbox{\hyperlink{namespacete_a3ffe2e4dc4bb5297c43d701fcfbcd825}{LogLevel}}\ logLevel,\ \textcolor{keyword}{const}\ std::string\ \&system,\ \textcolor{keyword}{const}\ std::string\ \&message);}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1Logger_a92286ef59a24ea39ec7f83af1cbd1e69}{debug}}(\textcolor{keyword}{const}\ std::string\ \&source,\ \textcolor{keyword}{const}\ std::string\ \&message);}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ toString(\mbox{\hyperlink{namespacete_a3ffe2e4dc4bb5297c43d701fcfbcd825}{LogLevel}}\ logLevel)\ \{}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (logLevel)\ \{}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacete_a3ffe2e4dc4bb5297c43d701fcfbcd825adc30ec20708ef7b0f641ef78b7880a15}{LogLevel::DEBUG}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}DEBUG"{}};}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacete_a3ffe2e4dc4bb5297c43d701fcfbcd825a551b723eafd6a31d444fcb2f5920fbd3}{LogLevel::INFO}}:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}INFO"{}};}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacete_a3ffe2e4dc4bb5297c43d701fcfbcd825a059e9861e0400dfbe05c98a841f3f96b}{LogLevel::WARNING}}:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}WARNING"{}};}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{namespacete_a3ffe2e4dc4bb5297c43d701fcfbcd825abb1ca97ec761fc37101737ba0aa2e7c5}{LogLevel::ERROR}}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}ERROR"{}};}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}UNKNOWN"{}};}
-\DoxyCodeLine{00031\ \ \ \ \ \}}
-\DoxyCodeLine{00032\ \};}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ LOG\_DEBUG(source,\ message)\ \(\backslash\)}}
-\DoxyCodeLine{00035\ \textcolor{preprocessor}{\ \ \ \ do\ \{\ \(\backslash\)}}
-\DoxyCodeLine{00036\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ if\ (Logger::currentLevel\ ==\ LogLevel::DEBUG)\ \{\ \(\backslash\)}}
-\DoxyCodeLine{00037\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ Logger::debug(source,\ message);\ \(\backslash\)}}
-\DoxyCodeLine{00038\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \}\ \(\backslash\)}}
-\DoxyCodeLine{00039\ \textcolor{preprocessor}{\ \ \ \ \}\ while(0)}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ debug(\textcolor{keyword}{const}\ std::string\ \&source,\ \textcolor{keyword}{const}\ std::string\ \&message);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ warning(\textcolor{keyword}{const}\ std::string\ \&source,\ \textcolor{keyword}{const}\ std::string\ \&message);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ error(\textcolor{keyword}{const}\ std::string\ \&source,\ \textcolor{keyword}{const}\ std::string\ \&message);}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ info(\textcolor{keyword}{const}\ std::string\ \&source,\ \textcolor{keyword}{const}\ std::string\ \&message);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ critical(\textcolor{keyword}{const}\ std::string\ \&source,\ \textcolor{keyword}{const}\ std::string\ \&message);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ log(LogLevel\ logLevel,\ \textcolor{keyword}{const}\ std::string\ \&system,\ \textcolor{keyword}{const}\ std::string\ \&message);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ toString(LogLevel\ logLevel)\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (logLevel)\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ LogLevel::DEBUG:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}DEBUG"{}};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ LogLevel::INFO:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}INFO"{}};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ LogLevel::WARNING:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}WARNING"{}};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ LogLevel::ERROR:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}ERROR"{}};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ LogLevel::CRITICAL:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}CRITICAL"{}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}UNKNOWN"{}};}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \}}
 \DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ LOG\_DEBUG(source,\ message)\ \(\backslash\)}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\ \ \ \ do\ \{\ \(\backslash\)}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ if\ (te::Logger::currentLevel\ ==\ te::LogLevel::DEBUG)\ \{\ \(\backslash\)}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ te::Logger::debug(source,\ message);\ \(\backslash\)}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \}\ \(\backslash\)}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\ \ \ \ \}\ while(0)}}
 
 \end{DoxyCode}

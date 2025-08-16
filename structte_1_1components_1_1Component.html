@@ -91,10 +91,14 @@ $(document).ready(function(){initNavTree('structte_1_1components_1_1Component.ht
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structte_1_1components_1_1Component-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">te::components::Component Struct Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Base component.  
+ <a href="structte_1_1components_1_1Component.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Component_8hpp_source.html">Component.hpp</a>&gt;</code></p>
 <div class="dynheader">
@@ -103,34 +107,33 @@ Inheritance diagram for te::components::Component:</div>
  <div class="center">
   <img src="structte_1_1components_1_1Component.png" usemap="#te::components::Component_map" alt=""/>
   <map id="te::components::Component_map" name="te::components::Component_map">
-<area href="structte_1_1components_1_1AnimationComponent.html" alt="te::components::AnimationComponent" shape="rect" coords="289,56,568,80"/>
-<area href="structte_1_1components_1_1ColliderComponent.html" alt="te::components::ColliderComponent" shape="rect" coords="289,112,568,136"/>
-<area href="structte_1_1components_1_1GroundedComponent.html" alt="te::components::GroundedComponent" shape="rect" coords="289,168,568,192"/>
-<area href="structte_1_1components_1_1HealthComponent.html" alt="te::components::HealthComponent" shape="rect" coords="289,224,568,248"/>
-<area href="structte_1_1components_1_1HorizontalMovementComponent.html" alt="te::components::HorizontalMovementComponent" shape="rect" coords="289,280,568,304"/>
-<area href="structte_1_1components_1_1JumpComponent.html" alt="te::components::JumpComponent" shape="rect" coords="289,336,568,360"/>
-<area href="structte_1_1components_1_1NameComponent.html" alt="te::components::NameComponent" shape="rect" coords="289,392,568,416"/>
-<area href="structte_1_1components_1_1PlayerInputComponent.html" alt="te::components::PlayerInputComponent" shape="rect" coords="289,448,568,472"/>
-<area href="structte_1_1components_1_1PlayerStateComponent.html" alt="te::components::PlayerStateComponent" shape="rect" coords="289,504,568,528"/>
-<area href="structte_1_1components_1_1RigidbodyComponent.html" alt="te::components::RigidbodyComponent" shape="rect" coords="289,560,568,584"/>
-<area href="structte_1_1components_1_1SpriteComponent.html" alt="te::components::SpriteComponent" shape="rect" coords="289,616,568,640"/>
-<area href="structte_1_1components_1_1TransformComponent.html" alt="te::components::TransformComponent" shape="rect" coords="289,672,568,696"/>
-<area href="structte_1_1components_1_1VelocityComponent.html" alt="te::components::VelocityComponent" shape="rect" coords="289,728,568,752"/>
+<area href="structte_1_1components_1_1PlayerInputComponent.html" title="component with input states" alt="te::components::PlayerInputComponent" shape="rect" coords="0,56,228,80"/>
+<area href="structte_1_1components_1_1SpriteComponent.html" title="component with sprite/texture" alt="te::components::SpriteComponent" shape="rect" coords="238,56,466,80"/>
+<area href="structte_1_1components_1_1TransformComponent.html" title="component with position and scale" alt="te::components::TransformComponent" shape="rect" coords="476,56,704,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a944fedf322932b0fa5c3355bd3e5f1bd" id="r_a944fedf322932b0fa5c3355bd3e5f1bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structte_1_1components_1_1Component.html#a944fedf322932b0fa5c3355bd3e5f1bd">Component</a> ()=default</td></tr>
-<tr class="separator:a944fedf322932b0fa5c3355bd3e5f1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c101e6b8887c8b8d922b6d550a1ace4" id="r_a8c101e6b8887c8b8d922b6d550a1ace4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structte_1_1components_1_1Component.html#a8c101e6b8887c8b8d922b6d550a1ace4">Component</a> (std::string <a class="el" href="structte_1_1components_1_1Component.html#ab0302b26f5aa5b3185126f6b5b0174a5">name</a>)</td></tr>
+<tr class="memdesc:a8c101e6b8887c8b8d922b6d550a1ace4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="separator:a8c101e6b8887c8b8d922b6d550a1ace4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab62e6b61f57db90657a5f0e67dcfc365" id="r_ab62e6b61f57db90657a5f0e67dcfc365"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structte_1_1components_1_1Component.html#ab62e6b61f57db90657a5f0e67dcfc365">toString</a> () const =0</td></tr>
+<tr class="memdesc:ab62e6b61f57db90657a5f0e67dcfc365"><td class="mdescLeft">&#160;</td><td class="mdescRight">shows data as a string  <br /></td></tr>
 <tr class="separator:ab62e6b61f57db90657a5f0e67dcfc365"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7dceb04ea655cb073a600d830d51a34" id="r_ac7dceb04ea655cb073a600d830d51a34"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structte_1_1components_1_1Component.html#ac7dceb04ea655cb073a600d830d51a34">name</a> () const =0</td></tr>
-<tr class="separator:ac7dceb04ea655cb073a600d830d51a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ab0302b26f5aa5b3185126f6b5b0174a5" id="r_ab0302b26f5aa5b3185126f6b5b0174a5"><td class="memItemLeft" align="right" valign="top"><a id="ab0302b26f5aa5b3185126f6b5b0174a5" name="ab0302b26f5aa5b3185126f6b5b0174a5"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="memdesc:ab0302b26f5aa5b3185126f6b5b0174a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">name of component <br /></td></tr>
+<tr class="separator:ab0302b26f5aa5b3185126f6b5b0174a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a944fedf322932b0fa5c3355bd3e5f1bd" name="a944fedf322932b0fa5c3355bd3e5f1bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a944fedf322932b0fa5c3355bd3e5f1bd">&#9670;&#160;</a></span>Component()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Base component. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a8c101e6b8887c8b8d922b6d550a1ace4" name="a8c101e6b8887c8b8d922b6d550a1ace4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c101e6b8887c8b8d922b6d550a1ace4">&#9670;&#160;</a></span>Component()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,47 +144,30 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">te::components::Component::Component </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Constructor. </p>
+<p>Creates a component with given name</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>name of the component </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac7dceb04ea655cb073a600d830d51a34" name="ac7dceb04ea655cb073a600d830d51a34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7dceb04ea655cb073a600d830d51a34">&#9670;&#160;</a></span>name()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::string te::components::Component::name </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="structte_1_1components_1_1AnimationComponent.html#a6002218909ee9566bb9e3f9a3fb6bdb1">te::components::AnimationComponent</a>, <a class="el" href="structte_1_1components_1_1ColliderComponent.html#a6174a4e370e06b47c33373251daea75b">te::components::ColliderComponent</a>, <a class="el" href="structte_1_1components_1_1GroundedComponent.html#a9e18514fb661d3132ab7eebe1d2ea3c1">te::components::GroundedComponent</a>, <a class="el" href="structte_1_1components_1_1HealthComponent.html#a37486a81864700cd2e70866a18b09947">te::components::HealthComponent</a>, <a class="el" href="structte_1_1components_1_1JumpComponent.html#a9c4c65075723f53e8c2a37b31a07fc3d">te::components::JumpComponent</a>, <a class="el" href="structte_1_1components_1_1NameComponent.html#a93ed8a7efb23e83db4c51aeec7bedb08">te::components::NameComponent</a>, <a class="el" href="structte_1_1components_1_1PlayerInputComponent.html#a3f0bc5aa77b64959a8416b06707bcbcb">te::components::PlayerInputComponent</a>, <a class="el" href="structte_1_1components_1_1PlayerStateComponent.html#a8342af4eb27cbba7a71e0d706aef211e">te::components::PlayerStateComponent</a>, <a class="el" href="structte_1_1components_1_1RigidbodyComponent.html#aca935a468a991b36867db5c5fd31d8ce">te::components::RigidbodyComponent</a>, <a class="el" href="structte_1_1components_1_1SpriteComponent.html#a5d758354ea95f992409bfc81cb17bf93">te::components::SpriteComponent</a>, <a class="el" href="structte_1_1components_1_1TransformComponent.html#ad962918817783af133b81eefc13e4132">te::components::TransformComponent</a>, and <a class="el" href="structte_1_1components_1_1VelocityComponent.html#a7a999e637a44dd29bde287059ed80c73">te::components::VelocityComponent</a>.</p>
-
-</div>
-</div>
 <a id="ab62e6b61f57db90657a5f0e67dcfc365" name="ab62e6b61f57db90657a5f0e67dcfc365"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab62e6b61f57db90657a5f0e67dcfc365">&#9670;&#160;</a></span>toString()</h2>
 
@@ -205,7 +191,10 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="structte_1_1components_1_1AnimationComponent.html#ac1248d3cb03dbcb7544966f2512af6f3">te::components::AnimationComponent</a>, <a class="el" href="structte_1_1components_1_1ColliderComponent.html#add7f26c20823ca00645294d5213d89ce">te::components::ColliderComponent</a>, <a class="el" href="structte_1_1components_1_1GroundedComponent.html#added908a0d76ecd7593063139b2669a4">te::components::GroundedComponent</a>, <a class="el" href="structte_1_1components_1_1HealthComponent.html#a13698bcf658ab4ff92be43e4a21ab987">te::components::HealthComponent</a>, <a class="el" href="structte_1_1components_1_1HorizontalMovementComponent.html#afd146761c13f34588c68f38826b24b98">te::components::HorizontalMovementComponent</a>, <a class="el" href="structte_1_1components_1_1JumpComponent.html#a2f17747ee5f58155850c2ebc0017d370">te::components::JumpComponent</a>, <a class="el" href="structte_1_1components_1_1NameComponent.html#a499418bdfd9d9cc64fb63e2fe9427ba7">te::components::NameComponent</a>, <a class="el" href="structte_1_1components_1_1PlayerInputComponent.html#afa1c1ebbb05389ae4d89fd663878b34b">te::components::PlayerInputComponent</a>, <a class="el" href="structte_1_1components_1_1PlayerStateComponent.html#ae53d2163ecdfa4b6e3a02e1cbd319d34">te::components::PlayerStateComponent</a>, <a class="el" href="structte_1_1components_1_1RigidbodyComponent.html#afed6da3fce5df515e41b0b2850ef9323">te::components::RigidbodyComponent</a>, <a class="el" href="structte_1_1components_1_1SpriteComponent.html#a126c45e2f7a251c34963f3e8ec1dd238">te::components::SpriteComponent</a>, <a class="el" href="structte_1_1components_1_1TransformComponent.html#af16b111e1465f4deea0ab1df6bab4a3a">te::components::TransformComponent</a>, and <a class="el" href="structte_1_1components_1_1VelocityComponent.html#a7eceecea4cd748fdaf37d1598c935bc4">te::components::VelocityComponent</a>.</p>
+<p>shows data as a string </p>
+<p>converts the data into a string, components do override this method </p>
+
+<p>Implemented in <a class="el" href="structte_1_1components_1_1PlayerInputComponent.html#afa1c1ebbb05389ae4d89fd663878b34b">te::components::PlayerInputComponent</a>, <a class="el" href="structte_1_1components_1_1SpriteComponent.html#a126c45e2f7a251c34963f3e8ec1dd238">te::components::SpriteComponent</a>, and <a class="el" href="structte_1_1components_1_1TransformComponent.html#af16b111e1465f4deea0ab1df6bab4a3a">te::components::TransformComponent</a>.</p>
 
 </div>
 </div>
@@ -217,7 +206,7 @@ Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacete.html">te</a></li><li class="navelem"><a class="el" href="namespacete_1_1components.html">components</a></li><li class="navelem"><a class="el" href="structte_1_1components_1_1Component.html">Component</a></li>
+    <li class="navelem"><b>te</b></li><li class="navelem"><b>components</b></li><li class="navelem"><a class="el" href="structte_1_1components_1_1Component.html">Component</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

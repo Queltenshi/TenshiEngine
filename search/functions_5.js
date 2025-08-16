@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['healthcomponent_0',['healthcomponent',['../structte_1_1components_1_1HealthComponent.html#abc8c6cba8b021c64668af8828c4d29ce',1,'te::components::HealthComponent::HealthComponent()'],['../structte_1_1components_1_1HealthComponent.html#a01fb297e09505fbff690b50c002e29b5',1,'te::components::HealthComponent::HealthComponent(int hp)']]],
-  ['horizontalmovementcomponent_1',['HorizontalMovementComponent',['../structte_1_1components_1_1HorizontalMovementComponent.html#ae84e83418ce3dee56b4ee278b5823cc6',1,'te::components::HorizontalMovementComponent']]]
+  ['registry_0',['Registry',['../classte_1_1Registry.html#ac9fde2f8cf63b88d955daff21299fa3e',1,'te::Registry']]],
+  ['rendersystem_1',['RenderSystem',['../classte_1_1systems_1_1RenderSystem.html#a232da5a6b46708c6ee9c991e4ae2fe7f',1,'te::systems::RenderSystem']]],
+  ['run_2',['run',['../classte_1_1GameBase.html#accb4b63d1277e46131d66a66c0e1e63b',1,'te::GameBase']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['log_0',['log',['../classte_1_1Logger.html#a574ec3c8dd82ca1f047a8344d3570ce1',1,'te::Logger']]],
-  ['logger_1',['logger',['../classte_1_1Logger.html#ad343dd4cae78869ece11b3ca07a5cf7e',1,'te::Logger::Logger()=delete'],['../classte_1_1Logger.html#a0b11211ae02db32305bca9f40fdd452b',1,'te::Logger::Logger(const Logger &amp;)=delete'],['../classte_1_1Logger.html#afd495ecbeb66f7df1969a9acace379cd',1,'te::Logger::Logger(Logger &amp;&amp;)=delete']]]
+  ['update_0',['update',['../classte_1_1systems_1_1InputSystem.html#a966ac41f24309ed1402722cccf57cb37',1,'te::systems::InputSystem::update()'],['../classte_1_1systems_1_1RenderSystem.html#a4e07fc6094ffc1700b10dda13dd1da24',1,'te::systems::RenderSystem::update()'],['../classte_1_1systems_1_1System.html#a3640e994e8b9aad924d11ba67d07d421',1,'te::systems::System::update()']]],
+  ['updatesystems_1',['updateSystems',['../classte_1_1Registry.html#a53226e9ccc2c34336e0771b165db33d1',1,'te::Registry']]]
 ];

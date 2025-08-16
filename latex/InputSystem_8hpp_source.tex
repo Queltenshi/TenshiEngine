@@ -1,53 +1,47 @@
 \doxysection{Input\+System.\+hpp}
 \hypertarget{InputSystem_8hpp_source}{}\label{InputSystem_8hpp_source}\index{include/TenshiEngine/Engine/Systems/InputSystem.hpp@{include/TenshiEngine/Engine/Systems/InputSystem.hpp}}
-\mbox{\hyperlink{InputSystem_8hpp}{Go to the documentation of this file.}}
+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{System_8hpp}{System.hpp}}"{}}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Registry_8hpp}{TenshiEngine/Engine/Core/Registry.hpp}}"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}System.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Core/Registry.hpp"{}}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <SFML/Window/Keyboard.hpp>}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <SFML/Window/Mouse.hpp>}}
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <array>}}
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cstdint>}}
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{00010\ }
-\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacete}{te}}\{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }te\{}
 \DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }systems\{}
 \DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1systems_1_1InputSystem}{InputSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classte_1_1systems_1_1System}{System}}\{}
-\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{classte_1_1systems_1_1InputSystem}{InputSystem}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry);}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1systems_1_1InputSystem_a966ac41f24309ed1402722cccf57cb37}{update}}()\ \textcolor{keyword}{override};\ }
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//Key\ gets\ loaded\ from\ File}}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{enum\ class}\ InputType\{MOUSE,\ KEYBOARD\};}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{struct\ }Key\{}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ Key(InputType\ inputType,\ \textcolor{keyword}{const}\ std::string\ keyName,\ \textcolor{keyword}{const}\ std::string\ keyBind)}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ :inputType(inputType),\ keyName(keyName),\ keyBind(keyBind)\{\}}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ InputType\ inputType;}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::string\ keyName;}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::string\ keyBind;}
-\DoxyCodeLine{00029\ \ \ \ \ \};}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ keyPressed(Key\ \&key,\ \mbox{\hyperlink{namespacete_ae89584d0043c2eb870a72fa1769ebea3}{EntityID}}\ entityID);}
-\DoxyCodeLine{00032\ \ \ \ \ uint8\_t\ keyNameToCode(std::string\ \&keyName);}
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ updateComponent(std::string\ \&keyBind,\ \mbox{\hyperlink{structte_1_1components_1_1PlayerInputComponent}{components::PlayerInputComponent}}\ *component,\ \mbox{\hyperlink{namespacete_ae89584d0043c2eb870a72fa1769ebea3}{EntityID}}\ entityID);}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \ \ Key\ playerUp;}
-\DoxyCodeLine{00036\ \ \ \ \ Key\ playerDown;}
-\DoxyCodeLine{00037\ \ \ \ \ Key\ playerLeft;}
-\DoxyCodeLine{00038\ \ \ \ \ Key\ playerRight;}
-\DoxyCodeLine{00039\ \ \ \ \ Key\ playerJump;}
-\DoxyCodeLine{00040\ \ \ \ \ Key\ playerSprint;}
-\DoxyCodeLine{00041\ \ \ \ \ Key\ playerCrouch;}
-\DoxyCodeLine{00042\ \ \ \ \ Key\ playerAttack;}
-\DoxyCodeLine{00043\ \ \ \ \ std::array<Key*,\ 8>\ keys;}
-\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1systems_1_1InputSystem}{InputSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classte_1_1systems_1_1System}{System}}\{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classte_1_1systems_1_1InputSystem}{InputSystem}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1systems_1_1InputSystem_a966ac41f24309ed1402722cccf57cb37}{update}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//Key\ gets\ loaded\ from\ File}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{enum\ class}\ InputType\{MOUSE,\ KEYBOARD\};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{struct\ }Key\{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ Key(InputType\ inputType,\ \textcolor{keyword}{const}\ std::string\ keyName,\ \textcolor{keyword}{const}\ std::string\ keyBind)}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ :inputType(inputType),\ keyName(keyName),\ keyBind(keyBind)\{\}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ InputType\ inputType;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ std::string\ keyName;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ std::string\ keyBind;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ uint8\_t\ keyCode;}
+\DoxyCodeLine{00044\ \ \ \ \ \};}
 \DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ \}}
-\DoxyCodeLine{00047\ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ keyPressed(Key\ \&key,\ EntityID\ entityID);}
+\DoxyCodeLine{00047\ \ \ \ \ uint8\_t\ keyNameToCode(std::string\ \&keyName);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ updateComponent(std::string\ \&keyBind,\ \mbox{\hyperlink{structte_1_1components_1_1PlayerInputComponent}{components::PlayerInputComponent}}\ *component,\ EntityID\ entityID);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ Key\ keys[8];}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \}}
+\DoxyCodeLine{00054\ \}}
 
 \end{DoxyCode}

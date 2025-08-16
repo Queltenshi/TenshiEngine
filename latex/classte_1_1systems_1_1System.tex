@@ -2,29 +2,39 @@
 \hypertarget{classte_1_1systems_1_1System}{}\label{classte_1_1systems_1_1System}\index{te::systems::System@{te::systems::System}}
 
 
+Base system.  
+
+
+
+
 {\ttfamily \#include $<$System.\+hpp$>$}
 
 Inheritance diagram for te\+::systems\+::System\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=0.915033cm]{classte_1_1systems_1_1System}
+\includegraphics[height=2.000000cm]{classte_1_1systems_1_1System}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classte_1_1systems_1_1System_ab6d0dbe91eab8c19ca78d46dea4da274}{System}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, std\+::string name)
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classte_1_1systems_1_1System_a3640e994e8b9aad924d11ba67d07d421}{update}} ()=0
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em updates the system \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classte_1_1Registry}{Registry}} \& \mbox{\hyperlink{classte_1_1systems_1_1System_aacef5c1d0b0ec002f21c7fcf8cc4a06b}{m\+Registry}}
+\Hypertarget{classte_1_1systems_1_1System_aacef5c1d0b0ec002f21c7fcf8cc4a06b}\label{classte_1_1systems_1_1System_aacef5c1d0b0ec002f21c7fcf8cc4a06b} 
+\mbox{\hyperlink{classte_1_1Registry}{Registry}} \& {\bfseries m\+Registry}
 \item 
-std\+::string \mbox{\hyperlink{classte_1_1systems_1_1System_aa7110c3857f3df77211658ad1206ca7f}{m\+Name}}
+\Hypertarget{classte_1_1systems_1_1System_aa7110c3857f3df77211658ad1206ca7f}\label{classte_1_1systems_1_1System_aa7110c3857f3df77211658ad1206ca7f} 
+std\+::string {\bfseries m\+Name}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Base system. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classte_1_1systems_1_1System_ab6d0dbe91eab8c19ca78d46dea4da274}\label{classte_1_1systems_1_1System_ab6d0dbe91eab8c19ca78d46dea4da274} 
@@ -33,6 +43,19 @@ std\+::string \mbox{\hyperlink{classte_1_1systems_1_1System_aa7110c3857f3df77211
 \doxysubsubsection{\texorpdfstring{System()}{System()}}
 {\footnotesize\ttfamily te\+::systems\+::\+System\+::\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry,  }\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Constructor. 
+
+Creates a system with given name
+
+
+\begin{DoxyParams}{Parameters}
+{\em registry} & reference to the \doxylink{classte_1_1Registry}{Registry} \\
+\hline
+{\em name} & name of the \doxylink{classte_1_1systems_1_1System}{System} \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -44,25 +67,14 @@ std\+::string \mbox{\hyperlink{classte_1_1systems_1_1System_aa7110c3857f3df77211
 
 
 
-Implemented in \mbox{\hyperlink{classte_1_1systems_1_1AnimationSystem_ae9c43c7b45656f08038f8ce1f2f9aa36}{te\+::systems\+::\+Animation\+System}}, \mbox{\hyperlink{classte_1_1systems_1_1DebugRenderSystem_ab637ef025de5473e6922112298dc2122}{te\+::systems\+::\+Debug\+Render\+System}}, \mbox{\hyperlink{classte_1_1systems_1_1InputSystem_a966ac41f24309ed1402722cccf57cb37}{te\+::systems\+::\+Input\+System}}, \mbox{\hyperlink{classte_1_1systems_1_1MovementSystem_ae627f7fc6a4eebab0965cb6501f488b8}{te\+::systems\+::\+Movement\+System}}, \mbox{\hyperlink{classte_1_1systems_1_1PhysicsSystem_a713138b3fcc3e9904e57f0b8508e39e2}{te\+::systems\+::\+Physics\+System}}, and \mbox{\hyperlink{classte_1_1systems_1_1RenderSystem_a4e07fc6094ffc1700b10dda13dd1da24}{te\+::systems\+::\+Render\+System}}.
+updates the system 
 
+Used for updating and handling the logic, systems do override this method 
 
-
-\doxysubsection{Member Data Documentation}
-\Hypertarget{classte_1_1systems_1_1System_aa7110c3857f3df77211658ad1206ca7f}\label{classte_1_1systems_1_1System_aa7110c3857f3df77211658ad1206ca7f} 
-\index{te::systems::System@{te::systems::System}!mName@{mName}}
-\index{mName@{mName}!te::systems::System@{te::systems::System}}
-\doxysubsubsection{\texorpdfstring{mName}{mName}}
-{\footnotesize\ttfamily std\+::string te\+::systems\+::\+System\+::m\+Name\hspace{0.3cm}{\ttfamily [protected]}}
-
-\Hypertarget{classte_1_1systems_1_1System_aacef5c1d0b0ec002f21c7fcf8cc4a06b}\label{classte_1_1systems_1_1System_aacef5c1d0b0ec002f21c7fcf8cc4a06b} 
-\index{te::systems::System@{te::systems::System}!mRegistry@{mRegistry}}
-\index{mRegistry@{mRegistry}!te::systems::System@{te::systems::System}}
-\doxysubsubsection{\texorpdfstring{mRegistry}{mRegistry}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classte_1_1Registry}{Registry}}\& te\+::systems\+::\+System\+::m\+Registry\hspace{0.3cm}{\ttfamily [protected]}}
+Implemented in \mbox{\hyperlink{classte_1_1systems_1_1InputSystem_a966ac41f24309ed1402722cccf57cb37}{te\+::systems\+::\+Input\+System}}, and \mbox{\hyperlink{classte_1_1systems_1_1RenderSystem_a4e07fc6094ffc1700b10dda13dd1da24}{te\+::systems\+::\+Render\+System}}.
 
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/\+Tenshi\+Engine/\+Engine/\+Systems/\mbox{\hyperlink{System_8hpp}{System.\+hpp}}\end{DoxyCompactItemize}
+include/\+Tenshi\+Engine/\+Engine/\+Systems/System.\+hpp\end{DoxyCompactItemize}

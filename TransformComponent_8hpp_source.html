@@ -97,59 +97,52 @@ $(document).ready(function(){initNavTree('TransformComponent_8hpp_source.html','
   <div class="headertitle"><div class="title">TransformComponent.hpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="TransformComponent_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="Component_8hpp.html">TenshiEngine/Engine/Components/Component.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;TenshiEngine/Engine/Components/Component.hpp&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;SFML/System/Vector2.hpp&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacete.html">te</a>{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span>te{</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span>components{</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1TransformComponent.html">   12</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structte_1_1components_1_1TransformComponent.html">TransformComponent</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structte_1_1components_1_1Component.html">Component</a>{</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1TransformComponent.html#a3c1eaade27bc83c1a30b8673a3e6a7d6">   14</a></span>    <a class="code hl_function" href="structte_1_1components_1_1TransformComponent.html#a3c1eaade27bc83c1a30b8673a3e6a7d6">TransformComponent</a>(): <a class="code hl_variable" href="structte_1_1components_1_1TransformComponent.html#a3d5ea9f5dd226db12431ba9399399a79">position</a>(defaultPosition), <a class="code hl_variable" href="structte_1_1components_1_1TransformComponent.html#a8c8510c207c3eff8bfd5484ebffdac77">scale</a>(defaultScale){}</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1TransformComponent.html#af16b111e1465f4deea0ab1df6bab4a3a">   16</a></span>    std::string <a class="code hl_function" href="structte_1_1components_1_1TransformComponent.html#af16b111e1465f4deea0ab1df6bab4a3a">toString</a>()<span class="keyword"> const override</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;TestTransform&quot;</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    };</div>
-</div>
-<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1TransformComponent.html#ad962918817783af133b81eefc13e4132">   19</a></span>    std::string <a class="code hl_function" href="structte_1_1components_1_1TransformComponent.html#ad962918817783af133b81eefc13e4132">name</a>()<span class="keyword"> const override</span>{</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;TransformComponent&quot;</span>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    };</div>
-</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1TransformComponent.html#a3d5ea9f5dd226db12431ba9399399a79">   23</a></span>    sf::Vector2f <a class="code hl_variable" href="structte_1_1components_1_1TransformComponent.html#a3d5ea9f5dd226db12431ba9399399a79">position</a>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1TransformComponent.html#a8c8510c207c3eff8bfd5484ebffdac77">   24</a></span>    sf::Vector2f <a class="code hl_variable" href="structte_1_1components_1_1TransformComponent.html#a8c8510c207c3eff8bfd5484ebffdac77">scale</a>;</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1TransformComponent.html">   17</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structte_1_1components_1_1TransformComponent.html">TransformComponent</a> : <span class="keyword">public</span> <a class="code hl_struct" href="structte_1_1components_1_1Component.html">Component</a>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1TransformComponent.html#a3c1eaade27bc83c1a30b8673a3e6a7d6">   24</a></span>    <a class="code hl_function" href="structte_1_1components_1_1TransformComponent.html#a3c1eaade27bc83c1a30b8673a3e6a7d6">TransformComponent</a>(): <a class="code hl_struct" href="structte_1_1components_1_1Component.html">Component</a>(<span class="stringliteral">&quot;TransformComponent&quot;</span>), <a class="code hl_variable" href="structte_1_1components_1_1TransformComponent.html#a3d5ea9f5dd226db12431ba9399399a79">position</a>(defaultPosition), <a class="code hl_variable" href="structte_1_1components_1_1TransformComponent.html#a8c8510c207c3eff8bfd5484ebffdac77">scale</a>(defaultScale){}</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> sf::Vector2f defaultPosition{0.f, 0.f};</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> sf::Vector2f defaultScale{1.f, 1.f};</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1TransformComponent.html#af16b111e1465f4deea0ab1df6bab4a3a">   26</a></span>    std::string <a class="code hl_function" href="structte_1_1components_1_1TransformComponent.html#af16b111e1465f4deea0ab1df6bab4a3a">toString</a>()<span class="keyword"> const override</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;TestTransform&quot;</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    };</div>
 </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
-<div class="ttc" id="aComponent_8hpp_html"><div class="ttname"><a href="Component_8hpp.html">Component.hpp</a></div></div>
-<div class="ttc" id="anamespacete_html"><div class="ttname"><a href="namespacete.html">te</a></div><div class="ttdef"><b>Definition</b> AnimationComponent.hpp:6</div></div>
-<div class="ttc" id="astructte_1_1components_1_1Component_html"><div class="ttname"><a href="structte_1_1components_1_1Component.html">te::components::Component</a></div><div class="ttdef"><b>Definition</b> Component.hpp:8</div></div>
-<div class="ttc" id="astructte_1_1components_1_1TransformComponent_html"><div class="ttname"><a href="structte_1_1components_1_1TransformComponent.html">te::components::TransformComponent</a></div><div class="ttdef"><b>Definition</b> TransformComponent.hpp:12</div></div>
-<div class="ttc" id="astructte_1_1components_1_1TransformComponent_html_a3c1eaade27bc83c1a30b8673a3e6a7d6"><div class="ttname"><a href="structte_1_1components_1_1TransformComponent.html#a3c1eaade27bc83c1a30b8673a3e6a7d6">te::components::TransformComponent::TransformComponent</a></div><div class="ttdeci">TransformComponent()</div><div class="ttdef"><b>Definition</b> TransformComponent.hpp:14</div></div>
-<div class="ttc" id="astructte_1_1components_1_1TransformComponent_html_a3d5ea9f5dd226db12431ba9399399a79"><div class="ttname"><a href="structte_1_1components_1_1TransformComponent.html#a3d5ea9f5dd226db12431ba9399399a79">te::components::TransformComponent::position</a></div><div class="ttdeci">sf::Vector2f position</div><div class="ttdef"><b>Definition</b> TransformComponent.hpp:23</div></div>
-<div class="ttc" id="astructte_1_1components_1_1TransformComponent_html_a8c8510c207c3eff8bfd5484ebffdac77"><div class="ttname"><a href="structte_1_1components_1_1TransformComponent.html#a8c8510c207c3eff8bfd5484ebffdac77">te::components::TransformComponent::scale</a></div><div class="ttdeci">sf::Vector2f scale</div><div class="ttdef"><b>Definition</b> TransformComponent.hpp:24</div></div>
-<div class="ttc" id="astructte_1_1components_1_1TransformComponent_html_ad962918817783af133b81eefc13e4132"><div class="ttname"><a href="structte_1_1components_1_1TransformComponent.html#ad962918817783af133b81eefc13e4132">te::components::TransformComponent::name</a></div><div class="ttdeci">std::string name() const override</div><div class="ttdef"><b>Definition</b> TransformComponent.hpp:19</div></div>
-<div class="ttc" id="astructte_1_1components_1_1TransformComponent_html_af16b111e1465f4deea0ab1df6bab4a3a"><div class="ttname"><a href="structte_1_1components_1_1TransformComponent.html#af16b111e1465f4deea0ab1df6bab4a3a">te::components::TransformComponent::toString</a></div><div class="ttdeci">std::string toString() const override</div><div class="ttdef"><b>Definition</b> TransformComponent.hpp:16</div></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1TransformComponent.html#a3d5ea9f5dd226db12431ba9399399a79">   31</a></span>    sf::Vector2f <a class="code hl_variable" href="structte_1_1components_1_1TransformComponent.html#a3d5ea9f5dd226db12431ba9399399a79">position</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structte_1_1components_1_1TransformComponent.html#a8c8510c207c3eff8bfd5484ebffdac77">   34</a></span>    sf::Vector2f <a class="code hl_variable" href="structte_1_1components_1_1TransformComponent.html#a8c8510c207c3eff8bfd5484ebffdac77">scale</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> sf::Vector2f defaultPosition{0.f, 0.f};</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">inline</span> <span class="keyword">static</span> <span class="keyword">const</span> sf::Vector2f defaultScale{1.f, 1.f};</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
+<div class="ttc" id="astructte_1_1components_1_1Component_html"><div class="ttname"><a href="structte_1_1components_1_1Component.html">te::components::Component</a></div><div class="ttdoc">Base component.</div><div class="ttdef"><b>Definition</b> Component.hpp:13</div></div>
+<div class="ttc" id="astructte_1_1components_1_1TransformComponent_html"><div class="ttname"><a href="structte_1_1components_1_1TransformComponent.html">te::components::TransformComponent</a></div><div class="ttdoc">component with position and scale</div><div class="ttdef"><b>Definition</b> TransformComponent.hpp:17</div></div>
+<div class="ttc" id="astructte_1_1components_1_1TransformComponent_html_a3c1eaade27bc83c1a30b8673a3e6a7d6"><div class="ttname"><a href="structte_1_1components_1_1TransformComponent.html#a3c1eaade27bc83c1a30b8673a3e6a7d6">te::components::TransformComponent::TransformComponent</a></div><div class="ttdeci">TransformComponent()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition</b> TransformComponent.hpp:24</div></div>
+<div class="ttc" id="astructte_1_1components_1_1TransformComponent_html_a3d5ea9f5dd226db12431ba9399399a79"><div class="ttname"><a href="structte_1_1components_1_1TransformComponent.html#a3d5ea9f5dd226db12431ba9399399a79">te::components::TransformComponent::position</a></div><div class="ttdeci">sf::Vector2f position</div><div class="ttdoc">Position of the sprite.</div><div class="ttdef"><b>Definition</b> TransformComponent.hpp:31</div></div>
+<div class="ttc" id="astructte_1_1components_1_1TransformComponent_html_a8c8510c207c3eff8bfd5484ebffdac77"><div class="ttname"><a href="structte_1_1components_1_1TransformComponent.html#a8c8510c207c3eff8bfd5484ebffdac77">te::components::TransformComponent::scale</a></div><div class="ttdeci">sf::Vector2f scale</div><div class="ttdoc">Scaling of the sprite.</div><div class="ttdef"><b>Definition</b> TransformComponent.hpp:34</div></div>
+<div class="ttc" id="astructte_1_1components_1_1TransformComponent_html_af16b111e1465f4deea0ab1df6bab4a3a"><div class="ttname"><a href="structte_1_1components_1_1TransformComponent.html#af16b111e1465f4deea0ab1df6bab4a3a">te::components::TransformComponent::toString</a></div><div class="ttdeci">std::string toString() const override</div><div class="ttdoc">shows data as a string</div><div class="ttdef"><b>Definition</b> TransformComponent.hpp:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8d3d1e23c3ffe723e56c923af0032a3f.html">TenshiEngine</a></li><li class="navelem"><a class="el" href="dir_33cdd7c21c2a7467f2512bf8be114203.html">Engine</a></li><li class="navelem"><a class="el" href="dir_f1c322a58498b6464dbccbb9438fee84.html">Components</a></li><li class="navelem"><a class="el" href="TransformComponent_8hpp.html">TransformComponent.hpp</a></li>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8d3d1e23c3ffe723e56c923af0032a3f.html">TenshiEngine</a></li><li class="navelem"><a class="el" href="dir_33cdd7c21c2a7467f2512bf8be114203.html">Engine</a></li><li class="navelem"><a class="el" href="dir_f1c322a58498b6464dbccbb9438fee84.html">Components</a></li><li class="navelem"><b>TransformComponent.hpp</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

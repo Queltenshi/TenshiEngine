@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['jump_0',['jump',['../structte_1_1components_1_1PlayerInputComponent.html#a1e95d9d173effa4263263c6a2bd927e2',1,'te::components::PlayerInputComponent']]],
-  ['jumpcomponent_1',['jumpcomponent',['../structte_1_1components_1_1JumpComponent.html',1,'te::components::JumpComponent'],['../structte_1_1components_1_1JumpComponent.html#a161de5f13c31a5c06156dec58524b967',1,'te::components::JumpComponent::JumpComponent()']]],
-  ['jumpcomponent_2ehpp_2',['JumpComponent.hpp',['../JumpComponent_8hpp.html',1,'']]]
+  ['registry_0',['registry',['../classte_1_1Registry.html',1,'te::Registry'],['../classte_1_1Registry.html#ac9fde2f8cf63b88d955daff21299fa3e',1,'te::Registry::Registry()']]],
+  ['rendersystem_1',['rendersystem',['../classte_1_1systems_1_1RenderSystem.html',1,'te::systems::RenderSystem'],['../classte_1_1systems_1_1RenderSystem.html#a232da5a6b46708c6ee9c991e4ae2fe7f',1,'te::systems::RenderSystem::RenderSystem()']]],
+  ['run_2',['run',['../classte_1_1GameBase.html#accb4b63d1277e46131d66a66c0e1e63b',1,'te::GameBase']]]
 ];

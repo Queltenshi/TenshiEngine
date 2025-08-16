@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['healthcomponent_0',['HealthComponent',['../structte_1_1components_1_1HealthComponent.html',1,'te::components']]],
-  ['horizontalmovementcomponent_1',['HorizontalMovementComponent',['../structte_1_1components_1_1HorizontalMovementComponent.html',1,'te::components']]]
+  ['registry_0',['Registry',['../classte_1_1Registry.html',1,'te']]],
+  ['rendersystem_1',['RenderSystem',['../classte_1_1systems_1_1RenderSystem.html',1,'te::systems']]]
 ];
