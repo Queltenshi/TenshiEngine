@@ -12,6 +12,12 @@
 - **GameBase** - A ready-to-use game loop and render window setup
 
 ---
+## Components / Systems
+**A little graph to show what systems and components are in development and how they communicate with each other**
+
+![graph](Images/Components_Systems.png)
+
+---
 
 ## Documentation
 You can find the latest API documentation here: [TenshiEngine API Docs](https://Queldris.github.io/TenshiEngine/)
