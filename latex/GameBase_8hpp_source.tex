@@ -4,28 +4,32 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Core/Registry.hpp"{}}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Systems.hpp"{}}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }te\{}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1GameBase}{GameBase}}\{}
-\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classte_1_1GameBase}{GameBase}}(std::string\ windowName);}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1GameBase_accb4b63d1277e46131d66a66c0e1e63b}{run}}();}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1GameBase_a0a8905a011a8ab2cd4b44ec611ff2aeb}{init}}();}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry}{Registry}}\ mRegistry;}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00049\ \ \ \ \ sf::RenderWindow\ mWindow;}
-\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//systems::RenderSystem\ mRenderSystem;}}
-\DoxyCodeLine{00051\ \};}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00053\ \}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SFML/System/Clock.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Core/Registry.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Systems.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1GameBase}{GameBase}}\{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classte_1_1GameBase}{GameBase}}(std::string\ windowName);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1GameBase_accb4b63d1277e46131d66a66c0e1e63b}{run}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1GameBase_a0a8905a011a8ab2cd4b44ec611ff2aeb}{init}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \mbox{\hyperlink{classte_1_1GameBase_ad88938b232f7f7f7d38850bce672cf89}{mRegistry}};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00051\ \ \ \ \ sf::RenderWindow\ mWindow;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ mDeltaTime;}
+\DoxyCodeLine{00053\ \ \ \ \ sf::Clock\ mClock;}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{float}\ mAccumulator;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ mMaxUpdatesPerFrame;}
+\DoxyCodeLine{00056\ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \}}
 
 \end{DoxyCode}

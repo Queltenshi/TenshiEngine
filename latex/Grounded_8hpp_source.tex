@@ -1,0 +1,29 @@
+\doxysection{Grounded.\+hpp}
+\hypertarget{Grounded_8hpp_source}{}\label{Grounded_8hpp_source}\index{include/TenshiEngine/Engine/Components/Grounded.hpp@{include/TenshiEngine/Engine/Components/Grounded.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Components/Component.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }components\{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structte_1_1components_1_1Grounded}{Grounded}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structte_1_1components_1_1Component}{Component}}\{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Grounded_aedb3d95aaa81495dbe74d8c2cc8a8453}{Grounded}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Grounded_a44aa70fe7250b6df22441946a6d39c80}{toString}}()\textcolor{keyword}{\ const\ override}\{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}(state:\ "{}}\ +\ utils::boolToString(\mbox{\hyperlink{structte_1_1components_1_1Grounded_adcb5855648988e505cf1f0d24c21c77e}{isGrounded}})\ +\ \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{00025\ \ \ \ \ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structte_1_1components_1_1Grounded_adcb5855648988e505cf1f0d24c21c77e}{isGrounded}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Grounded_ac1b9e10340942924b496c8441363bc16}{name}}\ =\ \textcolor{stringliteral}{"{}Grounded"{}};}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \}}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}

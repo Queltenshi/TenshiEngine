@@ -107,16 +107,18 @@ Inheritance diagram for te::systems::System:</div>
  <div class="center">
   <img src="classte_1_1systems_1_1System.png" usemap="#te::systems::System_map" alt=""/>
   <map id="te::systems::System_map" name="te::systems::System_map">
-<area href="classte_1_1systems_1_1InputSystem.html" title="System for input handling." alt="te::systems::InputSystem" shape="rect" coords="0,56,159,80"/>
-<area href="classte_1_1systems_1_1RenderSystem.html" title="System for rendering the sprite." alt="te::systems::RenderSystem" shape="rect" coords="169,56,328,80"/>
+<area href="classte_1_1systems_1_1InputSystem.html" title="System for input handling." alt="te::systems::InputSystem" shape="rect" coords="0,56,176,80"/>
+<area href="classte_1_1systems_1_1MovementSystem.html" title="System for calculating velocity." alt="te::systems::MovementSystem" shape="rect" coords="186,56,362,80"/>
+<area href="classte_1_1systems_1_1PhysicsSystem.html" title="System for physical calculations." alt="te::systems::PhysicsSystem" shape="rect" coords="372,56,548,80"/>
+<area href="classte_1_1systems_1_1RenderSystem.html" title="System for rendering the sprite." alt="te::systems::RenderSystem" shape="rect" coords="558,56,734,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab6d0dbe91eab8c19ca78d46dea4da274" id="r_ab6d0dbe91eab8c19ca78d46dea4da274"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classte_1_1systems_1_1System.html#ab6d0dbe91eab8c19ca78d46dea4da274">System</a> (<a class="el" href="classte_1_1Registry.html">Registry</a> &amp;registry, std::string name)</td></tr>
-<tr class="memdesc:ab6d0dbe91eab8c19ca78d46dea4da274"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="separator:ab6d0dbe91eab8c19ca78d46dea4da274"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad654c9da05efadd658f3d4a2eae90a35" id="r_ad654c9da05efadd658f3d4a2eae90a35"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classte_1_1systems_1_1System.html#ad654c9da05efadd658f3d4a2eae90a35">System</a> (<a class="el" href="classte_1_1Registry.html">Registry</a> &amp;registry)</td></tr>
+<tr class="memdesc:ad654c9da05efadd658f3d4a2eae90a35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="separator:ad654c9da05efadd658f3d4a2eae90a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3640e994e8b9aad924d11ba67d07d421" id="r_a3640e994e8b9aad924d11ba67d07d421"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classte_1_1systems_1_1System.html#a3640e994e8b9aad924d11ba67d07d421">update</a> ()=0</td></tr>
 <tr class="memdesc:a3640e994e8b9aad924d11ba67d07d421"><td class="mdescLeft">&#160;</td><td class="mdescRight">updates the system  <br /></td></tr>
 <tr class="separator:a3640e994e8b9aad924d11ba67d07d421"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,16 +127,14 @@ Public Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:aacef5c1d0b0ec002f21c7fcf8cc4a06b" id="r_aacef5c1d0b0ec002f21c7fcf8cc4a06b"><td class="memItemLeft" align="right" valign="top"><a id="aacef5c1d0b0ec002f21c7fcf8cc4a06b" name="aacef5c1d0b0ec002f21c7fcf8cc4a06b"></a>
 <a class="el" href="classte_1_1Registry.html">Registry</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>mRegistry</b></td></tr>
+<tr class="memdesc:aacef5c1d0b0ec002f21c7fcf8cc4a06b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the registry. <br /></td></tr>
 <tr class="separator:aacef5c1d0b0ec002f21c7fcf8cc4a06b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7110c3857f3df77211658ad1206ca7f" id="r_aa7110c3857f3df77211658ad1206ca7f"><td class="memItemLeft" align="right" valign="top"><a id="aa7110c3857f3df77211658ad1206ca7f" name="aa7110c3857f3df77211658ad1206ca7f"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>mName</b></td></tr>
-<tr class="separator:aa7110c3857f3df77211658ad1206ca7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base system. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab6d0dbe91eab8c19ca78d46dea4da274" name="ab6d0dbe91eab8c19ca78d46dea4da274"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6d0dbe91eab8c19ca78d46dea4da274">&#9670;&#160;</a></span>System()</h2>
+<a id="ad654c9da05efadd658f3d4a2eae90a35" name="ad654c9da05efadd658f3d4a2eae90a35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad654c9da05efadd658f3d4a2eae90a35">&#9670;&#160;</a></span>System()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,18 +146,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>mName</b></td>
           <td class="memname">te::systems::System::System </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classte_1_1Registry.html">Registry</a> &amp;&#160;</td>
-          <td class="paramname"><em>registry</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>registry</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>name</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -168,11 +158,10 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>mName</b></td>
 </div><div class="memdoc">
 
 <p>Constructor. </p>
-<p>Creates a system with given name</p>
+<p>Creates a system</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">registry</td><td>reference to the <a class="el" href="classte_1_1Registry.html" title="Managing entities and components.">Registry</a> </td></tr>
-    <tr><td class="paramname">name</td><td>name of the <a class="el" href="classte_1_1systems_1_1System.html" title="Base system.">System</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -206,7 +195,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>mName</b></td>
 <p>updates the system </p>
 <p>Used for updating and handling the logic, systems do override this method </p>
 
-<p>Implemented in <a class="el" href="classte_1_1systems_1_1InputSystem.html#a966ac41f24309ed1402722cccf57cb37">te::systems::InputSystem</a>, and <a class="el" href="classte_1_1systems_1_1RenderSystem.html#a4e07fc6094ffc1700b10dda13dd1da24">te::systems::RenderSystem</a>.</p>
+<p>Implemented in <a class="el" href="classte_1_1systems_1_1InputSystem.html#a966ac41f24309ed1402722cccf57cb37">te::systems::InputSystem</a>, <a class="el" href="classte_1_1systems_1_1MovementSystem.html#ae627f7fc6a4eebab0965cb6501f488b8">te::systems::MovementSystem</a>, <a class="el" href="classte_1_1systems_1_1PhysicsSystem.html#a713138b3fcc3e9904e57f0b8508e39e2">te::systems::PhysicsSystem</a>, and <a class="el" href="classte_1_1systems_1_1RenderSystem.html#a4e07fc6094ffc1700b10dda13dd1da24">te::systems::RenderSystem</a>.</p>
 
 </div>
 </div>

@@ -1,0 +1,89 @@
+\doxysection{te\+::systems\+::Movement\+System Class Reference}
+\hypertarget{classte_1_1systems_1_1MovementSystem}{}\label{classte_1_1systems_1_1MovementSystem}\index{te::systems::MovementSystem@{te::systems::MovementSystem}}
+
+
+\doxylink{classte_1_1systems_1_1System}{System} for calculating velocity.  
+
+
+
+
+{\ttfamily \#include $<$Movement\+System.\+hpp$>$}
+
+Inheritance diagram for te\+::systems\+::Movement\+System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classte_1_1systems_1_1MovementSystem}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classte_1_1systems_1_1MovementSystem_af4f3cb915a6b37b219a51f5054dd5ffd}{Movement\+System}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classte_1_1systems_1_1MovementSystem_ae627f7fc6a4eebab0965cb6501f488b8}{update}} () override
+\begin{DoxyCompactList}\small\item\em updates the system \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classte_1_1systems_1_1System}{te\+::systems\+::\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classte_1_1systems_1_1System_ad654c9da05efadd658f3d4a2eae90a35}{System}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classte_1_1systems_1_1MovementSystem_ae27d9d38fdfc7e5c6044d403d02d79b7}\label{classte_1_1systems_1_1MovementSystem_ae27d9d38fdfc7e5c6044d403d02d79b7} 
+static const std\+::string {\bfseries name} = "{}Movement\+System"{}
+\begin{DoxyCompactList}\small\item\em Name of system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classte_1_1systems_1_1System}{te\+::systems\+::\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classte_1_1Registry}{Registry}} \& {\bfseries m\+Registry}
+\begin{DoxyCompactList}\small\item\em Reference to the registry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classte_1_1systems_1_1System}{System} for calculating velocity. 
+
+Checks player\+Input, horizonzal\+Movement, jump, grounded, velocity and then calculates new velocity 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classte_1_1systems_1_1MovementSystem_af4f3cb915a6b37b219a51f5054dd5ffd}\label{classte_1_1systems_1_1MovementSystem_af4f3cb915a6b37b219a51f5054dd5ffd} 
+\index{te::systems::MovementSystem@{te::systems::MovementSystem}!MovementSystem@{MovementSystem}}
+\index{MovementSystem@{MovementSystem}!te::systems::MovementSystem@{te::systems::MovementSystem}}
+\doxysubsubsection{\texorpdfstring{MovementSystem()}{MovementSystem()}}
+{\footnotesize\ttfamily te\+::systems\+::\+Movement\+System\+::\+Movement\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+creates the \doxylink{classte_1_1systems_1_1System}{System}
+
+
+\begin{DoxyParams}{Parameters}
+{\em registry} & reference to the registry \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classte_1_1systems_1_1MovementSystem_ae627f7fc6a4eebab0965cb6501f488b8}\label{classte_1_1systems_1_1MovementSystem_ae627f7fc6a4eebab0965cb6501f488b8} 
+\index{te::systems::MovementSystem@{te::systems::MovementSystem}!update@{update}}
+\index{update@{update}!te::systems::MovementSystem@{te::systems::MovementSystem}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void te\+::systems\+::\+Movement\+System\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+updates the system 
+
+Used for updating and handling the logic, systems do override this method 
+
+Implements \mbox{\hyperlink{classte_1_1systems_1_1System_a3640e994e8b9aad924d11ba67d07d421}{te\+::systems\+::\+System}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Tenshi\+Engine/\+Engine/\+Systems/Movement\+System.\+hpp\item 
+src/\+Engine/\+Systems/Movement\+System.\+cpp\end{DoxyCompactItemize}

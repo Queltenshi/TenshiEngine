@@ -4,7 +4,9 @@
 \begin{DoxyCompactItemize}
 \item 
 \#define \mbox{\hyperlink{group__LoggingMacros_ga975082d766d9cdd6436c9c8c445610ec}{LOG\+\_\+\+DEBUG}}(source,  message)
-\begin{DoxyCompactList}\small\item\em Logs a debug message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Logs a debug message. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__LoggingMacros_ga313ec8bf6425510ae0ce9d94d26cd2d9}{LOG\+\_\+\+DEBUG\+\_\+\+COMPONENT\+\_\+\+CHANGED}}(source,  component\+Name,  component,  entity\+ID)
+\begin{DoxyCompactList}\small\item\em Logs a debug message when a component is changed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -35,5 +37,35 @@ Logs a debug message if the current\+Level is set to DEBUG
 {\em source} & The source or module where the log originates \\
 \hline
 {\em message} & The message to log \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__LoggingMacros_ga313ec8bf6425510ae0ce9d94d26cd2d9}\label{group__LoggingMacros_ga313ec8bf6425510ae0ce9d94d26cd2d9} 
+\index{Logging Macros@{Logging Macros}!LOG\_DEBUG\_COMPONENT\_CHANGED@{LOG\_DEBUG\_COMPONENT\_CHANGED}}
+\index{LOG\_DEBUG\_COMPONENT\_CHANGED@{LOG\_DEBUG\_COMPONENT\_CHANGED}!Logging Macros@{Logging Macros}}
+\doxysubsubsection{\texorpdfstring{LOG\_DEBUG\_COMPONENT\_CHANGED}{LOG\_DEBUG\_COMPONENT\_CHANGED}}
+{\footnotesize\ttfamily \#define LOG\+\_\+\+DEBUG\+\_\+\+COMPONENT\+\_\+\+CHANGED(\begin{DoxyParamCaption}\item[{}]{source,  }\item[{}]{component\+Name,  }\item[{}]{component,  }\item[{}]{entity\+ID }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{do}\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (te::Logger::currentLevel\ ==\ te::LogLevel::DEBUG)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ te::Logger::debug(source,\ componentName,\ component,\ entityID);\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \}\ \textcolor{keywordflow}{while}(0)}
+
+\end{DoxyCode}
+
+
+Logs a debug message when a component is changed. 
+
+Logs a debug message if the current\+Level is set to DEBUG and when a compontent is changed 
+\begin{DoxyParams}{Parameters}
+{\em source} & The source or module where the log originates \\
+\hline
+{\em component\+Name} & Name of changed component \\
+\hline
+{\em component} & changed component \\
+\hline
+{\em entity\+ID} & ID of entity which component was changed \\
 \hline
 \end{DoxyParams}

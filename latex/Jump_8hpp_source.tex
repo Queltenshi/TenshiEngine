@@ -1,0 +1,30 @@
+\doxysection{Jump.\+hpp}
+\hypertarget{Jump_8hpp_source}{}\label{Jump_8hpp_source}\index{include/TenshiEngine/Engine/Components/Jump.hpp@{include/TenshiEngine/Engine/Components/Jump.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Components/Component.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }components\{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structte_1_1components_1_1Jump}{Jump}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structte_1_1components_1_1Component}{Component}}\{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Jump_a88902247436705ce164709163881a408}{Jump}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Jump_a70d263472245c77f1adf6a839dca7a8e}{Jump}}(\textcolor{keywordtype}{float}\ \mbox{\hyperlink{structte_1_1components_1_1Jump_a17cfd93f863fcf1dfa18569706143702}{strength}}):\ \mbox{\hyperlink{structte_1_1components_1_1Jump_a17cfd93f863fcf1dfa18569706143702}{strength}}(\mbox{\hyperlink{structte_1_1components_1_1Jump_a17cfd93f863fcf1dfa18569706143702}{strength}})\{\}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Jump_a017921dc969cbfe21dc5ff3af5ee6338}{toString}}()\textcolor{keyword}{\ const\ override}\{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}(strength:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Jump_a17cfd93f863fcf1dfa18569706143702}{strength}})\ +\ \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structte_1_1components_1_1Jump_a17cfd93f863fcf1dfa18569706143702}{strength}}\ =\ 16.f;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Jump_a91cf68223a2cff342632951d21840154}{name}}\ =\ \textcolor{stringliteral}{"{}Jump"{}};}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \}}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}

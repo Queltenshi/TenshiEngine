@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['registry_0',['Registry',['../classte_1_1Registry.html#ac9fde2f8cf63b88d955daff21299fa3e',1,'te::Registry']]],
-  ['rendersystem_1',['RenderSystem',['../classte_1_1systems_1_1RenderSystem.html#a232da5a6b46708c6ee9c991e4ae2fe7f',1,'te::systems::RenderSystem']]],
-  ['run_2',['run',['../classte_1_1GameBase.html#accb4b63d1277e46131d66a66c0e1e63b',1,'te::GameBase']]]
+  ['jump_0',['jump',['../structte_1_1components_1_1Jump.html#a88902247436705ce164709163881a408',1,'te::components::Jump::Jump()=default'],['../structte_1_1components_1_1Jump.html#a70d263472245c77f1adf6a839dca7a8e',1,'te::components::Jump::Jump(float strength)']]]
 ];

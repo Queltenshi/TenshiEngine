@@ -1,0 +1,29 @@
+\doxysection{Velocity.\+hpp}
+\hypertarget{Velocity_8hpp_source}{}\label{Velocity_8hpp_source}\index{include/TenshiEngine/Engine/Components/Velocity.hpp@{include/TenshiEngine/Engine/Components/Velocity.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SFML/System/Vector2.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Components/Component.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }components\{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structte_1_1components_1_1Velocity}{Velocity}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structte_1_1components_1_1Component}{Component}}\{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Velocity_a258cf03c36fc66c817ab07e5eea95e97}{Velocity}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Velocity_a6785f388980190bb504f11a546732c1f}{toString}}()\textcolor{keyword}{\ const\ override}\{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}(value.x:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Velocity_ae77506113d79b544fa50265e7f1948c4}{value}}.x)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ \textcolor{stringliteral}{"{}\ value.y:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Velocity_ae77506113d79b544fa50265e7f1948c4}{value}}.y)\ +\ \textcolor{stringliteral}{"{})"{}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{structte_1_1components_1_1Velocity_ae77506113d79b544fa50265e7f1948c4}{value}}\ =\ \{0.f,\ 0.f\};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Velocity_a21160cb4bffa2e9b4b867cb9eb130d00}{name}}\ =\ \textcolor{stringliteral}{"{}Velocity"{}};}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \}}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}

@@ -100,6 +100,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga975082d766d9cdd6436c9c8c445610ec" id="r_ga975082d766d9cdd6436c9c8c445610ec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LoggingMacros.html#ga975082d766d9cdd6436c9c8c445610ec">LOG_DEBUG</a>(source,  message)</td></tr>
 <tr class="memdesc:ga975082d766d9cdd6436c9c8c445610ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a debug message.  <br /></td></tr>
 <tr class="separator:ga975082d766d9cdd6436c9c8c445610ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga313ec8bf6425510ae0ce9d94d26cd2d9" id="r_ga313ec8bf6425510ae0ce9d94d26cd2d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__LoggingMacros.html#ga313ec8bf6425510ae0ce9d94d26cd2d9">LOG_DEBUG_COMPONENT_CHANGED</a>(source,  componentName,  component,  entityID)</td></tr>
+<tr class="memdesc:ga313ec8bf6425510ae0ce9d94d26cd2d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs a debug message when a component is changed.  <br /></td></tr>
+<tr class="separator:ga313ec8bf6425510ae0ce9d94d26cd2d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Macros used for logging messages at different log levels. </p>
@@ -140,6 +143,62 @@ Macros</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">source</td><td>The source or module where the log originates </td></tr>
     <tr><td class="paramname">message</td><td>The message to log </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga313ec8bf6425510ae0ce9d94d26cd2d9" name="ga313ec8bf6425510ae0ce9d94d26cd2d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga313ec8bf6425510ae0ce9d94d26cd2d9">&#9670;&#160;</a></span>LOG_DEBUG_COMPONENT_CHANGED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_DEBUG_COMPONENT_CHANGED</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">source, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">componentName, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">component, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">entityID&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> { \</div>
+<div class="line">        if (te::Logger::currentLevel == te::LogLevel::DEBUG) { \</div>
+<div class="line">            te::Logger::debug(source, componentName, component, entityID); \</div>
+<div class="line">        } \</div>
+<div class="line">    } <span class="keywordflow">while</span>(0)</div>
+</div><!-- fragment -->
+<p>Logs a debug message when a component is changed. </p>
+<p>Logs a debug message if the currentLevel is set to DEBUG and when a compontent is changed </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source</td><td>The source or module where the log originates </td></tr>
+    <tr><td class="paramname">componentName</td><td>Name of changed component </td></tr>
+    <tr><td class="paramname">component</td><td>changed component </td></tr>
+    <tr><td class="paramname">entityID</td><td>ID of entity which component was changed </td></tr>
   </table>
   </dd>
 </dl>

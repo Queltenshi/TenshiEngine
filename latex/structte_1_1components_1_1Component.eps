@@ -5,7 +5,7 @@
 %%For: 
 %Magnification: 1.00
 %%Orientation: Portrait
-%%BoundingBox: 0 0 500 56.497173
+%%BoundingBox: 0 0 500 401.785706
 %%Pages: 0
 %%BeginSetup
 %%EndSetup
@@ -19,13 +19,13 @@
 /marginwidth 10 def
 /distx 20 def
 /disty 40 def
-/boundaspect 8.850000 def  % aspect ratio of the BoundingBox (width/height)
+/boundaspect 1.244444 def  % aspect ratio of the BoundingBox (width/height)
 /boundx 500 def
 /boundy boundx boundaspect div def
 /xspacing 0 def
 /yspacing 0 def
-/rows 2 def
-/cols 3 def
+/rows 9 def
+/cols 2 def
 /scalefactor 0 def
 /boxfont /Times-Roman findfont fontheight scalefont def
 
@@ -174,9 +174,14 @@
 boxfont setfont
 1 boundaspect scale
 (te::components::Component) cw
-(te::components::PlayerInputComponent) cw
-(te::components::SpriteComponent) cw
-(te::components::TransformComponent) cw
+(te::components::Grounded) cw
+(te::components::HorizontalMovement) cw
+(te::components::Jump) cw
+(te::components::PlayerInput) cw
+(te::components::Rigidbody) cw
+(te::components::Sprite) cw
+(te::components::Transform) cw
+(te::components::Velocity) cw
 /boxwidth boxwidth marginwidth 2 mul add def
 /xspacing boxwidth distx add def
 /yspacing boxheight disty add def
@@ -188,20 +193,35 @@ boundx scalefactor div boundy scalefactor div scale
 
 % ----- classes -----
 
- (te::components::Component) 1.000000 1.000000 box
- (te::components::PlayerInputComponent) 0.000000 0.000000 box
- (te::components::SpriteComponent) 1.000000 0.000000 box
- (te::components::TransformComponent) 2.000000 0.000000 box
+ (te::components::Component) 0.000000 8.000000 box
+ (te::components::Grounded) 1.000000 7.000000 box
+ (te::components::HorizontalMovement) 1.000000 6.000000 box
+ (te::components::Jump) 1.000000 5.000000 box
+ (te::components::PlayerInput) 1.000000 4.000000 box
+ (te::components::Rigidbody) 1.000000 3.000000 box
+ (te::components::Sprite) 1.000000 2.000000 box
+ (te::components::Transform) 1.000000 1.000000 box
+ (te::components::Velocity) 1.000000 0.000000 box
 
 % ----- relations -----
 
 solid
-1 1.000000 0.250000 out
+1 0.000000 7.250000 out
 solid
-0.000000 2.000000 1.000000 conn
+0 0.000000 7.500000 hedge
 solid
-0 0.000000 0.750000 in
+0 0.000000 6.500000 hedge
 solid
-0 1.000000 0.750000 in
+0 0.000000 5.500000 hedge
 solid
-0 2.000000 0.750000 in
+0 0.000000 4.500000 hedge
+solid
+0 0.000000 3.500000 hedge
+solid
+0 0.000000 2.500000 hedge
+solid
+0 0.000000 1.500000 hedge
+solid
+0 0.000000 0.500000 hedge
+solid
+0.000000 8.000000 0.500000 vedge

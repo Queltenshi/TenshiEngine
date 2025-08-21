@@ -16,16 +16,22 @@ Managing entities and components.
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{structte_1_1Entity}{Entity}} \mbox{\hyperlink{classte_1_1Registry_a8711ff219ebf13ead555c90a545e55a2}{create\+Entity}} (sf\+::\+Texture \&texture)
 \begin{DoxyCompactList}\small\item\em creates new entity \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename Component $>$ }\\void \mbox{\hyperlink{classte_1_1Registry_a0badb8e8779dc8c2dcf8a559644fe3e4}{add\+Component}} (Entity\+ID entity\+ID, const Component \&component)
+\mbox{\hyperlink{structte_1_1Entity}{Entity}} \mbox{\hyperlink{classte_1_1Registry_a5144125f1120c46df096dece3ee382a4}{create\+Entity}} (sf\+::\+Texture \&texture, sf\+::\+Vector2f scale)
+\begin{DoxyCompactList}\small\item\em creates new entity \end{DoxyCompactList}\item 
+{\footnotesize template$<$\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{typename}} Component $>$ }\\\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{void}} \mbox{\hyperlink{classte_1_1Registry_a0badb8e8779dc8c2dcf8a559644fe3e4}{add\+Component}} (Entity\+ID \mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{entity\+ID}}, \mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{const}} Component \&\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{component}})
 \begin{DoxyCompactList}\small\item\em adds new component \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Component $>$ }\\Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{get\+Component}} (Entity\+ID entity\+ID)
 \begin{DoxyCompactList}\small\item\em shows component of entity \end{DoxyCompactList}\item 
+{\footnotesize template$<$\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{typename}} Component $>$ }\\\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{bool}} \mbox{\hyperlink{classte_1_1Registry_abf5d8848453b9641593e81efa22fc442}{has\+Component}} (Entity\+ID \mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{entity\+ID}}) \mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{const}}
+\begin{DoxyCompactList}\small\item\em shows if entity has a component \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename... Components$>$ }\\std\+::vector$<$ Entity\+ID $>$ \mbox{\hyperlink{classte_1_1Registry_ab22d33126a0e011ab16c4eea13e33921}{view}} ()
 \begin{DoxyCompactList}\small\item\em Lists entities. \end{DoxyCompactList}\item 
-{\footnotesize template$<$typename TSystem , typename... Args$>$ }\\void \mbox{\hyperlink{classte_1_1Registry_a4315b2e98a75c5648ef54220f652903e}{add\+System}} (Args \&\&... args)
+{\footnotesize template$<$\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{typename}} \mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{TSystem}} , typename... Args$>$ }\\\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{void}} \mbox{\hyperlink{classte_1_1Registry_a4315b2e98a75c5648ef54220f652903e}{add\+System}} (\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{Args}} \&\&... \mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{args}})
 \begin{DoxyCompactList}\small\item\em adds system \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classte_1_1Registry_a53226e9ccc2c34336e0771b165db33d1}{update\+Systems}} ()
-\begin{DoxyCompactList}\small\item\em updates all systems \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{void}} \mbox{\hyperlink{classte_1_1Registry_a53226e9ccc2c34336e0771b165db33d1}{update\+Systems}} ()
+\begin{DoxyCompactList}\small\item\em updates all systems \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{void}} \mbox{\hyperlink{classte_1_1Registry_a2d9d42450ca3a0e559448de226ff398c}{update\+Render\+System}} ()
+\begin{DoxyCompactList}\small\item\em updates the render system \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -56,8 +62,8 @@ Constructor.
 \index{te::Registry@{te::Registry}!addComponent@{addComponent}}
 \index{addComponent@{addComponent}!te::Registry@{te::Registry}}
 \doxysubsubsection{\texorpdfstring{addComponent()}{addComponent()}}
-{\footnotesize\ttfamily template$<$typename Component $>$ \\
-void te\+::\+Registry\+::add\+Component (\begin{DoxyParamCaption}\item[{Entity\+ID}]{entity\+ID,  }\item[{const Component \&}]{component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{typename}} Component $>$ \\
+\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{void}} te\+::\+Registry\+::add\+Component (\begin{DoxyParamCaption}\item[{Entity\+ID}]{entity\+ID,  }\item[{\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{const}} Component \&}]{component }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -76,8 +82,8 @@ adds new component to given entity\+ID
 \index{te::Registry@{te::Registry}!addSystem@{addSystem}}
 \index{addSystem@{addSystem}!te::Registry@{te::Registry}}
 \doxysubsubsection{\texorpdfstring{addSystem()}{addSystem()}}
-{\footnotesize\ttfamily template$<$typename TSystem , typename... Args$>$ \\
-void te\+::\+Registry\+::add\+System (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{typename}} \mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{TSystem}} , typename... Args$>$ \\
+\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{void}} te\+::\+Registry\+::add\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{Args}} \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -93,18 +99,37 @@ adds new system
 \Hypertarget{classte_1_1Registry_a8711ff219ebf13ead555c90a545e55a2}\label{classte_1_1Registry_a8711ff219ebf13ead555c90a545e55a2} 
 \index{te::Registry@{te::Registry}!createEntity@{createEntity}}
 \index{createEntity@{createEntity}!te::Registry@{te::Registry}}
-\doxysubsubsection{\texorpdfstring{createEntity()}{createEntity()}}
+\doxysubsubsection{\texorpdfstring{createEntity()}{createEntity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{structte_1_1Entity}{Entity}} te\+::\+Registry\+::create\+Entity (\begin{DoxyParamCaption}\item[{sf\+::\+Texture \&}]{texture }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 creates new entity 
 
-creates new entity with given texture, new ID, Transform\+Component, Sprite\+Component
+creates new entity with given texture and adds new ID, transform, sprite and rigidbody
 
 
 \begin{DoxyParams}{Parameters}
 {\em texture} & Texture to display \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classte_1_1Registry_a5144125f1120c46df096dece3ee382a4}\label{classte_1_1Registry_a5144125f1120c46df096dece3ee382a4} 
+\index{te::Registry@{te::Registry}!createEntity@{createEntity}}
+\index{createEntity@{createEntity}!te::Registry@{te::Registry}}
+\doxysubsubsection{\texorpdfstring{createEntity()}{createEntity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structte_1_1Entity}{Entity}} te\+::\+Registry\+::create\+Entity (\begin{DoxyParamCaption}\item[{sf\+::\+Texture \&}]{texture,  }\item[{sf\+::\+Vector2f}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+creates new entity 
+
+creates new entity with given texture, scale and adds new ID, transform, sprite and rigidbody
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & Texture to display \\
+\hline
+{\em scale} & scaling of sprite \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}\label{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a} 
@@ -125,11 +150,39 @@ shows the specified component of a given entity\+ID
 {\em entity\+ID} & ID of entity \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classte_1_1Registry_a53226e9ccc2c34336e0771b165db33d1}\label{classte_1_1Registry_a53226e9ccc2c34336e0771b165db33d1} 
+\Hypertarget{classte_1_1Registry_abf5d8848453b9641593e81efa22fc442}\label{classte_1_1Registry_abf5d8848453b9641593e81efa22fc442} 
+\index{te::Registry@{te::Registry}!hasComponent@{hasComponent}}
+\index{hasComponent@{hasComponent}!te::Registry@{te::Registry}}
+\doxysubsubsection{\texorpdfstring{hasComponent()}{hasComponent()}}
+{\footnotesize\ttfamily template$<$\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{typename}} Component $>$ \\
+\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{bool}} te\+::\+Registry\+::has\+Component (\begin{DoxyParamCaption}\item[{Entity\+ID}]{entity\+ID }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+shows if entity has a component 
+
+shows if the given entity has the specified component
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity\+ID} & ID of entity \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classte_1_1Registry_a2d9d42450ca3a0e559448de226ff398c}\label{classte_1_1Registry_a2d9d42450ca3a0e559448de226ff398c} 
+\index{te::Registry@{te::Registry}!updateRenderSystem@{updateRenderSystem}}
+\index{updateRenderSystem@{updateRenderSystem}!te::Registry@{te::Registry}}
+\doxysubsubsection{\texorpdfstring{updateRenderSystem()}{updateRenderSystem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{void}} te\+::\+Registry\+::update\+Render\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+updates the render system 
+
+updates the render system \Hypertarget{classte_1_1Registry_a53226e9ccc2c34336e0771b165db33d1}\label{classte_1_1Registry_a53226e9ccc2c34336e0771b165db33d1} 
 \index{te::Registry@{te::Registry}!updateSystems@{updateSystems}}
 \index{updateSystems@{updateSystems}!te::Registry@{te::Registry}}
 \doxysubsubsection{\texorpdfstring{updateSystems()}{updateSystems()}}
-{\footnotesize\ttfamily void te\+::\+Registry\+::update\+Systems (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{void}} te\+::\+Registry\+::update\+Systems (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
