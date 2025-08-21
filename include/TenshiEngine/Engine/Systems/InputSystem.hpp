@@ -4,7 +4,6 @@
 #include "TenshiEngine/Engine/Core/Registry.hpp"
 #include <SFML/Window/Keyboard.hpp>
 #include <SFML/Window/Mouse.hpp>
-#include <array>
 #include <cstdint>
 #include <string>
 
@@ -15,7 +14,7 @@ namespace systems{
  * @brief System for input handling
  *
  * Checks the pressed keys from the system and
- * chanegs the inputComponents depending on Hotkeys
+ * changes the inputComponents depending on Hotkeys
  */
 class InputSystem : public System{
 public:
@@ -31,6 +30,9 @@ public:
 
     void update() override; 
 
+    ///Name of system
+    static const std::string name;
+
 private:
     //Key gets loaded from File
     enum class InputType{MOUSE, KEYBOARD};
@@ -45,7 +47,7 @@ private:
 
     void keyPressed(Key &key, EntityID entityID);
     uint8_t keyNameToCode(std::string &keyName);
-    void updateComponent(std::string &keyBind, components::PlayerInputComponent *component, EntityID entityID);
+    void updatePlayerInput(std::string &keyBind, components::PlayerInput *inputComponent, EntityID entityID);
 
     Key keys[8];
 };

@@ -1,7 +1,5 @@
 #pragma once
 
-#include <string>
-#include <unordered_map>
 #include "TenshiEngine/Engine/Components/Component.hpp"
 
 namespace te{
@@ -12,7 +10,7 @@ namespace components{
  *
  * stores the input states of which actions are pressed
  */
-struct PlayerInputComponent : public Component{
+struct PlayerInput : public Component{
 public:
 
     /**
@@ -20,7 +18,7 @@ public:
      *
      * creates the component
      */
-    PlayerInputComponent(): Component("PlayerInputComponent"){}
+    PlayerInput() = default;
 
     std::string toString () const override{
         return "(up: " + utils::boolToString(up) + " | " + 
@@ -30,8 +28,7 @@ public:
                "jump: " + utils::boolToString(jump) + " | " +
                "sprint: " + utils::boolToString(sprint) + " | " +
                "crouch: " + utils::boolToString(crouch) + " | " +
-               "attack: " + utils::boolToString(attack) + 
-               ")";
+               "attack: " + utils::boolToString(attack) + ")";
     };
 
     bool up = false;
@@ -42,6 +39,9 @@ public:
     bool sprint = false;
     bool crouch = false;
     bool attack = false;
+
+    ///Name of component
+    inline static const std::string name = "PlayerInput";
 };
 
 }

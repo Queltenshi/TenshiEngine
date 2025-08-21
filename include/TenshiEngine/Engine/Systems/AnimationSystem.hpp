@@ -10,6 +10,8 @@ public:
     AnimationSystem(Registry &registry);
 
     void update() override; 
+
+    static const std::string name;
 };
 
 }

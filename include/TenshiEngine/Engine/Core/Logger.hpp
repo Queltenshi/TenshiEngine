@@ -1,5 +1,7 @@
 #pragma once
 
+#include "TenshiEngine/Engine/Components/Component.hpp"
+#include "TenshiEngine/Engine/Entity/Entity.hpp"
 #include <string>
 #include <iostream>
 
@@ -17,6 +19,7 @@ public:
     inline static LogLevel currentLevel = LogLevel::DEBUG;
 
     static void debug(const std::string &source, const std::string &message);
+    static void debug(const std::string &source, const std::string &componentName, const components::Component *component, const EntityID entityID);
     static void warning(const std::string &source, const std::string &message);
     static void error(const std::string &source, const std::string &message);
     static void info(const std::string &source, const std::string &message);
@@ -60,5 +63,22 @@ private:
         } \
     } while(0)
 
+/**
+ * \def LOG_DEBUG_COMPONENT_CHANGED(source, componentName, component, entityID)
+ * \brief Logs a debug message when a component is changed
+ *
+ * Logs a debug message if the currentLevel is set to DEBUG
+ * and when a compontent is changed
+ * \param source The source or module where the log originates
+ * \param componentName Name of changed component
+ * \param component changed component
+ * \param entityID ID of entity which component was changed
+ */
+#define LOG_DEBUG_COMPONENT_CHANGED(source, componentName, component, entityID) \
+    do { \
+        if (te::Logger::currentLevel == te::LogLevel::DEBUG) { \
+            te::Logger::debug(source, componentName, component, entityID); \
+        } \
+    } while(0)
 /** @} */
 

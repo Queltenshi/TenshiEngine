@@ -1,6 +1,5 @@
 #pragma once
 
-#include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Texture.hpp>
 #include "TenshiEngine/Engine/Components/Component.hpp"
@@ -13,26 +12,32 @@ namespace components{
  *
  * stores a sprite and texture
  */
-struct SpriteComponent : public Component{
+struct Sprite : public Component{
 public:
     /**
      * @brief Constructor
      *
-     * creates the component with given texture
+     * creates the component with given texture and
+     * sets it to the sprite
      *
      * @param texture texture for the sprite
      */
-    explicit SpriteComponent(sf::Texture &texture): Component("SpriteComponent"), texture(texture), sprite(texture){}
+    Sprite(sf::Texture &texture): texture(texture), sprite(texture){
+        sprite.setOrigin(sprite.getGlobalBounds().size / 2.f);
+    }
 
     ///Texture for the sprite
     sf::Texture &texture;
 
     ///Sprite used for rendering
     sf::Sprite sprite;
-    
+
     std::string toString() const override{
-        return "Dabu";
+        return "";
     }
+
+    ///Name of component
+    inline static const std::string name = "Sprite";
 };
 
 }

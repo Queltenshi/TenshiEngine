@@ -11,6 +11,8 @@ public:
     DebugRenderSystem(Registry &registry, sf::RenderWindow &window);
 
     void update() override;
+
+    static const std::string name;
 };
 
 }

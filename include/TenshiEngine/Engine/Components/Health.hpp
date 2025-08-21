@@ -7,15 +7,18 @@
 namespace te{
 namespace components{
 
-struct HealthComponent : public Component{
+struct Health : public Component{
 public:
-    HealthComponent(): Component("HealthComponent"), hp(defaultHp), maxHp(hp) {}
-    explicit HealthComponent(int hp): Component("HealthComponent"), hp(hp), maxHp(hp){}
+    Health(): hp(defaultHp), maxHp(hp) {}
+    Health(int hp): hp(hp), maxHp(hp){}
 
     std::string toString() const override;
 
     int hp;
     int maxHp;
+
+    ///Name of component
+    inline static const std::string name = "Health";
 
 private:
     inline static const int defaultHp = 100;

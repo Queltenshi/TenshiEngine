@@ -27,6 +27,9 @@ public:
 
     void update() override;
 
+    ///Name of system
+    static const std::string name;
+
 private:
     sf::RenderWindow &mWindow;
 };

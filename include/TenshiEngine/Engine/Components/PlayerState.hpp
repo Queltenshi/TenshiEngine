@@ -1,17 +1,19 @@
 #pragma once
 
 #include <iostream>
-#include <string>
 #include "TenshiEngine/Engine/Components/Component.hpp"
 
 namespace te{
 namespace components{
 
-struct ColliderComponent : public Component{
+struct PlayerState : public Component{
 public:
-    ColliderComponent(): Component("ColliderComponent"){}
+    PlayerState() = default;
 
     std::string toString() const override;
+
+    ///Name of component
+    inline static const std::string name = "PlayerState";
 };
 
 }

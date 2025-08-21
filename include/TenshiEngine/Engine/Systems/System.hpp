@@ -1,7 +1,7 @@
 #pragma once
 
-#include "TenshiEngine/Engine/Entity/Entity.hpp"
 #include <string>
+#include "TenshiEngine/Engine/Entity/Entity.hpp"
 
 namespace te{
 
@@ -17,13 +17,11 @@ public:
     /**
      * @brief Constructor
      *
-     * Creates a system with given name
+     * Creates a system
      *
      * @param registry reference to the Registry
-     * @param name name of the System
      */
-    System(Registry &registry, std::string name): 
-        mRegistry(registry), mName(name){}
+    System(Registry &registry): mRegistry(registry){}
 
     /**
      * @brief updates the system
@@ -34,8 +32,8 @@ public:
     virtual void update() = 0;
 
 protected:
+    ///Reference to the registry
     Registry &mRegistry;
-    std::string mName;
 };
 
 }

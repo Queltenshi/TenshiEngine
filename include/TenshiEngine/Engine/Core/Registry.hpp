@@ -2,16 +2,21 @@
 
 #include <SFML/Graphics/Texture.hpp>
 #include <string>
+#include <type_traits>
 #include <unordered_map>
 #include <typeindex>
 #include <memory>
+#include <utility>
 #include <vector>
 #include "TenshiEngine/Engine/Entity/Entity.hpp"
 #include "TenshiEngine/Components.hpp"
 #include "TenshiEngine/Engine/Core/Logger.hpp"
 #include "TenshiEngine/Engine/Systems/System.hpp"
+#include "TenshiEngine/Engine/Systems/RenderSystem.hpp"
 
 namespace te{
+
+namespace systems{struct RenderSystem;}
 
 /**
  * @brief Managing entities and components
@@ -32,15 +37,33 @@ public:
     /**
      * @brief creates new entity
      *
-     * creates new entity with given texture,
-     * new ID, TransformComponent, SpriteComponent
+     * creates new entity with given texture and adds
+     * new ID, transform, sprite and rigidbody
      *
      * @param texture Texture to display
      */
     Entity createEntity(sf::Texture &texture){
         Entity entity(mNextId++);
-        addComponent(entity.id, components::SpriteComponent(texture));
-        addComponent(entity.id, components::TransformComponent());
+        addComponent(entity.id, components::Sprite(texture));
+        addComponent(entity.id, components::Transform(getComponent<components::Sprite>(entity.id)->sprite.getGlobalBounds().size));
+        addComponent(entity.id, components::Rigidbody());
+        return entity;
+    }
+
+    /**
+     * @brief creates new entity
+     *
+     * creates new entity with given texture, scale and adds
+     * new ID, transform, sprite and rigidbody
+     *
+     * @param texture Texture to display
+     * @param scale scaling of sprite
+     */
+    Entity createEntity(sf::Texture &texture, sf::Vector2f scale){
+        Entity entity(mNextId++);
+        addComponent(entity.id, components::Sprite(texture));
+        addComponent(entity.id, components::Transform(getComponent<components::Sprite>(entity.id)->sprite.getGlobalBounds().size, scale));
+        addComponent(entity.id, components::Rigidbody());
         return entity;
     }
 
@@ -82,6 +105,19 @@ public:
     }
 
     /**
+     * @brief shows if entity has a component
+     *
+     * shows if the given entity has the specified component
+     *
+     * @param entityID ID of entity
+     */
+    template<typename Component>
+    bool hasComponent(EntityID entityID) const{
+        auto it = mComponents.find(typeid(Component));
+        return it != mComponents.end() && it->second.count(entityID) > 0;
+    }
+
+    /**
      * @brief Lists entities
      *
      * lists entities with specified components
@@ -118,8 +154,12 @@ public:
      */
     template<typename TSystem, typename... Args>
     void addSystem(Args&&... args) {
-        auto system = std::make_unique<TSystem>(*this, std::forward<Args>(args)...);
-        mSystems.push_back(std::move(system));
+        if(std::is_same_v<TSystem, systems::RenderSystem>){
+            mRenderSystem = std::make_unique<TSystem>(*this, std::forward<Args>(args)...);
+        } else{ 
+            auto system = std::make_unique<TSystem>(*this, std::forward<Args>(args)...);
+            mSystems.push_back(std::move(system));
+        }
     }
 
     /**
@@ -133,11 +173,21 @@ public:
         }
     }
 
+    /**
+     * @brief updates the render system
+     *
+     * updates the render system
+     */
+    void updateRenderSystem(){
+        mRenderSystem->update();
+    }
+
 
 private:
     EntityID mNextId;
     std::unordered_map<std::type_index, std::unordered_map<EntityID, std::shared_ptr<void>>> mComponents;
     std::vector<std::unique_ptr<systems::System>> mSystems;
+    std::unique_ptr<systems::System> mRenderSystem;
 };
 
 }

@@ -3,7 +3,7 @@
 namespace te{
 namespace systems{
 
-DebugRenderSystem::DebugRenderSystem(Registry &registry, sf::RenderWindow &window) : System(registry, "DebugRenderSystem"){
+DebugRenderSystem::DebugRenderSystem(Registry &registry, sf::RenderWindow &window) : System(registry){
 
 }
 

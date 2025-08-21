@@ -6,11 +6,14 @@
 namespace te{
 namespace components{
 
-struct PlayerStateComponent : public Component{
+struct Animation : public Component{
 public:
-    PlayerStateComponent(): Component("PlayerStateComponent"){}
+    Animation() = default;
 
     std::string toString() const override;
+
+    ///Name of component
+    inline static const std::string name = "Animation";
 };
 
 }

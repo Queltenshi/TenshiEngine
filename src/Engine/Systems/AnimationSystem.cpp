@@ -3,7 +3,7 @@
 namespace te{
 namespace systems{
 
-AnimationSystem::AnimationSystem(Registry &registry) : System(registry, "AnimationSystem"){
+AnimationSystem::AnimationSystem(Registry &registry) : System(registry){
 
 }
 

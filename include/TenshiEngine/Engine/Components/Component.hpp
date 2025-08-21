@@ -15,11 +15,9 @@ public:
     /**
      * @brief Constructor
      *
-     * Creates a component with given name
-     *
-     * @param name name of the component
+     * Creates a component
      */
-    Component(std::string name): name(name){}
+    Component() = default;
     
     /**
      * @brief shows data as a string
@@ -28,9 +26,6 @@ public:
      * components do override this method
      */
     virtual std::string toString() const = 0;
-
-    /// name of component
-    std::string name;
 };
 
 }

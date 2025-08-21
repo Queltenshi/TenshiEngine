@@ -3,7 +3,7 @@
 namespace te{
 namespace systems{
 
-InputSystem::InputSystem(Registry &registry) : System(registry, "InputSystem"),
+InputSystem::InputSystem(Registry &registry) : System(registry),
     keys{{InputType::KEYBOARD, "W", "up"}, 
          {InputType::KEYBOARD, "S", "down"},
          {InputType::KEYBOARD, "A", "left"},
@@ -18,24 +18,24 @@ InputSystem::InputSystem(Registry &registry) : System(registry, "InputSystem"),
 }  
 
 void InputSystem::update(){
-    const auto &entityIDs = mRegistry.view<components::PlayerInputComponent>();
+    const auto &entityIDs = mRegistry.view<components::PlayerInput>();
     for(auto entityID : entityIDs){
-        for(auto key : keys)
+        for(auto &key : keys)
             keyPressed(key, entityID);
     }
 }
 
 void InputSystem::keyPressed(Key &key, EntityID entityID){
-    components::PlayerInputComponent *component = mRegistry.getComponent<components::PlayerInputComponent>(entityID);
+    components::PlayerInput *component = mRegistry.getComponent<components::PlayerInput>(entityID);
     if(key.inputType == InputType::MOUSE){
         sf::Mouse::Button mouseButton = static_cast<sf::Mouse::Button>(key.keyCode);
         if(sf::Mouse::isButtonPressed(mouseButton)){
-            updateComponent(key.keyBind, component, entityID);
+            updatePlayerInput(key.keyBind, component, entityID);
         }
     } else if(key.inputType == InputType::KEYBOARD){ 
         sf::Keyboard::Key keyboardKey = static_cast<sf::Keyboard::Key>(key.keyCode);
         if(sf::Keyboard::isKeyPressed(keyboardKey)){
-            updateComponent(key.keyBind, component, entityID);
+            updatePlayerInput(key.keyBind, component, entityID);
         }
     }
 }
@@ -60,28 +60,27 @@ uint8_t InputSystem::keyNameToCode(std::string &keyName){
     return 0;
 }
 
-void InputSystem::updateComponent(std::string &keyBind, components::PlayerInputComponent *component, EntityID entityID){
-    if(keyBind == "up" && !component->up)
-        component->up = true;
-    else if(keyBind == "down" && !component->down)
-        component->down = true;
-    else if(keyBind == "left" && !component->left)
-        component->left = true;
-    else if(keyBind == "right" && !component->right)
-        component->right = true;
-    else if(keyBind == "jump" && !component->jump)
-        component->jump = true;
-    else if(keyBind == "sprint" && !component->sprint)
-        component->sprint = true;
-    else if(keyBind == "crouch" && !component->crouch)
-        component->crouch = true;
-    else if(keyBind == "attack" && !component->attack)
-        component->attack = true;
-    else return;
-
-    LOG_DEBUG(mName, component->name  + " changed for Entity " + std::to_string(entityID) + " " + component->toString());
+void InputSystem::updatePlayerInput(std::string &keyBind, components::PlayerInput *inputComponent, EntityID entityID){
+    if(keyBind == "up" && !inputComponent->up)
+        inputComponent->up = true;
+    else if(keyBind == "down" && !inputComponent->down)
+        inputComponent->down = true;
+    if(keyBind == "left" && !inputComponent->left)
+        inputComponent->left = true;
+    else if(keyBind == "right" && !inputComponent->right)
+        inputComponent->right = true;
+    if(keyBind == "jump" && !inputComponent->jump)
+        inputComponent->jump = true;
+    if(keyBind == "sprint" && !inputComponent->sprint)
+        inputComponent->sprint = true;
+    else if(keyBind == "crouch" && !inputComponent->crouch)
+        inputComponent->crouch = true;
+    if(keyBind == "attack" && !inputComponent->attack)
+        inputComponent->attack = true;
 }
     
+const std::string InputSystem::name = "InputSystem";
+
 }   
 }   
     

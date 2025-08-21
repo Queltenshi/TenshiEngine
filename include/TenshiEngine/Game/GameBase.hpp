@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <SFML/System/Clock.hpp>
 #include "TenshiEngine/Engine/Core/Registry.hpp"
 #include "TenshiEngine/Systems.hpp"
 
@@ -43,11 +44,15 @@ public:
     virtual void init();
 
 protected:
+    /// Registry used for managing entities, components and systems
     Registry mRegistry;
 
 private:
     sf::RenderWindow mWindow;
-    //systems::RenderSystem mRenderSystem;
+    const float mDeltaTime;
+    sf::Clock mClock;
+    float mAccumulator;
+    const int mMaxUpdatesPerFrame;
 };
 
 }
