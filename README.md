@@ -20,7 +20,7 @@
 ---
 
 ## Documentation
-You can find the latest API documentation here: [TenshiEngine API Docs](https://Queldris.github.io/TenshiEngine/)
+You can find the latest API documentation here: [TenshiEngine API Docs](https://Queltenshi.github.io/TenshiEngine/)
 
 ---
 
@@ -32,7 +32,7 @@ You can find the latest API documentation here: [TenshiEngine API Docs](https://
 
 **Linux**:
 ```bash
-git clone https://github.com/Queldris/TenshiEngine.git
+git clone https://github.com/Queltenshi/TenshiEngine.git
 cd TenshiEngine
 mkdir build
 cd build
