@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['object_5fiterator_0',['object_iterator',['../structnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1internal__iterator.html#ad3879a003729f982492c6d8bc54bf712',1,'nlohmann::json_abi_v3_12_0::detail::internal_iterator']]]
+  ['texture_0',['texture',['../structte_1_1components_1_1Sprite.html#a11e0d21375a4473ea3678210f0b97eb4',1,'te::components::Sprite']]],
+  ['texturedata_1',['textureData',['../structte_1_1components_1_1Animation.html#a004201cbf848667fcbdbe028b997cf36',1,'te::components::Animation']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['array_5fiterator_0',['array_iterator',['../structnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1internal__iterator.html#a233cf1a805c9f26cbb1e3c99693c7775',1,'nlohmann::json_abi_v3_12_0::detail::internal_iterator']]]
+  ['currentanimation_0',['currentAnimation',['../structte_1_1components_1_1Animation.html#abbfce0e9965660205d8826e7ce2a7126',1,'te::components::Animation']]],
+  ['currentstate_1',['currentState',['../structte_1_1components_1_1State.html#ad2f6b34b49fa7d65cdd8106599eefced',1,'te::components::State']]]
 ];

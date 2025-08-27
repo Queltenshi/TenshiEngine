@@ -9,16 +9,16 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}nlohmann/json.hpp"{}}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <SFML/Graphics/Rect.hpp>}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{json}}\ =\ \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_ab2f6edf07e4f40878b4593762f74029e}{nlohmann::json}};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ }json\ =\ nlohmann::json;}
 \DoxyCodeLine{00009\ }
 \DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }te\{}
 \DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }components\{}
 \DoxyCodeLine{00012\ }
 \DoxyCodeLine{00018\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structte_1_1components_1_1Animation}{Animation}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structte_1_1components_1_1Component}{Component}}\{}
 \DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Animation_ac736f7ae16df4d3eb9d02e5c70dca5d5}{Animation}}(\mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{json}}\ \&\mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}}):\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}}(\mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}})\{}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Animation_ac736f7ae16df4d3eb9d02e5c70dca5d5}{Animation}}(json\ \&\mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}}):\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}}(\mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}})\{}
 \DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ idleFrame\ =\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}}[\textcolor{stringliteral}{"{}animations"{}}][\textcolor{stringliteral}{"{}idle"{}}][0];}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Animation_aebc50046bc4e84b0a2f5faa74f176eec}{rectangle}}.\mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json_a5a14dd8aead844e9b53035fdf686362b}{size}}\ =\ \{idleFrame[\textcolor{stringliteral}{"{}w"{}}],\ idleFrame[\textcolor{stringliteral}{"{}h"{}}]\};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Animation_aebc50046bc4e84b0a2f5faa74f176eec}{rectangle}}.size\ =\ \{idleFrame[\textcolor{stringliteral}{"{}w"{}}],\ idleFrame[\textcolor{stringliteral}{"{}h"{}}]\};}
 \DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Animation_aebc50046bc4e84b0a2f5faa74f176eec}{rectangle}}.position\ =\ \{idleFrame[\textcolor{stringliteral}{"{}x"{}}],\ idleFrame[\textcolor{stringliteral}{"{}y"{}}]\};}
 \DoxyCodeLine{00032\ \ \ \ \ \}}
 \DoxyCodeLine{00033\ }
@@ -39,7 +39,7 @@
 \DoxyCodeLine{00051\ }
 \DoxyCodeLine{00053\ \ \ \ \ sf::IntRect\ \mbox{\hyperlink{structte_1_1components_1_1Animation_aebc50046bc4e84b0a2f5faa74f176eec}{rectangle}};}
 \DoxyCodeLine{00054\ }
-\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{json}}\ \&\mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}};}
+\DoxyCodeLine{00056\ \ \ \ \ json\ \&\mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}};}
 \DoxyCodeLine{00057\ }
 \DoxyCodeLine{00059\ \ \ \ \ CurrentAnimation\ \mbox{\hyperlink{structte_1_1components_1_1Animation_abbfce0e9965660205d8826e7ce2a7126}{currentAnimation}}\ =\ CurrentAnimation::IDLE;}
 \DoxyCodeLine{00060\ }

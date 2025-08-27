@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['json_5fpointer_0',['json_pointer',['../classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer.html#a8eb3880e69224826b7c21c5ebd06cf8c',1,'nlohmann::json_abi_v3_12_0::json_pointer']]],
-  ['json_5fsax_5fdom_5fparser_1',['json_sax_dom_parser',['../classnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1json__sax__dom__parser.html#a57ee15b61e2f81ee752b47085d2e0fcd',1,'nlohmann::json_abi_v3_12_0::detail::json_sax_dom_parser']]],
-  ['jump_2',['jump',['../structte_1_1components_1_1Jump.html#a88902247436705ce164709163881a408',1,'te::components::Jump::Jump()=default'],['../structte_1_1components_1_1Jump.html#a70d263472245c77f1adf6a839dca7a8e',1,'te::components::Jump::Jump(float strength)']]]
+  ['registry_0',['Registry',['../classte_1_1Registry.html#ac9fde2f8cf63b88d955daff21299fa3e',1,'te::Registry']]],
+  ['rendersystem_1',['RenderSystem',['../classte_1_1systems_1_1RenderSystem.html#a5e38b8b1586244d7cb2f0543b4f8fcb2',1,'te::systems::RenderSystem']]],
+  ['rigidbody_2',['rigidbody',['../structte_1_1components_1_1Rigidbody.html#ad0f144559b373a95727c482b1cdcdf67',1,'te::components::Rigidbody::Rigidbody()=default'],['../structte_1_1components_1_1Rigidbody.html#aa217b88ba64b7eab48bd232a68698d86',1,'te::components::Rigidbody::Rigidbody(float mass)']]],
+  ['run_3',['run',['../classte_1_1GameBase.html#accb4b63d1277e46131d66a66c0e1e63b',1,'te::GameBase']]]
 ];
