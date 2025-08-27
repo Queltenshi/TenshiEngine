@@ -3,7 +3,7 @@
 namespace te{
 namespace systems{
 
-InputSystem::InputSystem(Registry &registry) : System(registry),
+InputSystem::InputSystem(Registry &registry, float &deltaTime) : VariableSystem(registry, deltaTime),
     keys{{InputType::KEYBOARD, "W", "up"}, 
          {InputType::KEYBOARD, "S", "down"},
          {InputType::KEYBOARD, "A", "left"},

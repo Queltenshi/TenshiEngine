@@ -12,7 +12,7 @@ namespace systems{
  *
  * Does rendering of the sprite in the window
  */
-class RenderSystem : public System{
+class RenderSystem : public VariableSystem{
 public:
 
     /**
@@ -21,11 +21,12 @@ public:
      * creates the System
      *
      * @param registry reference to the registry
+     * @param deltaTime reference to the frame delta time
      * @param window reference to the window
      */
-    RenderSystem(Registry &registry, sf::RenderWindow &window);
+    RenderSystem(Registry &registry, float &deltaTime, sf::RenderWindow &window);
 
-    void update() override;
+    void update();
 
     ///Name of system
     static const std::string name;

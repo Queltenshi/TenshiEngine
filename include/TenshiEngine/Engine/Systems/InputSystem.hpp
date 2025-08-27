@@ -16,7 +16,7 @@ namespace systems{
  * Checks the pressed keys from the system and
  * changes the inputComponents depending on Hotkeys
  */
-class InputSystem : public System{
+class InputSystem : public VariableSystem{
 public:
 
     /**
@@ -25,8 +25,9 @@ public:
      * creates the System
      *
      * @param registry reference to the registry
+     * @param deltaTime reference to the frame delta time
      */
-    InputSystem(Registry &registry);
+    InputSystem(Registry &registry, float &deltaTime);
 
     void update() override; 
 

@@ -33,7 +33,7 @@ public:
     }
 
     ///value of jumping strength
-    float strength = 16.f;
+    float strength = 700.f;
 
     ///Name of component
     inline static const std::string name = "Jump";

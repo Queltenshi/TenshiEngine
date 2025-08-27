@@ -23,7 +23,21 @@ public:
      * @param texture texture for the sprite
      */
     Sprite(sf::Texture &texture): texture(texture), sprite(texture){
-        sprite.setOrigin(sprite.getGlobalBounds().size / 2.f);
+        sprite.setOrigin({sprite.getTextureRect().size.x / 2.f, sprite.getTextureRect().size.y / 2.f});
+    }
+
+    /**
+     * @brief Constructor
+     *
+     * creates the component with given texture and animationRectangle
+     * sets it to the sprite
+     *
+     * @param texture texture for the sprite
+     * @param animationRectangle rectangle for setting the texture to default animation
+     */
+    Sprite(sf::Texture &texture, sf::IntRect &animationRectangle): texture(texture), sprite(texture){
+        sprite.setTextureRect(animationRectangle);
+        sprite.setOrigin({sprite.getTextureRect().size.x / 2.f, sprite.getTextureRect().size.y / 2.f});
     }
 
     ///Texture for the sprite

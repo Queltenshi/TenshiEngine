@@ -1,22 +1,20 @@
 #pragma once
 
-#include <SFML/Graphics/Texture.hpp>
-#include <string>
-#include <type_traits>
 #include <unordered_map>
 #include <typeindex>
-#include <memory>
-#include <utility>
-#include <vector>
-#include "TenshiEngine/Engine/Entity/Entity.hpp"
 #include "TenshiEngine/Components.hpp"
 #include "TenshiEngine/Engine/Core/Logger.hpp"
 #include "TenshiEngine/Engine/Systems/System.hpp"
 #include "TenshiEngine/Engine/Systems/RenderSystem.hpp"
+#include "nlohmann/json.hpp"
+
+using json = nlohmann::json;
 
 namespace te{
 
-namespace systems{struct RenderSystem;}
+namespace systems{
+struct RenderSystem;
+}
 
 /**
  * @brief Managing entities and components
@@ -29,41 +27,41 @@ class Registry{
 public:
 
     /** @brief Constructor
-     *  
-     *  @param mNextId used for automatically adding IDs to entities
      */
     Registry(): mNextId(0){}
 
     /**
      * @brief creates new entity
      *
-     * creates new entity with given texture and adds
-     * new ID, transform, sprite and rigidbody
+     * creates new Entity with given texture and adds
+     * new ID, Transform, Sprite
      *
      * @param texture Texture to display
      */
     Entity createEntity(sf::Texture &texture){
         Entity entity(mNextId++);
-        addComponent(entity.id, components::Sprite(texture));
-        addComponent(entity.id, components::Transform(getComponent<components::Sprite>(entity.id)->sprite.getGlobalBounds().size));
-        addComponent(entity.id, components::Rigidbody());
+        auto sprite = addComponent(entity.id, components::Sprite(texture));
+        auto spriteSize = sprite->sprite.getGlobalBounds().size;
+        addComponent(entity.id, components::Transform(spriteSize));
         return entity;
     }
 
     /**
-     * @brief creates new entity
+     * @brief creates new entity with animation
      *
-     * creates new entity with given texture, scale and adds
-     * new ID, transform, sprite and rigidbody
+     * creates new Entity with given texture and textureData and adds
+     * new ID, Transform, Sprite, Animation, State
      *
      * @param texture Texture to display
-     * @param scale scaling of sprite
+     * @param textureData json data used for animation
      */
-    Entity createEntity(sf::Texture &texture, sf::Vector2f scale){
+    Entity createEntity(sf::Texture &texture, json &textureData){
         Entity entity(mNextId++);
-        addComponent(entity.id, components::Sprite(texture));
-        addComponent(entity.id, components::Transform(getComponent<components::Sprite>(entity.id)->sprite.getGlobalBounds().size, scale));
-        addComponent(entity.id, components::Rigidbody());
+        auto animation = addComponent(entity.id, components::Animation(textureData));
+        auto sprite = addComponent(entity.id, components::Sprite(texture, animation->rectangle));
+        auto spriteSize = sprite->sprite.getGlobalBounds().size;
+        addComponent(entity.id, components::Transform(spriteSize));
+        addComponent(entity.id, te::components::State());
         return entity;
     }
 
@@ -76,13 +74,14 @@ public:
      * @param component component to add
      */
     template<typename Component>
-    void addComponent(EntityID entityID, const Component &component){
-        mComponents[typeid(Component)][entityID] = std::make_shared<Component>(component);
-
+    Component* addComponent(EntityID entityID, const Component &component){
         //Debug Info
         if(Logger::currentLevel == LogLevel::DEBUG){
             Logger::debug("Registry", component.name  + " added to Entity " + std::to_string(entityID) + " " + component.toString());
         }
+
+        mComponents[typeid(Component)][entityID] = std::make_shared<Component>(component);
+        return static_cast<Component*>(mComponents[typeid(Component)][entityID].get());
     }
 
     /**
@@ -154,22 +153,38 @@ public:
      */
     template<typename TSystem, typename... Args>
     void addSystem(Args&&... args) {
-        if(std::is_same_v<TSystem, systems::RenderSystem>){
+        if constexpr (std::is_same_v<TSystem, systems::RenderSystem>){
             mRenderSystem = std::make_unique<TSystem>(*this, std::forward<Args>(args)...);
-        } else{ 
-            auto system = std::make_unique<TSystem>(*this, std::forward<Args>(args)...);
-            mSystems.push_back(std::move(system));
+        } 
+        else if constexpr (std::is_base_of_v<systems::FixedSystem, TSystem>) {
+            auto fixedSystem = std::make_unique<TSystem>(*this, std::forward<Args>(args)...);
+            mFixedSystems.push_back(std::move(fixedSystem));
+        }
+        else if constexpr (std::is_base_of_v<systems::VariableSystem, TSystem>) {
+            auto variableSystem = std::make_unique<TSystem>(*this, std::forward<Args>(args)...);
+            mVariableSystems.push_back(std::move(variableSystem));
         }
     }
 
     /**
-     * @brief updates all systems
+     * @brief updates all fixed systems
      *
-     * updates all the systems
+     * updates all the fixed systems
      */
-    void updateSystems() {
-        for (auto& system : mSystems) {
-            system->update();
+    void updateFixedSystems() {
+        for (auto& fixedSystem : mFixedSystems) {
+            fixedSystem->update();
+        }
+    }
+
+    /**
+     * @brief updates all variable systems
+     *
+     * updates all the variable systems
+     */
+    void updateVariableSystems() {
+        for (auto& variableSystem : mVariableSystems) {
+            variableSystem->update();
         }
     }
 
@@ -186,8 +201,9 @@ public:
 private:
     EntityID mNextId;
     std::unordered_map<std::type_index, std::unordered_map<EntityID, std::shared_ptr<void>>> mComponents;
-    std::vector<std::unique_ptr<systems::System>> mSystems;
-    std::unique_ptr<systems::System> mRenderSystem;
+    std::vector<std::unique_ptr<systems::FixedSystem>> mFixedSystems;
+    std::vector<std::unique_ptr<systems::VariableSystem>> mVariableSystems;
+    std::unique_ptr<systems::VariableSystem> mRenderSystem;
 };
 
 }

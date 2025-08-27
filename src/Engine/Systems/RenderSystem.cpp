@@ -1,10 +1,11 @@
 #include "TenshiEngine/Engine/Systems/RenderSystem.hpp"
+#include <SFML/Graphics/RectangleShape.hpp>
 
 
 namespace te{
 namespace systems{
 
-RenderSystem::RenderSystem(Registry &registry, sf::RenderWindow &window) : System(registry), mWindow(window){}
+RenderSystem::RenderSystem(Registry &registry, float &deltaTime, sf::RenderWindow &window) : VariableSystem(registry, deltaTime), mWindow(window){}
 
 void RenderSystem::update(){
     std::vector<EntityID> entityIDs = mRegistry.view<components::Sprite>();
@@ -21,8 +22,18 @@ void RenderSystem::update(){
             sprite->sprite.setScale(transform->scale);
             transform->scaleDirty = false;
         }
-
+       
         mWindow.draw(sprite->sprite);
+
+        //Debug rendering
+        if(Logger::currentLevel == LogLevel::DEBUG){
+            sf::RectangleShape collider(transform->size);
+            collider.setOrigin(collider.getSize() / 2.f);
+            collider.setPosition(transform->position);
+            collider.setFillColor(sf::Color(0, 0, 0, 0));
+            collider.setOutlineThickness(-2.f);
+            mWindow.draw(collider);
+        }
     }
 }
 

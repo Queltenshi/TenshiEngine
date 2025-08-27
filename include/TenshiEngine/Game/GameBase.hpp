@@ -49,10 +49,10 @@ protected:
 
 private:
     sf::RenderWindow mWindow;
-    const float mDeltaTime;
+    const float mFixedDeltaTime;
+    float mVariableDeltaTime;
     sf::Clock mClock;
     float mAccumulator;
-    const int mMaxUpdatesPerFrame;
 };
 
 }

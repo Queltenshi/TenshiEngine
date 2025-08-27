@@ -24,7 +24,7 @@ public:
         return "(value.x: " + std::to_string(value.x) + " | " + " value.y: " + std::to_string(value.y) + ")"; 
     };
 
-    /// Current velocity
+    ///Current velocity
     sf::Vector2f value = {0.f, 0.f};
 
     ///Name of component

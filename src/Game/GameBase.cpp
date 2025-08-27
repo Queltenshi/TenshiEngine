@@ -5,27 +5,24 @@
 namespace te{
 
 GameBase::GameBase(std::string windowName)
-    : mWindow(sf::VideoMode({1920, 1080}), windowName), mDeltaTime(1.f / 60.f), mAccumulator(0.f), mMaxUpdatesPerFrame(5){ //mWindow(sf::VideoMode::getDesktopMode(), windowName, sf::State::Fullscreen)
+    : mWindow(sf::VideoMode({1920, 1080}), windowName), mFixedDeltaTime(1.f / 60.f), mVariableDeltaTime(0.f), mAccumulator(0.f){ //mWindow(sf::VideoMode::getDesktopMode(), windowName, sf::State::Fullscreen)
     
 }
 
 void GameBase::init(){
     mWindow.setFramerateLimit(60);
-    mRegistry.addSystem<systems::RenderSystem>(mWindow);
-    mRegistry.addSystem<systems::InputSystem>();
-    mRegistry.addSystem<systems::MovementSystem>();
-    mRegistry.addSystem<systems::PhysicsSystem>();
+    mRegistry.addSystem<systems::RenderSystem>(mVariableDeltaTime, mWindow);
+    mRegistry.addSystem<systems::InputSystem>(mVariableDeltaTime);
+    mRegistry.addSystem<systems::MovementSystem>(mFixedDeltaTime);
+    mRegistry.addSystem<systems::PhysicsSystem>(mFixedDeltaTime);
+    mRegistry.addSystem<systems::AnimationSystem>(mVariableDeltaTime);
 }
 
 void GameBase::run(){
-    int frame = 0;
     while (mWindow.isOpen())
     {
-        float frameTime = mClock.restart().asSeconds();
-        if (mAccumulator > mDeltaTime * mMaxUpdatesPerFrame)
-            mAccumulator = mDeltaTime * mMaxUpdatesPerFrame;
-
-        mAccumulator += frameTime;
+        mVariableDeltaTime = mClock.restart().asSeconds();
+        mAccumulator += mVariableDeltaTime;
 
         while (const std::optional event = mWindow.pollEvent())
         {
@@ -33,13 +30,14 @@ void GameBase::run(){
                 mWindow.close();
         }
 
-        int updates = 0;
-        while(mAccumulator >= mDeltaTime && updates < mMaxUpdatesPerFrame){
-            mRegistry.updateSystems();        
-            mAccumulator -= mDeltaTime;
-            updates++;
+
+        while(mAccumulator >= mFixedDeltaTime){
+            mRegistry.updateFixedSystems();        
+            mAccumulator -= mFixedDeltaTime;
         }
-        
+
+        mRegistry.updateVariableSystems();
+
         mWindow.clear();
         mRegistry.updateRenderSystem();
         mWindow.display();

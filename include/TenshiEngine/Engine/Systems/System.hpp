@@ -36,5 +36,44 @@ protected:
     Registry &mRegistry;
 };
 
+/**
+ * @brief Fixed system
+ */
+class FixedSystem : public System{
+public:
+    /**
+     * @brief Constructor
+     *
+     * Creates a system with fixed deltaTime
+     *
+     * @param registry reference to the Registry
+     * @param deltaTime Fixed deltaTime
+     */
+    FixedSystem(Registry &registry, const float deltaTime): System(registry), mDeltaTime(deltaTime){} 
+
+protected:
+    ///Fixed deltaTime
+    const float mDeltaTime;
+};
+
+/**
+ * @brief Variable system
+ */
+class VariableSystem : public System{
+public:
+    /**
+     * @brief Constructor
+     *
+     * Creates a variable system
+     *
+     * @param registry reference to the Registry
+     * @param deltaTime Reference to frame deltaTime
+     */
+    VariableSystem(Registry &registry, float &deltaTime): System(registry), mDeltaTime(deltaTime){} 
+
+protected:
+    ///Frame deltaTime
+    float &mDeltaTime;
+};
 }
 }

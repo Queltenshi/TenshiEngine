@@ -33,7 +33,7 @@ public:
     }
 
     ///value for speed
-    float speed = 10.f;
+    float speed = 400.f;
 
     ///Name of component
     inline static const std::string name = "HorizontalMovement";

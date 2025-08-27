@@ -3,28 +3,30 @@
 namespace te{
 namespace systems{
 
-PhysicsSystem::PhysicsSystem(Registry &registry) : System(registry), mGravity(defaultGravity){}
-PhysicsSystem::PhysicsSystem(Registry &registry, float gravity) : System(registry), mGravity(gravity){}
+PhysicsSystem::PhysicsSystem(Registry &registry, float deltaTime) : FixedSystem(registry, deltaTime), mGravity(defaultGravity){}
+PhysicsSystem::PhysicsSystem(Registry &registry, float deltaTime, float gravity) : FixedSystem(registry, deltaTime), mGravity(gravity){}
 
 void PhysicsSystem::update(){
-    const auto & entityIDs = mRegistry.view<components::Rigidbody>();
+    //Velocity
+    const auto & entityIDs = mRegistry.view<components::Velocity, components::Rigidbody>();
     for(auto entityID: entityIDs){
-        if(mRegistry.hasComponent<components::Velocity>(entityID)){
-            if(mRegistry.hasComponent<components::Grounded>(entityID)){
-                mRegistry.getComponent<components::Grounded>(entityID)->isGrounded = false;
-            }
-            auto transform  = mRegistry.getComponent<components::Transform>(entityID);
-            auto velocity = mRegistry.getComponent<components::Velocity>(entityID);
-
-            updateGravity(entityID, velocity);
-            transform->position += velocity->value;
-            transform->positionDirty = true;
+        if(mRegistry.hasComponent<components::Grounded>(entityID)){
+            mRegistry.getComponent<components::Grounded>(entityID)->isGrounded = false;
         }
+
+        auto velocity = mRegistry.getComponent<components::Velocity>(entityID);
+        auto transform  = mRegistry.getComponent<components::Transform>(entityID);
+
+        updateGravity(entityID, velocity);
+        transform->position += velocity->value * mDeltaTime;
+        transform->positionDirty = true;
     }
 
-    for(int i = 0; i < entityIDs.size(); i++){
-        for(int j = i+1; j < entityIDs.size(); j++){
-            updateCollision(entityIDs[i], entityIDs[j]);
+    //Collision
+    const auto & collisionEntityIDs = mRegistry.view<components::Rigidbody>();
+    for(int i = 0; i < collisionEntityIDs.size(); i++){
+        for(int j = i+1; j < collisionEntityIDs.size(); j++){
+            checkCollision(collisionEntityIDs[i], collisionEntityIDs[j]);
         }
     }
 }
@@ -33,12 +35,12 @@ void PhysicsSystem::updateGravity(EntityID entityID, components::Velocity *veloc
     auto rigidBody = mRegistry.getComponent<components::Rigidbody>(entityID);
 
     if(!rigidBody->isStatic){
-        float acceleration = mGravity * rigidBody->mass * 0.0007;
+        float acceleration = mGravity * rigidBody->mass * mDeltaTime;
         velocity->value.y += acceleration; 
     }
 }
 
-void PhysicsSystem::updateCollision(EntityID entityID1, EntityID entityID2){
+void PhysicsSystem::checkCollision(EntityID entityID1, EntityID entityID2){
     auto transform1 = mRegistry.getComponent<components::Transform>(entityID1);
     auto transform2 = mRegistry.getComponent<components::Transform>(entityID2);
     sf::FloatRect rectangle1(transform1->position - transform1->size * 0.5f, transform1->size);
@@ -49,6 +51,7 @@ void PhysicsSystem::updateCollision(EntityID entityID1, EntityID entityID2){
         sf::FloatRect overlapRect = *intersection;
         auto rigidBody1 = mRegistry.getComponent<components::Rigidbody>(entityID1);
         auto rigidBody2 = mRegistry.getComponent<components::Rigidbody>(entityID2);
+
         if(!rigidBody1->isStatic){
             correctPosition(entityID1, transform2, transform1, overlapRect);
         } else if(!rigidBody2->isStatic){
