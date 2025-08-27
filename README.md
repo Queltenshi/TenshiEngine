@@ -10,7 +10,7 @@
 - **SFML Rendering** - 2D Rendering with Sprites/Textures
 - **Logger** - Console Logger with Debug Log
 - **GameBase** - A ready-to-use game loop and render window setup
-- **Prefabs** - Ready to use entities with components
+- **Prefabs** - Ready-to-use entities with components
 
 ---
 ## Components / Systems
