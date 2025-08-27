@@ -14,35 +14,35 @@
 \DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }te\{}
 \DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }systems\{}
 \DoxyCodeLine{00012\ }
-\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1systems_1_1InputSystem}{InputSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classte_1_1systems_1_1System}{System}}\{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1systems_1_1InputSystem}{InputSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classte_1_1systems_1_1VariableSystem}{VariableSystem}}\{}
 \DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00021\ }
-\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classte_1_1systems_1_1InputSystem}{InputSystem}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry);}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1systems_1_1InputSystem_a966ac41f24309ed1402722cccf57cb37}{update}}()\ \textcolor{keyword}{override};\ }
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classte_1_1systems_1_1InputSystem_afcd03333c4f959f621dd42d012a54924}{name}};}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//Key\ gets\ loaded\ from\ File}}
-\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{enum\ class}\ InputType\{MOUSE,\ KEYBOARD\};}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{struct\ }Key\{}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ Key(InputType\ inputType,\ \textcolor{keyword}{const}\ std::string\ keyName,\ \textcolor{keyword}{const}\ std::string\ keyBind)}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ :inputType(inputType),\ keyName(keyName),\ keyBind(keyBind)\{\}}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ InputType\ inputType;}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::string\ keyName;}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::string\ keyBind;}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ uint8\_t\ keyCode;}
-\DoxyCodeLine{00046\ \ \ \ \ \};}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ keyPressed(Key\ \&key,\ EntityID\ entityID);}
-\DoxyCodeLine{00049\ \ \ \ \ uint8\_t\ keyNameToCode(std::string\ \&keyName);}
-\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ updatePlayerInput(std::string\ \&keyBind,\ components::PlayerInput\ *inputComponent,\ EntityID\ entityID);}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00052\ \ \ \ \ Key\ keys[8];}
-\DoxyCodeLine{00053\ \};}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00055\ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classte_1_1systems_1_1InputSystem}{InputSystem}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry,\ \textcolor{keywordtype}{float}\ \&deltaTime);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1systems_1_1InputSystem_a966ac41f24309ed1402722cccf57cb37}{update}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classte_1_1systems_1_1InputSystem_afcd03333c4f959f621dd42d012a54924}{name}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//Key\ gets\ loaded\ from\ File}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{enum\ class}\ InputType\{MOUSE,\ KEYBOARD\};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{struct\ }Key\{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ Key(InputType\ inputType,\ \textcolor{keyword}{const}\ std::string\ keyName,\ \textcolor{keyword}{const}\ std::string\ keyBind)}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ :inputType(inputType),\ keyName(keyName),\ keyBind(keyBind)\{\}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ InputType\ inputType;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ std::string\ keyName;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ std::string\ keyBind;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ uint8\_t\ keyCode;}
+\DoxyCodeLine{00047\ \ \ \ \ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ keyPressed(Key\ \&key,\ EntityID\ entityID);}
+\DoxyCodeLine{00050\ \ \ \ \ uint8\_t\ keyNameToCode(std::string\ \&keyName);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ updatePlayerInput(std::string\ \&keyBind,\ components::PlayerInput\ *inputComponent,\ EntityID\ entityID);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ Key\ keys[8];}
+\DoxyCodeLine{00054\ \};}
+\DoxyCodeLine{00055\ }
 \DoxyCodeLine{00056\ \}}
+\DoxyCodeLine{00057\ \}}
 
 \end{DoxyCode}

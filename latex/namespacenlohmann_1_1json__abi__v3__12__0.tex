@@ -1,0 +1,170 @@
+\doxysection{nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0 Namespace Reference}
+\hypertarget{namespacenlohmann_1_1json__abi__v3__12__0}{}\label{namespacenlohmann_1_1json__abi__v3__12__0}\index{nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail}{detail}}
+\begin{DoxyCompactList}\small\item\em detail namespace with internal helper functions \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structnlohmann_1_1json__abi__v3__12__0_1_1adl__serializer}{adl\+\_\+serializer}}
+\begin{DoxyCompactList}\small\item\em default JSONSerializer template argument \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{basic\+\_\+json}}
+\begin{DoxyCompactList}\small\item\em a class to store JSON values \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1byte__container__with__subtype}{byte\+\_\+container\+\_\+with\+\_\+subtype}}
+\begin{DoxyCompactList}\small\item\em an internal type for a backed binary type \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}
+\begin{DoxyCompactList}\small\item\em JSON Pointer defines a string syntax for identifying a specific value within a JSON document. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structnlohmann_1_1json__abi__v3__12__0_1_1ordered__map}{ordered\+\_\+map}}
+\begin{DoxyCompactList}\small\item\em a minimal map-\/like container that preserves insertion order \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_ab2f6edf07e4f40878b4593762f74029e}{json}} = \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{basic\+\_\+json}}$<$$>$
+\begin{DoxyCompactList}\small\item\em default specialization \end{DoxyCompactList}\item 
+using \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_aab6090a591c2978a32541089cfc23a0e}{ordered\+\_\+json}} = \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{basic\+\_\+json}}$<$ \mbox{\hyperlink{structnlohmann_1_1json__abi__v3__12__0_1_1ordered__map}{nlohmann\+::ordered\+\_\+map}} $>$
+\begin{DoxyCompactList}\small\item\em specialization that maintains the insertion order of object keys \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Ref\+String\+Type\+Lhs , typename Ref\+String\+Type\+Rhs $>$ }\\bool \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_a1220f4e93695da5fe30bf9c4ac595817}{operator==}} (const \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}$<$ Ref\+String\+Type\+Lhs $>$ \&lhs, const \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}$<$ Ref\+String\+Type\+Rhs $>$ \&rhs) noexcept
+\item 
+{\footnotesize template$<$typename Ref\+String\+Type\+Lhs , typename String\+Type  = typename json\+\_\+pointer$<$\+Ref\+String\+Type\+Lhs$>$\+::string\+\_\+t$>$ }\\bool \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_a14b2b5afcf63b64cb5cf25ef9f729b88}{operator==}} (const \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}$<$ Ref\+String\+Type\+Lhs $>$ \&lhs, const String\+Type \&rhs)
+\item 
+{\footnotesize template$<$typename Ref\+String\+Type\+Rhs , typename String\+Type  = typename json\+\_\+pointer$<$\+Ref\+String\+Type\+Rhs$>$\+::string\+\_\+t$>$ }\\bool \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_ae83e10263bb6fe4c01d624a632d64576}{operator==}} (const String\+Type \&lhs, const \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}$<$ Ref\+String\+Type\+Rhs $>$ \&rhs)
+\item 
+{\footnotesize template$<$typename Ref\+String\+Type\+Lhs , typename Ref\+String\+Type\+Rhs $>$ }\\bool \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_a6018fb0fb9f539b6ad7a1a6629ab900c}{operator!=}} (const \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}$<$ Ref\+String\+Type\+Lhs $>$ \&lhs, const \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}$<$ Ref\+String\+Type\+Rhs $>$ \&rhs) noexcept
+\item 
+{\footnotesize template$<$typename Ref\+String\+Type\+Lhs , typename String\+Type  = typename json\+\_\+pointer$<$\+Ref\+String\+Type\+Lhs$>$\+::string\+\_\+t$>$ }\\bool \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_a5a23c04c36593ca4487b5bb08eb36d91}{operator!=}} (const \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}$<$ Ref\+String\+Type\+Lhs $>$ \&lhs, const String\+Type \&rhs)
+\item 
+{\footnotesize template$<$typename Ref\+String\+Type\+Rhs , typename String\+Type  = typename json\+\_\+pointer$<$\+Ref\+String\+Type\+Rhs$>$\+::string\+\_\+t$>$ }\\bool \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_ad6a22a6fc41a47d49be3ba9bfd90b82a}{operator!=}} (const String\+Type \&lhs, const \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}$<$ Ref\+String\+Type\+Rhs $>$ \&rhs)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_ac792282e55d52d9d0cd8cc732500acf2}\label{namespacenlohmann_1_1json__abi__v3__12__0_ac792282e55d52d9d0cd8cc732500acf2} 
+{\footnotesize template$<$typename Ref\+String\+Type\+Lhs , typename Ref\+String\+Type\+Rhs $>$ }\\bool {\bfseries operator$<$} (const \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}$<$ Ref\+String\+Type\+Lhs $>$ \&lhs, const \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}$<$ Ref\+String\+Type\+Rhs $>$ \&rhs) noexcept
+\item 
+\mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_ab2f6edf07e4f40878b4593762f74029e}{nlohmann\+::json}} \mbox{\hyperlink{json_8hpp_ab06c1d0f4986b7fb6f172e0bef148d6b}{operator"{}"{}\+\_\+json}} (const char \texorpdfstring{$\ast$}{*}s, std\+::size\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em user-\/defined string literal for JSON values \end{DoxyCompactList}\item 
+nlohmann\+::json\+::json\+\_\+pointer \mbox{\hyperlink{json_8hpp_ad4bd5a43a0a6c74ae27f34b56429322d}{operator"{}"{}\+\_\+json\+\_\+pointer}} (const char \texorpdfstring{$\ast$}{*}s, std\+::size\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em user-\/defined string literal for JSON pointer \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+namespace to hold default {\ttfamily to\+\_\+json} function to see why this is required\+: \href{http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4381.html}{\texttt{ http\+://www.\+open-\/std.\+org/jtc1/sc22/wg21/docs/papers/2015/n4381.\+html}} 
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_ab2f6edf07e4f40878b4593762f74029e}\label{namespacenlohmann_1_1json__abi__v3__12__0_ab2f6edf07e4f40878b4593762f74029e} 
+\index{nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}!json@{json}}
+\index{json@{json}!nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}}
+\doxysubsubsection{\texorpdfstring{json}{json}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_ab2f6edf07e4f40878b4593762f74029e}{nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::json}} = typedef \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{basic\+\_\+json}}$<$$>$}
+
+
+
+default specialization 
+
+\begin{DoxySeeAlso}{See also}
+\href{https://json.nlohmann.me/api/json/}{\texttt{ https\+://json.\+nlohmann.\+me/api/json/}} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_aab6090a591c2978a32541089cfc23a0e}\label{namespacenlohmann_1_1json__abi__v3__12__0_aab6090a591c2978a32541089cfc23a0e} 
+\index{nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}!ordered\_json@{ordered\_json}}
+\index{ordered\_json@{ordered\_json}!nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}}
+\doxysubsubsection{\texorpdfstring{ordered\_json}{ordered\_json}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_aab6090a591c2978a32541089cfc23a0e}{nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::ordered\+\_\+json}} = typedef \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{basic\+\_\+json}}$<$\mbox{\hyperlink{structnlohmann_1_1json__abi__v3__12__0_1_1ordered__map}{nlohmann\+::ordered\+\_\+map}}$>$}
+
+
+
+specialization that maintains the insertion order of object keys 
+
+\begin{DoxySeeAlso}{See also}
+\href{https://json.nlohmann.me/api/ordered_json/}{\texttt{ https\+://json.\+nlohmann.\+me/api/ordered\+\_\+json/}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_a6018fb0fb9f539b6ad7a1a6629ab900c}\label{namespacenlohmann_1_1json__abi__v3__12__0_a6018fb0fb9f539b6ad7a1a6629ab900c} 
+\index{nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Ref\+String\+Type\+Lhs , typename Ref\+String\+Type\+Rhs $>$ \\
+bool nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}$<$ Ref\+String\+Type\+Lhs $>$ \&}]{lhs,  }\item[{const \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}$<$ Ref\+String\+Type\+Rhs $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxySeeAlso}{See also}
+\href{https://json.nlohmann.me/api/json_pointer/operator_ne/}{\texttt{ https\+://json.\+nlohmann.\+me/api/json\+\_\+pointer/operator\+\_\+ne/}} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_a5a23c04c36593ca4487b5bb08eb36d91}\label{namespacenlohmann_1_1json__abi__v3__12__0_a5a23c04c36593ca4487b5bb08eb36d91} 
+\index{nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Ref\+String\+Type\+Lhs , typename String\+Type  = typename json\+\_\+pointer$<$\+Ref\+String\+Type\+Lhs$>$\+::string\+\_\+t$>$ \\
+bool nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}$<$ Ref\+String\+Type\+Lhs $>$ \&}]{lhs,  }\item[{const String\+Type \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\href{https://json.nlohmann.me/api/json_pointer/operator_ne/}{\texttt{ https\+://json.\+nlohmann.\+me/api/json\+\_\+pointer/operator\+\_\+ne/}} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_ad6a22a6fc41a47d49be3ba9bfd90b82a}\label{namespacenlohmann_1_1json__abi__v3__12__0_ad6a22a6fc41a47d49be3ba9bfd90b82a} 
+\index{nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Ref\+String\+Type\+Rhs , typename String\+Type  = typename json\+\_\+pointer$<$\+Ref\+String\+Type\+Rhs$>$\+::string\+\_\+t$>$ \\
+bool nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::operator!= (\begin{DoxyParamCaption}\item[{const String\+Type \&}]{lhs,  }\item[{const \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}$<$ Ref\+String\+Type\+Rhs $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\href{https://json.nlohmann.me/api/json_pointer/operator_ne/}{\texttt{ https\+://json.\+nlohmann.\+me/api/json\+\_\+pointer/operator\+\_\+ne/}} 
+\end{DoxySeeAlso}
+\Hypertarget{json_8hpp_ab06c1d0f4986b7fb6f172e0bef148d6b}\label{json_8hpp_ab06c1d0f4986b7fb6f172e0bef148d6b} 
+\index{nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}!operator"{}"{}\_json@{operator""""\_json}}
+\index{operator"{}"{}\_json@{operator""""\_json}!nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}}
+\doxysubsubsection{\texorpdfstring{operator""""\_json()}{operator""\_json()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_ab2f6edf07e4f40878b4593762f74029e}{nlohmann\+::json}} nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::literals\+::json\+\_\+literals\+::operator"{}"{}\+\_\+json (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{s,  }\item[{std\+::size\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+user-\/defined string literal for JSON values 
+
+\begin{DoxySeeAlso}{See also}
+\href{https://json.nlohmann.me/api/basic_json/operator_literal_json/}{\texttt{ https\+://json.\+nlohmann.\+me/api/basic\+\_\+json/operator\+\_\+literal\+\_\+json/}} 
+\end{DoxySeeAlso}
+\Hypertarget{json_8hpp_ad4bd5a43a0a6c74ae27f34b56429322d}\label{json_8hpp_ad4bd5a43a0a6c74ae27f34b56429322d} 
+\index{nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}!operator"{}"{}\_json\_pointer@{operator""""\_json\_pointer}}
+\index{operator"{}"{}\_json\_pointer@{operator""""\_json\_pointer}!nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}}
+\doxysubsubsection{\texorpdfstring{operator""""\_json\_pointer()}{operator""\_json\_pointer()}}
+{\footnotesize\ttfamily nlohmann\+::json\+::json\+\_\+pointer nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::literals\+::json\+\_\+literals\+::operator"{}"{}\+\_\+json\+\_\+pointer (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{s,  }\item[{std\+::size\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+user-\/defined string literal for JSON pointer 
+
+\begin{DoxySeeAlso}{See also}
+\href{https://json.nlohmann.me/api/basic_json/operator_literal_json_pointer/}{\texttt{ https\+://json.\+nlohmann.\+me/api/basic\+\_\+json/operator\+\_\+literal\+\_\+json\+\_\+pointer/}} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_a1220f4e93695da5fe30bf9c4ac595817}\label{namespacenlohmann_1_1json__abi__v3__12__0_a1220f4e93695da5fe30bf9c4ac595817} 
+\index{nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}!operator==@{operator==}}
+\index{operator==@{operator==}!nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Ref\+String\+Type\+Lhs , typename Ref\+String\+Type\+Rhs $>$ \\
+bool nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}$<$ Ref\+String\+Type\+Lhs $>$ \&}]{lhs,  }\item[{const \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}$<$ Ref\+String\+Type\+Rhs $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxySeeAlso}{See also}
+\href{https://json.nlohmann.me/api/json_pointer/operator_eq/}{\texttt{ https\+://json.\+nlohmann.\+me/api/json\+\_\+pointer/operator\+\_\+eq/}} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_a14b2b5afcf63b64cb5cf25ef9f729b88}\label{namespacenlohmann_1_1json__abi__v3__12__0_a14b2b5afcf63b64cb5cf25ef9f729b88} 
+\index{nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}!operator==@{operator==}}
+\index{operator==@{operator==}!nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Ref\+String\+Type\+Lhs , typename String\+Type  = typename json\+\_\+pointer$<$\+Ref\+String\+Type\+Lhs$>$\+::string\+\_\+t$>$ \\
+bool nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}$<$ Ref\+String\+Type\+Lhs $>$ \&}]{lhs,  }\item[{const String\+Type \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\href{https://json.nlohmann.me/api/json_pointer/operator_eq/}{\texttt{ https\+://json.\+nlohmann.\+me/api/json\+\_\+pointer/operator\+\_\+eq/}} 
+\end{DoxySeeAlso}
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_ae83e10263bb6fe4c01d624a632d64576}\label{namespacenlohmann_1_1json__abi__v3__12__0_ae83e10263bb6fe4c01d624a632d64576} 
+\index{nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}!operator==@{operator==}}
+\index{operator==@{operator==}!nlohmann::json\_abi\_v3\_12\_0@{nlohmann::json\_abi\_v3\_12\_0}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Ref\+String\+Type\+Rhs , typename String\+Type  = typename json\+\_\+pointer$<$\+Ref\+String\+Type\+Rhs$>$\+::string\+\_\+t$>$ \\
+bool nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::operator== (\begin{DoxyParamCaption}\item[{const String\+Type \&}]{lhs,  }\item[{const \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{json\+\_\+pointer}}$<$ Ref\+String\+Type\+Rhs $>$ \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxySeeAlso}{See also}
+\href{https://json.nlohmann.me/api/json_pointer/operator_eq/}{\texttt{ https\+://json.\+nlohmann.\+me/api/json\+\_\+pointer/operator\+\_\+eq/}} 
+\end{DoxySeeAlso}

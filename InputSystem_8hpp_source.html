@@ -110,42 +110,42 @@ $(document).ready(function(){initNavTree('InputSystem_8hpp_source.html',''); ini
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span>systems{</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classte_1_1systems_1_1InputSystem.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="classte_1_1systems_1_1InputSystem.html">InputSystem</a> : <span class="keyword">public</span> <a class="code hl_class" href="classte_1_1systems_1_1System.html">System</a>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classte_1_1systems_1_1InputSystem.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="classte_1_1systems_1_1InputSystem.html">InputSystem</a> : <span class="keyword">public</span> <a class="code hl_class" href="classte_1_1systems_1_1VariableSystem.html">VariableSystem</a>{</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_class" href="classte_1_1systems_1_1InputSystem.html">InputSystem</a>(<a class="code hl_class" href="classte_1_1Registry.html">Registry</a> &amp;registry);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classte_1_1systems_1_1InputSystem.html#a966ac41f24309ed1402722cccf57cb37">update</a>() <span class="keyword">override</span>; </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classte_1_1systems_1_1InputSystem.html#afcd03333c4f959f621dd42d012a54924">   34</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> std::string <a class="code hl_variable" href="classte_1_1systems_1_1InputSystem.html#afcd03333c4f959f621dd42d012a54924">name</a>;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">//Key gets loaded from File</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keyword">enum class</span> InputType{MOUSE, KEYBOARD};</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">struct </span>Key{</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        Key(InputType inputType, <span class="keyword">const</span> std::string keyName, <span class="keyword">const</span> std::string keyBind)</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            :inputType(inputType), keyName(keyName), keyBind(keyBind){}</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        InputType inputType;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        std::string keyName;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        std::string keyBind;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        uint8_t keyCode;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    };</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">void</span> keyPressed(Key &amp;key, EntityID entityID);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    uint8_t keyNameToCode(std::string &amp;keyName);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordtype">void</span> updatePlayerInput(std::string &amp;keyBind, components::PlayerInput *inputComponent, EntityID entityID);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    Key keys[8];</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_class" href="classte_1_1systems_1_1InputSystem.html">InputSystem</a>(<a class="code hl_class" href="classte_1_1Registry.html">Registry</a> &amp;registry, <span class="keywordtype">float</span> &amp;deltaTime);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classte_1_1systems_1_1InputSystem.html#a966ac41f24309ed1402722cccf57cb37">update</a>() <span class="keyword">override</span>; </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classte_1_1systems_1_1InputSystem.html#afcd03333c4f959f621dd42d012a54924">   35</a></span>    <span class="keyword">static</span> <span class="keyword">const</span> std::string <a class="code hl_variable" href="classte_1_1systems_1_1InputSystem.html#afcd03333c4f959f621dd42d012a54924">name</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">//Key gets loaded from File</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">enum class</span> InputType{MOUSE, KEYBOARD};</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">struct </span>Key{</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        Key(InputType inputType, <span class="keyword">const</span> std::string keyName, <span class="keyword">const</span> std::string keyBind)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            :inputType(inputType), keyName(keyName), keyBind(keyBind){}</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        InputType inputType;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        std::string keyName;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        std::string keyBind;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        uint8_t keyCode;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    };</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> keyPressed(Key &amp;key, EntityID entityID);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    uint8_t keyNameToCode(std::string &amp;keyName);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> updatePlayerInput(std::string &amp;keyBind, components::PlayerInput *inputComponent, EntityID entityID);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    Key keys[8];</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
 </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>}</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
-<div class="ttc" id="aclasste_1_1Registry_html"><div class="ttname"><a href="classte_1_1Registry.html">te::Registry</a></div><div class="ttdoc">Managing entities and components.</div><div class="ttdef"><b>Definition</b> Registry.hpp:28</div></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
+<div class="ttc" id="aclasste_1_1Registry_html"><div class="ttname"><a href="classte_1_1Registry.html">te::Registry</a></div><div class="ttdoc">Managing entities and components.</div><div class="ttdef"><b>Definition</b> Registry.hpp:26</div></div>
 <div class="ttc" id="aclasste_1_1systems_1_1InputSystem_html"><div class="ttname"><a href="classte_1_1systems_1_1InputSystem.html">te::systems::InputSystem</a></div><div class="ttdoc">System for input handling.</div><div class="ttdef"><b>Definition</b> InputSystem.hpp:19</div></div>
 <div class="ttc" id="aclasste_1_1systems_1_1InputSystem_html_a966ac41f24309ed1402722cccf57cb37"><div class="ttname"><a href="classte_1_1systems_1_1InputSystem.html#a966ac41f24309ed1402722cccf57cb37">te::systems::InputSystem::update</a></div><div class="ttdeci">void update() override</div><div class="ttdoc">updates the system</div><div class="ttdef"><b>Definition</b> InputSystem.cpp:20</div></div>
-<div class="ttc" id="aclasste_1_1systems_1_1InputSystem_html_afcd03333c4f959f621dd42d012a54924"><div class="ttname"><a href="classte_1_1systems_1_1InputSystem.html#afcd03333c4f959f621dd42d012a54924">te::systems::InputSystem::name</a></div><div class="ttdeci">static const std::string name</div><div class="ttdoc">Name of system.</div><div class="ttdef"><b>Definition</b> InputSystem.hpp:34</div></div>
-<div class="ttc" id="aclasste_1_1systems_1_1System_html"><div class="ttname"><a href="classte_1_1systems_1_1System.html">te::systems::System</a></div><div class="ttdoc">Base system.</div><div class="ttdef"><b>Definition</b> System.hpp:15</div></div>
+<div class="ttc" id="aclasste_1_1systems_1_1InputSystem_html_afcd03333c4f959f621dd42d012a54924"><div class="ttname"><a href="classte_1_1systems_1_1InputSystem.html#afcd03333c4f959f621dd42d012a54924">te::systems::InputSystem::name</a></div><div class="ttdeci">static const std::string name</div><div class="ttdoc">Name of system.</div><div class="ttdef"><b>Definition</b> InputSystem.hpp:35</div></div>
+<div class="ttc" id="aclasste_1_1systems_1_1VariableSystem_html"><div class="ttname"><a href="classte_1_1systems_1_1VariableSystem.html">te::systems::VariableSystem</a></div><div class="ttdoc">Variable system.</div><div class="ttdef"><b>Definition</b> System.hpp:62</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

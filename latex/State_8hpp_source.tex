@@ -1,0 +1,54 @@
+\doxysection{State.\+hpp}
+\hypertarget{State_8hpp_source}{}\label{State_8hpp_source}\index{include/TenshiEngine/Engine/Components/State.hpp@{include/TenshiEngine/Engine/Components/State.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Components/Component.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }components\{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structte_1_1components_1_1State}{State}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structte_1_1components_1_1Component}{Component}}\{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1State_a55566331b395adfda5dd7758bcecf646}{State}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{enum\ class}\ CurrentState\{IDLE,\ WALK,\ JUMP,\ FALL,\ HIT\};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{enum\ class}\ Direction\{LEFT,\ RIGHT\};\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ std::string\ \mbox{\hyperlink{structte_1_1components_1_1State_a71cb10fa08d9d47c8a53283658e28705}{toString}}()\textcolor{keyword}{\ const\ override}\{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}(currentState:\ "{}}\ +\ stateToString(\mbox{\hyperlink{structte_1_1components_1_1State_ad2f6b34b49fa7d65cdd8106599eefced}{currentState}})\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ \textcolor{stringliteral}{"{}direction:\ "{}}\ +\ directionToString(direction)\ +\ \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{00027\ \ \ \ \ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00030\ \ \ \ \ CurrentState\ \mbox{\hyperlink{structte_1_1components_1_1State_ad2f6b34b49fa7d65cdd8106599eefced}{currentState}}\ =\ CurrentState::IDLE;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//current\ direction\ in\ which\ the\ entity\ is\ facing}}
+\DoxyCodeLine{00033\ \ \ \ \ Direction\ direction\ =\ Direction::RIGHT;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{structte_1_1components_1_1State_a52338e06665cf6229039ad562ffe2103}{name}}\ =\ \textcolor{stringliteral}{"{}State"{}};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ stateToString(CurrentState\ stateType)\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (stateType)\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentState::IDLE:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}IDLE"{}};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentState::WALK:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}WALK"{}};}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentState::JUMP:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}JUMP"{}};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentState::FALL:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}FALL"{}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentState::HIT:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}HIT"{}};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}UNKNOWN"{}};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ directionToString(Direction\ direction)\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (direction)\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Direction::LEFT:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}LEFT"{}};}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Direction::RIGHT:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}RIGHT"{}};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}UNKNOWN"{}};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \}}
+\DoxyCodeLine{00060\ \}}
+
+\end{DoxyCode}

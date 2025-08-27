@@ -12,16 +12,21 @@
 Inheritance diagram for te\+::systems\+::Render\+System\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classte_1_1systems_1_1RenderSystem}
+\includegraphics[height=3.000000cm]{classte_1_1systems_1_1RenderSystem}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classte_1_1systems_1_1RenderSystem_a232da5a6b46708c6ee9c991e4ae2fe7f}{Render\+System}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, sf\+::\+Render\+Window \&window)
+\mbox{\hyperlink{classte_1_1systems_1_1RenderSystem_a5e38b8b1586244d7cb2f0543b4f8fcb2}{Render\+System}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, float \&delta\+Time, sf\+::\+Render\+Window \&window)
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classte_1_1systems_1_1RenderSystem_a4e07fc6094ffc1700b10dda13dd1da24}{update}} () override
+void \mbox{\hyperlink{classte_1_1systems_1_1RenderSystem_a70523add6b7a258e117e3bdc2a9341d9}{update}} ()
 \begin{DoxyCompactList}\small\item\em updates the system \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classte_1_1systems_1_1VariableSystem}{te\+::systems\+::\+Variable\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classte_1_1systems_1_1VariableSystem_a9994f6722a3988075df384004dd9a5a9}{Variable\+System}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, float \&delta\+Time)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classte_1_1systems_1_1System}{te\+::systems\+::\+System}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -34,6 +39,11 @@ void \mbox{\hyperlink{classte_1_1systems_1_1RenderSystem_a4e07fc6094ffc1700b10dd
 static const std\+::string {\bfseries name} = "{}Render\+System"{}
 \begin{DoxyCompactList}\small\item\em Name of system. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classte_1_1systems_1_1VariableSystem}{te\+::systems\+::\+Variable\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+float \& {\bfseries m\+Delta\+Time}
+\begin{DoxyCompactList}\small\item\em Frame delta\+Time. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classte_1_1systems_1_1System}{te\+::systems\+::\+System}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -47,11 +57,11 @@ static const std\+::string {\bfseries name} = "{}Render\+System"{}
 Does rendering of the sprite in the window 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classte_1_1systems_1_1RenderSystem_a232da5a6b46708c6ee9c991e4ae2fe7f}\label{classte_1_1systems_1_1RenderSystem_a232da5a6b46708c6ee9c991e4ae2fe7f} 
+\Hypertarget{classte_1_1systems_1_1RenderSystem_a5e38b8b1586244d7cb2f0543b4f8fcb2}\label{classte_1_1systems_1_1RenderSystem_a5e38b8b1586244d7cb2f0543b4f8fcb2} 
 \index{te::systems::RenderSystem@{te::systems::RenderSystem}!RenderSystem@{RenderSystem}}
 \index{RenderSystem@{RenderSystem}!te::systems::RenderSystem@{te::systems::RenderSystem}}
 \doxysubsubsection{\texorpdfstring{RenderSystem()}{RenderSystem()}}
-{\footnotesize\ttfamily te\+::systems\+::\+Render\+System\+::\+Render\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry,  }\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily te\+::systems\+::\+Render\+System\+::\+Render\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry,  }\item[{float \&}]{delta\+Time,  }\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
 
 
 
@@ -63,17 +73,19 @@ creates the \doxylink{classte_1_1systems_1_1System}{System}
 \begin{DoxyParams}{Parameters}
 {\em registry} & reference to the registry \\
 \hline
+{\em delta\+Time} & reference to the frame delta time \\
+\hline
 {\em window} & reference to the window \\
 \hline
 \end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classte_1_1systems_1_1RenderSystem_a4e07fc6094ffc1700b10dda13dd1da24}\label{classte_1_1systems_1_1RenderSystem_a4e07fc6094ffc1700b10dda13dd1da24} 
+\Hypertarget{classte_1_1systems_1_1RenderSystem_a70523add6b7a258e117e3bdc2a9341d9}\label{classte_1_1systems_1_1RenderSystem_a70523add6b7a258e117e3bdc2a9341d9} 
 \index{te::systems::RenderSystem@{te::systems::RenderSystem}!update@{update}}
 \index{update@{update}!te::systems::RenderSystem@{te::systems::RenderSystem}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void te\+::systems\+::\+Render\+System\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void te\+::systems\+::\+Render\+System\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 

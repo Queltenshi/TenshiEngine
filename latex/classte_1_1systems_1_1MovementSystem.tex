@@ -12,16 +12,21 @@
 Inheritance diagram for te\+::systems\+::Movement\+System\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classte_1_1systems_1_1MovementSystem}
+\includegraphics[height=3.000000cm]{classte_1_1systems_1_1MovementSystem}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classte_1_1systems_1_1MovementSystem_af4f3cb915a6b37b219a51f5054dd5ffd}{Movement\+System}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry)
+\mbox{\hyperlink{classte_1_1systems_1_1MovementSystem_a94e460cc54dac2fdb906fae1bd23a82a}{Movement\+System}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, const float delta\+Time)
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classte_1_1systems_1_1MovementSystem_ae627f7fc6a4eebab0965cb6501f488b8}{update}} () override
+void \mbox{\hyperlink{classte_1_1systems_1_1MovementSystem_af6357cbf26b254991383fd4db488f358}{update}} ()
 \begin{DoxyCompactList}\small\item\em updates the system \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classte_1_1systems_1_1FixedSystem}{te\+::systems\+::\+Fixed\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classte_1_1systems_1_1FixedSystem_a85040d49e6c6c69f907e43b544970af2}{Fixed\+System}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, const float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classte_1_1systems_1_1System}{te\+::systems\+::\+System}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -34,6 +39,11 @@ void \mbox{\hyperlink{classte_1_1systems_1_1MovementSystem_ae627f7fc6a4eebab0965
 static const std\+::string {\bfseries name} = "{}Movement\+System"{}
 \begin{DoxyCompactList}\small\item\em Name of system. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classte_1_1systems_1_1FixedSystem}{te\+::systems\+::\+Fixed\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+const float {\bfseries m\+Delta\+Time}
+\begin{DoxyCompactList}\small\item\em Fixed delta\+Time. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classte_1_1systems_1_1System}{te\+::systems\+::\+System}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -47,11 +57,11 @@ static const std\+::string {\bfseries name} = "{}Movement\+System"{}
 Checks player\+Input, horizonzal\+Movement, jump, grounded, velocity and then calculates new velocity 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classte_1_1systems_1_1MovementSystem_af4f3cb915a6b37b219a51f5054dd5ffd}\label{classte_1_1systems_1_1MovementSystem_af4f3cb915a6b37b219a51f5054dd5ffd} 
+\Hypertarget{classte_1_1systems_1_1MovementSystem_a94e460cc54dac2fdb906fae1bd23a82a}\label{classte_1_1systems_1_1MovementSystem_a94e460cc54dac2fdb906fae1bd23a82a} 
 \index{te::systems::MovementSystem@{te::systems::MovementSystem}!MovementSystem@{MovementSystem}}
 \index{MovementSystem@{MovementSystem}!te::systems::MovementSystem@{te::systems::MovementSystem}}
 \doxysubsubsection{\texorpdfstring{MovementSystem()}{MovementSystem()}}
-{\footnotesize\ttfamily te\+::systems\+::\+Movement\+System\+::\+Movement\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily te\+::systems\+::\+Movement\+System\+::\+Movement\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry,  }\item[{const float}]{delta\+Time }\end{DoxyParamCaption})}
 
 
 
@@ -63,15 +73,17 @@ creates the \doxylink{classte_1_1systems_1_1System}{System}
 \begin{DoxyParams}{Parameters}
 {\em registry} & reference to the registry \\
 \hline
+{\em delta\+Time} & Fixed delta\+Time \\
+\hline
 \end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classte_1_1systems_1_1MovementSystem_ae627f7fc6a4eebab0965cb6501f488b8}\label{classte_1_1systems_1_1MovementSystem_ae627f7fc6a4eebab0965cb6501f488b8} 
+\Hypertarget{classte_1_1systems_1_1MovementSystem_af6357cbf26b254991383fd4db488f358}\label{classte_1_1systems_1_1MovementSystem_af6357cbf26b254991383fd4db488f358} 
 \index{te::systems::MovementSystem@{te::systems::MovementSystem}!update@{update}}
 \index{update@{update}!te::systems::MovementSystem@{te::systems::MovementSystem}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void te\+::systems\+::\+Movement\+System\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void te\+::systems\+::\+Movement\+System\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 

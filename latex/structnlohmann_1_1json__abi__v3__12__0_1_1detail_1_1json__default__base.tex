@@ -1,0 +1,21 @@
+\doxysection{nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::detail\+::json\+\_\+default\+\_\+base Struct Reference}
+\hypertarget{structnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1json__default__base}{}\label{structnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1json__default__base}\index{nlohmann::json\_abi\_v3\_12\_0::detail::json\_default\_base@{nlohmann::json\_abi\_v3\_12\_0::detail::json\_default\_base}}
+
+
+Default base class of the \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{basic\+\_\+json} class.  
+
+
+
+
+{\ttfamily \#include $<$json.\+hpp$>$}
+
+
+
+\doxysubsection{Detailed Description}
+Default base class of the \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{basic\+\_\+json} class. 
+
+So that the correct implementations of the copy / move ctors / assign operators of \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{basic\+\_\+json} do not require complex case distinctions (no base class / custom base class used as customization point), \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{basic\+\_\+json} always has a base class. By default, this class is used because it is empty and thus has no effect on the behavior of \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{basic\+\_\+json}. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/nlohmann/json.\+hpp\end{DoxyCompactItemize}

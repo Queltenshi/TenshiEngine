@@ -1,0 +1,102 @@
+\doxysection{te\+::components\+::State Struct Reference}
+\hypertarget{structte_1_1components_1_1State}{}\label{structte_1_1components_1_1State}\index{te::components::State@{te::components::State}}
+
+
+component with current state  
+
+
+
+
+{\ttfamily \#include $<$State.\+hpp$>$}
+
+Inheritance diagram for te\+::components\+::State\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structte_1_1components_1_1State}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structte_1_1components_1_1State_a003a71a239056bff5b9c8cdafca52a73}\label{structte_1_1components_1_1State_a003a71a239056bff5b9c8cdafca52a73} 
+enum class {\bfseries Current\+State} \{ \newline
+{\bfseries IDLE}
+, {\bfseries WALK}
+, {\bfseries JUMP}
+, {\bfseries FALL}
+, \newline
+{\bfseries HIT}
+ \}
+\item 
+\Hypertarget{structte_1_1components_1_1State_a25ce44944b5a71fb7277f137d19a7ba9}\label{structte_1_1components_1_1State_a25ce44944b5a71fb7277f137d19a7ba9} 
+enum class {\bfseries Direction} \{ {\bfseries LEFT}
+, {\bfseries RIGHT}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structte_1_1components_1_1State_a55566331b395adfda5dd7758bcecf646}{State}} ()=default
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structte_1_1components_1_1State_a71cb10fa08d9d47c8a53283658e28705}{to\+String}} () const override
+\begin{DoxyCompactList}\small\item\em shows data as a string \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structte_1_1components_1_1Component}{te\+::components\+::\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structte_1_1components_1_1Component_a944fedf322932b0fa5c3355bd3e5f1bd}{Component}} ()=default
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structte_1_1components_1_1State_ad2f6b34b49fa7d65cdd8106599eefced}\label{structte_1_1components_1_1State_ad2f6b34b49fa7d65cdd8106599eefced} 
+Current\+State {\bfseries current\+State} = Current\+State\+::\+IDLE
+\begin{DoxyCompactList}\small\item\em current state \end{DoxyCompactList}\item 
+\Hypertarget{structte_1_1components_1_1State_ae23d72b27b069e72e58f7b66c6091d85}\label{structte_1_1components_1_1State_ae23d72b27b069e72e58f7b66c6091d85} 
+Direction {\bfseries direction} = Direction\+::\+RIGHT
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structte_1_1components_1_1State_a52338e06665cf6229039ad562ffe2103}\label{structte_1_1components_1_1State_a52338e06665cf6229039ad562ffe2103} 
+static const std\+::string {\bfseries name} = "{}State"{}
+\begin{DoxyCompactList}\small\item\em Name of component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+component with current state 
+
+stores the current state and direction in which the entity is facing 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structte_1_1components_1_1State_a55566331b395adfda5dd7758bcecf646}\label{structte_1_1components_1_1State_a55566331b395adfda5dd7758bcecf646} 
+\index{te::components::State@{te::components::State}!State@{State}}
+\index{State@{State}!te::components::State@{te::components::State}}
+\doxysubsubsection{\texorpdfstring{State()}{State()}}
+{\footnotesize\ttfamily te\+::components\+::\+State\+::\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default Constructor. 
+
+creates the component 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structte_1_1components_1_1State_a71cb10fa08d9d47c8a53283658e28705}\label{structte_1_1components_1_1State_a71cb10fa08d9d47c8a53283658e28705} 
+\index{te::components::State@{te::components::State}!toString@{toString}}
+\index{toString@{toString}!te::components::State@{te::components::State}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string te\+::components\+::\+State\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+shows data as a string 
+
+converts the data into a string, components do override this method 
+
+Implements \mbox{\hyperlink{structte_1_1components_1_1Component_ab62e6b61f57db90657a5f0e67dcfc365}{te\+::components\+::\+Component}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Tenshi\+Engine/\+Engine/\+Components/State.\+hpp\end{DoxyCompactItemize}

@@ -117,6 +117,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3b420674d3cc1df65d2daa1294b70a58" id="r_a3b420674d3cc1df65d2daa1294b70a58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structte_1_1components_1_1Sprite.html#a3b420674d3cc1df65d2daa1294b70a58">Sprite</a> (sf::Texture &amp;<a class="el" href="structte_1_1components_1_1Sprite.html#a11e0d21375a4473ea3678210f0b97eb4">texture</a>)</td></tr>
 <tr class="memdesc:a3b420674d3cc1df65d2daa1294b70a58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
 <tr class="separator:a3b420674d3cc1df65d2daa1294b70a58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc98283207af9cd4701bb2d4631aed11" id="r_abc98283207af9cd4701bb2d4631aed11"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structte_1_1components_1_1Sprite.html#abc98283207af9cd4701bb2d4631aed11">Sprite</a> (sf::Texture &amp;<a class="el" href="structte_1_1components_1_1Sprite.html#a11e0d21375a4473ea3678210f0b97eb4">texture</a>, sf::IntRect &amp;animationRectangle)</td></tr>
+<tr class="memdesc:abc98283207af9cd4701bb2d4631aed11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="separator:abc98283207af9cd4701bb2d4631aed11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cbad49d3349765463d0c5733a4d0fb7" id="r_a6cbad49d3349765463d0c5733a4d0fb7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structte_1_1components_1_1Sprite.html#a6cbad49d3349765463d0c5733a4d0fb7">toString</a> () const override</td></tr>
 <tr class="memdesc:a6cbad49d3349765463d0c5733a4d0fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">shows data as a string  <br /></td></tr>
 <tr class="separator:a6cbad49d3349765463d0c5733a4d0fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,7 +151,7 @@ static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>n
 <p>stores a sprite and texture </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3b420674d3cc1df65d2daa1294b70a58" name="a3b420674d3cc1df65d2daa1294b70a58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b420674d3cc1df65d2daa1294b70a58">&#9670;&#160;</a></span>Sprite()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b420674d3cc1df65d2daa1294b70a58">&#9670;&#160;</a></span>Sprite() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -176,6 +179,52 @@ static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>n
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">texture</td><td>texture for the sprite </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abc98283207af9cd4701bb2d4631aed11" name="abc98283207af9cd4701bb2d4631aed11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc98283207af9cd4701bb2d4631aed11">&#9670;&#160;</a></span>Sprite() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">te::components::Sprite::Sprite </td>
+          <td>(</td>
+          <td class="paramtype">sf::Texture &amp;&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sf::IntRect &amp;&#160;</td>
+          <td class="paramname"><em>animationRectangle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor. </p>
+<p>creates the component with given texture and animationRectangle sets it to the sprite</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texture</td><td>texture for the sprite </td></tr>
+    <tr><td class="paramname">animationRectangle</td><td>rectangle for setting the texture to default animation </td></tr>
   </table>
   </dd>
 </dl>

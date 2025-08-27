@@ -14,21 +14,26 @@
 \DoxyCodeLine{00015\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structte_1_1components_1_1Sprite}{Sprite}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structte_1_1components_1_1Component}{Component}}\{}
 \DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a3b420674d3cc1df65d2daa1294b70a58}{Sprite}}(sf::Texture\ \&\mbox{\hyperlink{structte_1_1components_1_1Sprite_a11e0d21375a4473ea3678210f0b97eb4}{texture}}):\ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a11e0d21375a4473ea3678210f0b97eb4}{texture}}(\mbox{\hyperlink{structte_1_1components_1_1Sprite_a11e0d21375a4473ea3678210f0b97eb4}{texture}}),\ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f}{sprite}}(\mbox{\hyperlink{structte_1_1components_1_1Sprite_a11e0d21375a4473ea3678210f0b97eb4}{texture}})\{}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f}{sprite}}.setOrigin(\mbox{\hyperlink{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f}{sprite}}.getGlobalBounds().size\ /\ 2.f);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f}{sprite}}.setOrigin(\{\mbox{\hyperlink{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f}{sprite}}.getTextureRect().size.x\ /\ 2.f,\ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f}{sprite}}.getTextureRect().size.y\ /\ 2.f\});}
 \DoxyCodeLine{00027\ \ \ \ \ \}}
 \DoxyCodeLine{00028\ }
-\DoxyCodeLine{00030\ \ \ \ \ sf::Texture\ \&\mbox{\hyperlink{structte_1_1components_1_1Sprite_a11e0d21375a4473ea3678210f0b97eb4}{texture}};}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00033\ \ \ \ \ sf::Sprite\ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f}{sprite}};}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \ \ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a6cbad49d3349765463d0c5733a4d0fb7}{toString}}()\textcolor{keyword}{\ const\ override}\{}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{00037\ \ \ \ \ \}}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a20c672108b946beca6081793d83d9fce}{name}}\ =\ \textcolor{stringliteral}{"{}Sprite"{}};}
-\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Sprite_abc98283207af9cd4701bb2d4631aed11}{Sprite}}(sf::Texture\ \&\mbox{\hyperlink{structte_1_1components_1_1Sprite_a11e0d21375a4473ea3678210f0b97eb4}{texture}},\ sf::IntRect\ \&animationRectangle):\ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a11e0d21375a4473ea3678210f0b97eb4}{texture}}(\mbox{\hyperlink{structte_1_1components_1_1Sprite_a11e0d21375a4473ea3678210f0b97eb4}{texture}}),\ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f}{sprite}}(\mbox{\hyperlink{structte_1_1components_1_1Sprite_a11e0d21375a4473ea3678210f0b97eb4}{texture}})\{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f}{sprite}}.setTextureRect(animationRectangle);}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f}{sprite}}.setOrigin(\{\mbox{\hyperlink{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f}{sprite}}.getTextureRect().size.x\ /\ 2.f,\ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f}{sprite}}.getTextureRect().size.y\ /\ 2.f\});}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
 \DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \}}
-\DoxyCodeLine{00044\ \}}
+\DoxyCodeLine{00044\ \ \ \ \ sf::Texture\ \&\mbox{\hyperlink{structte_1_1components_1_1Sprite_a11e0d21375a4473ea3678210f0b97eb4}{texture}};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00047\ \ \ \ \ sf::Sprite\ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f}{sprite}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a6cbad49d3349765463d0c5733a4d0fb7}{toString}}()\textcolor{keyword}{\ const\ override}\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00051\ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a20c672108b946beca6081793d83d9fce}{name}}\ =\ \textcolor{stringliteral}{"{}Sprite"{}};}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \}}
+\DoxyCodeLine{00058\ \}}
 
 \end{DoxyCode}

@@ -1,0 +1,116 @@
+\doxysection{te\+::components\+::Animation Struct Reference}
+\hypertarget{structte_1_1components_1_1Animation}{}\label{structte_1_1components_1_1Animation}\index{te::components::Animation@{te::components::Animation}}
+
+
+component with animation data  
+
+
+
+
+{\ttfamily \#include $<$Animation.\+hpp$>$}
+
+Inheritance diagram for te\+::components\+::Animation\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structte_1_1components_1_1Animation}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structte_1_1components_1_1Animation_a52e7fad6e61b9a19ed10775fe803a9d2}\label{structte_1_1components_1_1Animation_a52e7fad6e61b9a19ed10775fe803a9d2} 
+enum class {\bfseries Current\+Animation} \{ \newline
+{\bfseries IDLE}
+, {\bfseries WALK}
+, {\bfseries JUMP}
+, {\bfseries FALL}
+, \newline
+{\bfseries HIT}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structte_1_1components_1_1Animation_ac736f7ae16df4d3eb9d02e5c70dca5d5}{Animation}} (\mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{json}} \&\mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{texture\+Data}})
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structte_1_1components_1_1Animation_a09ce9b262f079027f2f2625f563c6775}{to\+String}} () const override
+\begin{DoxyCompactList}\small\item\em shows data as a string \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structte_1_1components_1_1Component}{te\+::components\+::\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structte_1_1components_1_1Component_a944fedf322932b0fa5c3355bd3e5f1bd}{Component}} ()=default
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structte_1_1components_1_1Animation_a9523ca7e9d9d74ac84b12f4460e7d20e}\label{structte_1_1components_1_1Animation_a9523ca7e9d9d74ac84b12f4460e7d20e} 
+int {\bfseries iterator} = 0
+\begin{DoxyCompactList}\small\item\em Iterator for current animation. \end{DoxyCompactList}\item 
+\Hypertarget{structte_1_1components_1_1Animation_a7eac278383070e98f62838783cc6dd40}\label{structte_1_1components_1_1Animation_a7eac278383070e98f62838783cc6dd40} 
+float {\bfseries elapsed\+Time} = 0.f
+\begin{DoxyCompactList}\small\item\em Elapsed time, which is used for next animation. \end{DoxyCompactList}\item 
+\Hypertarget{structte_1_1components_1_1Animation_a4e9a1f15923794d575120aecd7287f34}\label{structte_1_1components_1_1Animation_a4e9a1f15923794d575120aecd7287f34} 
+float {\bfseries switch\+Time} = 0.\+2f
+\begin{DoxyCompactList}\small\item\em Time for next animation. \end{DoxyCompactList}\item 
+\Hypertarget{structte_1_1components_1_1Animation_aebc50046bc4e84b0a2f5faa74f176eec}\label{structte_1_1components_1_1Animation_aebc50046bc4e84b0a2f5faa74f176eec} 
+sf\+::\+Int\+Rect {\bfseries rectangle}
+\begin{DoxyCompactList}\small\item\em Current rectangle of sprite sheet. \end{DoxyCompactList}\item 
+\Hypertarget{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}\label{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36} 
+\mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{json}} \& {\bfseries texture\+Data}
+\begin{DoxyCompactList}\small\item\em Json data used for animation. \end{DoxyCompactList}\item 
+\Hypertarget{structte_1_1components_1_1Animation_abbfce0e9965660205d8826e7ce2a7126}\label{structte_1_1components_1_1Animation_abbfce0e9965660205d8826e7ce2a7126} 
+Current\+Animation {\bfseries current\+Animation} = Current\+Animation\+::\+IDLE
+\begin{DoxyCompactList}\small\item\em Current animation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structte_1_1components_1_1Animation_a31e565752008fcf3690f0dd4f7afabe8}\label{structte_1_1components_1_1Animation_a31e565752008fcf3690f0dd4f7afabe8} 
+static const std\+::string {\bfseries name} = "{}Animation"{}
+\begin{DoxyCompactList}\small\item\em Name of component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+component with animation data 
+
+stores time and data for animations 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structte_1_1components_1_1Animation_ac736f7ae16df4d3eb9d02e5c70dca5d5}\label{structte_1_1components_1_1Animation_ac736f7ae16df4d3eb9d02e5c70dca5d5} 
+\index{te::components::Animation@{te::components::Animation}!Animation@{Animation}}
+\index{Animation@{Animation}!te::components::Animation@{te::components::Animation}}
+\doxysubsubsection{\texorpdfstring{Animation()}{Animation()}}
+{\footnotesize\ttfamily te\+::components\+::\+Animation\+::\+Animation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{json}} \&}]{texture\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default Constructor. 
+
+creates the component with given texture\+Data and sets rectangle to idle
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture\+Data} & json data used for animation \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structte_1_1components_1_1Animation_a09ce9b262f079027f2f2625f563c6775}\label{structte_1_1components_1_1Animation_a09ce9b262f079027f2f2625f563c6775} 
+\index{te::components::Animation@{te::components::Animation}!toString@{toString}}
+\index{toString@{toString}!te::components::Animation@{te::components::Animation}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string te\+::components\+::\+Animation\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+shows data as a string 
+
+converts the data into a string, components do override this method 
+
+Implements \mbox{\hyperlink{structte_1_1components_1_1Component_ab62e6b61f57db90657a5f0e67dcfc365}{te\+::components\+::\+Component}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Tenshi\+Engine/\+Engine/\+Components/Animation.\+hpp\end{DoxyCompactItemize}

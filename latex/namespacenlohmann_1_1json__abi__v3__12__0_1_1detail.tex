@@ -1,0 +1,600 @@
+\doxysection{nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::detail Namespace Reference}
+\hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail}{}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail}\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}
+
+
+detail namespace with internal helper functions  
+
+
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_1_1dtoa__impl}{dtoa\+\_\+impl}}
+\begin{DoxyCompactList}\small\item\em implements the Grisu2 algorithm for binary to decimal floating-\/point conversion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1binary__reader}{binary\+\_\+reader}}
+\begin{DoxyCompactList}\small\item\em deserialization of CBOR, Message\+Pack, and UBJSON values \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1exception}{exception}}
+\begin{DoxyCompactList}\small\item\em general exception of the \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{basic\+\_\+json} class \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1internal__iterator}{internal\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em an iterator value \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1invalid__iterator}{invalid\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em exception indicating errors with iterators \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1iter__impl}{iter\+\_\+impl}}
+\begin{DoxyCompactList}\small\item\em a template for a bidirectional iterator for the \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{basic\+\_\+json} class This class implements a both iterators (iterator and const\+\_\+iterator) for the \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{basic\+\_\+json} class. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1json__default__base}{json\+\_\+default\+\_\+base}}
+\begin{DoxyCompactList}\small\item\em Default base class of the \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{basic\+\_\+json} class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1json__sax__dom__parser}{json\+\_\+sax\+\_\+dom\+\_\+parser}}
+\begin{DoxyCompactList}\small\item\em SAX implementation to create a JSON value from SAX events. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1other__error}{other\+\_\+error}}
+\begin{DoxyCompactList}\small\item\em exception indicating other library errors \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1out__of__range}{out\+\_\+of\+\_\+range}}
+\begin{DoxyCompactList}\small\item\em exception indicating access out of the defined range \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1parse__error}{parse\+\_\+error}}
+\begin{DoxyCompactList}\small\item\em exception indicating a parse error \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1position__t}{position\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em struct to capture the start position of the current token \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1type__error}{type\+\_\+error}}
+\begin{DoxyCompactList}\small\item\em exception indicating executing a member function with a wrong type \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af1fd123a0606ab839d031cae618b07c0}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af1fd123a0606ab839d031cae618b07c0} 
+{\footnotesize template$<$typename ... Ts$>$ }\\using {\bfseries void\+\_\+t} = typename make\+\_\+void$<$ Ts... $>$\+::type
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a228fa60ce987dc201f3beca23488fcdc}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a228fa60ce987dc201f3beca23488fcdc} 
+{\footnotesize template$<$template$<$ class... $>$ class Op, class... Args$>$ }\\using {\bfseries is\+\_\+detected} = typename detector$<$ nonesuch, void, Op, Args... $>$\mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01}{\+::value\+\_\+t}}
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aefcc0804b03b7a761a66f1c9cb1f8d1d}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aefcc0804b03b7a761a66f1c9cb1f8d1d} 
+{\footnotesize template$<$template$<$ class... $>$ class Op, class... Args$>$ }\\using {\bfseries detected\+\_\+t} = typename detector$<$ nonesuch, void, Op, Args... $>$\+::type
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a19ad65e07e82bc6a5e76ea6cc38b1ba3}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a19ad65e07e82bc6a5e76ea6cc38b1ba3} 
+{\footnotesize template$<$class Default , template$<$ class... $>$ class Op, class... Args$>$ }\\using {\bfseries detected\+\_\+or} = detector$<$ Default, void, Op, Args... $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a14a2f5d65d98ab4ba61482c19ca1a599}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a14a2f5d65d98ab4ba61482c19ca1a599} 
+{\footnotesize template$<$class Default , template$<$ class... $>$ class Op, class... Args$>$ }\\using {\bfseries detected\+\_\+or\+\_\+t} = typename detected\+\_\+or$<$ Default, Op, Args... $>$\+::type
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ae179cf38908028c7addcd8d892074f11}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ae179cf38908028c7addcd8d892074f11} 
+{\footnotesize template$<$class Expected , template$<$ class... $>$ class Op, class... Args$>$ }\\using {\bfseries is\+\_\+detected\+\_\+exact} = std\+::is\+\_\+same$<$ Expected, detected\+\_\+t$<$ Op, Args... $>$ $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a64cd40b0ec77993449af6ee944fcca36}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a64cd40b0ec77993449af6ee944fcca36} 
+{\footnotesize template$<$class To , template$<$ class... $>$ class Op, class... Args$>$ }\\using {\bfseries is\+\_\+detected\+\_\+convertible} = std\+::is\+\_\+convertible$<$ detected\+\_\+t$<$ Op, Args... $>$, To $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a82df7ba091d17ba4ab4ff79146274bd3}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a82df7ba091d17ba4ab4ff79146274bd3} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries uncvref\+\_\+t} = typename std\+::remove\+\_\+cv$<$ typename std\+::remove\+\_\+reference$<$ T $>$\+::type $>$\+::type
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af9d43881daad2f0905f5d447f6d6eadd}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af9d43881daad2f0905f5d447f6d6eadd} 
+{\footnotesize template$<$bool B, typename T  = void$>$ }\\using {\bfseries enable\+\_\+if\+\_\+t} = typename std\+::enable\+\_\+if$<$ B, T $>$\+::type
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a09e0eb54b6829453d12af67e68a5c03d}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a09e0eb54b6829453d12af67e68a5c03d} 
+{\footnotesize template$<$size\+\_\+t... Ints$>$ }\\using {\bfseries index\+\_\+sequence} = integer\+\_\+sequence$<$ size\+\_\+t, Ints... $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a19e4b664c6269d73b4c54b9f04668a52}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a19e4b664c6269d73b4c54b9f04668a52} 
+{\footnotesize template$<$typename T , T N$>$ }\\using {\bfseries make\+\_\+integer\+\_\+sequence} = typename utility\+\_\+internal\+::\+Gen$<$ T, N $>$\+::type
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ae3dd7025d470aeb0f6ca0e7fad30e5a3}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ae3dd7025d470aeb0f6ca0e7fad30e5a3} 
+{\footnotesize template$<$size\+\_\+t N$>$ }\\using {\bfseries make\+\_\+index\+\_\+sequence} = make\+\_\+integer\+\_\+sequence$<$ size\+\_\+t, N $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ae3465f726301f73d5511923b0eea30e9}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ae3465f726301f73d5511923b0eea30e9} 
+{\footnotesize template$<$typename... Ts$>$ }\\using {\bfseries index\+\_\+sequence\+\_\+for} = make\+\_\+index\+\_\+sequence$<$ sizeof...(Ts)$>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ae8fc9b853e0c245ff3a303ea61b95df3}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ae8fc9b853e0c245ff3a303ea61b95df3} 
+{\footnotesize template$<$typename... T$>$ }\\using {\bfseries result\+\_\+of\+\_\+begin} = decltype(begin(std\+::declval$<$ T $>$()...))
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_afe80ebf57f4ce7427c0cf09a67b6dc34}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_afe80ebf57f4ce7427c0cf09a67b6dc34} 
+{\footnotesize template$<$typename... T$>$ }\\using {\bfseries result\+\_\+of\+\_\+end} = decltype(end(std\+::declval$<$ T $>$()...))
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ae66d40514b56647fe75515f45c84b97f}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ae66d40514b56647fe75515f45c84b97f} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries mapped\+\_\+type\+\_\+t} = typename T\+::mapped\+\_\+type
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a6a5ceceaefb0f56bd09a5cfd0c280597}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a6a5ceceaefb0f56bd09a5cfd0c280597} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries key\+\_\+type\+\_\+t} = typename T\+::key\+\_\+type
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a05635344ed0cf773b9a0a21cfbab72fc}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a05635344ed0cf773b9a0a21cfbab72fc} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries value\+\_\+type\+\_\+t} = typename T\+::value\+\_\+type
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ad6b4930a0adb8ff0a7ca17d8ef568c76}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ad6b4930a0adb8ff0a7ca17d8ef568c76} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries difference\+\_\+type\+\_\+t} = typename T\+::difference\+\_\+type
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a3d1ff16f0c20949df5e2073279433a0d}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a3d1ff16f0c20949df5e2073279433a0d} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries pointer\+\_\+t} = typename T\+::pointer
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a7c30853554d7244188fa9fa8e7817384}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a7c30853554d7244188fa9fa8e7817384} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries reference\+\_\+t} = typename T\+::reference
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a1deab96e02ca0d19945aaff3733fb874}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a1deab96e02ca0d19945aaff3733fb874} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries iterator\+\_\+category\+\_\+t} = typename T\+::iterator\+\_\+category
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a2d5578e427ee97a54dae06fff5a73d39}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a2d5578e427ee97a54dae06fff5a73d39} 
+{\footnotesize template$<$typename T , typename... Args$>$ }\\using {\bfseries to\+\_\+json\+\_\+function} = decltype(T\+::to\+\_\+json(std\+::declval$<$ Args $>$()...))
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac5330d8d0f9ee0873eb39e1a05675083}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac5330d8d0f9ee0873eb39e1a05675083} 
+{\footnotesize template$<$typename T , typename... Args$>$ }\\using {\bfseries from\+\_\+json\+\_\+function} = decltype(T\+::from\+\_\+json(std\+::declval$<$ Args $>$()...))
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a8da0289836fdf3241cf6f88b82bd5883}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a8da0289836fdf3241cf6f88b82bd5883} 
+{\footnotesize template$<$typename T , typename U $>$ }\\using {\bfseries get\+\_\+template\+\_\+function} = decltype(std\+::declval$<$ T $>$().template get$<$ U $>$())
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a0de65fb0266e32f0b1bbb8b13feea79f}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a0de65fb0266e32f0b1bbb8b13feea79f} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries detect\+\_\+key\+\_\+compare} = typename T\+::key\+\_\+compare
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aca0936eb3143a55787a3d53cbc734a7d}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aca0936eb3143a55787a3d53cbc734a7d} 
+{\footnotesize template$<$typename Basic\+Json\+Type $>$ }\\using {\bfseries actual\+\_\+object\+\_\+comparator\+\_\+t} = typename actual\+\_\+object\+\_\+comparator$<$ Basic\+Json\+Type $>$\+::type
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ad1f754a5aa9e9fca0076a04966dbfd15}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ad1f754a5aa9e9fca0076a04966dbfd15} 
+{\footnotesize template$<$typename R $>$ }\\using {\bfseries iterator\+\_\+t} = enable\+\_\+if\+\_\+t$<$ is\+\_\+range$<$ R $>$\+::value, result\+\_\+of\+\_\+begin$<$ decltype(std\+::declval$<$ R \& $>$())$>$ $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_adb1e19a8305591da792032d0842d3025}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_adb1e19a8305591da792032d0842d3025} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries range\+\_\+value\+\_\+t} = value\+\_\+type\+\_\+t$<$ iterator\+\_\+traits$<$ iterator\+\_\+t$<$ T $>$ $>$ $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ae40b56b9e16f48441e2db5fb0c9485e0}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ae40b56b9e16f48441e2db5fb0c9485e0} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries is\+\_\+json\+\_\+pointer} = is\+\_\+specialization\+\_\+of$<$\mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1json__pointer}{\+::nlohmann\+::json\+\_\+pointer}}, uncvref\+\_\+t$<$ T $>$ $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aed43b50b415fffab7d2510e21b6eb426}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aed43b50b415fffab7d2510e21b6eb426} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries detect\+\_\+is\+\_\+transparent} = typename T\+::is\+\_\+transparent
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a778b30b68324e971076a7f46b8cb0e37}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a778b30b68324e971076a7f46b8cb0e37} 
+{\footnotesize template$<$typename Comparator , typename Object\+Key\+Type , typename Key\+Type\+CVRef , bool Require\+Transparent\+Comparator = true, bool Exclude\+Object\+Key\+Type = Require\+Transparent\+Comparator, typename Key\+Type  = uncvref\+\_\+t$<$\+Key\+Type\+CVRef$>$$>$ }\\using {\bfseries is\+\_\+usable\+\_\+as\+\_\+key\+\_\+type} = typename std\+::conditional$<$ is\+\_\+comparable$<$ Comparator, Object\+Key\+Type, Key\+Type\+CVRef $>$\+::value \&\&!(Exclude\+Object\+Key\+Type \&\&std\+::is\+\_\+same$<$ Key\+Type, Object\+Key\+Type $>$\+::value) \&\&(!Require\+Transparent\+Comparator\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}is\+\_\+detected$<$ detect\+\_\+is\+\_\+transparent, Comparator $>$\+::value) \&\&!is\+\_\+json\+\_\+pointer$<$ Key\+Type $>$\+::value, std\+::true\+\_\+type, std\+::false\+\_\+type $>$\+::type
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a10f2fae9b8e20d3b285f1776457b597d}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a10f2fae9b8e20d3b285f1776457b597d} 
+{\footnotesize template$<$typename Basic\+Json\+Type , typename Key\+Type\+CVRef , bool Require\+Transparent\+Comparator = true, bool Exclude\+Object\+Key\+Type = Require\+Transparent\+Comparator, typename Key\+Type  = uncvref\+\_\+t$<$\+Key\+Type\+CVRef$>$$>$ }\\using {\bfseries is\+\_\+usable\+\_\+as\+\_\+basic\+\_\+json\+\_\+key\+\_\+type} = typename std\+::conditional$<$ is\+\_\+usable\+\_\+as\+\_\+key\+\_\+type$<$ typename Basic\+Json\+Type\+::object\+\_\+comparator\+\_\+t, typename Basic\+Json\+Type\+::object\+\_\+t\+::key\+\_\+type, Key\+Type\+CVRef, Require\+Transparent\+Comparator, Exclude\+Object\+Key\+Type $>$\+::value \&\&!is\+\_\+json\+\_\+iterator\+\_\+of$<$ Basic\+Json\+Type, Key\+Type $>$\+::value, std\+::true\+\_\+type, std\+::false\+\_\+type $>$\+::type
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a5d4912a9e716d300b167c919743be0c4}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a5d4912a9e716d300b167c919743be0c4} 
+{\footnotesize template$<$typename Object\+Type , typename Key\+Type $>$ }\\using {\bfseries detect\+\_\+erase\+\_\+with\+\_\+key\+\_\+type} = decltype(std\+::declval$<$ Object\+Type \& $>$().erase(std\+::declval$<$ Key\+Type $>$()))
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a3aa03cab298b35a2f70ba31c2b169f60}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a3aa03cab298b35a2f70ba31c2b169f60} 
+{\footnotesize template$<$typename Basic\+Json\+Type , typename Key\+Type $>$ }\\using {\bfseries has\+\_\+erase\+\_\+with\+\_\+key\+\_\+type} = typename std\+::conditional$<$ is\+\_\+detected$<$ detect\+\_\+erase\+\_\+with\+\_\+key\+\_\+type, typename Basic\+Json\+Type\+::object\+\_\+t, Key\+Type $>$\+::value, std\+::true\+\_\+type, std\+::false\+\_\+type $>$\+::type
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a270acde5ab3f17100d79d5db7d73d920}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a270acde5ab3f17100d79d5db7d73d920} 
+{\footnotesize template$<$typename... Types$>$ }\\using {\bfseries all\+\_\+integral} = conjunction$<$ std\+::is\+\_\+integral$<$ Types $>$... $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aa497ab74c776177e0a0ff6a0e605506b}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aa497ab74c776177e0a0ff6a0e605506b} 
+{\footnotesize template$<$typename... Types$>$ }\\using {\bfseries all\+\_\+signed} = conjunction$<$ std\+::is\+\_\+signed$<$ Types $>$... $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aacfd4cfc2b8432ce176e4df0ed66e824}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aacfd4cfc2b8432ce176e4df0ed66e824} 
+{\footnotesize template$<$typename... Types$>$ }\\using {\bfseries all\+\_\+unsigned} = conjunction$<$ std\+::is\+\_\+unsigned$<$ Types $>$... $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a8231fbe2d5e2db001cddb6ba3df3d4c9}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a8231fbe2d5e2db001cddb6ba3df3d4c9} 
+{\footnotesize template$<$typename... Types$>$ }\\using {\bfseries same\+\_\+sign} = std\+::integral\+\_\+constant$<$ bool, all\+\_\+signed$<$ Types... $>$\+::value\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}all\+\_\+unsigned$<$ Types... $>$\+::value $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a374d3e59378414700b7fce74be0a211f}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a374d3e59378414700b7fce74be0a211f} 
+{\footnotesize template$<$typename Of\+Type , typename T $>$ }\\using {\bfseries never\+\_\+out\+\_\+of\+\_\+range} = std\+::integral\+\_\+constant$<$ bool,(std\+::is\+\_\+signed$<$ Of\+Type $>$\+::value \&\&(sizeof(T)$<$ sizeof(Of\+Type)))\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}(same\+\_\+sign$<$ Of\+Type, T $>$\+::value \&\&sizeof(Of\+Type)==sizeof(T)) $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab82b6502ec2deee6f7db109f921d5116}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab82b6502ec2deee6f7db109f921d5116} 
+{\footnotesize template$<$bool Value$>$ }\\using {\bfseries bool\+\_\+constant} = std\+::integral\+\_\+constant$<$ bool, Value $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac41d551de739837be97cadca1bac49e0}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac41d551de739837be97cadca1bac49e0} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries is\+\_\+c\+\_\+string\+\_\+uncvref} = is\+\_\+c\+\_\+string$<$ uncvref\+\_\+t$<$ T $>$ $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a99bf4eaca4799a5e2d080a2f241a76c1}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a99bf4eaca4799a5e2d080a2f241a76c1} 
+{\footnotesize template$<$typename String\+Type , typename Arg $>$ }\\using {\bfseries string\+\_\+can\+\_\+append} = decltype(std\+::declval$<$ String\+Type \& $>$().append(std\+::declval$<$ Arg \&\& $>$()))
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a97f73da1862d7f3ea68cb4eec4487c03}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a97f73da1862d7f3ea68cb4eec4487c03} 
+{\footnotesize template$<$typename String\+Type , typename Arg $>$ }\\using {\bfseries detect\+\_\+string\+\_\+can\+\_\+append} = is\+\_\+detected$<$ string\+\_\+can\+\_\+append, String\+Type, Arg $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a7d809a7c329523afd8095f55c5a75ab5}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a7d809a7c329523afd8095f55c5a75ab5} 
+{\footnotesize template$<$typename String\+Type , typename Arg $>$ }\\using {\bfseries string\+\_\+can\+\_\+append\+\_\+op} = decltype(std\+::declval$<$ String\+Type \& $>$()+=std\+::declval$<$ Arg \&\& $>$())
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a1bcc0337d1f6452b2a5edc38b9ef20d0}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a1bcc0337d1f6452b2a5edc38b9ef20d0} 
+{\footnotesize template$<$typename String\+Type , typename Arg $>$ }\\using {\bfseries detect\+\_\+string\+\_\+can\+\_\+append\+\_\+op} = is\+\_\+detected$<$ string\+\_\+can\+\_\+append\+\_\+op, String\+Type, Arg $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aa941964955112a2efef007ba05347e9d}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aa941964955112a2efef007ba05347e9d} 
+{\footnotesize template$<$typename String\+Type , typename Arg $>$ }\\using {\bfseries string\+\_\+can\+\_\+append\+\_\+iter} = decltype(std\+::declval$<$ String\+Type \& $>$().append(std\+::declval$<$ const Arg \& $>$().begin(), std\+::declval$<$ const Arg \& $>$().end()))
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a6d032c51572773dc3c5ed08120f6f6ed}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a6d032c51572773dc3c5ed08120f6f6ed} 
+{\footnotesize template$<$typename String\+Type , typename Arg $>$ }\\using {\bfseries detect\+\_\+string\+\_\+can\+\_\+append\+\_\+iter} = is\+\_\+detected$<$ string\+\_\+can\+\_\+append\+\_\+iter, String\+Type, Arg $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a464f246d6e1cd9c729882bebc8f24941}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a464f246d6e1cd9c729882bebc8f24941} 
+{\footnotesize template$<$typename String\+Type , typename Arg $>$ }\\using {\bfseries string\+\_\+can\+\_\+append\+\_\+data} = decltype(std\+::declval$<$ String\+Type \& $>$().append(std\+::declval$<$ const Arg \& $>$().data(), std\+::declval$<$ const Arg \& $>$().size()))
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a240b7a9aad6bb5a8030137a037df0f42}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a240b7a9aad6bb5a8030137a037df0f42} 
+{\footnotesize template$<$typename String\+Type , typename Arg $>$ }\\using {\bfseries detect\+\_\+string\+\_\+can\+\_\+append\+\_\+data} = is\+\_\+detected$<$ string\+\_\+can\+\_\+append\+\_\+data, String\+Type, Arg $>$
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a0b025919c6e23ea9e4a87020bddbfd30}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a0b025919c6e23ea9e4a87020bddbfd30} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries null\+\_\+function\+\_\+t} = decltype(std\+::declval$<$ T \& $>$().\mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a37a6259cc0c1dae299a7866489dff0bd}{null}}())
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aeb57cd7725a658d3e99faf0ef2fe7176}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aeb57cd7725a658d3e99faf0ef2fe7176} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries boolean\+\_\+function\+\_\+t} = decltype(std\+::declval$<$ T \& $>$().\mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a84e2c64f38f78ba3ea5c905ab5a2da27}{boolean}}(std\+::declval$<$ bool $>$()))
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a9111a812564a41bf8f613f0f60d80134}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a9111a812564a41bf8f613f0f60d80134} 
+{\footnotesize template$<$typename T , typename Integer $>$ }\\using {\bfseries number\+\_\+integer\+\_\+function\+\_\+t} = decltype(std\+::declval$<$ T \& $>$().\mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a5763da164f8659d94a56e29df64b4bcc}{number\+\_\+integer}}(std\+::declval$<$ Integer $>$()))
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a8eafef372a48ca51d967ab7e6123f7d6}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a8eafef372a48ca51d967ab7e6123f7d6} 
+{\footnotesize template$<$typename T , typename Unsigned $>$ }\\using {\bfseries number\+\_\+unsigned\+\_\+function\+\_\+t} = decltype(std\+::declval$<$ T \& $>$().\mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01adce7cc8ec29055c4158828921f2f265e}{number\+\_\+unsigned}}(std\+::declval$<$ Unsigned $>$()))
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_afd3444a3ad4d2112455b2fd38c97a3a1}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_afd3444a3ad4d2112455b2fd38c97a3a1} 
+{\footnotesize template$<$typename T , typename Float , typename String $>$ }\\using {\bfseries number\+\_\+float\+\_\+function\+\_\+t} = decltype(std\+::declval$<$ T \& $>$().\mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01ad9966ecb59667235a57b4b999a649eef}{number\+\_\+float}}(std\+::declval$<$ Float $>$(), std\+::declval$<$ const String \& $>$()))
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a6d04dc3511fc752d0c840320e0d37d18}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a6d04dc3511fc752d0c840320e0d37d18} 
+{\footnotesize template$<$typename T , typename String $>$ }\\using {\bfseries string\+\_\+function\+\_\+t} = decltype(std\+::declval$<$ T \& $>$().\mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01ab45cffe084dd3d20d928bee85e7b0f21}{string}}(std\+::declval$<$ String \& $>$()))
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a0d524834d43cc64c8fed7a9cc6a97b06}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a0d524834d43cc64c8fed7a9cc6a97b06} 
+{\footnotesize template$<$typename T , typename Binary $>$ }\\using {\bfseries binary\+\_\+function\+\_\+t} = decltype(std\+::declval$<$ T \& $>$().\mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a9d7183f16acce70658f686ae7f1a4d20}{binary}}(std\+::declval$<$ Binary \& $>$()))
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a7a658f569ce14bf40aba6ba1ad5ca569}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a7a658f569ce14bf40aba6ba1ad5ca569} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries start\+\_\+object\+\_\+function\+\_\+t} = decltype(std\+::declval$<$ T \& $>$().start\+\_\+object(std\+::declval$<$ std\+::size\+\_\+t $>$()))
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a291df699b92e036c3e10081316cfe463}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a291df699b92e036c3e10081316cfe463} 
+{\footnotesize template$<$typename T , typename String $>$ }\\using {\bfseries key\+\_\+function\+\_\+t} = decltype(std\+::declval$<$ T \& $>$().key(std\+::declval$<$ String \& $>$()))
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a2659dcab34b9a0c5dcc01346d4f57ba2}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a2659dcab34b9a0c5dcc01346d4f57ba2} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries end\+\_\+object\+\_\+function\+\_\+t} = decltype(std\+::declval$<$ T \& $>$().end\+\_\+object())
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a327f6938a7433136421d77e02191d025}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a327f6938a7433136421d77e02191d025} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries start\+\_\+array\+\_\+function\+\_\+t} = decltype(std\+::declval$<$ T \& $>$().start\+\_\+array(std\+::declval$<$ std\+::size\+\_\+t $>$()))
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a5ae7e0066ce9744c88f80b974c2ec78c}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a5ae7e0066ce9744c88f80b974c2ec78c} 
+{\footnotesize template$<$typename T $>$ }\\using {\bfseries end\+\_\+array\+\_\+function\+\_\+t} = decltype(std\+::declval$<$ T \& $>$().end\+\_\+array())
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac5b9380fb98b5f14198cc6b5b8dd5902}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac5b9380fb98b5f14198cc6b5b8dd5902} 
+{\footnotesize template$<$typename T , typename Exception $>$ }\\using {\bfseries parse\+\_\+error\+\_\+function\+\_\+t} = decltype(std\+::declval$<$ T \& $>$().\mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1parse__error}{parse\+\_\+error}}(std\+::declval$<$ std\+::size\+\_\+t $>$(), std\+::declval$<$ const std\+::string \& $>$(), std\+::declval$<$ const Exception \& $>$()))
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a978fc4bbb2fe643b270e0c20a3779d98}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a978fc4bbb2fe643b270e0c20a3779d98} 
+{\footnotesize template$<$class T $>$ }\\using {\bfseries json\+\_\+base\+\_\+class} = typename std\+::conditional$<$ std\+::is\+\_\+same$<$ T, void $>$\+::value, \mbox{\hyperlink{structnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1json__default__base}{json\+\_\+default\+\_\+base}}, T $>$\+::type
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01}{value\+\_\+t}} \+: std\+::uint8\+\_\+t \{ \newline
+\mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a37a6259cc0c1dae299a7866489dff0bd}{null}}
+, \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01aa8cfde6331bd59eb2ac96f8911c4b666}{object}}
+, \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01af1f713c9e000f5d3f280adbd124df4f5}{array}}
+, \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01ab45cffe084dd3d20d928bee85e7b0f21}{string}}
+, \newline
+\mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a84e2c64f38f78ba3ea5c905ab5a2da27}{boolean}}
+, \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a5763da164f8659d94a56e29df64b4bcc}{number\+\_\+integer}}
+, \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01adce7cc8ec29055c4158828921f2f265e}{number\+\_\+unsigned}}
+, \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01ad9966ecb59667235a57b4b999a649eef}{number\+\_\+float}}
+, \newline
+\mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a9d7183f16acce70658f686ae7f1a4d20}{binary}}
+, \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a94708897ec9db8647dfe695714c98e46}{discarded}}
+ \}
+\begin{DoxyCompactList}\small\item\em the JSON type enumeration \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af2740044298428043d11039bd5286641}{cbor\+\_\+tag\+\_\+handler\+\_\+t}} \{ \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af2740044298428043d11039bd5286641acb5e100e5a9a3e7f6d1fd97512215282}{error}}
+, \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af2740044298428043d11039bd5286641a567bc1d268f135496de3d5b946b691f3}{ignore}}
+, \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af2740044298428043d11039bd5286641a8cd892b7b97ef9489ae4479d3f4ef0fc}{store}}
+ \}
+\begin{DoxyCompactList}\small\item\em how to treat CBOR tags \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac90e3828c737ea0602b467cc8b8b76f7}{error\+\_\+handler\+\_\+t}} \{ \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac90e3828c737ea0602b467cc8b8b76f7a2133fd717402a7966ee88d06f9e0b792}{strict}}
+, \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac90e3828c737ea0602b467cc8b8b76f7a9dde360102c103867bd2f45872f1129c}{replace}}
+, \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac90e3828c737ea0602b467cc8b8b76f7a567bc1d268f135496de3d5b946b691f3}{ignore}}
+ \}
+\begin{DoxyCompactList}\small\item\em how to treat decoding errors \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aca84abaadc7e0155515beb4cfb16404a}{operator$<$}} (const \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01}{value\+\_\+t}} lhs, const \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01}{value\+\_\+t}} rhs) noexcept
+\begin{DoxyCompactList}\small\item\em comparison operator for JSON types \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename String\+Type $>$ }\\void \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a419582860572e143c6d2c17f60ce8bda}{replace\+\_\+substring}} (String\+Type \&s, const String\+Type \&f, const String\+Type \&t)
+\begin{DoxyCompactList}\small\item\em replace all occurrences of a substring by another string \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename String\+Type $>$ }\\String\+Type \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ae789594d1cdd99d7b97fa2fafe4cf67e}{escape}} (String\+Type s)
+\begin{DoxyCompactList}\small\item\em string escaping as described in RFC 6901 (Sect. 4) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename String\+Type $>$ }\\void \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a2b97cc0d22040455ec186d360d6c3c73}{unescape}} (String\+Type \&s)
+\begin{DoxyCompactList}\small\item\em string unescaping as described in RFC 6901 (Sect. 4) \end{DoxyCompactList}\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ade44bd48076cb12c81a0c4fd660743f4}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ade44bd48076cb12c81a0c4fd660743f4} 
+{\footnotesize template$<$typename T , typename... Args$>$ }\\constexpr std\+::array$<$ T, sizeof...(Args)$>$ {\bfseries make\+\_\+array} (Args \&\&... args)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a697e42df71d121a279527e0d0af1440d}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a697e42df71d121a279527e0d0af1440d} 
+{\footnotesize template$<$typename T , typename U , enable\+\_\+if\+\_\+t$<$ !std\+::is\+\_\+same$<$ T, U $>$\+::value, int $>$  = 0$>$ }\\T {\bfseries conditional\+\_\+static\+\_\+cast} (U value)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac8fb7821d95ff485ff8bd730f0c07ce3}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac8fb7821d95ff485ff8bd730f0c07ce3} 
+{\footnotesize template$<$typename Of\+Type , typename T $>$ }\\constexpr bool {\bfseries value\+\_\+in\+\_\+range\+\_\+of} (T val)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a5a75a07c4ec84476c3a5d8b020dba80b}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a5a75a07c4ec84476c3a5d8b020dba80b} 
+std\+::size\+\_\+t {\bfseries concat\+\_\+length} ()
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a4922e421a18199492f46b0a6f4b0d381}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a4922e421a18199492f46b0a6f4b0d381} 
+{\footnotesize template$<$typename... Args$>$ }\\std\+::size\+\_\+t {\bfseries concat\+\_\+length} (const char \texorpdfstring{$\ast$}{*}cstr, const Args \&... rest)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac40e4a76b2238fba7bc8acb098e55457}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac40e4a76b2238fba7bc8acb098e55457} 
+{\footnotesize template$<$typename String\+Type , typename... Args$>$ }\\std\+::size\+\_\+t {\bfseries concat\+\_\+length} (const String\+Type \&str, const Args \&... rest)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ad3ac02d76bd2629464e1fc44f4b742eb}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ad3ac02d76bd2629464e1fc44f4b742eb} 
+{\footnotesize template$<$typename... Args$>$ }\\std\+::size\+\_\+t {\bfseries concat\+\_\+length} (const char, const Args \&... rest)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a9c77b7c4428c95d4e265f5464da4fed3}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a9c77b7c4428c95d4e265f5464da4fed3} 
+{\footnotesize template$<$typename Out\+String\+Type $>$ }\\void {\bfseries concat\+\_\+into} (Out\+String\+Type \&)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a7a3e3a9b2f9ded77ecae70b52b509b87}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a7a3e3a9b2f9ded77ecae70b52b509b87} 
+{\footnotesize template$<$typename Out\+String\+Type , typename Arg , typename... Args, enable\+\_\+if\+\_\+t$<$ !detect\+\_\+string\+\_\+can\+\_\+append$<$ Out\+String\+Type, Arg $>$\+::value \&\&detect\+\_\+string\+\_\+can\+\_\+append\+\_\+op$<$ Out\+String\+Type, Arg $>$\+::value, int $>$  = 0$>$ }\\void {\bfseries concat\+\_\+into} (Out\+String\+Type \&out, Arg \&\&arg, Args \&\&... rest)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a38e3c0973969cc8ae3e181c5a380bdfc}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a38e3c0973969cc8ae3e181c5a380bdfc} 
+{\footnotesize template$<$typename Out\+String\+Type , typename Arg , typename... Args, enable\+\_\+if\+\_\+t$<$ !detect\+\_\+string\+\_\+can\+\_\+append$<$ Out\+String\+Type, Arg $>$\+::value \&\&!detect\+\_\+string\+\_\+can\+\_\+append\+\_\+op$<$ Out\+String\+Type, Arg $>$\+::value \&\&detect\+\_\+string\+\_\+can\+\_\+append\+\_\+iter$<$ Out\+String\+Type, Arg $>$\+::value, int $>$  = 0$>$ }\\void {\bfseries concat\+\_\+into} (Out\+String\+Type \&out, const Arg \&arg, Args \&\&... rest)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a826a12e32804dad22a0089320008687c}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a826a12e32804dad22a0089320008687c} 
+{\footnotesize template$<$typename Out\+String\+Type  = std\+::string, typename... Args$>$ }\\Out\+String\+Type {\bfseries concat} (Args \&\&... args)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a045d08eb2f8b4b7cedee6e3be3e5bad4}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a045d08eb2f8b4b7cedee6e3be3e5bad4} 
+{\footnotesize template$<$typename Basic\+Json\+Type , typename T , enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same$<$ T, typename Basic\+Json\+Type\+::boolean\+\_\+t $>$\+::value, int $>$  = 0$>$ }\\void {\bfseries to\+\_\+json} (Basic\+Json\+Type \&j, T b) noexcept
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a06fc8ea6ae576d9c341e7a46bfbc6f74}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a06fc8ea6ae576d9c341e7a46bfbc6f74} 
+{\footnotesize template$<$typename Basic\+Json\+Type , typename Bool\+Ref , enable\+\_\+if\+\_\+t$<$((std\+::is\+\_\+same$<$ std\+::vector$<$ bool $>$\+::reference, Bool\+Ref $>$\+::value \&\&!std\+::is\+\_\+same$<$ std\+::vector$<$ bool $>$\+::reference, typename Basic\+Json\+Type\+::boolean\+\_\+t \& $>$\+::value)\texorpdfstring{$\vert$}{|}\texorpdfstring{$\vert$}{|}(std\+::is\+\_\+same$<$ std\+::vector$<$ bool $>$\+::const\+\_\+reference, Bool\+Ref $>$\+::value \&\&!std\+::is\+\_\+same$<$ detail\+::uncvref\+\_\+t$<$ std\+::vector$<$ bool $>$\+::const\+\_\+reference $>$, typename Basic\+Json\+Type\+::boolean\+\_\+t $>$\+::value)) \&\&std\+::is\+\_\+convertible$<$ const Bool\+Ref \&, typename Basic\+Json\+Type\+::boolean\+\_\+t $>$\+::value, int $>$  = 0$>$ }\\void {\bfseries to\+\_\+json} (Basic\+Json\+Type \&j, const Bool\+Ref \&b) noexcept
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a2727b81f450be3faa2e3541629b6f257}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a2727b81f450be3faa2e3541629b6f257} 
+{\footnotesize template$<$typename Basic\+Json\+Type , typename Compatible\+String , enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+constructible$<$ typename Basic\+Json\+Type\+::string\+\_\+t, Compatible\+String $>$\+::value, int $>$  = 0$>$ }\\void {\bfseries to\+\_\+json} (Basic\+Json\+Type \&j, const Compatible\+String \&s)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a774da5b68f701e96b424138f21fd003c}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a774da5b68f701e96b424138f21fd003c} 
+{\footnotesize template$<$typename Basic\+Json\+Type $>$ }\\void {\bfseries to\+\_\+json} (Basic\+Json\+Type \&j, typename Basic\+Json\+Type\+::string\+\_\+t \&\&s)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ae74d748d90cce893d32defe286c4d41f}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ae74d748d90cce893d32defe286c4d41f} 
+{\footnotesize template$<$typename Basic\+Json\+Type , typename Float\+Type , enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+floating\+\_\+point$<$ Float\+Type $>$\+::value, int $>$  = 0$>$ }\\void {\bfseries to\+\_\+json} (Basic\+Json\+Type \&j, Float\+Type val) noexcept
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af92271aa58f7daff66e31d1450c1d454}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af92271aa58f7daff66e31d1450c1d454} 
+{\footnotesize template$<$typename Basic\+Json\+Type , typename Compatible\+Number\+Unsigned\+Type , enable\+\_\+if\+\_\+t$<$ is\+\_\+compatible\+\_\+integer\+\_\+type$<$ typename Basic\+Json\+Type\+::number\+\_\+unsigned\+\_\+t, Compatible\+Number\+Unsigned\+Type $>$\+::value, int $>$  = 0$>$ }\\void {\bfseries to\+\_\+json} (Basic\+Json\+Type \&j, Compatible\+Number\+Unsigned\+Type val) noexcept
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac3be72770869dd81eea6941a0d6f6e81}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac3be72770869dd81eea6941a0d6f6e81} 
+{\footnotesize template$<$typename Basic\+Json\+Type , typename Compatible\+Number\+Integer\+Type , enable\+\_\+if\+\_\+t$<$ is\+\_\+compatible\+\_\+integer\+\_\+type$<$ typename Basic\+Json\+Type\+::number\+\_\+integer\+\_\+t, Compatible\+Number\+Integer\+Type $>$\+::value, int $>$  = 0$>$ }\\void {\bfseries to\+\_\+json} (Basic\+Json\+Type \&j, Compatible\+Number\+Integer\+Type val) noexcept
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a3e541e964b38edf65a13fde918b77665}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a3e541e964b38edf65a13fde918b77665} 
+{\footnotesize template$<$typename Basic\+Json\+Type , typename Enum\+Type , enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+enum$<$ Enum\+Type $>$\+::value, int $>$  = 0$>$ }\\void {\bfseries to\+\_\+json} (Basic\+Json\+Type \&j, Enum\+Type e) noexcept
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac775b2e409ec726a97c1347194ee69aa}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac775b2e409ec726a97c1347194ee69aa} 
+{\footnotesize template$<$typename Basic\+Json\+Type $>$ }\\void {\bfseries to\+\_\+json} (Basic\+Json\+Type \&j, const std\+::vector$<$ bool $>$ \&e)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a85f6968d7ec1fe11e78b1d1166de9581}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a85f6968d7ec1fe11e78b1d1166de9581} 
+{\footnotesize template$<$typename Basic\+Json\+Type , typename Compatible\+Array\+Type , enable\+\_\+if\+\_\+t$<$ is\+\_\+compatible\+\_\+array\+\_\+type$<$ Basic\+Json\+Type, Compatible\+Array\+Type $>$\+::value \&\&!is\+\_\+compatible\+\_\+object\+\_\+type$<$ Basic\+Json\+Type, Compatible\+Array\+Type $>$\+::value \&\&!is\+\_\+compatible\+\_\+string\+\_\+type$<$ Basic\+Json\+Type, Compatible\+Array\+Type $>$\+::value \&\&!std\+::is\+\_\+same$<$ typename Basic\+Json\+Type\+::binary\+\_\+t, Compatible\+Array\+Type $>$\+::value \&\&!is\+\_\+basic\+\_\+json$<$ Compatible\+Array\+Type $>$\+::value, int $>$  = 0$>$ }\\void {\bfseries to\+\_\+json} (Basic\+Json\+Type \&j, const Compatible\+Array\+Type \&arr)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab6f320dc87b312b938ab440245e60b85}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab6f320dc87b312b938ab440245e60b85} 
+{\footnotesize template$<$typename Basic\+Json\+Type $>$ }\\void {\bfseries to\+\_\+json} (Basic\+Json\+Type \&j, const typename Basic\+Json\+Type\+::binary\+\_\+t \&bin)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_abb0afe828445012ad78be2e9d28a410d}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_abb0afe828445012ad78be2e9d28a410d} 
+{\footnotesize template$<$typename Basic\+Json\+Type , typename T , enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+convertible$<$ T, Basic\+Json\+Type $>$\+::value, int $>$  = 0$>$ }\\void {\bfseries to\+\_\+json} (Basic\+Json\+Type \&j, const std\+::valarray$<$ T $>$ \&arr)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aceba85da10d10c7f70498af9edea3ed2}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aceba85da10d10c7f70498af9edea3ed2} 
+{\footnotesize template$<$typename Basic\+Json\+Type $>$ }\\void {\bfseries to\+\_\+json} (Basic\+Json\+Type \&j, typename Basic\+Json\+Type\+::array\+\_\+t \&\&arr)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a2717e5a6f0a00c2f7ed98aa9f62d7abf}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a2717e5a6f0a00c2f7ed98aa9f62d7abf} 
+{\footnotesize template$<$typename Basic\+Json\+Type , typename Compatible\+Object\+Type , enable\+\_\+if\+\_\+t$<$ is\+\_\+compatible\+\_\+object\+\_\+type$<$ Basic\+Json\+Type, Compatible\+Object\+Type $>$\+::value \&\&!is\+\_\+basic\+\_\+json$<$ Compatible\+Object\+Type $>$\+::value, int $>$  = 0$>$ }\\void {\bfseries to\+\_\+json} (Basic\+Json\+Type \&j, const Compatible\+Object\+Type \&obj)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab77967a10bc71e0d3e58bffaa79efe3f}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab77967a10bc71e0d3e58bffaa79efe3f} 
+{\footnotesize template$<$typename Basic\+Json\+Type $>$ }\\void {\bfseries to\+\_\+json} (Basic\+Json\+Type \&j, typename Basic\+Json\+Type\+::object\+\_\+t \&\&obj)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a0cbdb5e8dcf2df935e10ac0dc9ab4735}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a0cbdb5e8dcf2df935e10ac0dc9ab4735} 
+{\footnotesize template$<$typename Basic\+Json\+Type , typename T , std\+::size\+\_\+t N, enable\+\_\+if\+\_\+t$<$ !std\+::is\+\_\+constructible$<$ typename Basic\+Json\+Type\+::string\+\_\+t, const T(\&)\mbox{[}N\mbox{]}$>$\+::value, int $>$  = 0$>$ }\\void {\bfseries to\+\_\+json} (Basic\+Json\+Type \&j, const T(\&arr)\mbox{[}N\mbox{]})
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a1d81c3d39c3d42a79fa0dace458f460c}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a1d81c3d39c3d42a79fa0dace458f460c} 
+{\footnotesize template$<$typename Basic\+Json\+Type , typename T1 , typename T2 , enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+constructible$<$ Basic\+Json\+Type, T1 $>$\+::value \&\&std\+::is\+\_\+constructible$<$ Basic\+Json\+Type, T2 $>$\+::value, int $>$  = 0$>$ }\\void {\bfseries to\+\_\+json} (Basic\+Json\+Type \&j, const std\+::pair$<$ T1, T2 $>$ \&p)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a3fa6b87f5679b052ce0f6ce74f68f54e}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a3fa6b87f5679b052ce0f6ce74f68f54e} 
+{\footnotesize template$<$typename Basic\+Json\+Type , typename T , enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+same$<$ T, iteration\+\_\+proxy\+\_\+value$<$ typename Basic\+Json\+Type\+::iterator $>$ $>$\+::value, int $>$  = 0$>$ }\\void {\bfseries to\+\_\+json} (Basic\+Json\+Type \&j, const T \&b)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a042a23a624fd1265a99f788fc482bb49}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a042a23a624fd1265a99f788fc482bb49} 
+{\footnotesize template$<$typename Basic\+Json\+Type , typename Tuple , std\+::size\+\_\+t... Idx$>$ }\\void {\bfseries to\+\_\+json\+\_\+tuple\+\_\+impl} (Basic\+Json\+Type \&j, const Tuple \&t, index\+\_\+sequence$<$ Idx... $>$)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a5ee2ce5160b1b8b0250feaede1f0aba2}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a5ee2ce5160b1b8b0250feaede1f0aba2} 
+{\footnotesize template$<$typename Basic\+Json\+Type , typename Tuple $>$ }\\void {\bfseries to\+\_\+json\+\_\+tuple\+\_\+impl} (Basic\+Json\+Type \&j, const Tuple \&, index\+\_\+sequence$<$$>$)
+\item 
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_abdbbb8a4ca8e2b5600d7e6ccf9d01833}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_abdbbb8a4ca8e2b5600d7e6ccf9d01833} 
+constexpr std\+::size\+\_\+t {\bfseries unknown\+\_\+size} ()
+\item 
+bool \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a15ce0d7b65017be2c97ff7dce174d24d}{little\+\_\+endianness}} (int num=1) noexcept
+\begin{DoxyCompactList}\small\item\em determine system byte order \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+detail namespace with internal helper functions 
+
+This namespace collects functions that should not be exposed, implementations of some \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{basic\+\_\+json} methods, and meta-\/programming helpers.
+
+\begin{DoxySince}{Since}
+version 2.\+1.\+0 
+\end{DoxySince}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af2740044298428043d11039bd5286641}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af2740044298428043d11039bd5286641} 
+\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!cbor\_tag\_handler\_t@{cbor\_tag\_handler\_t}}
+\index{cbor\_tag\_handler\_t@{cbor\_tag\_handler\_t}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}
+\doxysubsubsection{\texorpdfstring{cbor\_tag\_handler\_t}{cbor\_tag\_handler\_t}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af2740044298428043d11039bd5286641}{nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::detail\+::cbor\+\_\+tag\+\_\+handler\+\_\+t}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+how to treat CBOR tags 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{error@{error}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!error@{error}}}\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af2740044298428043d11039bd5286641acb5e100e5a9a3e7f6d1fd97512215282}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af2740044298428043d11039bd5286641acb5e100e5a9a3e7f6d1fd97512215282} 
+error&throw a \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1parse__error}{parse\+\_\+error} exception in case of a tag \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ignore@{ignore}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!ignore@{ignore}}}\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af2740044298428043d11039bd5286641a567bc1d268f135496de3d5b946b691f3}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af2740044298428043d11039bd5286641a567bc1d268f135496de3d5b946b691f3} 
+ignore&ignore tags \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{store@{store}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!store@{store}}}\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af2740044298428043d11039bd5286641a8cd892b7b97ef9489ae4479d3f4ef0fc}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_af2740044298428043d11039bd5286641a8cd892b7b97ef9489ae4479d3f4ef0fc} 
+store&store tags as binary type \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac90e3828c737ea0602b467cc8b8b76f7}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac90e3828c737ea0602b467cc8b8b76f7} 
+\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!error\_handler\_t@{error\_handler\_t}}
+\index{error\_handler\_t@{error\_handler\_t}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}
+\doxysubsubsection{\texorpdfstring{error\_handler\_t}{error\_handler\_t}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac90e3828c737ea0602b467cc8b8b76f7}{nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::detail\+::error\+\_\+handler\+\_\+t}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+how to treat decoding errors 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{strict@{strict}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!strict@{strict}}}\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac90e3828c737ea0602b467cc8b8b76f7a2133fd717402a7966ee88d06f9e0b792}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac90e3828c737ea0602b467cc8b8b76f7a2133fd717402a7966ee88d06f9e0b792} 
+strict&throw a \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1detail_1_1type__error}{type\+\_\+error} exception in case of invalid UTF-\/8 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{replace@{replace}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!replace@{replace}}}\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac90e3828c737ea0602b467cc8b8b76f7a9dde360102c103867bd2f45872f1129c}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac90e3828c737ea0602b467cc8b8b76f7a9dde360102c103867bd2f45872f1129c} 
+replace&replace invalid UTF-\/8 sequences with U+\+FFFD \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ignore@{ignore}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!ignore@{ignore}}}\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac90e3828c737ea0602b467cc8b8b76f7a567bc1d268f135496de3d5b946b691f3}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ac90e3828c737ea0602b467cc8b8b76f7a567bc1d268f135496de3d5b946b691f3} 
+ignore&ignore invalid UTF-\/8 sequences \\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01} 
+\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!value\_t@{value\_t}}
+\index{value\_t@{value\_t}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}
+\doxysubsubsection{\texorpdfstring{value\_t}{value\_t}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01}{nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::detail\+::value\+\_\+t}} \+: std\+::uint8\+\_\+t\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+the JSON type enumeration 
+
+This enumeration collects the different JSON types. It is internally used to distinguish the stored values, and the functions \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json_a0692342d3f078025e79b78c0ac6cdf20}{basic\+\_\+json\+::is\+\_\+null()}, \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json_a9edad331a8201f0ff74b10608acf2e53}{basic\+\_\+json\+::is\+\_\+object()}, \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json_ac023afa49ede14f4deb66cc2da7ab38e}{basic\+\_\+json\+::is\+\_\+array()}, \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json_aded5fd5cc5d0aab2469a9b7208f70eb3}{basic\+\_\+json\+::is\+\_\+string()}, \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json_a86ef5822b7a2351c3ce4532e2e1c093a}{basic\+\_\+json\+::is\+\_\+boolean()}, \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json_a7a11e9f5d1d6b92099f5364e7e35c0b2}{basic\+\_\+json\+::is\+\_\+number()} (with \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json_ac51b6ebc22f15ce22090a2962cfcb575}{basic\+\_\+json\+::is\+\_\+number\+\_\+integer()}, \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json_aa98bed556fdd5c40c37bbe47876fe7a8}{basic\+\_\+json\+::is\+\_\+number\+\_\+unsigned()}, and \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json_ac4de1e86d2100181e65d403e7cb83ab4}{basic\+\_\+json\+::is\+\_\+number\+\_\+float()}), \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json_a09f0411fd91beafec87678d146de64da}{basic\+\_\+json\+::is\+\_\+discarded()}, \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json_acb1b2b8d639c8e6bdcc2f08fd97d3ab9}{basic\+\_\+json\+::is\+\_\+primitive()}, and \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json_abeb620a75894587d43c5c026e0c771b0}{basic\+\_\+json\+::is\+\_\+structured()} rely on it.
+
+\begin{DoxyNote}{Note}
+There are three enumeration entries (number\+\_\+integer, number\+\_\+unsigned, and number\+\_\+float), because the library distinguishes these three types for numbers\+: \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json_a84fffa399d0b534d5339c48758dc48e5}{basic\+\_\+json\+::number\+\_\+unsigned\+\_\+t} is used for unsigned integers, \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json_a3ef6455052475f18bc498d139c0c7dd2}{basic\+\_\+json\+::number\+\_\+integer\+\_\+t} is used for signed integers, and \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json_a11d597c355d131a35848ebcb3d99c259}{basic\+\_\+json\+::number\+\_\+float\+\_\+t} is used for floating-\/point numbers or to approximate integers which do not fit in the limits of their respective type.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+see \doxylink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json_a57c69d11b379b6fb196134e7b064b1f3}{basic\+\_\+json\+::basic\+\_\+json(const value\+\_\+t value\+\_\+type)} -- create a JSON value with the default value for a given type
+\end{DoxySeeAlso}
+\begin{DoxySince}{Since}
+version 1.\+0.\+0 
+\end{DoxySince}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{null@{null}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!null@{null}}}\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a37a6259cc0c1dae299a7866489dff0bd}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a37a6259cc0c1dae299a7866489dff0bd} 
+null&null value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{object@{object}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!object@{object}}}\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01aa8cfde6331bd59eb2ac96f8911c4b666}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01aa8cfde6331bd59eb2ac96f8911c4b666} 
+object&object (unordered set of name/value pairs) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{array@{array}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!array@{array}}}\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01af1f713c9e000f5d3f280adbd124df4f5}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01af1f713c9e000f5d3f280adbd124df4f5} 
+array&array (ordered collection of values) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{string@{string}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!string@{string}}}\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01ab45cffe084dd3d20d928bee85e7b0f21}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01ab45cffe084dd3d20d928bee85e7b0f21} 
+string&string value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{boolean@{boolean}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!boolean@{boolean}}}\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a84e2c64f38f78ba3ea5c905ab5a2da27}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a84e2c64f38f78ba3ea5c905ab5a2da27} 
+boolean&boolean value \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{number\_integer@{number\_integer}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!number\_integer@{number\_integer}}}\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a5763da164f8659d94a56e29df64b4bcc}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a5763da164f8659d94a56e29df64b4bcc} 
+number\+\_\+integer&number value (signed integer) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{number\_unsigned@{number\_unsigned}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!number\_unsigned@{number\_unsigned}}}\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01adce7cc8ec29055c4158828921f2f265e}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01adce7cc8ec29055c4158828921f2f265e} 
+number\+\_\+unsigned&number value (unsigned integer) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{number\_float@{number\_float}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!number\_float@{number\_float}}}\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01ad9966ecb59667235a57b4b999a649eef}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01ad9966ecb59667235a57b4b999a649eef} 
+number\+\_\+float&number value (floating-\/point) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{binary@{binary}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!binary@{binary}}}\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a9d7183f16acce70658f686ae7f1a4d20}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a9d7183f16acce70658f686ae7f1a4d20} 
+binary&binary array (ordered collection of bytes) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{discarded@{discarded}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!discarded@{discarded}}}\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a94708897ec9db8647dfe695714c98e46}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01a94708897ec9db8647dfe695714c98e46} 
+discarded&discarded by the parser callback function \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ae789594d1cdd99d7b97fa2fafe4cf67e}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ae789594d1cdd99d7b97fa2fafe4cf67e} 
+\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!escape@{escape}}
+\index{escape@{escape}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}
+\doxysubsubsection{\texorpdfstring{escape()}{escape()}}
+{\footnotesize\ttfamily template$<$typename String\+Type $>$ \\
+String\+Type nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::detail\+::escape (\begin{DoxyParamCaption}\item[{String\+Type}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+string escaping as described in RFC 6901 (Sect. 4) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em s} & string to escape \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+escaped string
+\end{DoxyReturn}
+Note the order of escaping "{}\texorpdfstring{$\sim$}{\string~}"{} to "{}\texorpdfstring{$\sim$}{\string~}0"{} and "{}/"{} to "{}\texorpdfstring{$\sim$}{\string~}1"{} is important. \Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a15ce0d7b65017be2c97ff7dce174d24d}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a15ce0d7b65017be2c97ff7dce174d24d} 
+\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!little\_endianness@{little\_endianness}}
+\index{little\_endianness@{little\_endianness}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}
+\doxysubsubsection{\texorpdfstring{little\_endianness()}{little\_endianness()}}
+{\footnotesize\ttfamily bool nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::detail\+::little\+\_\+endianness (\begin{DoxyParamCaption}\item[{int}]{num = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+determine system byte order 
+
+\begin{DoxyReturn}{Returns}
+true if and only if system\textquotesingle{}s byte order is little endian
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+from \href{https://stackoverflow.com/a/1001328/266378}{\texttt{ https\+://stackoverflow.\+com/a/1001328/266378}} 
+\end{DoxyNote}
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aca84abaadc7e0155515beb4cfb16404a}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_aca84abaadc7e0155515beb4cfb16404a} 
+\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::detail\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01}{value\+\_\+t}}}]{lhs,  }\item[{const \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_ab49abd3235e6c6c7f77cbdee3b876f01}{value\+\_\+t}}}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+comparison operator for JSON types 
+
+Returns an ordering that is similar to Python\+:
+\begin{DoxyItemize}
+\item order\+: null \texorpdfstring{$<$}{<} boolean \texorpdfstring{$<$}{<} number \texorpdfstring{$<$}{<} object \texorpdfstring{$<$}{<} array \texorpdfstring{$<$}{<} string \texorpdfstring{$<$}{<} binary
+\item furthermore, each type is not smaller than itself
+\item discarded values are not comparable
+\item binary is represented as a b"{}"{} string in python and directly comparable to a string; however, making a binary array directly comparable with a string would be surprising behavior in a JSON file.
+\end{DoxyItemize}
+
+\begin{DoxySince}{Since}
+version 1.\+0.\+0 
+\end{DoxySince}
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a419582860572e143c6d2c17f60ce8bda}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a419582860572e143c6d2c17f60ce8bda} 
+\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!replace\_substring@{replace\_substring}}
+\index{replace\_substring@{replace\_substring}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}
+\doxysubsubsection{\texorpdfstring{replace\_substring()}{replace\_substring()}}
+{\footnotesize\ttfamily template$<$typename String\+Type $>$ \\
+void nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::detail\+::replace\+\_\+substring (\begin{DoxyParamCaption}\item[{String\+Type \&}]{s,  }\item[{const String\+Type \&}]{f,  }\item[{const String\+Type \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+replace all occurrences of a substring by another string 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em s} & the string to manipulate; changed so that all occurrences of {\itshape f} are replaced with {\itshape t} \\
+\hline
+\mbox{\texttt{ in}}  & {\em f} & the substring to replace with {\itshape t} \\
+\hline
+\mbox{\texttt{ in}}  & {\em t} & the string to replace {\itshape f} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Precondition}
+The search string {\itshape f} must not be empty. {\bfseries{This precondition is enforced with an assertion.}}
+\end{DoxyPrecond}
+\begin{DoxySince}{Since}
+version 2.\+0.\+0 
+\end{DoxySince}
+\Hypertarget{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a2b97cc0d22040455ec186d360d6c3c73}\label{namespacenlohmann_1_1json__abi__v3__12__0_1_1detail_a2b97cc0d22040455ec186d360d6c3c73} 
+\index{nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}!unescape@{unescape}}
+\index{unescape@{unescape}!nlohmann::json\_abi\_v3\_12\_0::detail@{nlohmann::json\_abi\_v3\_12\_0::detail}}
+\doxysubsubsection{\texorpdfstring{unescape()}{unescape()}}
+{\footnotesize\ttfamily template$<$typename String\+Type $>$ \\
+void nlohmann\+::json\+\_\+abi\+\_\+v3\+\_\+12\+\_\+0\+::detail\+::unescape (\begin{DoxyParamCaption}\item[{String\+Type \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+string unescaping as described in RFC 6901 (Sect. 4) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em s} & string to unescape \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unescaped string
+\end{DoxyReturn}
+Note the order of escaping "{}\texorpdfstring{$\sim$}{\string~}1"{} to "{}/"{} and "{}\texorpdfstring{$\sim$}{\string~}0"{} to "{}\texorpdfstring{$\sim$}{\string~}"{} is important. 

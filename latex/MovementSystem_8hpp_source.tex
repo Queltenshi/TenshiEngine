@@ -6,26 +6,26 @@
 \DoxyCodeLine{00002\ }
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}System.hpp"{}}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Core/Registry.hpp"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <SFML/System/Vector2.hpp>}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }te\{}
-\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }systems\{}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1systems_1_1MovementSystem}{MovementSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classte_1_1systems_1_1System}{System}}\{}
-\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classte_1_1systems_1_1MovementSystem}{MovementSystem}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry);}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }systems\{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1systems_1_1MovementSystem}{MovementSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classte_1_1systems_1_1FixedSystem}{FixedSystem}}\{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classte_1_1systems_1_1MovementSystem}{MovementSystem}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ deltaTime);}
 \DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1systems_1_1MovementSystem_ae627f7fc6a4eebab0965cb6501f488b8}{update}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1systems_1_1MovementSystem_af6357cbf26b254991383fd4db488f358}{update}}();\ }
 \DoxyCodeLine{00028\ }
 \DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classte_1_1systems_1_1MovementSystem_ae27d9d38fdfc7e5c6044d403d02d79b7}{name}};}
 \DoxyCodeLine{00031\ }
 \DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ updateVelocity(EntityID\ entityID);}
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ updateHorizontalMovement(\mbox{\hyperlink{structte_1_1components_1_1PlayerInput}{components::PlayerInput}}\ *playerInput,\ \mbox{\hyperlink{structte_1_1components_1_1HorizontalMovement}{components::HorizontalMovement}}\ *horizontalMovement);}
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{float}\ updateJump(EntityID\ entityID,\ \mbox{\hyperlink{structte_1_1components_1_1PlayerInput}{components::PlayerInput}}\ *playerInput,\ \mbox{\hyperlink{structte_1_1components_1_1Velocity}{components::Velocity}}\ *velocity);}
-\DoxyCodeLine{00036\ \};}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ updateHorizontalMovement(EntityID\ entityID,\ \mbox{\hyperlink{structte_1_1components_1_1PlayerInput}{components::PlayerInput}}\ *playerInput,\ \mbox{\hyperlink{structte_1_1components_1_1HorizontalMovement}{components::HorizontalMovement}}\ *horizontalMovement);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ updateState(EntityID\ entityID,\ \mbox{\hyperlink{structte_1_1components_1_1Velocity}{components::Velocity}}\ *velocity);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{float}\ updateJump(EntityID\ entityID,\ \mbox{\hyperlink{structte_1_1components_1_1PlayerInput}{components::PlayerInput}}\ *playerInput,\ \mbox{\hyperlink{structte_1_1components_1_1Velocity}{components::Velocity}}\ *velocity);}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
 \DoxyCodeLine{00039\ \}}
+\DoxyCodeLine{00040\ \}}
 
 \end{DoxyCode}

@@ -4,22 +4,61 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}State.hpp"{}}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Components/Component.hpp"{}}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }te\{}
-\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }components\{}
-\DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \textcolor{keyword}{struct\ }Animation\ :\ \textcolor{keyword}{public}\ Component\{}
-\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00011\ \ \ \ \ Animation()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}nlohmann/json.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <SFML/Graphics/Rect.hpp>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ }\mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{json}}\ =\ \mbox{\hyperlink{namespacenlohmann_1_1json__abi__v3__12__0_ab2f6edf07e4f40878b4593762f74029e}{nlohmann::json}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }components\{}
 \DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \ \ \ \ std::string\ toString()\ \textcolor{keyword}{const\ override};}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ name\ =\ \textcolor{stringliteral}{"{}Animation"{}};}
-\DoxyCodeLine{00017\ \};}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \}}
-\DoxyCodeLine{00020\ \}}
+\DoxyCodeLine{00018\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structte_1_1components_1_1Animation}{Animation}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structte_1_1components_1_1Component}{Component}}\{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Animation_ac736f7ae16df4d3eb9d02e5c70dca5d5}{Animation}}(\mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{json}}\ \&\mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}}):\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}}(\mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}})\{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ idleFrame\ =\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}}[\textcolor{stringliteral}{"{}animations"{}}][\textcolor{stringliteral}{"{}idle"{}}][0];}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Animation_aebc50046bc4e84b0a2f5faa74f176eec}{rectangle}}.\mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json_a5a14dd8aead844e9b53035fdf686362b}{size}}\ =\ \{idleFrame[\textcolor{stringliteral}{"{}w"{}}],\ idleFrame[\textcolor{stringliteral}{"{}h"{}}]\};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Animation_aebc50046bc4e84b0a2f5faa74f176eec}{rectangle}}.position\ =\ \{idleFrame[\textcolor{stringliteral}{"{}x"{}}],\ idleFrame[\textcolor{stringliteral}{"{}y"{}}]\};}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{enum\ class}\ CurrentAnimation\{IDLE,\ WALK,\ JUMP,\ FALL,\ HIT\};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a09ce9b262f079027f2f2625f563c6775}{toString}}()\textcolor{keyword}{\ const\ override}\{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}(iterator:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Animation_a9523ca7e9d9d74ac84b12f4460e7d20e}{iterator}})\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}elapsedTime:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Animation_a7eac278383070e98f62838783cc6dd40}{elapsedTime}})\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}switchTime:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Animation_a4e9a1f15923794d575120aecd7287f34}{switchTime}})\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}currentAnimation:\ "{}}\ +\ animationToString(\mbox{\hyperlink{structte_1_1components_1_1Animation_abbfce0e9965660205d8826e7ce2a7126}{currentAnimation}})\ +\ \textcolor{stringliteral}{"{})"{}};\ }
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a9523ca7e9d9d74ac84b12f4460e7d20e}{iterator}}\ =\ 0;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a7eac278383070e98f62838783cc6dd40}{elapsedTime}}\ =\ 0.f;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a4e9a1f15923794d575120aecd7287f34}{switchTime}}\ =\ 0.2f;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ \ \ \ \ sf::IntRect\ \mbox{\hyperlink{structte_1_1components_1_1Animation_aebc50046bc4e84b0a2f5faa74f176eec}{rectangle}};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{json}}\ \&\mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ \ \ \ \ CurrentAnimation\ \mbox{\hyperlink{structte_1_1components_1_1Animation_abbfce0e9965660205d8826e7ce2a7126}{currentAnimation}}\ =\ CurrentAnimation::IDLE;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a31e565752008fcf3690f0dd4f7afabe8}{name}}\ =\ \textcolor{stringliteral}{"{}Animation"{}};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ animationToString(CurrentAnimation\ \mbox{\hyperlink{structte_1_1components_1_1Animation_abbfce0e9965660205d8826e7ce2a7126}{currentAnimation}})\ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\mbox{\hyperlink{structte_1_1components_1_1Animation_abbfce0e9965660205d8826e7ce2a7126}{currentAnimation}})\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentAnimation::IDLE:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}IDLE"{}};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentAnimation::WALK:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}WALK"{}};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentAnimation::JUMP:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}JUMP"{}};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentAnimation::FALL:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}FALL"{}};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentAnimation::HIT:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}HIT"{}};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}UNKNOWN"{}};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \}}
+\DoxyCodeLine{00078\ \}}
 
 \end{DoxyCode}

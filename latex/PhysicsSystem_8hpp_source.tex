@@ -10,27 +10,27 @@
 \DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }te\{}
 \DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }systems\{}
 \DoxyCodeLine{00008\ }
-\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1systems_1_1PhysicsSystem}{PhysicsSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classte_1_1systems_1_1System}{System}}\{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1systems_1_1PhysicsSystem}{PhysicsSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classte_1_1systems_1_1FixedSystem}{FixedSystem}}\{}
 \DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classte_1_1systems_1_1PhysicsSystem}{PhysicsSystem}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry);}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classte_1_1systems_1_1PhysicsSystem}{PhysicsSystem}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry,\ \textcolor{keywordtype}{float}\ gravity);}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1systems_1_1PhysicsSystem_a713138b3fcc3e9904e57f0b8508e39e2}{update}}()\ \textcolor{keyword}{override};\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classte_1_1systems_1_1PhysicsSystem}{PhysicsSystem}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classte_1_1systems_1_1PhysicsSystem}{PhysicsSystem}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry,\ \textcolor{keywordtype}{float}\ deltaTime,\ \textcolor{keywordtype}{float}\ gravity);}
 \DoxyCodeLine{00037\ }
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classte_1_1systems_1_1PhysicsSystem_a0176a348a70cb051a454fd9dac34404b}{name}};}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ updateGravity(EntityID\ entityID,\ \mbox{\hyperlink{structte_1_1components_1_1Velocity}{components::Velocity}}\ *velocity);}
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ updateCollision(EntityID\ entityID1,\ EntityID\ entityID2);}
-\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ correctPosition(EntityID\ entityID,\ \mbox{\hyperlink{structte_1_1components_1_1Transform}{components::Transform}}\ *transform1,\ \mbox{\hyperlink{structte_1_1components_1_1Transform}{components::Transform}}\ *transform2,\ sf::FloatRect\ overlapRect);}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{float}\ mGravity;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1systems_1_1PhysicsSystem_acb3bae1529e7132838e87508440d0b7e}{update}}();\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classte_1_1systems_1_1PhysicsSystem_a0176a348a70cb051a454fd9dac34404b}{name}};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ updateGravity(EntityID\ entityID,\ \mbox{\hyperlink{structte_1_1components_1_1Velocity}{components::Velocity}}\ *velocity);}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ checkCollision(EntityID\ entityID1,\ EntityID\ entityID2);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ correctPosition(EntityID\ entityID,\ \mbox{\hyperlink{structte_1_1components_1_1Transform}{components::Transform}}\ *transform1,\ \mbox{\hyperlink{structte_1_1components_1_1Transform}{components::Transform}}\ *transform2,\ sf::FloatRect\ overlapRect);}
 \DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ defaultGravity\ =\ 10.f;}
-\DoxyCodeLine{00049\ \};}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \}}
-\DoxyCodeLine{00052\ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{float}\ mGravity;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ defaultGravity\ =\ 25.f;}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \}}
+\DoxyCodeLine{00054\ \}}
 
 \end{DoxyCode}

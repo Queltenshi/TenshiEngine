@@ -5,20 +5,27 @@
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}System.hpp"{}}}
-\DoxyCodeLine{00004\ }
-\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }te\{}
-\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }systems\{}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }AnimationSystem\ :\ \textcolor{keyword}{public}\ System\{}
-\DoxyCodeLine{00009\ \textcolor{keyword}{public}:\ \ \ \ }
-\DoxyCodeLine{00010\ \ \ \ \ AnimationSystem(Registry\ \&registry);}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ update()\ \textcolor{keyword}{override};\ }
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ name;}
-\DoxyCodeLine{00015\ \};}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \}}
-\DoxyCodeLine{00018\ \}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Core/Registry.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }systems\{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1systems_1_1AnimationSystem}{AnimationSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classte_1_1systems_1_1VariableSystem}{VariableSystem}}\{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:\ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classte_1_1systems_1_1AnimationSystem}{AnimationSystem}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry,\ \textcolor{keywordtype}{float}\ \&deltaTime);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1systems_1_1AnimationSystem_a617ec29dfa6af353a5c69f5a542b7b0c}{update}}();\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//Name\ of\ system}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ name;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ checkDirection(EntityID\ entityID,\ \mbox{\hyperlink{structte_1_1components_1_1State}{components::State}}\ *state);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ checkState(EntityID\ entityID,\ \mbox{\hyperlink{structte_1_1components_1_1State}{components::State}}\ *state);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ updateTexture(EntityID\ entityID,\ \mbox{\hyperlink{structte_1_1components_1_1Animation}{components::Animation}}\ *animation,\ \mbox{\hyperlink{classnlohmann_1_1json__abi__v3__12__0_1_1basic__json}{json}}\ \&frame);\ }
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \}}
+\DoxyCodeLine{00039\ \}}
 
 \end{DoxyCode}

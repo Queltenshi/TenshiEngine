@@ -12,18 +12,23 @@
 Inheritance diagram for te\+::systems\+::Physics\+System\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classte_1_1systems_1_1PhysicsSystem}
+\includegraphics[height=3.000000cm]{classte_1_1systems_1_1PhysicsSystem}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classte_1_1systems_1_1PhysicsSystem_aa2516364c03c14afd99b91054d4fe459}{Physics\+System}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry)
+\mbox{\hyperlink{classte_1_1systems_1_1PhysicsSystem_a9d662bbbd1d4810275314dc4bb4cf1f6}{Physics\+System}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, const float delta\+Time)
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classte_1_1systems_1_1PhysicsSystem_a23690f8c7fd4d44f592c2183629615ed}{Physics\+System}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, float gravity)
+\mbox{\hyperlink{classte_1_1systems_1_1PhysicsSystem_acd245fd3ec64ee8787f2931745590f0d}{Physics\+System}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, float delta\+Time, float gravity)
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classte_1_1systems_1_1PhysicsSystem_a713138b3fcc3e9904e57f0b8508e39e2}{update}} () override
+void \mbox{\hyperlink{classte_1_1systems_1_1PhysicsSystem_acb3bae1529e7132838e87508440d0b7e}{update}} ()
 \begin{DoxyCompactList}\small\item\em updates the system \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classte_1_1systems_1_1FixedSystem}{te\+::systems\+::\+Fixed\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classte_1_1systems_1_1FixedSystem_a85040d49e6c6c69f907e43b544970af2}{Fixed\+System}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, const float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classte_1_1systems_1_1System}{te\+::systems\+::\+System}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -36,6 +41,11 @@ void \mbox{\hyperlink{classte_1_1systems_1_1PhysicsSystem_a713138b3fcc3e9904e57f
 static const std\+::string {\bfseries name} = "{}Physics\+System"{}
 \begin{DoxyCompactList}\small\item\em Name of system. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classte_1_1systems_1_1FixedSystem}{te\+::systems\+::\+Fixed\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+const float {\bfseries m\+Delta\+Time}
+\begin{DoxyCompactList}\small\item\em Fixed delta\+Time. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classte_1_1systems_1_1System}{te\+::systems\+::\+System}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -49,11 +59,11 @@ static const std\+::string {\bfseries name} = "{}Physics\+System"{}
 Checks velocity, rigid\+Body, collider and then calculates new velocity and new sprite position 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classte_1_1systems_1_1PhysicsSystem_aa2516364c03c14afd99b91054d4fe459}\label{classte_1_1systems_1_1PhysicsSystem_aa2516364c03c14afd99b91054d4fe459} 
+\Hypertarget{classte_1_1systems_1_1PhysicsSystem_a9d662bbbd1d4810275314dc4bb4cf1f6}\label{classte_1_1systems_1_1PhysicsSystem_a9d662bbbd1d4810275314dc4bb4cf1f6} 
 \index{te::systems::PhysicsSystem@{te::systems::PhysicsSystem}!PhysicsSystem@{PhysicsSystem}}
 \index{PhysicsSystem@{PhysicsSystem}!te::systems::PhysicsSystem@{te::systems::PhysicsSystem}}
 \doxysubsubsection{\texorpdfstring{PhysicsSystem()}{PhysicsSystem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily te\+::systems\+::\+Physics\+System\+::\+Physics\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily te\+::systems\+::\+Physics\+System\+::\+Physics\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry,  }\item[{const float}]{delta\+Time }\end{DoxyParamCaption})}
 
 
 
@@ -65,12 +75,14 @@ creates the \doxylink{classte_1_1systems_1_1System}{System} with default\+Gravit
 \begin{DoxyParams}{Parameters}
 {\em registry} & reference to the registry \\
 \hline
+{\em delta\+Time} & Fixed delta\+Time \\
+\hline
 \end{DoxyParams}
-\Hypertarget{classte_1_1systems_1_1PhysicsSystem_a23690f8c7fd4d44f592c2183629615ed}\label{classte_1_1systems_1_1PhysicsSystem_a23690f8c7fd4d44f592c2183629615ed} 
+\Hypertarget{classte_1_1systems_1_1PhysicsSystem_acd245fd3ec64ee8787f2931745590f0d}\label{classte_1_1systems_1_1PhysicsSystem_acd245fd3ec64ee8787f2931745590f0d} 
 \index{te::systems::PhysicsSystem@{te::systems::PhysicsSystem}!PhysicsSystem@{PhysicsSystem}}
 \index{PhysicsSystem@{PhysicsSystem}!te::systems::PhysicsSystem@{te::systems::PhysicsSystem}}
 \doxysubsubsection{\texorpdfstring{PhysicsSystem()}{PhysicsSystem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily te\+::systems\+::\+Physics\+System\+::\+Physics\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry,  }\item[{float}]{gravity }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily te\+::systems\+::\+Physics\+System\+::\+Physics\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry,  }\item[{float}]{delta\+Time,  }\item[{float}]{gravity }\end{DoxyParamCaption})}
 
 
 
@@ -82,17 +94,19 @@ creates the \doxylink{classte_1_1systems_1_1System}{System} with given gravity
 \begin{DoxyParams}{Parameters}
 {\em registry} & reference to the registry \\
 \hline
+{\em delta\+Time} & delta\+Time \\
+\hline
 {\em gravity} & value of gravity \\
 \hline
 \end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classte_1_1systems_1_1PhysicsSystem_a713138b3fcc3e9904e57f0b8508e39e2}\label{classte_1_1systems_1_1PhysicsSystem_a713138b3fcc3e9904e57f0b8508e39e2} 
+\Hypertarget{classte_1_1systems_1_1PhysicsSystem_acb3bae1529e7132838e87508440d0b7e}\label{classte_1_1systems_1_1PhysicsSystem_acb3bae1529e7132838e87508440d0b7e} 
 \index{te::systems::PhysicsSystem@{te::systems::PhysicsSystem}!update@{update}}
 \index{update@{update}!te::systems::PhysicsSystem@{te::systems::PhysicsSystem}}
 \doxysubsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void te\+::systems\+::\+Physics\+System\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void te\+::systems\+::\+Physics\+System\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 

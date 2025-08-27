@@ -120,19 +120,19 @@ $(document).ready(function(){initNavTree('GameBase_8hpp_source.html',''); initRe
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    sf::RenderWindow mWindow;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> mDeltaTime;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    sf::Clock mClock;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">float</span> mAccumulator;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> mMaxUpdatesPerFrame;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">const</span> <span class="keywordtype">float</span> mFixedDeltaTime;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">float</span> mVariableDeltaTime;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    sf::Clock mClock;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">float</span> mAccumulator;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
 </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
 <div class="ttc" id="aclasste_1_1GameBase_html"><div class="ttname"><a href="classte_1_1GameBase.html">te::GameBase</a></div><div class="ttdoc">Base class for a game.</div><div class="ttdef"><b>Definition</b> GameBase.hpp:19</div></div>
 <div class="ttc" id="aclasste_1_1GameBase_html_a0a8905a011a8ab2cd4b44ec611ff2aeb"><div class="ttname"><a href="classte_1_1GameBase.html#a0a8905a011a8ab2cd4b44ec611ff2aeb">te::GameBase::init</a></div><div class="ttdeci">virtual void init()</div><div class="ttdoc">Intializes game objects.</div><div class="ttdef"><b>Definition</b> GameBase.cpp:12</div></div>
-<div class="ttc" id="aclasste_1_1GameBase_html_accb4b63d1277e46131d66a66c0e1e63b"><div class="ttname"><a href="classte_1_1GameBase.html#accb4b63d1277e46131d66a66c0e1e63b">te::GameBase::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">starts the game loop</div><div class="ttdef"><b>Definition</b> GameBase.cpp:20</div></div>
+<div class="ttc" id="aclasste_1_1GameBase_html_accb4b63d1277e46131d66a66c0e1e63b"><div class="ttname"><a href="classte_1_1GameBase.html#accb4b63d1277e46131d66a66c0e1e63b">te::GameBase::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">starts the game loop</div><div class="ttdef"><b>Definition</b> GameBase.cpp:21</div></div>
 <div class="ttc" id="aclasste_1_1GameBase_html_ad88938b232f7f7f7d38850bce672cf89"><div class="ttname"><a href="classte_1_1GameBase.html#ad88938b232f7f7f7d38850bce672cf89">te::GameBase::mRegistry</a></div><div class="ttdeci">Registry mRegistry</div><div class="ttdoc">Registry used for managing entities, components and systems.</div><div class="ttdef"><b>Definition</b> GameBase.hpp:48</div></div>
-<div class="ttc" id="aclasste_1_1Registry_html"><div class="ttname"><a href="classte_1_1Registry.html">te::Registry</a></div><div class="ttdoc">Managing entities and components.</div><div class="ttdef"><b>Definition</b> Registry.hpp:28</div></div>
+<div class="ttc" id="aclasste_1_1Registry_html"><div class="ttname"><a href="classte_1_1Registry.html">te::Registry</a></div><div class="ttdoc">Managing entities and components.</div><div class="ttdef"><b>Definition</b> Registry.hpp:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
