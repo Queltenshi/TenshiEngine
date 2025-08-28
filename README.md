@@ -84,6 +84,9 @@ public:
             std::cout << "Texture could not be loaded" << std::endl;
         mGround = mRegistry.createEntity(mGroundTexture);
         mRegistry.addComponent(mGround.id, te::components::Rigidbody());
+        auto spriteGround = mRegistry.getComponent<te::components::Sprite>(mGround.id);
+        auto spriteSize = spriteGround->sprite.getGlobalBounds().size;
+        mRegistry.addComponent(mGround.id, te::components::Collider(spriteSize));
         mRegistry.getComponent<te::components::Transform>(mGround.id)->position = {0.f, 800.f};
         mRegistry.getComponent<te::components::Rigidbody>(mGround.id)->isStatic = true;
 
