@@ -23,7 +23,7 @@ void PhysicsSystem::update(){
     }
 
     //Collision
-    const auto & collisionEntityIDs = mRegistry.view<components::Rigidbody>();
+    const auto & collisionEntityIDs = mRegistry.view<components::Collider>();
     for(int i = 0; i < collisionEntityIDs.size(); i++){
         for(int j = i+1; j < collisionEntityIDs.size(); j++){
             checkCollision(collisionEntityIDs[i], collisionEntityIDs[j]);
@@ -43,8 +43,16 @@ void PhysicsSystem::updateGravity(EntityID entityID, components::Velocity *veloc
 void PhysicsSystem::checkCollision(EntityID entityID1, EntityID entityID2){
     auto transform1 = mRegistry.getComponent<components::Transform>(entityID1);
     auto transform2 = mRegistry.getComponent<components::Transform>(entityID2);
-    sf::FloatRect rectangle1(transform1->position - transform1->size * 0.5f, transform1->size);
-    sf::FloatRect rectangle2(transform2->position - transform2->size * 0.5f, transform2->size);
+    auto collider1 = mRegistry.getComponent<components::Collider>(entityID1);
+    auto collider2 = mRegistry.getComponent<components::Collider>(entityID2);
+    sf::FloatRect rectangle1({transform1->position.x - collider1->size.x * transform1->scale.x * 0.5f, 
+                              transform1->position.y - collider1->size.y * transform1->scale.y * 0.5f}, 
+                              {collider1->size.x * transform1->scale.x, 
+                               collider1->size.y * transform1->scale.y});
+    sf::FloatRect rectangle2({transform2->position.x - collider2->size.x * transform2->scale.x * 0.5f, 
+                              transform2->position.y - collider2->size.y * transform2->scale.y * 0.5f}, 
+                             {collider2->size.x * transform2->scale.x, 
+                              collider2->size.y * transform2->scale.y});
     auto intersection = rectangle1.findIntersection(rectangle2); 
 
     if(intersection){
@@ -66,12 +74,13 @@ void PhysicsSystem::correctPosition(EntityID entityID, components::Transform *tr
     if(overlapRect.size.x > overlapRect.size.y){
         if(transform2->position.y < transform1->position.y){
             transform2->position.y -= overlapRect.size.y;
+            if(mRegistry.hasComponent<components::Grounded>(entityID)){
+                mRegistry.getComponent<components::Grounded>(entityID)->isGrounded = true;
+            }
+            velocity->value.y = 0;
         } else{ 
             transform2->position.y += overlapRect.size.y;
-        }
-        velocity->value.y = 0;
-        if(mRegistry.hasComponent<components::Grounded>(entityID)){
-            mRegistry.getComponent<components::Grounded>(entityID)->isGrounded = true;
+            velocity->value.y = 0;
         }
     } else{
         if(transform2->position.x < transform1->position.x){

@@ -2,6 +2,19 @@
 
 ---
 
+## [0.3.1] - 2025-08-28
+### Added
+- **Components**
+    - **Collider**: Stores size for collision
+
+### Fixed
+- Incorrect scaling
+- Incorrect collision detection for jumping entities
+
+### Changed
+- **Components**
+    - **Transform**: No longer stores size for collision
+
 ## [0.3.0] - 2025-08-27
 ### Added
 - **Components**
@@ -18,8 +31,9 @@
 
 ### Changed
 - **Registry**: Now has createEntity with optional animations
-- **RenderSystem**: Now has debug rendering for drawing colliders
-- **MovementSystem**: now updates State
+- **Systems**
+    - **RenderSystem**: Now has debug rendering for drawing colliders
+    - **MovementSystem**: now updates State
 
 ## [0.2.0] - 2025-08-21
 ### Added

@@ -17,7 +17,7 @@ public:
      * @brief creates platformer player
      *
      * creates new entity with given texture and adds
-     * PlayerInput, HorizontalMovement, Jump, Velocity, Grounded, Rigidbody
+     * PlayerInput, HorizontalMovement, Jump, Velocity, Grounded, Rigidbody, Collider
      *
      * @param registry Registry
      * @param texture Texture to display
@@ -30,13 +30,16 @@ public:
         registry.addComponent(entity.id, components::Velocity());
         registry.addComponent(entity.id, components::Grounded());
         registry.addComponent(entity.id, components::Rigidbody());
+        auto sprite = registry.getComponent<components::Sprite>(entity.id);
+        auto spriteSize = sprite->sprite.getGlobalBounds().size;
+        registry.addComponent(entity.id, components::Collider(spriteSize));
         return entity;
     }
     /**
      * @brief creates platformer player with animation
      *
      * creates new entity with given texture and textureData and adds
-     * PlayerInput, HorizontalMovement, Jump, Velocity, Grounded, Rigidbody
+     * PlayerInput, HorizontalMovement, Jump, Velocity, Grounded, Rigidbody, Collider
      *
      * @param registry Registry
      * @param texture Texture to display
@@ -50,6 +53,9 @@ public:
         registry.addComponent(entity.id, components::Velocity());
         registry.addComponent(entity.id, components::Grounded());
         registry.addComponent(entity.id, components::Rigidbody());
+        auto sprite = registry.getComponent<components::Sprite>(entity.id);
+        auto spriteSize = sprite->sprite.getGlobalBounds().size;
+        registry.addComponent(entity.id, components::Collider(spriteSize));
         return entity;
     }
 };

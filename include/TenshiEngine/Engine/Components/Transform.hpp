@@ -18,29 +18,24 @@ public:
     /**
      * @brief Default Constructor
      *
-     * creates the component with given size
-     *
-     * @param size size of sprite
+     * creates the component
      */
-    Transform(sf::Vector2f size): size(size){}
+    Transform() = default;
 
     /**
      * @brief Constructor
      *
-     * creates the component with given size and scale
+     * creates the component with given scale
      *
-     * @param size size of sprite
      * @param scale scaling of sprite
      */
-    Transform(sf::Vector2f size, sf::Vector2f scale): scale(scale), size(size.x * scale.x, size.y * scale.y){}
+    Transform(sf::Vector2f scale): scale(scale){}
 
     std::string toString() const override{
         return "(position.x: " + std::to_string(position.x) + " | " +
                "position.y: " + std::to_string(position.y) + " | " +
                "scale.x: " + std::to_string(scale.x) + " | " +
                "scale.y: " + std::to_string(scale.y) + " | " +
-               "size.x: " + std::to_string(size.x) + " | " +
-               "size.y: " + std::to_string(size.y) + " | " +
                "positionDirty: " + utils::boolToString(positionDirty) + " | " +
                "scaleDirty: " + utils::boolToString(scaleDirty) + ")";
     };
@@ -50,9 +45,6 @@ public:
 
     ///Scaling of sprite
     sf::Vector2f scale = {1.f, 1.f};
-
-    //Size of sprite
-    sf::Vector2f size; 
 
     ///checks if position was changed
     bool positionDirty = true;

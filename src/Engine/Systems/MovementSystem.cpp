@@ -64,7 +64,7 @@ void MovementSystem::updateState(EntityID entityID, components::Velocity *veloci
         else if(velocity->value.y < 0){
             state->currentState = components::State::CurrentState::JUMP;
         }
-        else{
+        else if(state->currentState != components::State::CurrentState::JUMP){
             state->currentState = components::State::CurrentState::IDLE;
         }
 
