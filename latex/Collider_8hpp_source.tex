@@ -1,0 +1,31 @@
+\doxysection{Collider.\+hpp}
+\hypertarget{Collider_8hpp_source}{}\label{Collider_8hpp_source}\index{include/TenshiEngine/Engine/Components/Collider.hpp@{include/TenshiEngine/Engine/Components/Collider.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Components/Component.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SFML/System/Vector2.hpp>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }components\{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structte_1_1components_1_1Collider}{Collider}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structte_1_1components_1_1Component}{Component}}\{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Collider_a53deb58b0a5334b6e1f1d381028b170b}{Collider}}(sf::Vector2f\ size):\ size(size)\{\}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Collider_a0a2eb41b3ceead9fc39b9ec8e1effd82}{toString}}()\textcolor{keyword}{\ const\ override}\{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}(size.x:\ "{}}\ +\ std::to\_string(size.x)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}size.y:\ "{}}\ +\ std::to\_string(size.y)\ +\ \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{00028\ \ \ \ \ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//Size\ of\ collider}}
+\DoxyCodeLine{00031\ \ \ \ \ sf::Vector2f\ size;\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Collider_af9cc91a2506742f49f620db3c6f6b37c}{name}}\ =\ \textcolor{stringliteral}{"{}Collider"{}};}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \}}
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}

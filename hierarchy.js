@@ -2,6 +2,7 @@ var hierarchy =
 [
     [ "te::components::Component", "structte_1_1components_1_1Component.html", [
       [ "te::components::Animation", "structte_1_1components_1_1Animation.html", null ],
+      [ "te::components::Collider", "structte_1_1components_1_1Collider.html", null ],
       [ "te::components::Grounded", "structte_1_1components_1_1Grounded.html", null ],
       [ "te::components::HorizontalMovement", "structte_1_1components_1_1HorizontalMovement.html", null ],
       [ "te::components::Jump", "structte_1_1components_1_1Jump.html", null ],

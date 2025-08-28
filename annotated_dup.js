@@ -3,6 +3,7 @@ var annotated_dup =
     [ "te", null, [
       [ "components", null, [
         [ "Animation", "structte_1_1components_1_1Animation.html", "structte_1_1components_1_1Animation" ],
+        [ "Collider", "structte_1_1components_1_1Collider.html", "structte_1_1components_1_1Collider" ],
         [ "Component", "structte_1_1components_1_1Component.html", "structte_1_1components_1_1Component" ],
         [ "Grounded", "structte_1_1components_1_1Grounded.html", "structte_1_1components_1_1Grounded" ],
         [ "HorizontalMovement", "structte_1_1components_1_1HorizontalMovement.html", "structte_1_1components_1_1HorizontalMovement" ],

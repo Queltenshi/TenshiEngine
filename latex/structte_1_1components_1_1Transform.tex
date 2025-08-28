@@ -18,9 +18,9 @@ Inheritance diagram for te\+::components\+::Transform\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structte_1_1components_1_1Transform_a96da4ab6cb466a1af115849a01238ed1}{Transform}} (sf\+::\+Vector2f size)
+\mbox{\hyperlink{structte_1_1components_1_1Transform_af5d454a6f995dc91c6ae0dac2b158be7}{Transform}} ()=default
 \begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structte_1_1components_1_1Transform_a8330625c5bf542fad2c4184c88e2efbe}{Transform}} (sf\+::\+Vector2f size, sf\+::\+Vector2f \mbox{\hyperlink{structte_1_1components_1_1Transform_a003658936cb59b3a5cc93130be86ffa7}{scale}})
+\mbox{\hyperlink{structte_1_1components_1_1Transform_a4d90f1e10bae313374cb4b106ba83fe5}{Transform}} (sf\+::\+Vector2f \mbox{\hyperlink{structte_1_1components_1_1Transform_a003658936cb59b3a5cc93130be86ffa7}{scale}})
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{structte_1_1components_1_1Transform_ad2735a4f8295240bdb881fbbcd19702a}{to\+String}} () const override
 \begin{DoxyCompactList}\small\item\em shows data as a string \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -38,9 +38,6 @@ sf\+::\+Vector2f {\bfseries position} = \{0.f, 0.f\}
 \Hypertarget{structte_1_1components_1_1Transform_a003658936cb59b3a5cc93130be86ffa7}\label{structte_1_1components_1_1Transform_a003658936cb59b3a5cc93130be86ffa7} 
 sf\+::\+Vector2f {\bfseries scale} = \{1.f, 1.f\}
 \begin{DoxyCompactList}\small\item\em Scaling of sprite. \end{DoxyCompactList}\item 
-\Hypertarget{structte_1_1components_1_1Transform_ad3e41ca2ba1c5f1ea967053388e72656}\label{structte_1_1components_1_1Transform_ad3e41ca2ba1c5f1ea967053388e72656} 
-sf\+::\+Vector2f {\bfseries size}
-\item 
 \Hypertarget{structte_1_1components_1_1Transform_a32a7677f4eda57399c43f5b140b7b14f}\label{structte_1_1components_1_1Transform_a32a7677f4eda57399c43f5b140b7b14f} 
 bool {\bfseries position\+Dirty} = true
 \begin{DoxyCompactList}\small\item\em checks if position was changed \end{DoxyCompactList}\item 
@@ -61,39 +58,30 @@ component with position and scale
 stores the position and scaling of the sprite 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{structte_1_1components_1_1Transform_a96da4ab6cb466a1af115849a01238ed1}\label{structte_1_1components_1_1Transform_a96da4ab6cb466a1af115849a01238ed1} 
+\Hypertarget{structte_1_1components_1_1Transform_af5d454a6f995dc91c6ae0dac2b158be7}\label{structte_1_1components_1_1Transform_af5d454a6f995dc91c6ae0dac2b158be7} 
 \index{te::components::Transform@{te::components::Transform}!Transform@{Transform}}
 \index{Transform@{Transform}!te::components::Transform@{te::components::Transform}}
 \doxysubsubsection{\texorpdfstring{Transform()}{Transform()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily te\+::components\+::\+Transform\+::\+Transform (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily te\+::components\+::\+Transform\+::\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
 Default Constructor. 
 
-creates the component with given size
-
-
-\begin{DoxyParams}{Parameters}
-{\em size} & size of sprite \\
-\hline
-\end{DoxyParams}
-\Hypertarget{structte_1_1components_1_1Transform_a8330625c5bf542fad2c4184c88e2efbe}\label{structte_1_1components_1_1Transform_a8330625c5bf542fad2c4184c88e2efbe} 
+creates the component \Hypertarget{structte_1_1components_1_1Transform_a4d90f1e10bae313374cb4b106ba83fe5}\label{structte_1_1components_1_1Transform_a4d90f1e10bae313374cb4b106ba83fe5} 
 \index{te::components::Transform@{te::components::Transform}!Transform@{Transform}}
 \index{Transform@{Transform}!te::components::Transform@{te::components::Transform}}
 \doxysubsubsection{\texorpdfstring{Transform()}{Transform()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily te\+::components\+::\+Transform\+::\+Transform (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{size,  }\item[{sf\+::\+Vector2f}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily te\+::components\+::\+Transform\+::\+Transform (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f}]{scale }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Constructor. 
 
-creates the component with given size and scale
+creates the component with given scale
 
 
 \begin{DoxyParams}{Parameters}
-{\em size} & size of sprite \\
-\hline
 {\em scale} & scaling of sprite \\
 \hline
 \end{DoxyParams}

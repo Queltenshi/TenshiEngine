@@ -14,36 +14,31 @@
 \DoxyCodeLine{00010\ }
 \DoxyCodeLine{00016\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structte_1_1components_1_1Transform}{Transform}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structte_1_1components_1_1Component}{Component}}\{}
 \DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Transform_a96da4ab6cb466a1af115849a01238ed1}{Transform}}(sf::Vector2f\ size):\ size(size)\{\}}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Transform_a8330625c5bf542fad2c4184c88e2efbe}{Transform}}(sf::Vector2f\ size,\ sf::Vector2f\ \mbox{\hyperlink{structte_1_1components_1_1Transform_a003658936cb59b3a5cc93130be86ffa7}{scale}}):\ \mbox{\hyperlink{structte_1_1components_1_1Transform_a003658936cb59b3a5cc93130be86ffa7}{scale}}(\mbox{\hyperlink{structte_1_1components_1_1Transform_a003658936cb59b3a5cc93130be86ffa7}{scale}}),\ size(size.x\ *\ \mbox{\hyperlink{structte_1_1components_1_1Transform_a003658936cb59b3a5cc93130be86ffa7}{scale}}.x,\ size.y\ *\ \mbox{\hyperlink{structte_1_1components_1_1Transform_a003658936cb59b3a5cc93130be86ffa7}{scale}}.y)\{\}}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \ \ \ \ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Transform_ad2735a4f8295240bdb881fbbcd19702a}{toString}}()\textcolor{keyword}{\ const\ override}\{}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}(position.x:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Transform_a52a85252a692cd3fca6c3ad375ca8d61}{position}}.x)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}position.y:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Transform_a52a85252a692cd3fca6c3ad375ca8d61}{position}}.y)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}scale.x:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Transform_a003658936cb59b3a5cc93130be86ffa7}{scale}}.x)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}scale.y:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Transform_a003658936cb59b3a5cc93130be86ffa7}{scale}}.y)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}size.x:\ "{}}\ +\ std::to\_string(size.x)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}size.y:\ "{}}\ +\ std::to\_string(size.y)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}positionDirty:\ "{}}\ +\ utils::boolToString(\mbox{\hyperlink{structte_1_1components_1_1Transform_a32a7677f4eda57399c43f5b140b7b14f}{positionDirty}})\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}scaleDirty:\ "{}}\ +\ utils::boolToString(\mbox{\hyperlink{structte_1_1components_1_1Transform_a48cbf9fe99f5be6601233e069e740d72}{scaleDirty}})\ +\ \textcolor{stringliteral}{"{})"{}};}
-\DoxyCodeLine{00046\ \ \ \ \ \};}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00049\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{structte_1_1components_1_1Transform_a52a85252a692cd3fca6c3ad375ca8d61}{position}}\ =\ \{0.f,\ 0.f\};}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00052\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{structte_1_1components_1_1Transform_a003658936cb59b3a5cc93130be86ffa7}{scale}}\ =\ \{1.f,\ 1.f\};}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{//Size\ of\ sprite}}
-\DoxyCodeLine{00055\ \ \ \ \ sf::Vector2f\ size;\ }
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structte_1_1components_1_1Transform_a32a7677f4eda57399c43f5b140b7b14f}{positionDirty}}\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structte_1_1components_1_1Transform_a48cbf9fe99f5be6601233e069e740d72}{scaleDirty}}\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00062\ }
-\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Transform_a530e76522158d87581b4545e21ce45c3}{name}}\ =\ \textcolor{stringliteral}{"{}Transform"{}};}
-\DoxyCodeLine{00065\ \};}
-\DoxyCodeLine{00066\ }
-\DoxyCodeLine{00067\ \}}
-\DoxyCodeLine{00068\ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Transform_af5d454a6f995dc91c6ae0dac2b158be7}{Transform}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Transform_a4d90f1e10bae313374cb4b106ba83fe5}{Transform}}(sf::Vector2f\ \mbox{\hyperlink{structte_1_1components_1_1Transform_a003658936cb59b3a5cc93130be86ffa7}{scale}}):\ \mbox{\hyperlink{structte_1_1components_1_1Transform_a003658936cb59b3a5cc93130be86ffa7}{scale}}(\mbox{\hyperlink{structte_1_1components_1_1Transform_a003658936cb59b3a5cc93130be86ffa7}{scale}})\{\}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Transform_ad2735a4f8295240bdb881fbbcd19702a}{toString}}()\textcolor{keyword}{\ const\ override}\{}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}(position.x:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Transform_a52a85252a692cd3fca6c3ad375ca8d61}{position}}.x)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}position.y:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Transform_a52a85252a692cd3fca6c3ad375ca8d61}{position}}.y)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}scale.x:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Transform_a003658936cb59b3a5cc93130be86ffa7}{scale}}.x)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}scale.y:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Transform_a003658936cb59b3a5cc93130be86ffa7}{scale}}.y)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}positionDirty:\ "{}}\ +\ utils::boolToString(\mbox{\hyperlink{structte_1_1components_1_1Transform_a32a7677f4eda57399c43f5b140b7b14f}{positionDirty}})\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}scaleDirty:\ "{}}\ +\ utils::boolToString(\mbox{\hyperlink{structte_1_1components_1_1Transform_a48cbf9fe99f5be6601233e069e740d72}{scaleDirty}})\ +\ \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{00041\ \ \ \ \ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00044\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{structte_1_1components_1_1Transform_a52a85252a692cd3fca6c3ad375ca8d61}{position}}\ =\ \{0.f,\ 0.f\};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00047\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{structte_1_1components_1_1Transform_a003658936cb59b3a5cc93130be86ffa7}{scale}}\ =\ \{1.f,\ 1.f\};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structte_1_1components_1_1Transform_a32a7677f4eda57399c43f5b140b7b14f}{positionDirty}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structte_1_1components_1_1Transform_a48cbf9fe99f5be6601233e069e740d72}{scaleDirty}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Transform_a530e76522158d87581b4545e21ce45c3}{name}}\ =\ \textcolor{stringliteral}{"{}Transform"{}};}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \}}
+\DoxyCodeLine{00060\ \}}
 
 \end{DoxyCode}

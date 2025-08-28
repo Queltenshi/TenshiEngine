@@ -5,6 +5,7 @@ var classte_1_1Registry =
     [ "addSystem", "classte_1_1Registry.html#a4315b2e98a75c5648ef54220f652903e", null ],
     [ "createEntity", "classte_1_1Registry.html#a8711ff219ebf13ead555c90a545e55a2", null ],
     [ "createEntity", "classte_1_1Registry.html#ab74c4a84425cb6dd94304e044415ed1a", null ],
+    [ "createEntity", "classte_1_1Registry.html#a817b88c6ff6b47a85cd027e3e9d39403", null ],
     [ "getComponent", "classte_1_1Registry.html#a710e6ffdf531dff9dd47e22206a3725a", null ],
     [ "hasComponent", "classte_1_1Registry.html#abf5d8848453b9641593e81efa22fc442", null ],
     [ "updateFixedSystems", "classte_1_1Registry.html#a52459c675de567f3c2ac5d14a36a0c62", null ],

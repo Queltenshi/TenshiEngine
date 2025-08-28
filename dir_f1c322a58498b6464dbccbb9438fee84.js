@@ -1,6 +1,7 @@
 var dir_f1c322a58498b6464dbccbb9438fee84 =
 [
     [ "Animation.hpp", "Animation_8hpp_source.html", null ],
+    [ "Collider.hpp", "Collider_8hpp_source.html", null ],
     [ "Component.hpp", "Component_8hpp_source.html", null ],
     [ "Grounded.hpp", "Grounded_8hpp_source.html", null ],
     [ "Health.hpp", "Health_8hpp_source.html", null ],
