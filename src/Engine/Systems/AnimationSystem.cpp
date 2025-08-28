@@ -22,12 +22,12 @@ void AnimationSystem::checkDirection(EntityID entityID, components::State *state
     
     switch (state->direction) {
         case components::State::Direction::LEFT :
-            transform->scale = {-1.f, 1.f}; 
+            transform->scale = {-std::abs(transform->scale.x), std::abs(transform->scale.y)}; 
             transform->scaleDirty = true;
             break;
 
         case components::State::Direction::RIGHT :
-            transform->scale = {1.f, 1.f}; 
+            transform->scale = {std::abs(transform->scale.x), std::abs(transform->scale.y)}; 
             transform->scaleDirty = true;
             break;
 

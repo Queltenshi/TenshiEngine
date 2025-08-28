@@ -40,9 +40,24 @@ public:
      */
     Entity createEntity(sf::Texture &texture){
         Entity entity(mNextId++);
-        auto sprite = addComponent(entity.id, components::Sprite(texture));
-        auto spriteSize = sprite->sprite.getGlobalBounds().size;
-        addComponent(entity.id, components::Transform(spriteSize));
+        addComponent(entity.id, components::Sprite(texture));
+        addComponent(entity.id, components::Transform());
+        return entity;
+    }
+
+    /**
+     * @brief creates new entity
+     *
+     * creates new Entity with given texture and size and adds
+     * new ID, Transform, Sprite
+     *
+     * @param texture Texture to display
+     */
+    Entity createEntity(sf::Texture &texture, sf::Vector2i size){
+        Entity entity(mNextId++);
+        sf::IntRect rectangle({0, 0}, size);
+        addComponent(entity.id, components::Sprite(texture, rectangle));
+        addComponent(entity.id, components::Transform());
         return entity;
     }
 
@@ -58,9 +73,8 @@ public:
     Entity createEntity(sf::Texture &texture, json &textureData){
         Entity entity(mNextId++);
         auto animation = addComponent(entity.id, components::Animation(textureData));
-        auto sprite = addComponent(entity.id, components::Sprite(texture, animation->rectangle));
-        auto spriteSize = sprite->sprite.getGlobalBounds().size;
-        addComponent(entity.id, components::Transform(spriteSize));
+        addComponent(entity.id, components::Sprite(texture, animation->rectangle));
+        addComponent(entity.id, components::Transform());
         addComponent(entity.id, te::components::State());
         return entity;
     }

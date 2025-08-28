@@ -11,3 +11,4 @@
 #include "TenshiEngine/Engine/Components/State.hpp"
 #include "TenshiEngine/Engine/Components/HorizontalMovement.hpp"
 #include "TenshiEngine/Engine/Components/Jump.hpp"
+#include "TenshiEngine/Engine/Components/Collider.hpp"

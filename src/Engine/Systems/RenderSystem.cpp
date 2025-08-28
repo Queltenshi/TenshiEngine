@@ -26,13 +26,14 @@ void RenderSystem::update(){
         mWindow.draw(sprite->sprite);
 
         //Debug rendering
-        if(Logger::currentLevel == LogLevel::DEBUG){
-            sf::RectangleShape collider(transform->size);
-            collider.setOrigin(collider.getSize() / 2.f);
-            collider.setPosition(transform->position);
-            collider.setFillColor(sf::Color(0, 0, 0, 0));
-            collider.setOutlineThickness(-2.f);
-            mWindow.draw(collider);
+        if(Logger::currentLevel == LogLevel::DEBUG && mRegistry.hasComponent<components::Collider>(entityID)){
+            auto collider = mRegistry.getComponent<components::Collider>(entityID);
+            sf::RectangleShape colliderRect({collider->size.x * transform->scale.x, collider->size.y * transform->scale.y});
+            colliderRect.setOrigin(colliderRect.getSize() / 2.f);
+            colliderRect.setPosition(transform->position);
+            colliderRect.setFillColor(sf::Color(0, 0, 0, 0));
+            colliderRect.setOutlineThickness(-2.f);
+            mWindow.draw(colliderRect);
         }
     }
 }
