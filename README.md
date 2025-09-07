@@ -26,9 +26,9 @@
     - [Managing components](#Managing-components)
   - [Important Modules](#Important-Modules)
   - [Json files](#Json-files)
-    - [TilesetData](#TilesetData)
-    - [LevelData](#LevelData)
-    - [AnimationData](#AnimationData)
+    - [Tileset.json](#Tileset.json)
+    - [Level.json](#Level.json )
+    - [Animation.json](#Animation.json)
 - [Contributing](#Contributing)
 - [Changelog](#Changelog)
 - [License](#License)
@@ -56,12 +56,12 @@ You can find the latest API documentation here: [TenshiEngine API Docs](https://
 ---
 
 ## Installation
-**Requirements**:
+### Requirements ###
 - C++ 17+
 - [SFML](https://www.sfml-dev.org/) 3.0+
 - [CMake](https://cmake.org/) 3.16+
 
-**Linux**:
+### Linux ###
 ```bash
 git clone https://github.com/Queltenshi/TenshiEngine.git
 cd TenshiEngine
@@ -78,7 +78,7 @@ sudo cmake --install . --prefix /usr/local
 ## Usage
 
 ### Quick Start
-**main.cpp**
+#### main.cpp ####
 ``` cpp
 #include <Game.h>
 
@@ -91,7 +91,7 @@ int main(){
 }
 ```
 
-**Game.cpp**
+#### Game.cpp ####
 
 This will create a simple level with tilemap, moveable platformer character, camera and background
 
@@ -138,7 +138,7 @@ private:
 };
 ```
 
-**Managing components**
+#### Managing components ####
 
 To add or change components from entities u can do this by using the registry
 
@@ -177,7 +177,7 @@ Example:
 
 Below are example files with important data to show how they should look like in order to be properly loaded
 
-**Tileset.json** 
+#### Tileset.json #### 
 ``` json
 {"tileheight":64,
  "tiles":[
@@ -212,7 +212,7 @@ Below are example files with important data to show how they should look like in
 }
 ```
 
-**Level.json**
+#### Level.json ####
 ``` json
 {"height":17,
  "layers":[
@@ -240,7 +240,7 @@ Below are example files with important data to show how they should look like in
 
 ```
 
-**Animation.json**
+#### Animation.json ####
 ``` json
 {"animations": {
     "hit": [
