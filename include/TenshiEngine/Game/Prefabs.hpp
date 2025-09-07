@@ -1,4 +1,5 @@
 #include "TenshiEngine/Engine/Core/Registry.hpp"
+#include <memory>
 
 namespace te{
 
@@ -22,7 +23,7 @@ public:
      * @param registry Registry
      * @param texture Texture to display
      */
-    static Entity PlatformerPlayer(Registry &registry, sf::Texture &texture){
+    static Entity PlatformerPlayer(Registry &registry, std::shared_ptr<sf::Texture> texture){
         Entity entity = registry.createEntity(texture);
         registry.addComponent(entity.id, components::PlayerInput());
         registry.addComponent(entity.id, components::HorizontalMovement());
@@ -38,15 +39,15 @@ public:
     /**
      * @brief creates platformer player with animation
      *
-     * creates new entity with given texture and textureData and adds
+     * creates new entity with given texture and animationData and adds
      * PlayerInput, HorizontalMovement, Jump, Velocity, Grounded, Rigidbody, Collider
      *
      * @param registry Registry
      * @param texture Texture to display
-     * @param textureData json data used for animation
+     * @param animationData json data used for animation
      */
-    static Entity PlatformerPlayer(Registry &registry, sf::Texture &texture, json &textureData){
-        Entity entity = registry.createEntity(texture, textureData);
+    static Entity PlatformerPlayer(Registry &registry, std::shared_ptr<sf::Texture> texture, std::shared_ptr<json> animationData){
+        Entity entity = registry.createEntity(texture, animationData);
         registry.addComponent(entity.id, components::PlayerInput());
         registry.addComponent(entity.id, components::HorizontalMovement());
         registry.addComponent(entity.id, components::Jump());

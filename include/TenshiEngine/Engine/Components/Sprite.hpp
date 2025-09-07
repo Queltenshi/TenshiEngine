@@ -22,7 +22,7 @@ public:
      *
      * @param texture texture for the sprite
      */
-    Sprite(sf::Texture &texture): texture(texture), sprite(texture){
+    Sprite(std::shared_ptr<sf::Texture> texture): texture(std::move(texture)), sprite(*this->texture){
         sprite.setOrigin({sprite.getTextureRect().size.x / 2.f, sprite.getTextureRect().size.y / 2.f});
     }
 
@@ -35,13 +35,13 @@ public:
      * @param texture texture for the sprite
      * @param animationRectangle rectangle for setting the texture to default animation
      */
-    Sprite(sf::Texture &texture, sf::IntRect &animationRectangle): texture(texture), sprite(texture){
+    Sprite(std::shared_ptr<sf::Texture> texture, sf::IntRect &animationRectangle): texture(std::move(texture)), sprite(*this->texture){
         sprite.setTextureRect(animationRectangle);
         sprite.setOrigin({sprite.getTextureRect().size.x / 2.f, sprite.getTextureRect().size.y / 2.f});
     }
 
     ///Texture for the sprite
-    sf::Texture &texture;
+    std::shared_ptr<sf::Texture> texture;
 
     ///Sprite used for rendering
     sf::Sprite sprite;

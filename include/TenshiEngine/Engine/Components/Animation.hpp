@@ -4,6 +4,7 @@
 #include "TenshiEngine/Engine/Components/Component.hpp"
 #include "nlohmann/json.hpp"
 #include <SFML/Graphics/Rect.hpp>
+#include "TenshiEngine/Engine/Core/Logger.hpp"
 
 using json = nlohmann::json;
 
@@ -20,15 +21,20 @@ public:
     /**
      * @brief Default Constructor
      *
-     * creates the component with given textureData and
+     * creates the component with given animationData and
      * sets rectangle to idle
      *
-     * @param textureData json data used for animation
+     * @param animationData json data used for animation
      */
-    Animation(json &textureData): textureData(textureData){
-        auto idleFrame = textureData["animations"]["idle"][0];
-        rectangle.size = {idleFrame["w"], idleFrame["h"]};
-        rectangle.position = {idleFrame["x"], idleFrame["y"]};
+    Animation(std::shared_ptr<json> animationData): animationData(std::move(animationData)){
+        if(this->animationData->contains("animations")){
+            auto idleFrame = this->animationData->at("animations")["idle"][0];
+            rectangle.size = {idleFrame["w"], idleFrame["h"]};
+            rectangle.position = {idleFrame["x"], idleFrame["y"]};
+        }
+        else{
+            Logger::error(name, "no animations in json file found");
+        }
     }
 
     enum class CurrentAnimation{IDLE, WALK, JUMP, FALL, HIT};
@@ -53,7 +59,7 @@ public:
     sf::IntRect rectangle;
 
     ///Json data used for animation
-    json &textureData;
+    std::shared_ptr<json> animationData;
 
     ///Current animation
     CurrentAnimation currentAnimation = CurrentAnimation::IDLE;

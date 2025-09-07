@@ -4,19 +4,49 @@
 
 ---
 
-## Features
+## Main Features
 - **Entity Component System** - Dynamically add or modify components to entities at runtime
 - **Systems** - Process and update Entities by reading/writing their components
 - **SFML Rendering** - 2D Rendering with Sprites/Textures
-- **Logger** - Console Logger with Debug Log
+- **Managers** - Handling various kinds of tasks
 - **GameBase** - A ready-to-use game loop and render window setup
 - **Prefabs** - Ready-to-use entities with components
 
 ---
-## Components / Systems
-**A little graph to show what systems and components are in development and how they communicate with each other**
 
-![graph](Images/Components_Systems.png)
+- [Info](#Info)
+- [Documentation](#Documentation)
+- [Installation](#Installation)
+  - [Requirements](#Requirements)
+  - [Linux](#Linux)
+- [Usage](#Usage)
+  - [Quick Start](#Quick-Start)
+    - [main.cpp](#main.cpp)
+    - [Game.cpp](#Game.cpp)
+    - [Managing components](#Managing-components)
+  - [Important Modules](#Important-Modules)
+  - [Json files](#Json-files)
+    - [TilesetData](#TilesetData)
+    - [LevelData](#LevelData)
+    - [AnimationData](#AnimationData)
+- [Contributing](#Contributing)
+- [Changelog](#Changelog)
+- [License](#License)
+
+---
+
+## Info
+The Engine is a library with different classes and methods that can be used to build 2D games.
+
+It uses an Entity Component System, which means that entities and components will be added and managed through the registry.
+
+Different systems are responsible for managing the logic, like physics or rendering, and are automatically using components that are needed.
+
+Managers take on other tasks like managing resources or loading levels, and are also automatically updated.
+
+**Below is a graph that shows how the different systems, components and managers communicate with each other**
+
+![graph](Images/EngineGraph.png)
 
 ---
 
@@ -25,7 +55,7 @@ You can find the latest API documentation here: [TenshiEngine API Docs](https://
 
 ---
 
-## Installation:
+## Installation
 **Requirements**:
 - C++ 17+
 - [SFML](https://www.sfml-dev.org/) 3.0+
@@ -45,12 +75,15 @@ sudo cmake --install . --prefix /usr/local
 
 ---
 
-## Quick Start
+## Usage
+
+### Quick Start
 **main.cpp**
 ``` cpp
 #include <Game.h>
 
 int main(){
+    //Creating and running the game
     Game game;
     game.init();
     game.run();
@@ -59,51 +92,157 @@ int main(){
 ```
 
 **Game.cpp**
+
+This will create a simple level with tilemap, moveable platformer character, camera and background
+
 ``` cpp
 #include <TenshiEngine/Game/GameBase.hpp>
 #include <TenshiEngine/Game/Prefabs.hpp>
-#include <nlohmann/json.hpp>
-#include <fstream>
-
-using json = nlohmann::json;
 
 class Game : public te::GameBase {
 public:
     Game();
     
     void init(){
+        //Calling the Parent to init the Engine
         GameBase::init();
 
-        std::ifstream file("Path/to/json");
-        mPlayerTextureData = json::parse(file);
-        if(!mPlayerTexture.loadFromFile("Path/to/Texture"))
-            std::cout << "Texture could not be loaded" << std::endl;
-        mPlayer = te::Prefabs::PlatformerPlayer(mRegistry, mPlayerTexture, mPlayerTextureData);
+        //Loading tileset with texture and json file
+        auto tileSetTexture = mResourceManager.addTexture("Tileset", "Path/to/texture");
+        auto tileSetData = mResourceManager.addJson("Tileset", "Path/to/json");
+        mTileMapManager.loadTileset(tileSetTexture, tileSetData);
 
-        if(!mGroundTexture.loadFromFile("Path/to/Texture"))
-            std::cout << "Texture could not be loaded" << std::endl;
-        mGround = mRegistry.createEntity(mGroundTexture);
-        mRegistry.addComponent(mGround.id, te::components::Rigidbody());
-        mRegistry.getComponent<te::components::Transform>(mGround.id)->position = {0.f, 800.f};
-        mRegistry.getComponent<te::components::Rigidbody>(mGround.id)->isStatic = true;
+        //Loading level with json file
+        auto level1Data = mResourceManager.addJson("Level1", "Path/to/json");
+        mTileMapManager.loadLevel(level1);
+
+        //Creating player with texture and json file
+        auto playerTexture = mResourceManager.addTexture("Player","Path/to/texture");
+        auto playerAnimationData = mResourceManager.addJson("Player", "Path/to/json");
+        mPlayer = te::Prefabs::PlatformerPlayer(mRegistry, playerTexture, playerTextureData);
+
+        //Creating camera which will be attached to the player and move in all direction
+        //Creating is optional, default is camera with horizontal movement
+        mCameraManager.addCamera(mPlayer.id, te::Camera::Movement::FREE);
+
+        ///Creating a background with half the movement speed of the camera
+        ///second parameter is optional, default is 0, which means static background
+        auto backgroundTexture = mResourceManager.addTexture("Background", "Path/to/texture");
+        mBackgroundManager.setBackground(backgroundTexture, 0.5f);
 
 }
 
 private:
-    sf::Texture mPlayerTexture;
-    json mPlayerTextureData;
+    //Entity with ID
     te::Entity mPlayer;
-
-    sf::Texture mGroundTexture;
-    te::Entity mGround;
 };
 ```
 
-**texture.json**
-```json
-{
-  "texture": "texture.png",
-  "animations": {
+**Managing components**
+
+To add or change components from entities u can do this by using the registry
+
+Example:
+
+``` cpp
+    //Adding component to entity
+    mRegistry.addComponent(entity.id, te::components::Transform());
+
+    //Getting the component and changing its member
+    auto transform = mRegistry.getComponent<te::components::Transform>(entity.id);
+    transform->scale = {0.75f, 0.75f};
+
+    //Adding components also returns the added component
+    auto jump = mRegistry.addComponent(entity.id, te::components::Jump());
+    jump->strength = 500.f;
+```
+
+### Important Modules
+- **GameBase** To use the engine and create a game, you have to inherit from the GameBase class and call the parent Init();
+- **Registry** - Managing entities and components
+- **Entity** - Stores only the ID of an entity that is used by the registry
+- **Components** - Are added through the registry to store data, which then can be used by the systems. Can also be get by the registry to change the data
+- **RessourceManager** - Manages resources like texture or json files
+- **TileMapManager** - Manages tilesets and creates tilemap levels
+- **CameraManager** - Manages cameras that are attached to entities with current view
+- **BackgroundManager** - Manages the background and its movement
+- **Logger** - Logs messages with different log levels and is automatically used by other modules
+- **Prefabs** - Create ready-to-use entities with pre-defined components like PlatformerPlayer
+
+### Json files
+
+[Tiled](https://www.mapeditor.org/) can be used to create json and texture files for tilesets
+
+[Free Texture Packer](https://free-tex-packer.com/) can be used to create json and texture files for animation
+
+Below are example files with important data to show how they should look like in order to be properly loaded
+
+**Tileset.json** 
+``` json
+{"tileheight":64,
+ "tiles":[
+        {
+         "id":1,
+         "properties":[
+                {
+                 "name":"collider",
+                 "type":"bool",
+                 "value":true
+                }]
+        }, 
+        {
+         "id":2,
+         "properties":[
+                {
+                 "name":"collider",
+                 "type":"bool",
+                 "value":true
+                }]
+        }, 
+        {
+         "id":5,
+         "properties":[
+                {
+                 "name":"collider",
+                 "type":"bool",
+                 "value":true
+                }]
+        }],
+ "tilewidth":64
+}
+```
+
+**Level.json**
+``` json
+{"height":17,
+ "layers":[
+        {
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 4, 4, 4, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 1, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 4, 4, 4, 1, 1, 1, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 1, 1, 1, 1, 1, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 5, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            4, 4, 4, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+            1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+            1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        }],
+ "width":30
+}
+
+```
+
+**Animation.json**
+``` json
+{"animations": {
     "hit": [
       {"x":0,"y":0,"w":222,"h":500}
     ],
@@ -114,7 +253,7 @@ private:
       {"x":0,"y":500,"w":139,"h":500}
     ],
     "fall": [
-      {"x":0,"y":2000,"w":139,"h":500}
+      {"x":0,"y":500,"w":139,"h":500}
     ],
     "walk": [
       {"x":0,"y":1000,"w":130,"h":500},
@@ -122,7 +261,10 @@ private:
     ]
   }
 }
+
 ```
+
+More Information to usage can be found at [TenshiEngine API Docs](https://Queltenshi.github.io/TenshiEngine/)
 
 ---
 

@@ -11,9 +11,8 @@ latex/
 *.log
 *.DS_Store
 *.graphml
+*.txt
 CMakeCache.txt
 Makefile
 cmake_install.cmake
 compile_commands.json
-Ideen.txt
-Installation.txt

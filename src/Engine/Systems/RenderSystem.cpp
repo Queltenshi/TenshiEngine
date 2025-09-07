@@ -1,13 +1,21 @@
 #include "TenshiEngine/Engine/Systems/RenderSystem.hpp"
 #include <SFML/Graphics/RectangleShape.hpp>
 
-
 namespace te{
+
 namespace systems{
 
-RenderSystem::RenderSystem(Registry &registry, float &deltaTime, sf::RenderWindow &window) : VariableSystem(registry, deltaTime), mWindow(window){}
+RenderSystem::RenderSystem(Registry &registry, float &deltaTime, sf::RenderWindow &window, managers::CameraManager &cameraManager, managers::BackgroundManager &backgroundManager)
+    : VariableSystem(registry, deltaTime), mWindow(window), mCameraManager(cameraManager), mBackgroundManager(backgroundManager){}
 
 void RenderSystem::update(){
+    mWindow.setView(mWindow.getDefaultView());
+    mWindow.draw(mBackgroundManager.getBackground());
+
+    if(auto* camera = mCameraManager.getActiveCamera()){
+        mWindow.setView(camera->view);
+    }
+
     std::vector<EntityID> entityIDs = mRegistry.view<components::Sprite>();
     for(auto entityID : entityIDs){
         auto sprite = mRegistry.getComponent<components::Sprite>(entityID);

@@ -7,8 +7,13 @@
 
 namespace te{
 
-enum class LogLevel{DEBUG, INFO, WARNING, ERROR, CRITICAL};
+enum class LogLevel{DEBUG, INFO, WARNING, ERROR, FATAL};
 
+/**
+ * @brief Logger for logging messages
+ *
+ * Logs messages depending on the currentLevel in different colors
+ */
 class Logger{
 
 public:
@@ -16,27 +21,57 @@ public:
     Logger(const Logger&)=delete;
     Logger(Logger&&)=delete; 
 
-    inline static LogLevel currentLevel = LogLevel::DEBUG;
+    static LogLevel currentLevel;
 
+    ///Use LOG_DEBUG or LOG_DEBUG_COMPONENT_CHANGED instead to automatically check if currentLevel is debug
     static void debug(const std::string &source, const std::string &message);
+
+    ///Use LOG_DEBUG or LOG_DEBUG_COMPONENT_CHANGED instead to automatically check if currentLevel is debug
     static void debug(const std::string &source, const std::string &componentName, const components::Component *component, const EntityID entityID);
+
+    /**
+     * @brief Logs warning
+     *
+     * Logs warning message in yellow color 
+     *
+     * @param source Name of message sender
+     * @param message Message to log
+     */
     static void warning(const std::string &source, const std::string &message);
+
+    /**
+     * @brief Logs error
+     *
+     * Logs error message in red color 
+     *
+     * @param source Name of message sender
+     * @param message Message to log
+     */
     static void error(const std::string &source, const std::string &message);
+
+    /**
+     * @brief Logs info
+     *
+     * Logs info message in green color 
+     *
+     * @param source Name of message sender
+     * @param message Message to log
+     */
     static void info(const std::string &source, const std::string &message);
+
+    /**
+     * @brief Logs critical
+     *
+     * Logs critical message in white color and red background
+     *
+     * @param source Name of message sender
+     * @param message Message to log
+     */
     static void critical(const std::string &source, const std::string &message);
 
 private:
     static void log(LogLevel logLevel, const std::string &system, const std::string &message);
-    static std::string toString(LogLevel logLevel) {
-        switch (logLevel) {
-            case LogLevel::DEBUG: return "DEBUG";
-            case LogLevel::INFO:  return "INFO";
-            case LogLevel::WARNING:  return "WARNING";
-            case LogLevel::ERROR: return "ERROR";
-            case LogLevel::CRITICAL: return "CRITICAL";
-            default: return "UNKNOWN";
-        }
-    }
+    static std::string toString(LogLevel logLevel);
 };
 
 }

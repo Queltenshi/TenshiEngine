@@ -4,7 +4,7 @@
 namespace te{
 
 void Logger::log(LogLevel logLevel, const std::string &system, const std::string &message){
-    std::cout << "[" + system + "] " + toString(logLevel) + ": " + message << std::endl;;  
+    std::cout << "[" + system + "] " + toString(logLevel) + ": " + message + "\033[0m"<< std::endl;;  
 }
 
 void Logger::debug(const std::string &source, const std::string &message){
@@ -28,6 +28,20 @@ void Logger::error(const std::string &source, const std::string &message){
 }
 
 void Logger::critical(const std::string &source, const std::string &message){
-    log(LogLevel::CRITICAL, source, message);
+    log(LogLevel::FATAL, source, message);
 }
+
+std::string Logger::toString(LogLevel logLevel) {
+    switch (logLevel) {
+        case LogLevel::DEBUG: return "\033[34mDEBUG";
+        case LogLevel::INFO:  return "\033[32mINFO";
+        case LogLevel::WARNING:  return "\033[33mWARNING";
+        case LogLevel::ERROR: return "\033[31mERROR";
+        case LogLevel::FATAL: return "\033[1;41mFATAL";
+        default: return "UNKNOWN";
+    }
+}
+
+LogLevel Logger::currentLevel = LogLevel::DEBUG;
+
 }

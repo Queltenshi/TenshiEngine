@@ -1,14 +1,8 @@
 #pragma once
 
-#include <unordered_map>
 #include <typeindex>
 #include "TenshiEngine/Components.hpp"
-#include "TenshiEngine/Engine/Core/Logger.hpp"
 #include "TenshiEngine/Engine/Systems/System.hpp"
-#include "TenshiEngine/Engine/Systems/RenderSystem.hpp"
-#include "nlohmann/json.hpp"
-
-using json = nlohmann::json;
 
 namespace te{
 
@@ -38,7 +32,7 @@ public:
      *
      * @param texture Texture to display
      */
-    Entity createEntity(sf::Texture &texture){
+    Entity createEntity(std::shared_ptr<sf::Texture> texture){
         Entity entity(mNextId++);
         addComponent(entity.id, components::Sprite(texture));
         addComponent(entity.id, components::Transform());
@@ -53,7 +47,7 @@ public:
      *
      * @param texture Texture to display
      */
-    Entity createEntity(sf::Texture &texture, sf::Vector2i size){
+    Entity createEntity(std::shared_ptr<sf::Texture> texture, sf::Vector2i size){
         Entity entity(mNextId++);
         sf::IntRect rectangle({0, 0}, size);
         addComponent(entity.id, components::Sprite(texture, rectangle));
@@ -64,15 +58,15 @@ public:
     /**
      * @brief creates new entity with animation
      *
-     * creates new Entity with given texture and textureData and adds
+     * creates new Entity with given texture and animationData and adds
      * new ID, Transform, Sprite, Animation, State
      *
      * @param texture Texture to display
-     * @param textureData json data used for animation
+     * @param animationData json data used for animation
      */
-    Entity createEntity(sf::Texture &texture, json &textureData){
+    Entity createEntity(std::shared_ptr<sf::Texture> texture, std::shared_ptr<json> animationData){
         Entity entity(mNextId++);
-        auto animation = addComponent(entity.id, components::Animation(textureData));
+        auto animation = addComponent(entity.id, components::Animation(animationData));
         addComponent(entity.id, components::Sprite(texture, animation->rectangle));
         addComponent(entity.id, components::Transform());
         addComponent(entity.id, te::components::State());
@@ -89,10 +83,7 @@ public:
      */
     template<typename Component>
     Component* addComponent(EntityID entityID, const Component &component){
-        //Debug Info
-        if(Logger::currentLevel == LogLevel::DEBUG){
-            Logger::debug("Registry", component.name  + " added to Entity " + std::to_string(entityID) + " " + component.toString());
-        }
+        //LOG_DEBUG(name, component.name  + " added to Entity " + std::to_string(entityID) + " " + component.toString());
 
         mComponents[typeid(Component)][entityID] = std::make_shared<Component>(component);
         return static_cast<Component*>(mComponents[typeid(Component)][entityID].get());
@@ -218,6 +209,8 @@ private:
     std::vector<std::unique_ptr<systems::FixedSystem>> mFixedSystems;
     std::vector<std::unique_ptr<systems::VariableSystem>> mVariableSystems;
     std::unique_ptr<systems::VariableSystem> mRenderSystem;
+
+    inline const static std::string name = "Registry";
 };
 
 }

@@ -19,7 +19,7 @@ public:
      *
      * creates the System with defaultGravity(10.f)
      *
-     * @param registry reference to the registry
+     * @param registry Reference to the registry
      * @param deltaTime Fixed deltaTime
      */
     PhysicsSystem(Registry &registry, const float deltaTime);
@@ -42,12 +42,16 @@ public:
 
 private:
     void updateGravity(EntityID entityID, components::Velocity *velocity);
-    void checkCollision(EntityID entityID1, EntityID entityID2);
-    void correctPosition(EntityID entityID, components::Transform *transform1, components::Transform *transform2, sf::FloatRect overlapRect);
+    void checkCollision();
+    void checkXCollisions(components::Transform *transform, sf::FloatRect &rect, EntityID movingEntityID);
+    void checkYCollisions(components::Transform *transform, sf::FloatRect &rect, EntityID movingEntityID);
+    void correctXPosition(components::Velocity *velocity, components::Transform *transform, sf::FloatRect intersectionRect, sf::FloatRect &rect);
+    void correctYPosition(components::Velocity *velocity, components::Transform *transform, sf::FloatRect intersectionRect, sf::FloatRect &rect, EntityID movingEntityID);
+    sf::FloatRect getWorldBounds(components::Transform *transform, components::Collider *collider);
 
     float mGravity;
 
-    inline static const float defaultGravity = 25.f;
+    static const float defaultGravity;
 };
 
 }

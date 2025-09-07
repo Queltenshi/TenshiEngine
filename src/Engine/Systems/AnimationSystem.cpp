@@ -42,7 +42,7 @@ void AnimationSystem::checkDirection(EntityID entityID, components::State *state
 
 void AnimationSystem::checkState(EntityID entityID, components::State *state){
     auto animation = mRegistry.getComponent<components::Animation>(entityID);
-    auto animationData = animation->textureData["animations"];
+    auto animationData = animation->animationData->at("animations");
 
     animation->elapsedTime += mDeltaTime;
 

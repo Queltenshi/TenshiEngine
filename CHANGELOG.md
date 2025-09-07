@@ -2,6 +2,23 @@
 
 ---
 
+## [0.4.0] - 2025-09-07
+### Added
+- **Managers**
+    - **ResourceManager**: Manages/loads resources: textures and json
+    - **TileMapManager**: manages/loads tilesets and levels from files
+    - **CameraManager**: Manages cameras, sets the active camera
+    - **BackgroundManager**: Manages background image and its movement
+- **Camera**: Stores the current view of an attached entity    
+
+### Fixed
+- Incorrect collision calculations on corners
+
+### Changed
+- **Systems**
+    - **RenderSystem**: Now uses active camera for rendering
+- **Logger**: Now has textcolor for different loglevels
+
 ## [0.3.1] - 2025-08-28
 ### Added
 - **Components**

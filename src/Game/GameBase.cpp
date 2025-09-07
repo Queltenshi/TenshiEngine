@@ -4,14 +4,20 @@
 
 namespace te{
 
-GameBase::GameBase(std::string windowName)
-    : mWindow(sf::VideoMode({1920, 1080}), windowName), mFixedDeltaTime(1.f / 60.f), mVariableDeltaTime(0.f), mAccumulator(0.f){ //mWindow(sf::VideoMode::getDesktopMode(), windowName, sf::State::Fullscreen)
+GameBase::GameBase(std::string windowName, sf::Vector2u windowSize)
+    : mWindow(sf::VideoMode(windowSize), windowName), 
+      mCameraManager(mRegistry, mBackgroundManager, static_cast<sf::Vector2f>(windowSize)), 
+      mTileMapManager(mRegistry), 
+      mBackgroundManager(mResourceManager.getTexture("Default"), static_cast<sf::Vector2f>(windowSize)),
+      mFixedDeltaTime(1.f / 60.f), 
+      mVariableDeltaTime(0.f), 
+      mAccumulator(0.f){ //mWindow(sf::VideoMode::getDesktopMode(), windowName, sf::State::Fullscreen)
     
 }
 
 void GameBase::init(){
     mWindow.setFramerateLimit(60);
-    mRegistry.addSystem<systems::RenderSystem>(mVariableDeltaTime, mWindow);
+    mRegistry.addSystem<systems::RenderSystem>(mVariableDeltaTime, mWindow, mCameraManager, mBackgroundManager);
     mRegistry.addSystem<systems::InputSystem>(mVariableDeltaTime);
     mRegistry.addSystem<systems::MovementSystem>(mFixedDeltaTime);
     mRegistry.addSystem<systems::PhysicsSystem>(mFixedDeltaTime);
@@ -36,6 +42,7 @@ void GameBase::run(){
             mAccumulator -= mFixedDeltaTime;
         }
 
+        mCameraManager.update();
         mRegistry.updateVariableSystems();
 
         mWindow.clear();

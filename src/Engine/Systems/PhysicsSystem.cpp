@@ -1,4 +1,5 @@
 #include "TenshiEngine/Engine/Systems/PhysicsSystem.hpp"
+#include <string>
 
 namespace te{
 namespace systems{
@@ -18,17 +19,8 @@ void PhysicsSystem::update(){
         auto transform  = mRegistry.getComponent<components::Transform>(entityID);
 
         updateGravity(entityID, velocity);
-        transform->position += velocity->value * mDeltaTime;
-        transform->positionDirty = true;
     }
-
-    //Collision
-    const auto & collisionEntityIDs = mRegistry.view<components::Collider>();
-    for(int i = 0; i < collisionEntityIDs.size(); i++){
-        for(int j = i+1; j < collisionEntityIDs.size(); j++){
-            checkCollision(collisionEntityIDs[i], collisionEntityIDs[j]);
-        }
-    }
+    checkCollision();
 }
 
 void PhysicsSystem::updateGravity(EntityID entityID, components::Velocity *velocity){
@@ -40,60 +32,108 @@ void PhysicsSystem::updateGravity(EntityID entityID, components::Velocity *veloc
     }
 }
 
-void PhysicsSystem::checkCollision(EntityID entityID1, EntityID entityID2){
-    auto transform1 = mRegistry.getComponent<components::Transform>(entityID1);
-    auto transform2 = mRegistry.getComponent<components::Transform>(entityID2);
-    auto collider1 = mRegistry.getComponent<components::Collider>(entityID1);
-    auto collider2 = mRegistry.getComponent<components::Collider>(entityID2);
-    sf::FloatRect rectangle1({transform1->position.x - collider1->size.x * transform1->scale.x * 0.5f, 
-                              transform1->position.y - collider1->size.y * transform1->scale.y * 0.5f}, 
-                              {collider1->size.x * transform1->scale.x, 
-                               collider1->size.y * transform1->scale.y});
-    sf::FloatRect rectangle2({transform2->position.x - collider2->size.x * transform2->scale.x * 0.5f, 
-                              transform2->position.y - collider2->size.y * transform2->scale.y * 0.5f}, 
-                             {collider2->size.x * transform2->scale.x, 
-                              collider2->size.y * transform2->scale.y});
-    auto intersection = rectangle1.findIntersection(rectangle2); 
+void PhysicsSystem::checkCollision(){
+    const auto & movingEntitiesIDs = mRegistry.view<components::Collider, components::Velocity>();
+    for(auto movingEntityID : movingEntitiesIDs){
+        auto transform = mRegistry.getComponent<components::Transform>(movingEntityID);
+        auto collider = mRegistry.getComponent<components::Collider>(movingEntityID);
+        sf::FloatRect rect = getWorldBounds(transform, collider);
 
-    if(intersection){
-        sf::FloatRect overlapRect = *intersection;
-        auto rigidBody1 = mRegistry.getComponent<components::Rigidbody>(entityID1);
-        auto rigidBody2 = mRegistry.getComponent<components::Rigidbody>(entityID2);
+        checkXCollisions(transform, rect, movingEntityID);
+        checkYCollisions(transform, rect, movingEntityID);
 
-        if(!rigidBody1->isStatic){
-            correctPosition(entityID1, transform2, transform1, overlapRect);
-        } else if(!rigidBody2->isStatic){
-            correctPosition(entityID2, transform1, transform2, overlapRect);
+        transform->positionDirty = true;
+    }
+}
+
+void PhysicsSystem::checkXCollisions(components::Transform *transform, sf::FloatRect &rect, EntityID movingEntityID){
+    auto velocity = mRegistry.getComponent<components::Velocity>(movingEntityID);
+    transform->position.x += velocity->value.x * mDeltaTime;
+    rect.position.x += velocity->value.x * mDeltaTime;
+    
+    const auto & otherEntityIDs = mRegistry.view<components::Collider>();
+    for(auto otherEntityID : otherEntityIDs){
+        if(otherEntityID == movingEntityID){
+            continue;
+        }
+       
+        auto otherTransform = mRegistry.getComponent<components::Transform>(otherEntityID);
+        auto otherCollider = mRegistry.getComponent<components::Collider>(otherEntityID);
+        sf::FloatRect otherRect = getWorldBounds(otherTransform, otherCollider);
+
+        auto intersection = rect.findIntersection(otherRect);
+        sf::FloatRect intersectionRect = *intersection;
+
+        if(intersection){
+            if(mRegistry.hasComponent<components::Rigidbody>(movingEntityID) && mRegistry.hasComponent<components::Rigidbody>(otherEntityID) && mRegistry.getComponent<components::Rigidbody>(otherEntityID)->isStatic){
+                correctXPosition(velocity, transform, intersectionRect, rect);
+            }
         }
     }
 }
 
-void PhysicsSystem::correctPosition(EntityID entityID, components::Transform *transform1, components::Transform *transform2, sf::FloatRect overlapRect){
-   auto velocity = mRegistry.getComponent<components::Velocity>(entityID);
+void PhysicsSystem::checkYCollisions(components::Transform *transform, sf::FloatRect &rect, EntityID movingEntityID){
+    auto velocity = mRegistry.getComponent<components::Velocity>(movingEntityID);
+    transform->position.y += velocity->value.y * mDeltaTime;
+    rect.position.y += velocity->value.y * mDeltaTime;
 
-    if(overlapRect.size.x > overlapRect.size.y){
-        if(transform2->position.y < transform1->position.y){
-            transform2->position.y -= overlapRect.size.y;
-            if(mRegistry.hasComponent<components::Grounded>(entityID)){
-                mRegistry.getComponent<components::Grounded>(entityID)->isGrounded = true;
+    const auto & otherEntityIDs = mRegistry.view<components::Collider>();
+    for(auto otherEntityID : otherEntityIDs){
+        if(otherEntityID == movingEntityID){
+            continue;
+        }
+        
+        auto otherTransform = mRegistry.getComponent<components::Transform>(otherEntityID);
+        auto otherCollider = mRegistry.getComponent<components::Collider>(otherEntityID);
+        sf::FloatRect otherRect = getWorldBounds(otherTransform, otherCollider);
+
+        auto intersection = rect.findIntersection(otherRect);
+        sf::FloatRect intersectionRect = *intersection;
+
+        if(intersection){
+            if(mRegistry.hasComponent<components::Rigidbody>(movingEntityID) && mRegistry.hasComponent<components::Rigidbody>(otherEntityID) && mRegistry.getComponent<components::Rigidbody>(otherEntityID)->isStatic){
+                correctYPosition(velocity, transform, intersectionRect, rect, movingEntityID);
             }
-            velocity->value.y = 0;
-        } else{ 
-            transform2->position.y += overlapRect.size.y;
-            velocity->value.y = 0;
         }
-    } else{
-        if(transform2->position.x < transform1->position.x){
-            transform2->position.x -= overlapRect.size.x;
-        } else{ 
-            transform2->position.x += overlapRect.size.x;
-        }
-        velocity->value.x = 0;
     }
-    transform2->positionDirty = true;
+}
+
+void PhysicsSystem::correctXPosition(components::Velocity *velocity, components::Transform *transform, sf::FloatRect intersectionRect, sf::FloatRect &rect){
+    if(velocity->value.x > 0){
+        transform->position.x -= intersectionRect.size.x + 0.0001f;
+        rect.position.x -= intersectionRect.size.x + 0.0001f;
+    }
+    else{
+        transform->position.x += intersectionRect.size.x;
+        rect.position.x += intersectionRect.size.x;
+    }
+    velocity->value.x = 0.f;
+}
+
+void PhysicsSystem::correctYPosition(components::Velocity *velocity, components::Transform *transform, sf::FloatRect intersectionRect, sf::FloatRect &rect, EntityID movingEntityID){
+    if(velocity->value.y > 0){
+        transform->position.y -= intersectionRect.size.y + 0.0001f;
+        rect.position.y -= intersectionRect.size.y + 0.0001f;
+        if(mRegistry.hasComponent<components::Grounded>(movingEntityID)){
+            auto grounded = mRegistry.getComponent<components::Grounded>(movingEntityID);
+            grounded->isGrounded = true;
+        }
+    }else{
+        transform->position.y += intersectionRect.size.y;
+        rect.position.y += intersectionRect.size.y;
+    }
+    velocity->value.y = 0.f;
+}
+
+sf::FloatRect PhysicsSystem::getWorldBounds(components::Transform *transform, components::Collider *collider){
+    return sf::FloatRect ({transform->position.x - (collider->size.x * transform->scale.x * 0.5f), 
+                           transform->position.y - (collider->size.y * transform->scale.y * 0.5f)}, 
+                          {collider->size.x * transform->scale.x, 
+                           collider->size.y * transform->scale.y});
 }
 
 const std::string PhysicsSystem::name = "PhysicsSystem";
+const float PhysicsSystem::defaultGravity = 25.f;
 
 }
 }
