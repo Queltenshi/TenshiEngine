@@ -1,0 +1,90 @@
+\doxysection{te\+::managers\+::Tile\+Map\+Manager Class Reference}
+\hypertarget{classte_1_1managers_1_1TileMapManager}{}\label{classte_1_1managers_1_1TileMapManager}\index{te::managers::TileMapManager@{te::managers::TileMapManager}}
+
+
+Manager for creating tile maps.  
+
+
+
+
+{\ttfamily \#include $<$Tile\+Map\+Manager.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classte_1_1managers_1_1TileMapManager_a66f6d6ca18a9647ce4dc617cdf82ccd4}{Tile\+Map\+Manager}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classte_1_1managers_1_1TileMapManager_ab95f14918af13942cfe4a363bb737f09}{load\+Tileset}} (std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ tileset\+Texture, std\+::shared\+\_\+ptr$<$ json $>$ tileset\+Data)
+\begin{DoxyCompactList}\small\item\em Loads the tileset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classte_1_1managers_1_1TileMapManager_a0cbe1fdd18b2f2a313f9a6e4add5cda7}{load\+Level}} (std\+::shared\+\_\+ptr$<$ json $>$ level\+Data)
+\begin{DoxyCompactList}\small\item\em loads the level \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manager for creating tile maps. 
+
+loads leveldata and spritesheets from files and creates tile maps from them 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classte_1_1managers_1_1TileMapManager_a66f6d6ca18a9647ce4dc617cdf82ccd4}\label{classte_1_1managers_1_1TileMapManager_a66f6d6ca18a9647ce4dc617cdf82ccd4} 
+\index{te::managers::TileMapManager@{te::managers::TileMapManager}!TileMapManager@{TileMapManager}}
+\index{TileMapManager@{TileMapManager}!te::managers::TileMapManager@{te::managers::TileMapManager}}
+\doxysubsubsection{\texorpdfstring{TileMapManager()}{TileMapManager()}}
+{\footnotesize\ttfamily te\+::managers\+::\+Tile\+Map\+Manager\+::\+Tile\+Map\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+creates the Manager
+
+
+\begin{DoxyParams}{Parameters}
+{\em registry} & Reference to the registry \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classte_1_1managers_1_1TileMapManager_a0cbe1fdd18b2f2a313f9a6e4add5cda7}\label{classte_1_1managers_1_1TileMapManager_a0cbe1fdd18b2f2a313f9a6e4add5cda7} 
+\index{te::managers::TileMapManager@{te::managers::TileMapManager}!loadLevel@{loadLevel}}
+\index{loadLevel@{loadLevel}!te::managers::TileMapManager@{te::managers::TileMapManager}}
+\doxysubsubsection{\texorpdfstring{loadLevel()}{loadLevel()}}
+{\footnotesize\ttfamily void te\+::managers\+::\+Tile\+Map\+Manager\+::load\+Level (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ json $>$}]{level\+Data }\end{DoxyParamCaption})}
+
+
+
+loads the level 
+
+loads the level with given given json file path
+
+
+\begin{DoxyParams}{Parameters}
+{\em level\+Data} & Json data of the tileset \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classte_1_1managers_1_1TileMapManager_ab95f14918af13942cfe4a363bb737f09}\label{classte_1_1managers_1_1TileMapManager_ab95f14918af13942cfe4a363bb737f09} 
+\index{te::managers::TileMapManager@{te::managers::TileMapManager}!loadTileset@{loadTileset}}
+\index{loadTileset@{loadTileset}!te::managers::TileMapManager@{te::managers::TileMapManager}}
+\doxysubsubsection{\texorpdfstring{loadTileset()}{loadTileset()}}
+{\footnotesize\ttfamily void te\+::managers\+::\+Tile\+Map\+Manager\+::load\+Tileset (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{tileset\+Texture,  }\item[{std\+::shared\+\_\+ptr$<$ json $>$}]{tileset\+Data }\end{DoxyParamCaption})}
+
+
+
+Loads the tileset. 
+
+Loads the tileset with given texture and json file
+
+
+\begin{DoxyParams}{Parameters}
+{\em tileset\+Texture} & Texture of the tileset \\
+\hline
+{\em tileset\+Data} & Json data of the tileset \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Tenshi\+Engine/\+Engine/\+Manager/Tile\+Map\+Manager.\+hpp\item 
+src/\+Engine/\+Manager/Tile\+Map\+Manager.\+cpp\end{DoxyCompactItemize}

@@ -12,7 +12,7 @@ Base class for a game.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classte_1_1GameBase_a5d1af9fab83dd425749f4ef4437a524f}{Game\+Base}} (std\+::string window\+Name)
+\mbox{\hyperlink{classte_1_1GameBase_a85a4c02b8f6d348f7d5dd5193de3f233}{Game\+Base}} (std\+::string window\+Name, sf\+::\+Vector2u window\+Size)
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classte_1_1GameBase_accb4b63d1277e46131d66a66c0e1e63b}{run}} ()
 \begin{DoxyCompactList}\small\item\em starts the game loop \end{DoxyCompactList}\item 
@@ -23,7 +23,19 @@ virtual void \mbox{\hyperlink{classte_1_1GameBase_a0a8905a011a8ab2cd4b44ec611ff2
 \item 
 \Hypertarget{classte_1_1GameBase_ad88938b232f7f7f7d38850bce672cf89}\label{classte_1_1GameBase_ad88938b232f7f7f7d38850bce672cf89} 
 \mbox{\hyperlink{classte_1_1Registry}{Registry}} {\bfseries m\+Registry}
-\begin{DoxyCompactList}\small\item\em \doxylink{classte_1_1Registry}{Registry} used for managing entities, components and systems. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \doxylink{classte_1_1Registry}{Registry} used for managing entities, components and systems. \end{DoxyCompactList}\item 
+\Hypertarget{classte_1_1GameBase_aba0495395e1d1758d051b3d96b47c106}\label{classte_1_1GameBase_aba0495395e1d1758d051b3d96b47c106} 
+\mbox{\hyperlink{classte_1_1managers_1_1CameraManager}{managers\+::\+Camera\+Manager}} {\bfseries m\+Camera\+Manager}
+\begin{DoxyCompactList}\small\item\em Camera\+Manager used for managing camera. \end{DoxyCompactList}\item 
+\Hypertarget{classte_1_1GameBase_ab0a32a29b9e620c5fe1cfdffe38ce2ae}\label{classte_1_1GameBase_ab0a32a29b9e620c5fe1cfdffe38ce2ae} 
+\mbox{\hyperlink{classte_1_1managers_1_1ResourceManager}{managers\+::\+Resource\+Manager}} {\bfseries m\+Resource\+Manager}
+\begin{DoxyCompactList}\small\item\em Resource\+Manager used for managing resources. \end{DoxyCompactList}\item 
+\Hypertarget{classte_1_1GameBase_ab9ee297bb2e4768cffeeab08e4a78729}\label{classte_1_1GameBase_ab9ee297bb2e4768cffeeab08e4a78729} 
+\mbox{\hyperlink{classte_1_1managers_1_1TileMapManager}{managers\+::\+Tile\+Map\+Manager}} {\bfseries m\+Tile\+Map\+Manager}
+\begin{DoxyCompactList}\small\item\em Tile\+Map\+Manager used for loading tilesets and levels. \end{DoxyCompactList}\item 
+\Hypertarget{classte_1_1GameBase_a2d3fcbfb9994cc4a2f841dc293ca482f}\label{classte_1_1GameBase_a2d3fcbfb9994cc4a2f841dc293ca482f} 
+\mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager}{managers\+::\+Background\+Manager}} {\bfseries m\+Background\+Manager}
+\begin{DoxyCompactList}\small\item\em Background\+Manager used for managing the background. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -39,21 +51,23 @@ Usage\+:
 \end{DoxyItemize}
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classte_1_1GameBase_a5d1af9fab83dd425749f4ef4437a524f}\label{classte_1_1GameBase_a5d1af9fab83dd425749f4ef4437a524f} 
+\Hypertarget{classte_1_1GameBase_a85a4c02b8f6d348f7d5dd5193de3f233}\label{classte_1_1GameBase_a85a4c02b8f6d348f7d5dd5193de3f233} 
 \index{te::GameBase@{te::GameBase}!GameBase@{GameBase}}
 \index{GameBase@{GameBase}!te::GameBase@{te::GameBase}}
 \doxysubsubsection{\texorpdfstring{GameBase()}{GameBase()}}
-{\footnotesize\ttfamily te\+::\+Game\+Base\+::\+Game\+Base (\begin{DoxyParamCaption}\item[{std\+::string}]{window\+Name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily te\+::\+Game\+Base\+::\+Game\+Base (\begin{DoxyParamCaption}\item[{std\+::string}]{window\+Name,  }\item[{sf\+::\+Vector2u}]{window\+Size }\end{DoxyParamCaption})}
 
 
 
 Constructor. 
 
-creates a window with given title
+creates a window with given title and window\+Size
 
 
 \begin{DoxyParams}{Parameters}
 {\em window\+Name} & Title of the window to be created \\
+\hline
+{\em window\+Size} & Size of the window to be created \\
 \hline
 \end{DoxyParams}
 

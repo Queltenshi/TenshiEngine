@@ -1,0 +1,152 @@
+\doxysection{te\+::managers\+::Camera\+Manager Class Reference}
+\hypertarget{classte_1_1managers_1_1CameraManager}{}\label{classte_1_1managers_1_1CameraManager}\index{te::managers::CameraManager@{te::managers::CameraManager}}
+
+
+Manager for cameras.  
+
+
+
+
+{\ttfamily \#include $<$Camera\+Manager.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classte_1_1managers_1_1CameraManager_ab069a474a11f3bdc535a5ac080286029}{Camera\+Manager}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager}{Background\+Manager}} \&background\+Manager, sf\+::\+Vector2f window\+Size)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classte_1_1managers_1_1CameraManager_a96c6d428852c0af8f1a43adc8bab15f1}{update}} ()
+\begin{DoxyCompactList}\small\item\em updates the active camera \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classte_1_1managers_1_1CameraManager_a87a457534ba638c21ad5c70934bbb79a}{set\+Trigger\+Distance}} (const sf\+::\+Vector2f trigger\+Distance)
+\begin{DoxyCompactList}\small\item\em Sets the trigger\+Distance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classte_1_1managers_1_1CameraManager_a7069ece4a4bf73be7ea25cb12404b429}{add\+Camera}} (Entity\+ID entity\+ID)
+\begin{DoxyCompactList}\small\item\em adds camera \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classte_1_1managers_1_1CameraManager_a74597cac31cd0215f509f11f2e8eedff}{add\+Camera}} (Entity\+ID entity\+ID, Camera\+::\+Movement movement)
+\begin{DoxyCompactList}\small\item\em adds camera \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classte_1_1managers_1_1CameraManager_aa87ec8fc6edc5a0f5be17da045ab0c36}{set\+Camera}} (Entity\+ID entitiy\+ID)
+\begin{DoxyCompactList}\small\item\em sets active camera \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structte_1_1Camera}{Camera}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classte_1_1managers_1_1CameraManager_adabf32152cfb5532fb92fd7f67e46cfa}{get\+Active\+Camera}} ()
+\begin{DoxyCompactList}\small\item\em gets the active camera \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manager for cameras. 
+
+Creates and updates the cameras for setting the view field 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classte_1_1managers_1_1CameraManager_ab069a474a11f3bdc535a5ac080286029}\label{classte_1_1managers_1_1CameraManager_ab069a474a11f3bdc535a5ac080286029} 
+\index{te::managers::CameraManager@{te::managers::CameraManager}!CameraManager@{CameraManager}}
+\index{CameraManager@{CameraManager}!te::managers::CameraManager@{te::managers::CameraManager}}
+\doxysubsubsection{\texorpdfstring{CameraManager()}{CameraManager()}}
+{\footnotesize\ttfamily te\+::managers\+::\+Camera\+Manager\+::\+Camera\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry,  }\item[{\mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager}{Background\+Manager}} \&}]{background\+Manager,  }\item[{sf\+::\+Vector2f}]{window\+Size }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+creates the \doxylink{classte_1_1managers_1_1CameraManager}{Camera\+Manager} with given window\+Size
+
+
+\begin{DoxyParams}{Parameters}
+{\em registry} & Reference to the registry \\
+\hline
+{\em background\+Manager} & Reference to the background\+Manager \\
+\hline
+{\em window\+Size} & Size of window \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classte_1_1managers_1_1CameraManager_a7069ece4a4bf73be7ea25cb12404b429}\label{classte_1_1managers_1_1CameraManager_a7069ece4a4bf73be7ea25cb12404b429} 
+\index{te::managers::CameraManager@{te::managers::CameraManager}!addCamera@{addCamera}}
+\index{addCamera@{addCamera}!te::managers::CameraManager@{te::managers::CameraManager}}
+\doxysubsubsection{\texorpdfstring{addCamera()}{addCamera()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void te\+::managers\+::\+Camera\+Manager\+::add\+Camera (\begin{DoxyParamCaption}\item[{Entity\+ID}]{entity\+ID }\end{DoxyParamCaption})}
+
+
+
+adds camera 
+
+Adds camera with given entity\+ID and sets it as active\+Camera if there is no other camera
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity\+ID} & ID of entity which will be attached to camera \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classte_1_1managers_1_1CameraManager_a74597cac31cd0215f509f11f2e8eedff}\label{classte_1_1managers_1_1CameraManager_a74597cac31cd0215f509f11f2e8eedff} 
+\index{te::managers::CameraManager@{te::managers::CameraManager}!addCamera@{addCamera}}
+\index{addCamera@{addCamera}!te::managers::CameraManager@{te::managers::CameraManager}}
+\doxysubsubsection{\texorpdfstring{addCamera()}{addCamera()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void te\+::managers\+::\+Camera\+Manager\+::add\+Camera (\begin{DoxyParamCaption}\item[{Entity\+ID}]{entity\+ID,  }\item[{Camera\+::\+Movement}]{movement }\end{DoxyParamCaption})}
+
+
+
+adds camera 
+
+Adds camera with given entity\+ID, and movement direction and sets it as active\+Camera if there is no other camera
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity\+ID} & ID of entity which will be attached to camera \\
+\hline
+{\em movement} & movement direction in which the camera can be moved \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classte_1_1managers_1_1CameraManager_adabf32152cfb5532fb92fd7f67e46cfa}\label{classte_1_1managers_1_1CameraManager_adabf32152cfb5532fb92fd7f67e46cfa} 
+\index{te::managers::CameraManager@{te::managers::CameraManager}!getActiveCamera@{getActiveCamera}}
+\index{getActiveCamera@{getActiveCamera}!te::managers::CameraManager@{te::managers::CameraManager}}
+\doxysubsubsection{\texorpdfstring{getActiveCamera()}{getActiveCamera()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structte_1_1Camera}{Camera}} \texorpdfstring{$\ast$}{*} te\+::managers\+::\+Camera\+Manager\+::get\+Active\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gets the active camera 
+
+Returns the active camera \Hypertarget{classte_1_1managers_1_1CameraManager_aa87ec8fc6edc5a0f5be17da045ab0c36}\label{classte_1_1managers_1_1CameraManager_aa87ec8fc6edc5a0f5be17da045ab0c36} 
+\index{te::managers::CameraManager@{te::managers::CameraManager}!setCamera@{setCamera}}
+\index{setCamera@{setCamera}!te::managers::CameraManager@{te::managers::CameraManager}}
+\doxysubsubsection{\texorpdfstring{setCamera()}{setCamera()}}
+{\footnotesize\ttfamily void te\+::managers\+::\+Camera\+Manager\+::set\+Camera (\begin{DoxyParamCaption}\item[{Entity\+ID}]{entitiy\+ID }\end{DoxyParamCaption})}
+
+
+
+sets active camera 
+
+Sets active camera with given entity\+ID 
+\begin{DoxyParams}{Parameters}
+{\em entity\+ID} & ID of entity activated camera \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classte_1_1managers_1_1CameraManager_a87a457534ba638c21ad5c70934bbb79a}\label{classte_1_1managers_1_1CameraManager_a87a457534ba638c21ad5c70934bbb79a} 
+\index{te::managers::CameraManager@{te::managers::CameraManager}!setTriggerDistance@{setTriggerDistance}}
+\index{setTriggerDistance@{setTriggerDistance}!te::managers::CameraManager@{te::managers::CameraManager}}
+\doxysubsubsection{\texorpdfstring{setTriggerDistance()}{setTriggerDistance()}}
+{\footnotesize\ttfamily void te\+::managers\+::\+Camera\+Manager\+::set\+Trigger\+Distance (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f}]{trigger\+Distance }\end{DoxyParamCaption})}
+
+
+
+Sets the trigger\+Distance. 
+
+Sets the distance from entity to window which is needed to activate camera movement 
+\begin{DoxyParams}{Parameters}
+{\em trigger\+Distance} & Distance as ratio to window\+Size \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classte_1_1managers_1_1CameraManager_a96c6d428852c0af8f1a43adc8bab15f1}\label{classte_1_1managers_1_1CameraManager_a96c6d428852c0af8f1a43adc8bab15f1} 
+\index{te::managers::CameraManager@{te::managers::CameraManager}!update@{update}}
+\index{update@{update}!te::managers::CameraManager@{te::managers::CameraManager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void te\+::managers\+::\+Camera\+Manager\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+updates the active camera 
+
+updates the current view of active camera 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Tenshi\+Engine/\+Engine/\+Manager/Camera\+Manager.\+hpp\item 
+src/\+Engine/\+Manager/Camera\+Manager.\+cpp\end{DoxyCompactItemize}

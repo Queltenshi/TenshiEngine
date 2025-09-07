@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['update_0',['update',['../classte_1_1systems_1_1AnimationSystem.html#a617ec29dfa6af353a5c69f5a542b7b0c',1,'te::systems::AnimationSystem::update()'],['../classte_1_1systems_1_1InputSystem.html#a966ac41f24309ed1402722cccf57cb37',1,'te::systems::InputSystem::update()'],['../classte_1_1systems_1_1MovementSystem.html#af6357cbf26b254991383fd4db488f358',1,'te::systems::MovementSystem::update()'],['../classte_1_1systems_1_1PhysicsSystem.html#acb3bae1529e7132838e87508440d0b7e',1,'te::systems::PhysicsSystem::update()'],['../classte_1_1systems_1_1RenderSystem.html#a70523add6b7a258e117e3bdc2a9341d9',1,'te::systems::RenderSystem::update()'],['../classte_1_1systems_1_1System.html#a3640e994e8b9aad924d11ba67d07d421',1,'te::systems::System::update()']]],
-  ['updatefixedsystems_1',['updateFixedSystems',['../classte_1_1Registry.html#a52459c675de567f3c2ac5d14a36a0c62',1,'te::Registry']]],
-  ['updaterendersystem_2',['updateRenderSystem',['../classte_1_1Registry.html#a2d9d42450ca3a0e559448de226ff398c',1,'te::Registry']]],
-  ['updatevariablesystems_3',['updateVariableSystems',['../classte_1_1Registry.html#ad22bf6ce1bfcec1e3091d58916629c18',1,'te::Registry']]]
+  ['physicssystem_0',['physicssystem',['../classte_1_1systems_1_1PhysicsSystem.html#a9d662bbbd1d4810275314dc4bb4cf1f6',1,'te::systems::PhysicsSystem::PhysicsSystem(Registry &amp;registry, const float deltaTime)'],['../classte_1_1systems_1_1PhysicsSystem.html#acd245fd3ec64ee8787f2931745590f0d',1,'te::systems::PhysicsSystem::PhysicsSystem(Registry &amp;registry, float deltaTime, float gravity)']]],
+  ['platformerplayer_1',['platformerplayer',['../classte_1_1Prefabs.html#ae75c5bcd56d306419ca4d87f87e74235',1,'te::Prefabs::PlatformerPlayer(Registry &amp;registry, std::shared_ptr&lt; sf::Texture &gt; texture)'],['../classte_1_1Prefabs.html#a4df531bfdf5336d26f768d81a3ed195a',1,'te::Prefabs::PlatformerPlayer(Registry &amp;registry, std::shared_ptr&lt; sf::Texture &gt; texture, std::shared_ptr&lt; json &gt; animationData)']]],
+  ['playerinput_2',['PlayerInput',['../structte_1_1components_1_1PlayerInput.html#a91190750e098ba6cdbd5aa9754099750',1,'te::components::PlayerInput']]]
 ];

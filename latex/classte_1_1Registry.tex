@@ -15,11 +15,11 @@ Managing entities and components.
 \Hypertarget{classte_1_1Registry_ac9fde2f8cf63b88d955daff21299fa3e}\label{classte_1_1Registry_ac9fde2f8cf63b88d955daff21299fa3e} 
 {\bfseries Registry} ()
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structte_1_1Entity}{Entity}} \mbox{\hyperlink{classte_1_1Registry_a8711ff219ebf13ead555c90a545e55a2}{create\+Entity}} (sf\+::\+Texture \&texture)
+\mbox{\hyperlink{structte_1_1Entity}{Entity}} \mbox{\hyperlink{classte_1_1Registry_a321f4bcfdd4fc73ae50e710e71b6dc79}{create\+Entity}} (std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ texture)
 \begin{DoxyCompactList}\small\item\em creates new entity \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structte_1_1Entity}{Entity}} \mbox{\hyperlink{classte_1_1Registry_a817b88c6ff6b47a85cd027e3e9d39403}{create\+Entity}} (sf\+::\+Texture \&texture, sf\+::\+Vector2i size)
+\mbox{\hyperlink{structte_1_1Entity}{Entity}} \mbox{\hyperlink{classte_1_1Registry_aad06cfa32937848e5c42ef9ae5813dc1}{create\+Entity}} (std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ texture, sf\+::\+Vector2i size)
 \begin{DoxyCompactList}\small\item\em creates new entity \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structte_1_1Entity}{Entity}} \mbox{\hyperlink{classte_1_1Registry_ab74c4a84425cb6dd94304e044415ed1a}{create\+Entity}} (sf\+::\+Texture \&texture, json \&texture\+Data)
+\mbox{\hyperlink{structte_1_1Entity}{Entity}} \mbox{\hyperlink{classte_1_1Registry_ac210af526e821dcd110cc9b57e95c109}{create\+Entity}} (std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ texture, std\+::shared\+\_\+ptr$<$ json $>$ animation\+Data)
 \begin{DoxyCompactList}\small\item\em creates new entity with animation \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename Component $>$ }\\Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{add\+Component}} (Entity\+ID entity\+ID, const Component \&component)
 \begin{DoxyCompactList}\small\item\em adds new component \end{DoxyCompactList}\item 
@@ -83,11 +83,11 @@ adds new system
 {\em args} & arguments of the specified system to create \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classte_1_1Registry_a8711ff219ebf13ead555c90a545e55a2}\label{classte_1_1Registry_a8711ff219ebf13ead555c90a545e55a2} 
+\Hypertarget{classte_1_1Registry_a321f4bcfdd4fc73ae50e710e71b6dc79}\label{classte_1_1Registry_a321f4bcfdd4fc73ae50e710e71b6dc79} 
 \index{te::Registry@{te::Registry}!createEntity@{createEntity}}
 \index{createEntity@{createEntity}!te::Registry@{te::Registry}}
 \doxysubsubsection{\texorpdfstring{createEntity()}{createEntity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structte_1_1Entity}{Entity}} te\+::\+Registry\+::create\+Entity (\begin{DoxyParamCaption}\item[{sf\+::\+Texture \&}]{texture }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structte_1_1Entity}{Entity}} te\+::\+Registry\+::create\+Entity (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{texture }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -100,30 +100,11 @@ creates new \doxylink{structte_1_1Entity}{Entity} with given texture and adds ne
 {\em texture} & Texture to display \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classte_1_1Registry_ab74c4a84425cb6dd94304e044415ed1a}\label{classte_1_1Registry_ab74c4a84425cb6dd94304e044415ed1a} 
+\Hypertarget{classte_1_1Registry_aad06cfa32937848e5c42ef9ae5813dc1}\label{classte_1_1Registry_aad06cfa32937848e5c42ef9ae5813dc1} 
 \index{te::Registry@{te::Registry}!createEntity@{createEntity}}
 \index{createEntity@{createEntity}!te::Registry@{te::Registry}}
 \doxysubsubsection{\texorpdfstring{createEntity()}{createEntity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structte_1_1Entity}{Entity}} te\+::\+Registry\+::create\+Entity (\begin{DoxyParamCaption}\item[{sf\+::\+Texture \&}]{texture,  }\item[{json \&}]{texture\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-creates new entity with animation 
-
-creates new \doxylink{structte_1_1Entity}{Entity} with given texture and texture\+Data and adds new ID, Transform, Sprite, Animation, State
-
-
-\begin{DoxyParams}{Parameters}
-{\em texture} & Texture to display \\
-\hline
-{\em texture\+Data} & json data used for animation \\
-\hline
-\end{DoxyParams}
-\Hypertarget{classte_1_1Registry_a817b88c6ff6b47a85cd027e3e9d39403}\label{classte_1_1Registry_a817b88c6ff6b47a85cd027e3e9d39403} 
-\index{te::Registry@{te::Registry}!createEntity@{createEntity}}
-\index{createEntity@{createEntity}!te::Registry@{te::Registry}}
-\doxysubsubsection{\texorpdfstring{createEntity()}{createEntity()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structte_1_1Entity}{Entity}} te\+::\+Registry\+::create\+Entity (\begin{DoxyParamCaption}\item[{sf\+::\+Texture \&}]{texture,  }\item[{sf\+::\+Vector2i}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structte_1_1Entity}{Entity}} te\+::\+Registry\+::create\+Entity (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{texture,  }\item[{sf\+::\+Vector2i}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -134,6 +115,25 @@ creates new \doxylink{structte_1_1Entity}{Entity} with given texture and size an
 
 \begin{DoxyParams}{Parameters}
 {\em texture} & Texture to display \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classte_1_1Registry_ac210af526e821dcd110cc9b57e95c109}\label{classte_1_1Registry_ac210af526e821dcd110cc9b57e95c109} 
+\index{te::Registry@{te::Registry}!createEntity@{createEntity}}
+\index{createEntity@{createEntity}!te::Registry@{te::Registry}}
+\doxysubsubsection{\texorpdfstring{createEntity()}{createEntity()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structte_1_1Entity}{Entity}} te\+::\+Registry\+::create\+Entity (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{texture,  }\item[{std\+::shared\+\_\+ptr$<$ json $>$}]{animation\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+creates new entity with animation 
+
+creates new \doxylink{structte_1_1Entity}{Entity} with given texture and animation\+Data and adds new ID, Transform, Sprite, Animation, State
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & Texture to display \\
+\hline
+{\em animation\+Data} & json data used for animation \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}\label{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a} 

@@ -113,19 +113,19 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aa55ddf0810133027bdc29498784b5315" id="r_aa55ddf0810133027bdc29498784b5315"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structte_1_1Entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classte_1_1Prefabs.html#aa55ddf0810133027bdc29498784b5315">PlatformerPlayer</a> (<a class="el" href="classte_1_1Registry.html">Registry</a> &amp;registry, sf::Texture &amp;texture)</td></tr>
-<tr class="memdesc:aa55ddf0810133027bdc29498784b5315"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates platformer player  <br /></td></tr>
-<tr class="separator:aa55ddf0810133027bdc29498784b5315"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa266247ced0fa3a7f4b42e631ec5ae0b" id="r_aa266247ced0fa3a7f4b42e631ec5ae0b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structte_1_1Entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classte_1_1Prefabs.html#aa266247ced0fa3a7f4b42e631ec5ae0b">PlatformerPlayer</a> (<a class="el" href="classte_1_1Registry.html">Registry</a> &amp;registry, sf::Texture &amp;texture, json &amp;textureData)</td></tr>
-<tr class="memdesc:aa266247ced0fa3a7f4b42e631ec5ae0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates platformer player with animation  <br /></td></tr>
-<tr class="separator:aa266247ced0fa3a7f4b42e631ec5ae0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae75c5bcd56d306419ca4d87f87e74235" id="r_ae75c5bcd56d306419ca4d87f87e74235"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structte_1_1Entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classte_1_1Prefabs.html#ae75c5bcd56d306419ca4d87f87e74235">PlatformerPlayer</a> (<a class="el" href="classte_1_1Registry.html">Registry</a> &amp;registry, std::shared_ptr&lt; sf::Texture &gt; texture)</td></tr>
+<tr class="memdesc:ae75c5bcd56d306419ca4d87f87e74235"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates platformer player  <br /></td></tr>
+<tr class="separator:ae75c5bcd56d306419ca4d87f87e74235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4df531bfdf5336d26f768d81a3ed195a" id="r_a4df531bfdf5336d26f768d81a3ed195a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structte_1_1Entity.html">Entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classte_1_1Prefabs.html#a4df531bfdf5336d26f768d81a3ed195a">PlatformerPlayer</a> (<a class="el" href="classte_1_1Registry.html">Registry</a> &amp;registry, std::shared_ptr&lt; sf::Texture &gt; texture, std::shared_ptr&lt; json &gt; animationData)</td></tr>
+<tr class="memdesc:a4df531bfdf5336d26f768d81a3ed195a"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates platformer player with animation  <br /></td></tr>
+<tr class="separator:a4df531bfdf5336d26f768d81a3ed195a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Creating entities with prefabs. </p>
 <p>Creates entities through different prefabs with predefined components </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa55ddf0810133027bdc29498784b5315" name="aa55ddf0810133027bdc29498784b5315"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa55ddf0810133027bdc29498784b5315">&#9670;&#160;</a></span>PlatformerPlayer() <span class="overload">[1/2]</span></h2>
+<a id="ae75c5bcd56d306419ca4d87f87e74235" name="ae75c5bcd56d306419ca4d87f87e74235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae75c5bcd56d306419ca4d87f87e74235">&#9670;&#160;</a></span>PlatformerPlayer() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -142,7 +142,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">sf::Texture &amp;&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; sf::Texture &gt;&#160;</td>
           <td class="paramname"><em>texture</em>&#160;</td>
         </tr>
         <tr>
@@ -170,8 +170,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa266247ced0fa3a7f4b42e631ec5ae0b" name="aa266247ced0fa3a7f4b42e631ec5ae0b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa266247ced0fa3a7f4b42e631ec5ae0b">&#9670;&#160;</a></span>PlatformerPlayer() <span class="overload">[2/2]</span></h2>
+<a id="a4df531bfdf5336d26f768d81a3ed195a" name="a4df531bfdf5336d26f768d81a3ed195a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4df531bfdf5336d26f768d81a3ed195a">&#9670;&#160;</a></span>PlatformerPlayer() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,14 +188,14 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">sf::Texture &amp;&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; sf::Texture &gt;&#160;</td>
           <td class="paramname"><em>texture</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">json &amp;&#160;</td>
-          <td class="paramname"><em>textureData</em>&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; json &gt;&#160;</td>
+          <td class="paramname"><em>animationData</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -211,12 +211,12 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>creates platformer player with animation </p>
-<p>creates new entity with given texture and textureData and adds PlayerInput, HorizontalMovement, Jump, Velocity, Grounded, Rigidbody, Collider</p>
+<p>creates new entity with given texture and animationData and adds PlayerInput, HorizontalMovement, Jump, Velocity, Grounded, Rigidbody, Collider</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">registry</td><td><a class="el" href="classte_1_1Registry.html" title="Managing entities and components.">Registry</a> </td></tr>
     <tr><td class="paramname">texture</td><td>Texture to display </td></tr>
-    <tr><td class="paramname">textureData</td><td>json data used for animation </td></tr>
+    <tr><td class="paramname">animationData</td><td>json data used for animation </td></tr>
   </table>
   </dd>
 </dl>

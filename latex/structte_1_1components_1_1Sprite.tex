@@ -18,9 +18,9 @@ Inheritance diagram for te\+::components\+::Sprite\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structte_1_1components_1_1Sprite_a3b420674d3cc1df65d2daa1294b70a58}{Sprite}} (sf\+::\+Texture \&\mbox{\hyperlink{structte_1_1components_1_1Sprite_a11e0d21375a4473ea3678210f0b97eb4}{texture}})
+\mbox{\hyperlink{structte_1_1components_1_1Sprite_ad9ee40701d5e869d5a3ac81e6cb143a5}{Sprite}} (std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a644a3beddca46bf01cf1d6319301c30a}{texture}})
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{structte_1_1components_1_1Sprite_abc98283207af9cd4701bb2d4631aed11}{Sprite}} (sf\+::\+Texture \&\mbox{\hyperlink{structte_1_1components_1_1Sprite_a11e0d21375a4473ea3678210f0b97eb4}{texture}}, sf\+::\+Int\+Rect \&animation\+Rectangle)
+\mbox{\hyperlink{structte_1_1components_1_1Sprite_a6cc3a9531d769120a9e336814ea12d9a}{Sprite}} (std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ \mbox{\hyperlink{structte_1_1components_1_1Sprite_a644a3beddca46bf01cf1d6319301c30a}{texture}}, sf\+::\+Int\+Rect \&animation\+Rectangle)
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{structte_1_1components_1_1Sprite_a6cbad49d3349765463d0c5733a4d0fb7}{to\+String}} () const override
 \begin{DoxyCompactList}\small\item\em shows data as a string \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -32,8 +32,8 @@ std\+::string \mbox{\hyperlink{structte_1_1components_1_1Sprite_a6cbad49d3349765
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{structte_1_1components_1_1Sprite_a11e0d21375a4473ea3678210f0b97eb4}\label{structte_1_1components_1_1Sprite_a11e0d21375a4473ea3678210f0b97eb4} 
-sf\+::\+Texture \& {\bfseries texture}
+\Hypertarget{structte_1_1components_1_1Sprite_a644a3beddca46bf01cf1d6319301c30a}\label{structte_1_1components_1_1Sprite_a644a3beddca46bf01cf1d6319301c30a} 
+std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ {\bfseries texture}
 \begin{DoxyCompactList}\small\item\em Texture for the sprite. \end{DoxyCompactList}\item 
 \Hypertarget{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f}\label{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f} 
 sf\+::\+Sprite {\bfseries sprite}
@@ -52,11 +52,11 @@ component with sprite/texture
 stores a sprite and texture 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{structte_1_1components_1_1Sprite_a3b420674d3cc1df65d2daa1294b70a58}\label{structte_1_1components_1_1Sprite_a3b420674d3cc1df65d2daa1294b70a58} 
+\Hypertarget{structte_1_1components_1_1Sprite_ad9ee40701d5e869d5a3ac81e6cb143a5}\label{structte_1_1components_1_1Sprite_ad9ee40701d5e869d5a3ac81e6cb143a5} 
 \index{te::components::Sprite@{te::components::Sprite}!Sprite@{Sprite}}
 \index{Sprite@{Sprite}!te::components::Sprite@{te::components::Sprite}}
 \doxysubsubsection{\texorpdfstring{Sprite()}{Sprite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily te\+::components\+::\+Sprite\+::\+Sprite (\begin{DoxyParamCaption}\item[{sf\+::\+Texture \&}]{texture }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily te\+::components\+::\+Sprite\+::\+Sprite (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{texture }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -69,11 +69,11 @@ creates the component with given texture and sets it to the sprite
 {\em texture} & texture for the sprite \\
 \hline
 \end{DoxyParams}
-\Hypertarget{structte_1_1components_1_1Sprite_abc98283207af9cd4701bb2d4631aed11}\label{structte_1_1components_1_1Sprite_abc98283207af9cd4701bb2d4631aed11} 
+\Hypertarget{structte_1_1components_1_1Sprite_a6cc3a9531d769120a9e336814ea12d9a}\label{structte_1_1components_1_1Sprite_a6cc3a9531d769120a9e336814ea12d9a} 
 \index{te::components::Sprite@{te::components::Sprite}!Sprite@{Sprite}}
 \index{Sprite@{Sprite}!te::components::Sprite@{te::components::Sprite}}
 \doxysubsubsection{\texorpdfstring{Sprite()}{Sprite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily te\+::components\+::\+Sprite\+::\+Sprite (\begin{DoxyParamCaption}\item[{sf\+::\+Texture \&}]{texture,  }\item[{sf\+::\+Int\+Rect \&}]{animation\+Rectangle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily te\+::components\+::\+Sprite\+::\+Sprite (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{texture,  }\item[{sf\+::\+Int\+Rect \&}]{animation\+Rectangle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 

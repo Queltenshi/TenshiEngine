@@ -114,9 +114,9 @@ Inheritance diagram for te::systems::RenderSystem:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5e38b8b1586244d7cb2f0543b4f8fcb2" id="r_a5e38b8b1586244d7cb2f0543b4f8fcb2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classte_1_1systems_1_1RenderSystem.html#a5e38b8b1586244d7cb2f0543b4f8fcb2">RenderSystem</a> (<a class="el" href="classte_1_1Registry.html">Registry</a> &amp;registry, float &amp;deltaTime, sf::RenderWindow &amp;window)</td></tr>
-<tr class="memdesc:a5e38b8b1586244d7cb2f0543b4f8fcb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="separator:a5e38b8b1586244d7cb2f0543b4f8fcb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58458dc6e850b8debc46683e3927190c" id="r_a58458dc6e850b8debc46683e3927190c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classte_1_1systems_1_1RenderSystem.html#a58458dc6e850b8debc46683e3927190c">RenderSystem</a> (<a class="el" href="classte_1_1Registry.html">Registry</a> &amp;registry, float &amp;deltaTime, sf::RenderWindow &amp;window, <a class="el" href="classte_1_1managers_1_1CameraManager.html">managers::CameraManager</a> &amp;cameraManager, <a class="el" href="classte_1_1managers_1_1BackgroundManager.html">managers::BackgroundManager</a> &amp;backgroundManager)</td></tr>
+<tr class="memdesc:a58458dc6e850b8debc46683e3927190c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
+<tr class="separator:a58458dc6e850b8debc46683e3927190c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70523add6b7a258e117e3bdc2a9341d9" id="r_a70523add6b7a258e117e3bdc2a9341d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classte_1_1systems_1_1RenderSystem.html#a70523add6b7a258e117e3bdc2a9341d9">update</a> ()</td></tr>
 <tr class="memdesc:a70523add6b7a258e117e3bdc2a9341d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">updates the system  <br /></td></tr>
 <tr class="separator:a70523add6b7a258e117e3bdc2a9341d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,8 +153,8 @@ float &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>mDeltaTime</b>
 <div class="textblock"><p><a class="el" href="classte_1_1systems_1_1System.html" title="Base system.">System</a> for rendering the sprite. </p>
 <p>Does rendering of the sprite in the window </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a5e38b8b1586244d7cb2f0543b4f8fcb2" name="a5e38b8b1586244d7cb2f0543b4f8fcb2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e38b8b1586244d7cb2f0543b4f8fcb2">&#9670;&#160;</a></span>RenderSystem()</h2>
+<a id="a58458dc6e850b8debc46683e3927190c" name="a58458dc6e850b8debc46683e3927190c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58458dc6e850b8debc46683e3927190c">&#9670;&#160;</a></span>RenderSystem()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,7 +175,19 @@ float &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>mDeltaTime</b>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">sf::RenderWindow &amp;&#160;</td>
-          <td class="paramname"><em>window</em>&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classte_1_1managers_1_1CameraManager.html">managers::CameraManager</a> &amp;&#160;</td>
+          <td class="paramname"><em>cameraManager</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classte_1_1managers_1_1BackgroundManager.html">managers::BackgroundManager</a> &amp;&#160;</td>
+          <td class="paramname"><em>backgroundManager</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -186,12 +198,13 @@ float &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>mDeltaTime</b>
 </div><div class="memdoc">
 
 <p>Constructor. </p>
-<p>creates the <a class="el" href="classte_1_1systems_1_1System.html" title="Base system.">System</a></p>
+<p>creates the <a class="el" href="classte_1_1systems_1_1System.html" title="Base system.">System</a> with given window and cameraManager</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">registry</td><td>reference to the registry </td></tr>
     <tr><td class="paramname">deltaTime</td><td>reference to the frame delta time </td></tr>
     <tr><td class="paramname">window</td><td>reference to the window </td></tr>
+    <tr><td class="paramname">cameraManager</td><td>reference to the cameraManager </td></tr>
   </table>
   </dd>
 </dl>

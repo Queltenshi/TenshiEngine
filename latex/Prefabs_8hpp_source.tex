@@ -3,43 +3,44 @@
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Core/Registry.hpp"{}}}
-\DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{keyword}{namespace\ }te\{}
-\DoxyCodeLine{00004\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1Prefabs}{Prefabs}}\{}
-\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{classte_1_1Prefabs}{Prefabs}}()=\textcolor{keyword}{delete};}
-\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classte_1_1Prefabs}{Prefabs}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classte_1_1Prefabs}{Prefabs}}\&)=\textcolor{keyword}{delete};}
-\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classte_1_1Prefabs}{Prefabs}}(\mbox{\hyperlink{classte_1_1Prefabs}{Prefabs}}\&\&)=\textcolor{keyword}{delete};\ }
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ \mbox{\hyperlink{classte_1_1Prefabs_aa55ddf0810133027bdc29498784b5315}{PlatformerPlayer}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry,\ sf::Texture\ \&texture)\{}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ entity\ =\ registry.\mbox{\hyperlink{classte_1_1Registry_a8711ff219ebf13ead555c90a545e55a2}{createEntity}}(texture);}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1PlayerInput}{components::PlayerInput}}());}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1HorizontalMovement}{components::HorizontalMovement}}());}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Jump}{components::Jump}}());}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Velocity}{components::Velocity}}());}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Grounded}{components::Grounded}}());}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Rigidbody}{components::Rigidbody}}());}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ sprite\ =\ registry.\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{getComponent}}<\mbox{\hyperlink{structte_1_1components_1_1Sprite}{components::Sprite}}>(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}});}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ spriteSize\ =\ sprite-\/>\mbox{\hyperlink{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f}{sprite}}.getGlobalBounds().size;}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Collider}{components::Collider}}(spriteSize));}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ entity;}
-\DoxyCodeLine{00037\ \ \ \ \ \}}
-\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ \mbox{\hyperlink{classte_1_1Prefabs_aa266247ced0fa3a7f4b42e631ec5ae0b}{PlatformerPlayer}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry,\ sf::Texture\ \&texture,\ json\ \&textureData)\{}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ entity\ =\ registry.\mbox{\hyperlink{classte_1_1Registry_a8711ff219ebf13ead555c90a545e55a2}{createEntity}}(texture,\ textureData);}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1PlayerInput}{components::PlayerInput}}());}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1HorizontalMovement}{components::HorizontalMovement}}());}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Jump}{components::Jump}}());}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Velocity}{components::Velocity}}());}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Grounded}{components::Grounded}}());}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Rigidbody}{components::Rigidbody}}());}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ sprite\ =\ registry.\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{getComponent}}<\mbox{\hyperlink{structte_1_1components_1_1Sprite}{components::Sprite}}>(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}});}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ spriteSize\ =\ sprite-\/>\mbox{\hyperlink{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f}{sprite}}.getGlobalBounds().size;}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Collider}{components::Collider}}(spriteSize));}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ entity;}
-\DoxyCodeLine{00060\ \ \ \ \ \}}
-\DoxyCodeLine{00061\ \};}
-\DoxyCodeLine{00062\ }
-\DoxyCodeLine{00063\ \}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1Prefabs}{Prefabs}}\{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classte_1_1Prefabs}{Prefabs}}()=\textcolor{keyword}{delete};}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classte_1_1Prefabs}{Prefabs}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classte_1_1Prefabs}{Prefabs}}\&)=\textcolor{keyword}{delete};}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classte_1_1Prefabs}{Prefabs}}(\mbox{\hyperlink{classte_1_1Prefabs}{Prefabs}}\&\&)=\textcolor{keyword}{delete};\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ \mbox{\hyperlink{classte_1_1Prefabs_ae75c5bcd56d306419ca4d87f87e74235}{PlatformerPlayer}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry,\ std::shared\_ptr<sf::Texture>\ texture)\{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ entity\ =\ registry.\mbox{\hyperlink{classte_1_1Registry_a321f4bcfdd4fc73ae50e710e71b6dc79}{createEntity}}(texture);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1PlayerInput}{components::PlayerInput}}());}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1HorizontalMovement}{components::HorizontalMovement}}());}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Jump}{components::Jump}}());}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Velocity}{components::Velocity}}());}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Grounded}{components::Grounded}}());}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Rigidbody}{components::Rigidbody}}());}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ sprite\ =\ registry.\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{getComponent}}<\mbox{\hyperlink{structte_1_1components_1_1Sprite}{components::Sprite}}>(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}});}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ spriteSize\ =\ sprite-\/>\mbox{\hyperlink{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f}{sprite}}.getGlobalBounds().size;}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Collider}{components::Collider}}(spriteSize));}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ entity;}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ \mbox{\hyperlink{classte_1_1Prefabs_a4df531bfdf5336d26f768d81a3ed195a}{PlatformerPlayer}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry,\ std::shared\_ptr<sf::Texture>\ texture,\ std::shared\_ptr<json>\ animationData)\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ entity\ =\ registry.\mbox{\hyperlink{classte_1_1Registry_a321f4bcfdd4fc73ae50e710e71b6dc79}{createEntity}}(texture,\ animationData);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1PlayerInput}{components::PlayerInput}}());}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1HorizontalMovement}{components::HorizontalMovement}}());}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Jump}{components::Jump}}());}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Velocity}{components::Velocity}}());}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Grounded}{components::Grounded}}());}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Rigidbody}{components::Rigidbody}}());}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ sprite\ =\ registry.\mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{getComponent}}<\mbox{\hyperlink{structte_1_1components_1_1Sprite}{components::Sprite}}>(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}});}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ spriteSize\ =\ sprite-\/>\mbox{\hyperlink{structte_1_1components_1_1Sprite_a40bc0adbb2b799d88206f6b3546f321f}{sprite}}.getGlobalBounds().size;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ registry.\mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Collider}{components::Collider}}(spriteSize));}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ entity;}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \}}
 
 \end{DoxyCode}

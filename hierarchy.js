@@ -1,5 +1,8 @@
 var hierarchy =
 [
+    [ "te::managers::BackgroundManager", "classte_1_1managers_1_1BackgroundManager.html", null ],
+    [ "te::Camera", "structte_1_1Camera.html", null ],
+    [ "te::managers::CameraManager", "classte_1_1managers_1_1CameraManager.html", null ],
     [ "te::components::Component", "structte_1_1components_1_1Component.html", [
       [ "te::components::Animation", "structte_1_1components_1_1Animation.html", null ],
       [ "te::components::Collider", "structte_1_1components_1_1Collider.html", null ],
@@ -15,8 +18,10 @@ var hierarchy =
     ] ],
     [ "te::Entity", "structte_1_1Entity.html", null ],
     [ "te::GameBase", "classte_1_1GameBase.html", null ],
+    [ "te::Logger", "classte_1_1Logger.html", null ],
     [ "te::Prefabs", "classte_1_1Prefabs.html", null ],
     [ "te::Registry", "classte_1_1Registry.html", null ],
+    [ "te::managers::ResourceManager", "classte_1_1managers_1_1ResourceManager.html", null ],
     [ "te::systems::System", "classte_1_1systems_1_1System.html", [
       [ "te::systems::FixedSystem", "classte_1_1systems_1_1FixedSystem.html", [
         [ "te::systems::MovementSystem", "classte_1_1systems_1_1MovementSystem.html", null ],
@@ -27,5 +32,6 @@ var hierarchy =
         [ "te::systems::InputSystem", "classte_1_1systems_1_1InputSystem.html", null ],
         [ "te::systems::RenderSystem", "classte_1_1systems_1_1RenderSystem.html", null ]
       ] ]
-    ] ]
+    ] ],
+    [ "te::managers::TileMapManager", "classte_1_1managers_1_1TileMapManager.html", null ]
 ];

@@ -8,57 +8,63 @@
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Components/Component.hpp"{}}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}nlohmann/json.hpp"{}}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <SFML/Graphics/Rect.hpp>}}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{using\ }json\ =\ nlohmann::json;}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }te\{}
-\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }components\{}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00018\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structte_1_1components_1_1Animation}{Animation}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structte_1_1components_1_1Component}{Component}}\{}
-\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Animation_ac736f7ae16df4d3eb9d02e5c70dca5d5}{Animation}}(json\ \&\mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}}):\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}}(\mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}})\{}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ idleFrame\ =\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}}[\textcolor{stringliteral}{"{}animations"{}}][\textcolor{stringliteral}{"{}idle"{}}][0];}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Animation_aebc50046bc4e84b0a2f5faa74f176eec}{rectangle}}.size\ =\ \{idleFrame[\textcolor{stringliteral}{"{}w"{}}],\ idleFrame[\textcolor{stringliteral}{"{}h"{}}]\};}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Animation_aebc50046bc4e84b0a2f5faa74f176eec}{rectangle}}.position\ =\ \{idleFrame[\textcolor{stringliteral}{"{}x"{}}],\ idleFrame[\textcolor{stringliteral}{"{}y"{}}]\};}
-\DoxyCodeLine{00032\ \ \ \ \ \}}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{enum\ class}\ CurrentAnimation\{IDLE,\ WALK,\ JUMP,\ FALL,\ HIT\};}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \ \ \ \ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a09ce9b262f079027f2f2625f563c6775}{toString}}()\textcolor{keyword}{\ const\ override}\{}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}(iterator:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Animation_a9523ca7e9d9d74ac84b12f4460e7d20e}{iterator}})\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ }
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}elapsedTime:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Animation_a7eac278383070e98f62838783cc6dd40}{elapsedTime}})\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ }
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}switchTime:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Animation_a4e9a1f15923794d575120aecd7287f34}{switchTime}})\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ }
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}currentAnimation:\ "{}}\ +\ animationToString(\mbox{\hyperlink{structte_1_1components_1_1Animation_abbfce0e9965660205d8826e7ce2a7126}{currentAnimation}})\ +\ \textcolor{stringliteral}{"{})"{}};\ }
-\DoxyCodeLine{00041\ \ \ \ \ \}}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a9523ca7e9d9d74ac84b12f4460e7d20e}{iterator}}\ =\ 0;}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a7eac278383070e98f62838783cc6dd40}{elapsedTime}}\ =\ 0.f;}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Core/Logger.hpp"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ }json\ =\ nlohmann::json;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }components\{}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structte_1_1components_1_1Animation}{Animation}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structte_1_1components_1_1Component}{Component}}\{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Animation_a9251a3c60283895b6bfd1b53d28aaa61}{Animation}}(std::shared\_ptr<json>\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a6a4963a6a65fd9e3fde736256fbbdd36}{animationData}}):\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a6a4963a6a65fd9e3fde736256fbbdd36}{animationData}}(std::move(\mbox{\hyperlink{structte_1_1components_1_1Animation_a6a4963a6a65fd9e3fde736256fbbdd36}{animationData}}))\{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>animationData-\/>contains(\textcolor{stringliteral}{"{}animations"{}}))\{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ idleFrame\ =\ this-\/>animationData-\/>at(\textcolor{stringliteral}{"{}animations"{}})[\textcolor{stringliteral}{"{}idle"{}}][0];}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Animation_aebc50046bc4e84b0a2f5faa74f176eec}{rectangle}}.size\ =\ \{idleFrame[\textcolor{stringliteral}{"{}w"{}}],\ idleFrame[\textcolor{stringliteral}{"{}h"{}}]\};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Animation_aebc50046bc4e84b0a2f5faa74f176eec}{rectangle}}.position\ =\ \{idleFrame[\textcolor{stringliteral}{"{}x"{}}],\ idleFrame[\textcolor{stringliteral}{"{}y"{}}]\};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classte_1_1Logger_a66ebf939aa0ae502cdb5622e8cd5688e}{Logger::error}}(\mbox{\hyperlink{structte_1_1components_1_1Animation_a31e565752008fcf3690f0dd4f7afabe8}{name}},\ \textcolor{stringliteral}{"{}no\ animations\ in\ json\ file\ found"{}});}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{enum\ class}\ CurrentAnimation\{IDLE,\ WALK,\ JUMP,\ FALL,\ HIT\};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a09ce9b262f079027f2f2625f563c6775}{toString}}()\textcolor{keyword}{\ const\ override}\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}(iterator:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Animation_a9523ca7e9d9d74ac84b12f4460e7d20e}{iterator}})\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}elapsedTime:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Animation_a7eac278383070e98f62838783cc6dd40}{elapsedTime}})\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}switchTime:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1components_1_1Animation_a4e9a1f15923794d575120aecd7287f34}{switchTime}})\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}currentAnimation:\ "{}}\ +\ animationToString(\mbox{\hyperlink{structte_1_1components_1_1Animation_abbfce0e9965660205d8826e7ce2a7126}{currentAnimation}})\ +\ \textcolor{stringliteral}{"{})"{}};\ }
+\DoxyCodeLine{00047\ \ \ \ \ \}}
 \DoxyCodeLine{00048\ }
-\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a4e9a1f15923794d575120aecd7287f34}{switchTime}}\ =\ 0.2f;}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a9523ca7e9d9d74ac84b12f4460e7d20e}{iterator}}\ =\ 0;}
 \DoxyCodeLine{00051\ }
-\DoxyCodeLine{00053\ \ \ \ \ sf::IntRect\ \mbox{\hyperlink{structte_1_1components_1_1Animation_aebc50046bc4e84b0a2f5faa74f176eec}{rectangle}};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a7eac278383070e98f62838783cc6dd40}{elapsedTime}}\ =\ 0.f;}
 \DoxyCodeLine{00054\ }
-\DoxyCodeLine{00056\ \ \ \ \ json\ \&\mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{textureData}};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a4e9a1f15923794d575120aecd7287f34}{switchTime}}\ =\ 0.2f;}
 \DoxyCodeLine{00057\ }
-\DoxyCodeLine{00059\ \ \ \ \ CurrentAnimation\ \mbox{\hyperlink{structte_1_1components_1_1Animation_abbfce0e9965660205d8826e7ce2a7126}{currentAnimation}}\ =\ CurrentAnimation::IDLE;}
+\DoxyCodeLine{00059\ \ \ \ \ sf::IntRect\ \mbox{\hyperlink{structte_1_1components_1_1Animation_aebc50046bc4e84b0a2f5faa74f176eec}{rectangle}};}
 \DoxyCodeLine{00060\ }
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a31e565752008fcf3690f0dd4f7afabe8}{name}}\ =\ \textcolor{stringliteral}{"{}Animation"{}};}
+\DoxyCodeLine{00062\ \ \ \ \ std::shared\_ptr<json>\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a6a4963a6a65fd9e3fde736256fbbdd36}{animationData}};}
 \DoxyCodeLine{00063\ }
-\DoxyCodeLine{00064\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ animationToString(CurrentAnimation\ \mbox{\hyperlink{structte_1_1components_1_1Animation_abbfce0e9965660205d8826e7ce2a7126}{currentAnimation}})\ \{}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\mbox{\hyperlink{structte_1_1components_1_1Animation_abbfce0e9965660205d8826e7ce2a7126}{currentAnimation}})\ \{}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentAnimation::IDLE:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}IDLE"{}};}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentAnimation::WALK:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}WALK"{}};}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentAnimation::JUMP:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}JUMP"{}};}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentAnimation::FALL:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}FALL"{}};}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentAnimation::HIT:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}HIT"{}};}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}UNKNOWN"{}};}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00074\ \ \ \ \ \}}
-\DoxyCodeLine{00075\ \};}
-\DoxyCodeLine{00076\ }
-\DoxyCodeLine{00077\ \}}
-\DoxyCodeLine{00078\ \}}
+\DoxyCodeLine{00065\ \ \ \ \ CurrentAnimation\ \mbox{\hyperlink{structte_1_1components_1_1Animation_abbfce0e9965660205d8826e7ce2a7126}{currentAnimation}}\ =\ CurrentAnimation::IDLE;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Animation_a31e565752008fcf3690f0dd4f7afabe8}{name}}\ =\ \textcolor{stringliteral}{"{}Animation"{}};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ animationToString(CurrentAnimation\ \mbox{\hyperlink{structte_1_1components_1_1Animation_abbfce0e9965660205d8826e7ce2a7126}{currentAnimation}})\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\mbox{\hyperlink{structte_1_1components_1_1Animation_abbfce0e9965660205d8826e7ce2a7126}{currentAnimation}})\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentAnimation::IDLE:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}IDLE"{}};}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentAnimation::WALK:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}WALK"{}};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentAnimation::JUMP:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}JUMP"{}};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentAnimation::FALL:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}FALL"{}};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ CurrentAnimation::HIT:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}HIT"{}};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}UNKNOWN"{}};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \}}
+\DoxyCodeLine{00084\ \}}
 
 \end{DoxyCode}

@@ -21,9 +21,9 @@ Creating entities with prefabs.
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{structte_1_1Entity}{Entity}} \mbox{\hyperlink{classte_1_1Prefabs_aa55ddf0810133027bdc29498784b5315}{Platformer\+Player}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, sf\+::\+Texture \&texture)
+static \mbox{\hyperlink{structte_1_1Entity}{Entity}} \mbox{\hyperlink{classte_1_1Prefabs_ae75c5bcd56d306419ca4d87f87e74235}{Platformer\+Player}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ texture)
 \begin{DoxyCompactList}\small\item\em creates platformer player \end{DoxyCompactList}\item 
-static \mbox{\hyperlink{structte_1_1Entity}{Entity}} \mbox{\hyperlink{classte_1_1Prefabs_aa266247ced0fa3a7f4b42e631ec5ae0b}{Platformer\+Player}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, sf\+::\+Texture \&texture, json \&texture\+Data)
+static \mbox{\hyperlink{structte_1_1Entity}{Entity}} \mbox{\hyperlink{classte_1_1Prefabs_a4df531bfdf5336d26f768d81a3ed195a}{Platformer\+Player}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ texture, std\+::shared\+\_\+ptr$<$ json $>$ animation\+Data)
 \begin{DoxyCompactList}\small\item\em creates platformer player with animation \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -33,11 +33,11 @@ Creating entities with prefabs.
 Creates entities through different prefabs with predefined components 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classte_1_1Prefabs_aa55ddf0810133027bdc29498784b5315}\label{classte_1_1Prefabs_aa55ddf0810133027bdc29498784b5315} 
+\Hypertarget{classte_1_1Prefabs_ae75c5bcd56d306419ca4d87f87e74235}\label{classte_1_1Prefabs_ae75c5bcd56d306419ca4d87f87e74235} 
 \index{te::Prefabs@{te::Prefabs}!PlatformerPlayer@{PlatformerPlayer}}
 \index{PlatformerPlayer@{PlatformerPlayer}!te::Prefabs@{te::Prefabs}}
 \doxysubsubsection{\texorpdfstring{PlatformerPlayer()}{PlatformerPlayer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily static \mbox{\hyperlink{structte_1_1Entity}{Entity}} te\+::\+Prefabs\+::\+Platformer\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry,  }\item[{sf\+::\+Texture \&}]{texture }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structte_1_1Entity}{Entity}} te\+::\+Prefabs\+::\+Platformer\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry,  }\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{texture }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
 
@@ -52,17 +52,17 @@ creates new entity with given texture and adds Player\+Input, Horizontal\+Moveme
 {\em texture} & Texture to display \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classte_1_1Prefabs_aa266247ced0fa3a7f4b42e631ec5ae0b}\label{classte_1_1Prefabs_aa266247ced0fa3a7f4b42e631ec5ae0b} 
+\Hypertarget{classte_1_1Prefabs_a4df531bfdf5336d26f768d81a3ed195a}\label{classte_1_1Prefabs_a4df531bfdf5336d26f768d81a3ed195a} 
 \index{te::Prefabs@{te::Prefabs}!PlatformerPlayer@{PlatformerPlayer}}
 \index{PlatformerPlayer@{PlatformerPlayer}!te::Prefabs@{te::Prefabs}}
 \doxysubsubsection{\texorpdfstring{PlatformerPlayer()}{PlatformerPlayer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily static \mbox{\hyperlink{structte_1_1Entity}{Entity}} te\+::\+Prefabs\+::\+Platformer\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry,  }\item[{sf\+::\+Texture \&}]{texture,  }\item[{json \&}]{texture\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{structte_1_1Entity}{Entity}} te\+::\+Prefabs\+::\+Platformer\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry,  }\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{texture,  }\item[{std\+::shared\+\_\+ptr$<$ json $>$}]{animation\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
 
 
 
 creates platformer player with animation 
 
-creates new entity with given texture and texture\+Data and adds Player\+Input, Horizontal\+Movement, Jump, Velocity, Grounded, Rigidbody, Collider
+creates new entity with given texture and animation\+Data and adds Player\+Input, Horizontal\+Movement, Jump, Velocity, Grounded, Rigidbody, Collider
 
 
 \begin{DoxyParams}{Parameters}
@@ -70,7 +70,7 @@ creates new entity with given texture and texture\+Data and adds Player\+Input, 
 \hline
 {\em texture} & Texture to display \\
 \hline
-{\em texture\+Data} & json data used for animation \\
+{\em animation\+Data} & json data used for animation \\
 \hline
 \end{DoxyParams}
 

@@ -1,0 +1,133 @@
+\doxysection{te\+::Logger Class Reference}
+\hypertarget{classte_1_1Logger}{}\label{classte_1_1Logger}\index{te::Logger@{te::Logger}}
+
+
+\doxylink{classte_1_1Logger}{Logger} for logging messages.  
+
+
+
+
+{\ttfamily \#include $<$Logger.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classte_1_1Logger_a0b11211ae02db32305bca9f40fdd452b}\label{classte_1_1Logger_a0b11211ae02db32305bca9f40fdd452b} 
+{\bfseries Logger} (const \mbox{\hyperlink{classte_1_1Logger}{Logger}} \&)=delete
+\item 
+\Hypertarget{classte_1_1Logger_afd495ecbeb66f7df1969a9acace379cd}\label{classte_1_1Logger_afd495ecbeb66f7df1969a9acace379cd} 
+{\bfseries Logger} (\mbox{\hyperlink{classte_1_1Logger}{Logger}} \&\&)=delete
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classte_1_1Logger_a92286ef59a24ea39ec7f83af1cbd1e69}\label{classte_1_1Logger_a92286ef59a24ea39ec7f83af1cbd1e69} 
+static void {\bfseries debug} (const std\+::string \&source, const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Use LOG\+\_\+\+DEBUG or LOG\+\_\+\+DEBUG\+\_\+\+COMPONENT\+\_\+\+CHANGED instead to automatically check if current\+Level is debug. \end{DoxyCompactList}\item 
+\Hypertarget{classte_1_1Logger_ae7f9a40fcdde306392cbca1b11fc8ee3}\label{classte_1_1Logger_ae7f9a40fcdde306392cbca1b11fc8ee3} 
+static void {\bfseries debug} (const std\+::string \&source, const std\+::string \&component\+Name, const \mbox{\hyperlink{structte_1_1components_1_1Component}{components\+::\+Component}} \texorpdfstring{$\ast$}{*}component, const Entity\+ID entity\+ID)
+\begin{DoxyCompactList}\small\item\em Use LOG\+\_\+\+DEBUG or LOG\+\_\+\+DEBUG\+\_\+\+COMPONENT\+\_\+\+CHANGED instead to automatically check if current\+Level is debug. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classte_1_1Logger_a95e3ba49ce1d8d8574e7593dae1e23b6}{warning}} (const std\+::string \&source, const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Logs warning. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classte_1_1Logger_a66ebf939aa0ae502cdb5622e8cd5688e}{error}} (const std\+::string \&source, const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Logs error. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classte_1_1Logger_a24266633522825ed58a308f4334d8ae6}{info}} (const std\+::string \&source, const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Logs info. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classte_1_1Logger_ab8b9538becc84681e9ea580c1a90e2c7}{critical}} (const std\+::string \&source, const std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Logs critical. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classte_1_1Logger_a2fb771ee5f3a5226cfb59a07cd2524a0}\label{classte_1_1Logger_a2fb771ee5f3a5226cfb59a07cd2524a0} 
+static Log\+Level {\bfseries current\+Level} = Log\+Level\+::\+DEBUG
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classte_1_1Logger}{Logger} for logging messages. 
+
+Logs messages depending on the current\+Level in different colors 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classte_1_1Logger_ab8b9538becc84681e9ea580c1a90e2c7}\label{classte_1_1Logger_ab8b9538becc84681e9ea580c1a90e2c7} 
+\index{te::Logger@{te::Logger}!critical@{critical}}
+\index{critical@{critical}!te::Logger@{te::Logger}}
+\doxysubsubsection{\texorpdfstring{critical()}{critical()}}
+{\footnotesize\ttfamily void te\+::\+Logger\+::critical (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{source,  }\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Logs critical. 
+
+Logs critical message in white color and red background
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Name of message sender \\
+\hline
+{\em message} & Message to log \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classte_1_1Logger_a66ebf939aa0ae502cdb5622e8cd5688e}\label{classte_1_1Logger_a66ebf939aa0ae502cdb5622e8cd5688e} 
+\index{te::Logger@{te::Logger}!error@{error}}
+\index{error@{error}!te::Logger@{te::Logger}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily void te\+::\+Logger\+::error (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{source,  }\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Logs error. 
+
+Logs error message in red color
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Name of message sender \\
+\hline
+{\em message} & Message to log \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classte_1_1Logger_a24266633522825ed58a308f4334d8ae6}\label{classte_1_1Logger_a24266633522825ed58a308f4334d8ae6} 
+\index{te::Logger@{te::Logger}!info@{info}}
+\index{info@{info}!te::Logger@{te::Logger}}
+\doxysubsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily void te\+::\+Logger\+::info (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{source,  }\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Logs info. 
+
+Logs info message in green color
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Name of message sender \\
+\hline
+{\em message} & Message to log \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classte_1_1Logger_a95e3ba49ce1d8d8574e7593dae1e23b6}\label{classte_1_1Logger_a95e3ba49ce1d8d8574e7593dae1e23b6} 
+\index{te::Logger@{te::Logger}!warning@{warning}}
+\index{warning@{warning}!te::Logger@{te::Logger}}
+\doxysubsubsection{\texorpdfstring{warning()}{warning()}}
+{\footnotesize\ttfamily void te\+::\+Logger\+::warning (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{source,  }\item[{const std\+::string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Logs warning. 
+
+Logs warning message in yellow color
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Name of message sender \\
+\hline
+{\em message} & Message to log \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Tenshi\+Engine/\+Engine/\+Core/Logger.\+hpp\item 
+src/\+Engine/\+Core/Logger.\+cpp\end{DoxyCompactItemize}

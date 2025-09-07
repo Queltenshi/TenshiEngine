@@ -22,15 +22,19 @@
 \DoxyCodeLine{00042\ }
 \DoxyCodeLine{00043\ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ updateGravity(EntityID\ entityID,\ \mbox{\hyperlink{structte_1_1components_1_1Velocity}{components::Velocity}}\ *velocity);}
-\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ checkCollision(EntityID\ entityID1,\ EntityID\ entityID2);}
-\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ correctPosition(EntityID\ entityID,\ \mbox{\hyperlink{structte_1_1components_1_1Transform}{components::Transform}}\ *transform1,\ \mbox{\hyperlink{structte_1_1components_1_1Transform}{components::Transform}}\ *transform2,\ sf::FloatRect\ overlapRect);}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{float}\ mGravity;}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ defaultGravity\ =\ 25.f;}
-\DoxyCodeLine{00051\ \};}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00053\ \}}
-\DoxyCodeLine{00054\ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ checkCollision();}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ checkXCollisions(\mbox{\hyperlink{structte_1_1components_1_1Transform}{components::Transform}}\ *transform,\ sf::FloatRect\ \&rect,\ EntityID\ movingEntityID);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ checkYCollisions(\mbox{\hyperlink{structte_1_1components_1_1Transform}{components::Transform}}\ *transform,\ sf::FloatRect\ \&rect,\ EntityID\ movingEntityID);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ correctXPosition(\mbox{\hyperlink{structte_1_1components_1_1Velocity}{components::Velocity}}\ *velocity,\ \mbox{\hyperlink{structte_1_1components_1_1Transform}{components::Transform}}\ *transform,\ sf::FloatRect\ intersectionRect,\ sf::FloatRect\ \&rect);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ correctYPosition(\mbox{\hyperlink{structte_1_1components_1_1Velocity}{components::Velocity}}\ *velocity,\ \mbox{\hyperlink{structte_1_1components_1_1Transform}{components::Transform}}\ *transform,\ sf::FloatRect\ intersectionRect,\ sf::FloatRect\ \&rect,\ EntityID\ movingEntityID);}
+\DoxyCodeLine{00050\ \ \ \ \ sf::FloatRect\ getWorldBounds(\mbox{\hyperlink{structte_1_1components_1_1Transform}{components::Transform}}\ *transform,\ \mbox{\hyperlink{structte_1_1components_1_1Collider}{components::Collider}}\ *collider);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{float}\ mGravity;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ defaultGravity;}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \}}
+\DoxyCodeLine{00058\ \}}
 
 \end{DoxyCode}

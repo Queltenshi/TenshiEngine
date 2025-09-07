@@ -1,0 +1,36 @@
+\doxysection{Tile\+Map\+Manager.\+hpp}
+\hypertarget{TileMapManager_8hpp_source}{}\label{TileMapManager_8hpp_source}\index{include/TenshiEngine/Engine/Manager/TileMapManager.hpp@{include/TenshiEngine/Engine/Manager/TileMapManager.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Core/Registry.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }managers\{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1managers_1_1TileMapManager}{TileMapManager}}\{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classte_1_1managers_1_1TileMapManager}{TileMapManager}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1TileMapManager_ab95f14918af13942cfe4a363bb737f09}{loadTileset}}(std::shared\_ptr<sf::Texture>\ tilesetTexture,\ std::shared\_ptr<json>\ tilesetData);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1TileMapManager_a0cbe1fdd18b2f2a313f9a6e4add5cda7}{loadLevel}}(std::shared\_ptr<json>\ levelData);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ \ \ std::vector<std::vector<int>>\ \mbox{\hyperlink{classte_1_1managers_1_1TileMapManager_a0cbe1fdd18b2f2a313f9a6e4add5cda7}{loadLevel}}(sf::Vector2i\ levelSize,\ std::shared\_ptr<json>\ levelData);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ createEntities(std::vector<std::vector<int>>\ \&level,\ sf::Vector2i\ levelSize);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&mRegistry;}
+\DoxyCodeLine{00050\ \ \ \ \ std::shared\_ptr<sf::Texture>\ mTilesetTexture;}
+\DoxyCodeLine{00051\ \ \ \ \ sf::Vector2i\ mTileSize;}
+\DoxyCodeLine{00052\ \ \ \ \ std::vector<int>\ mColliders;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ name;}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \}}
+\DoxyCodeLine{00058\ \}}
+
+\end{DoxyCode}

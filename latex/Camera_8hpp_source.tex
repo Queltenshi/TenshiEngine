@@ -1,0 +1,55 @@
+\doxysection{Camera.\+hpp}
+\hypertarget{Camera_8hpp_source}{}\label{Camera_8hpp_source}\index{include/TenshiEngine/Engine/Camera/Camera.hpp@{include/TenshiEngine/Engine/Camera/Camera.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ \ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Entity/Entity.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SFML/Graphics/View.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structte_1_1Camera}{Camera}}\{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{enum\ class}\ Movement\{HORIZONTAL,\ VERTICAL,\ FREE\};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{structte_1_1Camera_aaf59dddcc36ad102b93bd6c6e228fb7f}{Camera}}(sf::Vector2f\ \mbox{\hyperlink{structte_1_1Camera_acd4ae4bf616d05557069bdacccd70a55}{position}},\ sf::Vector2f\ \mbox{\hyperlink{structte_1_1Camera_ad23a3fb631728a263fec5c38063b3f71}{size}},\ EntityID\ \mbox{\hyperlink{structte_1_1Camera_a0899a9a34519f1828c7d999bb1314df3}{entityID}})}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{structte_1_1Camera_a0899a9a34519f1828c7d999bb1314df3}{entityID}}(\mbox{\hyperlink{structte_1_1Camera_a0899a9a34519f1828c7d999bb1314df3}{entityID}}),\ \mbox{\hyperlink{structte_1_1Camera_acd4ae4bf616d05557069bdacccd70a55}{position}}(\mbox{\hyperlink{structte_1_1Camera_acd4ae4bf616d05557069bdacccd70a55}{position}}),\ \mbox{\hyperlink{structte_1_1Camera_ad23a3fb631728a263fec5c38063b3f71}{size}}(\mbox{\hyperlink{structte_1_1Camera_ad23a3fb631728a263fec5c38063b3f71}{size}}),\ \mbox{\hyperlink{structte_1_1Camera_a5b66c2e18220aa9130f81d1402f7783d}{view}}(\mbox{\hyperlink{structte_1_1Camera_acd4ae4bf616d05557069bdacccd70a55}{position}},\ \mbox{\hyperlink{structte_1_1Camera_ad23a3fb631728a263fec5c38063b3f71}{size}}),\ \mbox{\hyperlink{structte_1_1Camera_a4deb29ee4c0bea72ff834d01f4561c3e}{movement}}(Movement::HORIZONTAL)\{\}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{structte_1_1Camera_a0caf6c4b2630736cc58286577b62e8bd}{Camera}}(sf::Vector2f\ \mbox{\hyperlink{structte_1_1Camera_acd4ae4bf616d05557069bdacccd70a55}{position}},\ sf::Vector2f\ \mbox{\hyperlink{structte_1_1Camera_ad23a3fb631728a263fec5c38063b3f71}{size}},\ EntityID\ \mbox{\hyperlink{structte_1_1Camera_a0899a9a34519f1828c7d999bb1314df3}{entityID}},\ Movement\ \mbox{\hyperlink{structte_1_1Camera_a4deb29ee4c0bea72ff834d01f4561c3e}{movement}})}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{structte_1_1Camera_a0899a9a34519f1828c7d999bb1314df3}{entityID}}(\mbox{\hyperlink{structte_1_1Camera_a0899a9a34519f1828c7d999bb1314df3}{entityID}}),\ \mbox{\hyperlink{structte_1_1Camera_acd4ae4bf616d05557069bdacccd70a55}{position}}(\mbox{\hyperlink{structte_1_1Camera_acd4ae4bf616d05557069bdacccd70a55}{position}}),\ \mbox{\hyperlink{structte_1_1Camera_ad23a3fb631728a263fec5c38063b3f71}{size}}(\mbox{\hyperlink{structte_1_1Camera_ad23a3fb631728a263fec5c38063b3f71}{size}}),\ \mbox{\hyperlink{structte_1_1Camera_a5b66c2e18220aa9130f81d1402f7783d}{view}}(\mbox{\hyperlink{structte_1_1Camera_acd4ae4bf616d05557069bdacccd70a55}{position}},\ \mbox{\hyperlink{structte_1_1Camera_ad23a3fb631728a263fec5c38063b3f71}{size}}),\ \mbox{\hyperlink{structte_1_1Camera_a4deb29ee4c0bea72ff834d01f4561c3e}{movement}}(\mbox{\hyperlink{structte_1_1Camera_a4deb29ee4c0bea72ff834d01f4561c3e}{movement}})\{\}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ std::string\ \mbox{\hyperlink{structte_1_1Camera_a1ea779fbadd8c5e5b6aff0a35586507f}{toString}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}(position.x:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1Camera_acd4ae4bf616d05557069bdacccd70a55}{position}}.x)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}position.y:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1Camera_acd4ae4bf616d05557069bdacccd70a55}{position}}.y)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}size.x:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1Camera_ad23a3fb631728a263fec5c38063b3f71}{size}}.x)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}size.y:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1Camera_ad23a3fb631728a263fec5c38063b3f71}{size}}.y)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Entity:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{structte_1_1Camera_a0899a9a34519f1828c7d999bb1314df3}{entityID}})\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}movement:\ "{}}\ +\ MovementToString(\mbox{\hyperlink{structte_1_1Camera_a4deb29ee4c0bea72ff834d01f4561c3e}{movement}})\ +\ \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{00056\ \ \ \ \ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ \ \ \ \ EntityID\ \mbox{\hyperlink{structte_1_1Camera_a0899a9a34519f1828c7d999bb1314df3}{entityID}};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00062\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{structte_1_1Camera_acd4ae4bf616d05557069bdacccd70a55}{position}};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00065\ \ \ \ \ sf::Vector2f\ \mbox{\hyperlink{structte_1_1Camera_ad23a3fb631728a263fec5c38063b3f71}{size}};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00068\ \ \ \ \ sf::View\ \mbox{\hyperlink{structte_1_1Camera_a5b66c2e18220aa9130f81d1402f7783d}{view}};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00071\ \ \ \ \ Movement\ \mbox{\hyperlink{structte_1_1Camera_a4deb29ee4c0bea72ff834d01f4561c3e}{movement}};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{static}\ std::string\ MovementToString(Movement\ \mbox{\hyperlink{structte_1_1Camera_a4deb29ee4c0bea72ff834d01f4561c3e}{movement}})\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\mbox{\hyperlink{structte_1_1Camera_a4deb29ee4c0bea72ff834d01f4561c3e}{movement}})\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Movement::HORIZONTAL:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}HORIZONTAL"{}};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Movement::VERTICAL:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}VERTICAL"{}};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ Movement::FREE:\ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}FREE"{}};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}UNKNOWN"{}};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \}}
+
+\end{DoxyCode}

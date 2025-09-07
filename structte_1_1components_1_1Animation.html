@@ -128,9 +128,9 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac736f7ae16df4d3eb9d02e5c70dca5d5" id="r_ac736f7ae16df4d3eb9d02e5c70dca5d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structte_1_1components_1_1Animation.html#ac736f7ae16df4d3eb9d02e5c70dca5d5">Animation</a> (json &amp;<a class="el" href="structte_1_1components_1_1Animation.html#a004201cbf848667fcbdbe028b997cf36">textureData</a>)</td></tr>
-<tr class="memdesc:ac736f7ae16df4d3eb9d02e5c70dca5d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor.  <br /></td></tr>
-<tr class="separator:ac736f7ae16df4d3eb9d02e5c70dca5d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9251a3c60283895b6bfd1b53d28aaa61" id="r_a9251a3c60283895b6bfd1b53d28aaa61"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structte_1_1components_1_1Animation.html#a9251a3c60283895b6bfd1b53d28aaa61">Animation</a> (std::shared_ptr&lt; json &gt; <a class="el" href="structte_1_1components_1_1Animation.html#a6a4963a6a65fd9e3fde736256fbbdd36">animationData</a>)</td></tr>
+<tr class="memdesc:a9251a3c60283895b6bfd1b53d28aaa61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor.  <br /></td></tr>
+<tr class="separator:a9251a3c60283895b6bfd1b53d28aaa61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09ce9b262f079027f2f2625f563c6775" id="r_a09ce9b262f079027f2f2625f563c6775"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structte_1_1components_1_1Animation.html#a09ce9b262f079027f2f2625f563c6775">toString</a> () const override</td></tr>
 <tr class="memdesc:a09ce9b262f079027f2f2625f563c6775"><td class="mdescLeft">&#160;</td><td class="mdescRight">shows data as a string  <br /></td></tr>
 <tr class="separator:a09ce9b262f079027f2f2625f563c6775"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,10 +157,10 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>switchTime</b> = 0.2
 sf::IntRect&#160;</td><td class="memItemRight" valign="bottom"><b>rectangle</b></td></tr>
 <tr class="memdesc:aebc50046bc4e84b0a2f5faa74f176eec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current rectangle of sprite sheet. <br /></td></tr>
 <tr class="separator:aebc50046bc4e84b0a2f5faa74f176eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a004201cbf848667fcbdbe028b997cf36" id="r_a004201cbf848667fcbdbe028b997cf36"><td class="memItemLeft" align="right" valign="top"><a id="a004201cbf848667fcbdbe028b997cf36" name="a004201cbf848667fcbdbe028b997cf36"></a>
-json &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>textureData</b></td></tr>
-<tr class="memdesc:a004201cbf848667fcbdbe028b997cf36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Json data used for animation. <br /></td></tr>
-<tr class="separator:a004201cbf848667fcbdbe028b997cf36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a4963a6a65fd9e3fde736256fbbdd36" id="r_a6a4963a6a65fd9e3fde736256fbbdd36"><td class="memItemLeft" align="right" valign="top"><a id="a6a4963a6a65fd9e3fde736256fbbdd36" name="a6a4963a6a65fd9e3fde736256fbbdd36"></a>
+std::shared_ptr&lt; json &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>animationData</b></td></tr>
+<tr class="memdesc:a6a4963a6a65fd9e3fde736256fbbdd36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Json data used for animation. <br /></td></tr>
+<tr class="separator:a6a4963a6a65fd9e3fde736256fbbdd36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbfce0e9965660205d8826e7ce2a7126" id="r_abbfce0e9965660205d8826e7ce2a7126"><td class="memItemLeft" align="right" valign="top"><a id="abbfce0e9965660205d8826e7ce2a7126" name="abbfce0e9965660205d8826e7ce2a7126"></a>
 CurrentAnimation&#160;</td><td class="memItemRight" valign="bottom"><b>currentAnimation</b> = CurrentAnimation::IDLE</td></tr>
 <tr class="memdesc:abbfce0e9965660205d8826e7ce2a7126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current animation. <br /></td></tr>
@@ -177,8 +177,8 @@ static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>n
 <div class="textblock"><p>component with animation data </p>
 <p>stores time and data for animations </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac736f7ae16df4d3eb9d02e5c70dca5d5" name="ac736f7ae16df4d3eb9d02e5c70dca5d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac736f7ae16df4d3eb9d02e5c70dca5d5">&#9670;&#160;</a></span>Animation()</h2>
+<a id="a9251a3c60283895b6bfd1b53d28aaa61" name="a9251a3c60283895b6bfd1b53d28aaa61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9251a3c60283895b6bfd1b53d28aaa61">&#9670;&#160;</a></span>Animation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -189,8 +189,8 @@ static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>n
         <tr>
           <td class="memname">te::components::Animation::Animation </td>
           <td>(</td>
-          <td class="paramtype">json &amp;&#160;</td>
-          <td class="paramname"><em>textureData</em></td><td>)</td>
+          <td class="paramtype">std::shared_ptr&lt; json &gt;&#160;</td>
+          <td class="paramname"><em>animationData</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -202,10 +202,10 @@ static const std::string&#160;</td><td class="memItemRight" valign="bottom"><b>n
 </div><div class="memdoc">
 
 <p>Default Constructor. </p>
-<p>creates the component with given textureData and sets rectangle to idle</p>
+<p>creates the component with given animationData and sets rectangle to idle</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">textureData</td><td>json data used for animation </td></tr>
+    <tr><td class="paramname">animationData</td><td>json data used for animation </td></tr>
   </table>
   </dd>
 </dl>

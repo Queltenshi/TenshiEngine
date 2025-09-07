@@ -1,0 +1,123 @@
+\doxysection{te\+::managers\+::Resource\+Manager Class Reference}
+\hypertarget{classte_1_1managers_1_1ResourceManager}{}\label{classte_1_1managers_1_1ResourceManager}\index{te::managers::ResourceManager@{te::managers::ResourceManager}}
+
+
+Manager for resources.  
+
+
+
+
+{\ttfamily \#include $<$Resource\+Manager.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classte_1_1managers_1_1ResourceManager_a8b8987e5c6b87d01e06e343a6d77c158}{Resource\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ \mbox{\hyperlink{classte_1_1managers_1_1ResourceManager_ad0095e60e437ee1258964cdf944116d7}{add\+Texture}} (const std\+::string \&name, const std\+::string \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Adds new texture. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ json $>$ \mbox{\hyperlink{classte_1_1managers_1_1ResourceManager_acc2149df3000be3d51af8d82bf196af9}{add\+Json}} (const std\+::string \&name, const std\+::string \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Adds new Json. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ \mbox{\hyperlink{classte_1_1managers_1_1ResourceManager_a2424cc8be34955b2da3a0bc3c4cf396a}{get\+Texture}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em gets texture \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ json $>$ \mbox{\hyperlink{classte_1_1managers_1_1ResourceManager_a4b8c4934672a6f350d93f073e7f612a1}{get\+Json}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em gets json \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manager for resources. 
+
+stores different types of resources 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classte_1_1managers_1_1ResourceManager_a8b8987e5c6b87d01e06e343a6d77c158}\label{classte_1_1managers_1_1ResourceManager_a8b8987e5c6b87d01e06e343a6d77c158} 
+\index{te::managers::ResourceManager@{te::managers::ResourceManager}!ResourceManager@{ResourceManager}}
+\index{ResourceManager@{ResourceManager}!te::managers::ResourceManager@{te::managers::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{ResourceManager()}{ResourceManager()}}
+{\footnotesize\ttfamily te\+::managers\+::\+Resource\+Manager\+::\+Resource\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+creates the Manager 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classte_1_1managers_1_1ResourceManager_acc2149df3000be3d51af8d82bf196af9}\label{classte_1_1managers_1_1ResourceManager_acc2149df3000be3d51af8d82bf196af9} 
+\index{te::managers::ResourceManager@{te::managers::ResourceManager}!addJson@{addJson}}
+\index{addJson@{addJson}!te::managers::ResourceManager@{te::managers::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{addJson()}{addJson()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ json $>$ te\+::managers\+::\+Resource\+Manager\+::add\+Json (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})}
+
+
+
+Adds new Json. 
+
+Adds and returns new json with given name and file\+Path
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of json \\
+\hline
+{\em file\+Path} & Filepath to json \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classte_1_1managers_1_1ResourceManager_ad0095e60e437ee1258964cdf944116d7}\label{classte_1_1managers_1_1ResourceManager_ad0095e60e437ee1258964cdf944116d7} 
+\index{te::managers::ResourceManager@{te::managers::ResourceManager}!addTexture@{addTexture}}
+\index{addTexture@{addTexture}!te::managers::ResourceManager@{te::managers::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{addTexture()}{addTexture()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ te\+::managers\+::\+Resource\+Manager\+::add\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})}
+
+
+
+Adds new texture. 
+
+Adds and returns new texture with given name and file\+Path
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of texture \\
+\hline
+{\em file\+Path} & Filepath to texture \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classte_1_1managers_1_1ResourceManager_a4b8c4934672a6f350d93f073e7f612a1}\label{classte_1_1managers_1_1ResourceManager_a4b8c4934672a6f350d93f073e7f612a1} 
+\index{te::managers::ResourceManager@{te::managers::ResourceManager}!getJson@{getJson}}
+\index{getJson@{getJson}!te::managers::ResourceManager@{te::managers::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{getJson()}{getJson()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ json $>$ te\+::managers\+::\+Resource\+Manager\+::get\+Json (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+gets json 
+
+returns json with given name
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of json \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classte_1_1managers_1_1ResourceManager_a2424cc8be34955b2da3a0bc3c4cf396a}\label{classte_1_1managers_1_1ResourceManager_a2424cc8be34955b2da3a0bc3c4cf396a} 
+\index{te::managers::ResourceManager@{te::managers::ResourceManager}!getTexture@{getTexture}}
+\index{getTexture@{getTexture}!te::managers::ResourceManager@{te::managers::ResourceManager}}
+\doxysubsubsection{\texorpdfstring{getTexture()}{getTexture()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ te\+::managers\+::\+Resource\+Manager\+::get\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+gets texture 
+
+returns texture with given name
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of texture \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Tenshi\+Engine/\+Engine/\+Manager/Resource\+Manager.\+hpp\item 
+src/\+Engine/\+Manager/Resource\+Manager.\+cpp\end{DoxyCompactItemize}

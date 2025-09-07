@@ -6,30 +6,40 @@
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SFML/System/Clock.hpp>}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Core/Registry.hpp"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Systems.hpp"{}}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }te\{}
-\DoxyCodeLine{00008\ }
-\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1GameBase}{GameBase}}\{}
-\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classte_1_1GameBase}{GameBase}}(std::string\ windowName);}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1GameBase_accb4b63d1277e46131d66a66c0e1e63b}{run}}();}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1GameBase_a0a8905a011a8ab2cd4b44ec611ff2aeb}{init}}();}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \mbox{\hyperlink{classte_1_1GameBase_ad88938b232f7f7f7d38850bce672cf89}{mRegistry}};}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Manager/CameraManager.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Manager/ResourceManager.hpp"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Manager/TileMapManager.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Systems.hpp"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1GameBase}{GameBase}}\{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classte_1_1GameBase}{GameBase}}(std::string\ windowName,\ sf::Vector2u\ windowSize);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1GameBase_accb4b63d1277e46131d66a66c0e1e63b}{run}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1GameBase_a0a8905a011a8ab2cd4b44ec611ff2aeb}{init}}();}
 \DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00051\ \ \ \ \ sf::RenderWindow\ mWindow;}
-\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ mFixedDeltaTime;}
-\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{float}\ mVariableDeltaTime;}
-\DoxyCodeLine{00054\ \ \ \ \ sf::Clock\ mClock;}
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{float}\ mAccumulator;}
-\DoxyCodeLine{00056\ \};}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \}}
+\DoxyCodeLine{00050\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \mbox{\hyperlink{classte_1_1GameBase_ad88938b232f7f7f7d38850bce672cf89}{mRegistry}};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{classte_1_1managers_1_1CameraManager}{managers::CameraManager}}\ \mbox{\hyperlink{classte_1_1GameBase_aba0495395e1d1758d051b3d96b47c106}{mCameraManager}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{classte_1_1managers_1_1ResourceManager}{managers::ResourceManager}}\ \mbox{\hyperlink{classte_1_1GameBase_ab0a32a29b9e620c5fe1cfdffe38ce2ae}{mResourceManager}};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{classte_1_1managers_1_1TileMapManager}{managers::TileMapManager}}\ \mbox{\hyperlink{classte_1_1GameBase_ab9ee297bb2e4768cffeeab08e4a78729}{mTileMapManager}};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager}{managers::BackgroundManager}}\ \mbox{\hyperlink{classte_1_1GameBase_a2d3fcbfb9994cc4a2f841dc293ca482f}{mBackgroundManager}};}
+\DoxyCodeLine{00065\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00066\ \ \ \ \ sf::RenderWindow\ mWindow;}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ mFixedDeltaTime;}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{float}\ mVariableDeltaTime;}
+\DoxyCodeLine{00069\ \ \ \ \ sf::Clock\ mClock;}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{float}\ mAccumulator;}
+\DoxyCodeLine{00071\ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \}}
 
 \end{DoxyCode}

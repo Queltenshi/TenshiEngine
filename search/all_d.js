@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['scale_0',['scale',['../structte_1_1components_1_1Transform.html#a003658936cb59b3a5cc93130be86ffa7',1,'te::components::Transform']]],
-  ['scaledirty_1',['scaleDirty',['../structte_1_1components_1_1Transform.html#a48cbf9fe99f5be6601233e069e740d72',1,'te::components::Transform']]],
-  ['speed_2',['speed',['../structte_1_1components_1_1HorizontalMovement.html#ac2317850de1a4b781984b65aa145f732',1,'te::components::HorizontalMovement']]],
-  ['sprite_3',['sprite',['../structte_1_1components_1_1Sprite.html',1,'te::components::Sprite'],['../structte_1_1components_1_1Sprite.html#a3b420674d3cc1df65d2daa1294b70a58',1,'te::components::Sprite::Sprite(sf::Texture &amp;texture)'],['../structte_1_1components_1_1Sprite.html#abc98283207af9cd4701bb2d4631aed11',1,'te::components::Sprite::Sprite(sf::Texture &amp;texture, sf::IntRect &amp;animationRectangle)'],['../structte_1_1components_1_1Sprite.html#a40bc0adbb2b799d88206f6b3546f321f',1,'te::components::Sprite::sprite']]],
-  ['state_4',['state',['../structte_1_1components_1_1State.html',1,'te::components::State'],['../structte_1_1components_1_1State.html#a55566331b395adfda5dd7758bcecf646',1,'te::components::State::State()']]],
-  ['strength_5',['strength',['../structte_1_1components_1_1Jump.html#a17cfd93f863fcf1dfa18569706143702',1,'te::components::Jump']]],
-  ['switchtime_6',['switchTime',['../structte_1_1components_1_1Animation.html#a4e9a1f15923794d575120aecd7287f34',1,'te::components::Animation']]],
-  ['system_7',['system',['../classte_1_1systems_1_1System.html',1,'te::systems::System'],['../classte_1_1systems_1_1System.html#ad654c9da05efadd658f3d4a2eae90a35',1,'te::systems::System::System()']]]
+  ['physicssystem_0',['physicssystem',['../classte_1_1systems_1_1PhysicsSystem.html',1,'te::systems::PhysicsSystem'],['../classte_1_1systems_1_1PhysicsSystem.html#a9d662bbbd1d4810275314dc4bb4cf1f6',1,'te::systems::PhysicsSystem::PhysicsSystem(Registry &amp;registry, const float deltaTime)'],['../classte_1_1systems_1_1PhysicsSystem.html#acd245fd3ec64ee8787f2931745590f0d',1,'te::systems::PhysicsSystem::PhysicsSystem(Registry &amp;registry, float deltaTime, float gravity)']]],
+  ['platformerplayer_1',['platformerplayer',['../classte_1_1Prefabs.html#ae75c5bcd56d306419ca4d87f87e74235',1,'te::Prefabs::PlatformerPlayer(Registry &amp;registry, std::shared_ptr&lt; sf::Texture &gt; texture)'],['../classte_1_1Prefabs.html#a4df531bfdf5336d26f768d81a3ed195a',1,'te::Prefabs::PlatformerPlayer(Registry &amp;registry, std::shared_ptr&lt; sf::Texture &gt; texture, std::shared_ptr&lt; json &gt; animationData)']]],
+  ['playerinput_2',['playerinput',['../structte_1_1components_1_1PlayerInput.html',1,'te::components::PlayerInput'],['../structte_1_1components_1_1PlayerInput.html#a91190750e098ba6cdbd5aa9754099750',1,'te::components::PlayerInput::PlayerInput()']]],
+  ['position_3',['position',['../structte_1_1Camera.html#acd4ae4bf616d05557069bdacccd70a55',1,'te::Camera::position'],['../structte_1_1components_1_1Transform.html#a52a85252a692cd3fca6c3ad375ca8d61',1,'te::components::Transform::position']]],
+  ['positiondirty_4',['positionDirty',['../structte_1_1components_1_1Transform.html#a32a7677f4eda57399c43f5b140b7b14f',1,'te::components::Transform']]],
+  ['prefabs_5',['Prefabs',['../classte_1_1Prefabs.html',1,'te']]]
 ];

@@ -18,7 +18,7 @@ Inheritance diagram for te\+::systems\+::Render\+System\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classte_1_1systems_1_1RenderSystem_a5e38b8b1586244d7cb2f0543b4f8fcb2}{Render\+System}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, float \&delta\+Time, sf\+::\+Render\+Window \&window)
+\mbox{\hyperlink{classte_1_1systems_1_1RenderSystem_a58458dc6e850b8debc46683e3927190c}{Render\+System}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry, float \&delta\+Time, sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classte_1_1managers_1_1CameraManager}{managers\+::\+Camera\+Manager}} \&camera\+Manager, \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager}{managers\+::\+Background\+Manager}} \&background\+Manager)
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classte_1_1systems_1_1RenderSystem_a70523add6b7a258e117e3bdc2a9341d9}{update}} ()
 \begin{DoxyCompactList}\small\item\em updates the system \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -57,17 +57,17 @@ float \& {\bfseries m\+Delta\+Time}
 Does rendering of the sprite in the window 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classte_1_1systems_1_1RenderSystem_a5e38b8b1586244d7cb2f0543b4f8fcb2}\label{classte_1_1systems_1_1RenderSystem_a5e38b8b1586244d7cb2f0543b4f8fcb2} 
+\Hypertarget{classte_1_1systems_1_1RenderSystem_a58458dc6e850b8debc46683e3927190c}\label{classte_1_1systems_1_1RenderSystem_a58458dc6e850b8debc46683e3927190c} 
 \index{te::systems::RenderSystem@{te::systems::RenderSystem}!RenderSystem@{RenderSystem}}
 \index{RenderSystem@{RenderSystem}!te::systems::RenderSystem@{te::systems::RenderSystem}}
 \doxysubsubsection{\texorpdfstring{RenderSystem()}{RenderSystem()}}
-{\footnotesize\ttfamily te\+::systems\+::\+Render\+System\+::\+Render\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry,  }\item[{float \&}]{delta\+Time,  }\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily te\+::systems\+::\+Render\+System\+::\+Render\+System (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry,  }\item[{float \&}]{delta\+Time,  }\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classte_1_1managers_1_1CameraManager}{managers\+::\+Camera\+Manager}} \&}]{camera\+Manager,  }\item[{\mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager}{managers\+::\+Background\+Manager}} \&}]{background\+Manager }\end{DoxyParamCaption})}
 
 
 
 Constructor. 
 
-creates the \doxylink{classte_1_1systems_1_1System}{System}
+creates the \doxylink{classte_1_1systems_1_1System}{System} with given window and camera\+Manager
 
 
 \begin{DoxyParams}{Parameters}
@@ -76,6 +76,8 @@ creates the \doxylink{classte_1_1systems_1_1System}{System}
 {\em delta\+Time} & reference to the frame delta time \\
 \hline
 {\em window} & reference to the window \\
+\hline
+{\em camera\+Manager} & reference to the camera\+Manager \\
 \hline
 \end{DoxyParams}
 

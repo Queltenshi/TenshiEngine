@@ -31,7 +31,7 @@ enum class {\bfseries Current\+Animation} \{ \newline
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{structte_1_1components_1_1Animation_ac736f7ae16df4d3eb9d02e5c70dca5d5}{Animation}} (json \&\mbox{\hyperlink{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}{texture\+Data}})
+\mbox{\hyperlink{structte_1_1components_1_1Animation_a9251a3c60283895b6bfd1b53d28aaa61}{Animation}} (std\+::shared\+\_\+ptr$<$ json $>$ \mbox{\hyperlink{structte_1_1components_1_1Animation_a6a4963a6a65fd9e3fde736256fbbdd36}{animation\+Data}})
 \begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{structte_1_1components_1_1Animation_a09ce9b262f079027f2f2625f563c6775}{to\+String}} () const override
 \begin{DoxyCompactList}\small\item\em shows data as a string \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -55,8 +55,8 @@ float {\bfseries switch\+Time} = 0.\+2f
 \Hypertarget{structte_1_1components_1_1Animation_aebc50046bc4e84b0a2f5faa74f176eec}\label{structte_1_1components_1_1Animation_aebc50046bc4e84b0a2f5faa74f176eec} 
 sf\+::\+Int\+Rect {\bfseries rectangle}
 \begin{DoxyCompactList}\small\item\em Current rectangle of sprite sheet. \end{DoxyCompactList}\item 
-\Hypertarget{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36}\label{structte_1_1components_1_1Animation_a004201cbf848667fcbdbe028b997cf36} 
-json \& {\bfseries texture\+Data}
+\Hypertarget{structte_1_1components_1_1Animation_a6a4963a6a65fd9e3fde736256fbbdd36}\label{structte_1_1components_1_1Animation_a6a4963a6a65fd9e3fde736256fbbdd36} 
+std\+::shared\+\_\+ptr$<$ json $>$ {\bfseries animation\+Data}
 \begin{DoxyCompactList}\small\item\em Json data used for animation. \end{DoxyCompactList}\item 
 \Hypertarget{structte_1_1components_1_1Animation_abbfce0e9965660205d8826e7ce2a7126}\label{structte_1_1components_1_1Animation_abbfce0e9965660205d8826e7ce2a7126} 
 Current\+Animation {\bfseries current\+Animation} = Current\+Animation\+::\+IDLE
@@ -75,21 +75,21 @@ component with animation data
 stores time and data for animations 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{structte_1_1components_1_1Animation_ac736f7ae16df4d3eb9d02e5c70dca5d5}\label{structte_1_1components_1_1Animation_ac736f7ae16df4d3eb9d02e5c70dca5d5} 
+\Hypertarget{structte_1_1components_1_1Animation_a9251a3c60283895b6bfd1b53d28aaa61}\label{structte_1_1components_1_1Animation_a9251a3c60283895b6bfd1b53d28aaa61} 
 \index{te::components::Animation@{te::components::Animation}!Animation@{Animation}}
 \index{Animation@{Animation}!te::components::Animation@{te::components::Animation}}
 \doxysubsubsection{\texorpdfstring{Animation()}{Animation()}}
-{\footnotesize\ttfamily te\+::components\+::\+Animation\+::\+Animation (\begin{DoxyParamCaption}\item[{json \&}]{texture\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily te\+::components\+::\+Animation\+::\+Animation (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ json $>$}]{animation\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 Default Constructor. 
 
-creates the component with given texture\+Data and sets rectangle to idle
+creates the component with given animation\+Data and sets rectangle to idle
 
 
 \begin{DoxyParams}{Parameters}
-{\em texture\+Data} & json data used for animation \\
+{\em animation\+Data} & json data used for animation \\
 \hline
 \end{DoxyParams}
 

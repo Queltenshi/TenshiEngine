@@ -1,0 +1,123 @@
+\doxysection{te\+::managers\+::Background\+Manager Class Reference}
+\hypertarget{classte_1_1managers_1_1BackgroundManager}{}\label{classte_1_1managers_1_1BackgroundManager}\index{te::managers::BackgroundManager@{te::managers::BackgroundManager}}
+
+
+Manager for background image.  
+
+
+
+
+{\ttfamily \#include $<$Background\+Manager.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager_a70bd3fdd3db82025823a92b04c646119}{Background\+Manager}} (std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ default\+Texture, sf\+::\+Vector2f window\+Size)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager_a6f4d531af08ba2154fd5afe69064f3f9}{set\+Background}} (std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ texture)
+\begin{DoxyCompactList}\small\item\em Sets the background. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager_a035a3d1acfe3b66567fd01c94fcbe976}{set\+Background}} (std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ texture, float parallax\+Factor)
+\begin{DoxyCompactList}\small\item\em Sets the background. \end{DoxyCompactList}\item 
+sf\+::\+Sprite \& \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager_a80f559d92308973457810798210b48d5}{get\+Background}} ()
+\begin{DoxyCompactList}\small\item\em Gets the background. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager_adbc205dc7d0099398c52abb7959f18eb}{update}} (sf\+::\+Vector2f \&move)
+\begin{DoxyCompactList}\small\item\em Updates the background. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manager for background image. 
+
+Creates and updates the background image 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classte_1_1managers_1_1BackgroundManager_a70bd3fdd3db82025823a92b04c646119}\label{classte_1_1managers_1_1BackgroundManager_a70bd3fdd3db82025823a92b04c646119} 
+\index{te::managers::BackgroundManager@{te::managers::BackgroundManager}!BackgroundManager@{BackgroundManager}}
+\index{BackgroundManager@{BackgroundManager}!te::managers::BackgroundManager@{te::managers::BackgroundManager}}
+\doxysubsubsection{\texorpdfstring{BackgroundManager()}{BackgroundManager()}}
+{\footnotesize\ttfamily te\+::managers\+::\+Background\+Manager\+::\+Background\+Manager (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{default\+Texture,  }\item[{sf\+::\+Vector2f}]{window\+Size }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+creates the \doxylink{classte_1_1managers_1_1BackgroundManager}{Background\+Manager} with given default\+Texture window\+Size
+
+
+\begin{DoxyParams}{Parameters}
+{\em default\+Texture} & default\+Texture \\
+\hline
+{\em window\+Size} & Size of window \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classte_1_1managers_1_1BackgroundManager_a80f559d92308973457810798210b48d5}\label{classte_1_1managers_1_1BackgroundManager_a80f559d92308973457810798210b48d5} 
+\index{te::managers::BackgroundManager@{te::managers::BackgroundManager}!getBackground@{getBackground}}
+\index{getBackground@{getBackground}!te::managers::BackgroundManager@{te::managers::BackgroundManager}}
+\doxysubsubsection{\texorpdfstring{getBackground()}{getBackground()}}
+{\footnotesize\ttfamily sf\+::\+Sprite \& te\+::managers\+::\+Background\+Manager\+::get\+Background (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the background. 
+
+Gets a reference to the current background \Hypertarget{classte_1_1managers_1_1BackgroundManager_a6f4d531af08ba2154fd5afe69064f3f9}\label{classte_1_1managers_1_1BackgroundManager_a6f4d531af08ba2154fd5afe69064f3f9} 
+\index{te::managers::BackgroundManager@{te::managers::BackgroundManager}!setBackground@{setBackground}}
+\index{setBackground@{setBackground}!te::managers::BackgroundManager@{te::managers::BackgroundManager}}
+\doxysubsubsection{\texorpdfstring{setBackground()}{setBackground()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void te\+::managers\+::\+Background\+Manager\+::set\+Background (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{texture }\end{DoxyParamCaption})}
+
+
+
+Sets the background. 
+
+Sets the background with given texture and sets parallax\+Factor to 0.\+f
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & texture for background \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classte_1_1managers_1_1BackgroundManager_a035a3d1acfe3b66567fd01c94fcbe976}\label{classte_1_1managers_1_1BackgroundManager_a035a3d1acfe3b66567fd01c94fcbe976} 
+\index{te::managers::BackgroundManager@{te::managers::BackgroundManager}!setBackground@{setBackground}}
+\index{setBackground@{setBackground}!te::managers::BackgroundManager@{te::managers::BackgroundManager}}
+\doxysubsubsection{\texorpdfstring{setBackground()}{setBackground()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void te\+::managers\+::\+Background\+Manager\+::set\+Background (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$}]{texture,  }\item[{float}]{parallax\+Factor }\end{DoxyParamCaption})}
+
+
+
+Sets the background. 
+
+Sets the background with given texture, movement and parallax\+Factor
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture} & texture for background \\
+\hline
+{\em parallax\+Factor} & factor for the moving speed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classte_1_1managers_1_1BackgroundManager_adbc205dc7d0099398c52abb7959f18eb}\label{classte_1_1managers_1_1BackgroundManager_adbc205dc7d0099398c52abb7959f18eb} 
+\index{te::managers::BackgroundManager@{te::managers::BackgroundManager}!update@{update}}
+\index{update@{update}!te::managers::BackgroundManager@{te::managers::BackgroundManager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void te\+::managers\+::\+Background\+Manager\+::update (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f \&}]{move }\end{DoxyParamCaption})}
+
+
+
+Updates the background. 
+
+Updates the background position if camera has moved and movement is true
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Value of movement \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Tenshi\+Engine/\+Engine/\+Manager/Background\+Manager.\+hpp\item 
+src/\+Engine/\+Manager/Background\+Manager.\+cpp\end{DoxyCompactItemize}

@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['gamebase_0',['GameBase',['../classte_1_1GameBase.html#a5d1af9fab83dd425749f4ef4437a524f',1,'te::GameBase']]],
-  ['getcomponent_1',['getComponent',['../classte_1_1Registry.html#a710e6ffdf531dff9dd47e22206a3725a',1,'te::Registry']]],
-  ['grounded_2',['Grounded',['../structte_1_1components_1_1Grounded.html#aedb3d95aaa81495dbe74d8c2cc8a8453',1,'te::components::Grounded']]]
+  ['debug_0',['debug',['../classte_1_1Logger.html#a92286ef59a24ea39ec7f83af1cbd1e69',1,'te::Logger::debug(const std::string &amp;source, const std::string &amp;message)'],['../classte_1_1Logger.html#ae7f9a40fcdde306392cbca1b11fc8ee3',1,'te::Logger::debug(const std::string &amp;source, const std::string &amp;componentName, const components::Component *component, const EntityID entityID)']]]
 ];

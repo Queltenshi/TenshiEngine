@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['id_0',['id',['../structte_1_1Entity.html#ac3af9d9e15deae2db02239518ff67f8d',1,'te::Entity']]],
-  ['init_1',['init',['../classte_1_1GameBase.html#a0a8905a011a8ab2cd4b44ec611ff2aeb',1,'te::GameBase']]],
-  ['inputsystem_2',['inputsystem',['../classte_1_1systems_1_1InputSystem.html',1,'te::systems::InputSystem'],['../classte_1_1systems_1_1InputSystem.html#aadfd6a1fa33e276ce2af5a64e30e4890',1,'te::systems::InputSystem::InputSystem()']]],
-  ['isgrounded_3',['isGrounded',['../structte_1_1components_1_1Grounded.html#adcb5855648988e505cf1f0d24c21c77e',1,'te::components::Grounded']]],
-  ['isstatic_4',['isStatic',['../structte_1_1components_1_1Rigidbody.html#a8118f7bf1cc5513bfc0014940814a927',1,'te::components::Rigidbody']]],
-  ['iterator_5',['iterator',['../structte_1_1components_1_1Animation.html#a9523ca7e9d9d74ac84b12f4460e7d20e',1,'te::components::Animation']]]
+  ['gamebase_0',['gamebase',['../classte_1_1GameBase.html',1,'te::GameBase'],['../classte_1_1GameBase.html#a85a4c02b8f6d348f7d5dd5193de3f233',1,'te::GameBase::GameBase()']]],
+  ['getactivecamera_1',['getActiveCamera',['../classte_1_1managers_1_1CameraManager.html#adabf32152cfb5532fb92fd7f67e46cfa',1,'te::managers::CameraManager']]],
+  ['getbackground_2',['getBackground',['../classte_1_1managers_1_1BackgroundManager.html#a80f559d92308973457810798210b48d5',1,'te::managers::BackgroundManager']]],
+  ['getcomponent_3',['getComponent',['../classte_1_1Registry.html#a710e6ffdf531dff9dd47e22206a3725a',1,'te::Registry']]],
+  ['getjson_4',['getJson',['../classte_1_1managers_1_1ResourceManager.html#a4b8c4934672a6f350d93f073e7f612a1',1,'te::managers::ResourceManager']]],
+  ['gettexture_5',['getTexture',['../classte_1_1managers_1_1ResourceManager.html#a2424cc8be34955b2da3a0bc3c4cf396a',1,'te::managers::ResourceManager']]],
+  ['grounded_6',['grounded',['../structte_1_1components_1_1Grounded.html',1,'te::components::Grounded'],['../structte_1_1components_1_1Grounded.html#aedb3d95aaa81495dbe74d8c2cc8a8453',1,'te::components::Grounded::Grounded()']]]
 ];
