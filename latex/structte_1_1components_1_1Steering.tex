@@ -1,0 +1,96 @@
+\doxysection{te\+::components\+::Steering Struct Reference}
+\hypertarget{structte_1_1components_1_1Steering}{}\label{structte_1_1components_1_1Steering}\index{te::components::Steering@{te::components::Steering}}
+
+
+component with steering actions  
+
+
+
+
+{\ttfamily \#include $<$Steering.\+hpp$>$}
+
+Inheritance diagram for te\+::components\+::Steering\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structte_1_1components_1_1Steering}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structte_1_1components_1_1Steering_aca95dc25bbc09b0c5d23988eaba1b8a6}{Steering}} ()=default
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structte_1_1components_1_1Steering_a50dd1fe9d842feb50c5eee0fd1321a37}{to\+String}} () const override
+\begin{DoxyCompactList}\small\item\em shows data as a string \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{structte_1_1components_1_1Component}{te\+::components\+::\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structte_1_1components_1_1Component_a944fedf322932b0fa5c3355bd3e5f1bd}{Component}} ()=default
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structte_1_1components_1_1Steering_a074483e80611b57795faf7e2153dfd79}\label{structte_1_1components_1_1Steering_a074483e80611b57795faf7e2153dfd79} 
+bool {\bfseries left} = false
+\item 
+\Hypertarget{structte_1_1components_1_1Steering_a8830f92505b3ac07177b2c209bfb109a}\label{structte_1_1components_1_1Steering_a8830f92505b3ac07177b2c209bfb109a} 
+bool {\bfseries right} = false
+\item 
+\Hypertarget{structte_1_1components_1_1Steering_ac2af7b7d9638a4b471854584c8193d45}\label{structte_1_1components_1_1Steering_ac2af7b7d9638a4b471854584c8193d45} 
+bool {\bfseries jump} = false
+\item 
+\Hypertarget{structte_1_1components_1_1Steering_ae523db39dd3ba456d1ba345723433c5e}\label{structte_1_1components_1_1Steering_ae523db39dd3ba456d1ba345723433c5e} 
+bool {\bfseries sprint} = false
+\item 
+\Hypertarget{structte_1_1components_1_1Steering_a3d717aa83182ad08ae4ae953ad546989}\label{structte_1_1components_1_1Steering_a3d717aa83182ad08ae4ae953ad546989} 
+bool {\bfseries crouch} = false
+\item 
+\Hypertarget{structte_1_1components_1_1Steering_a68761eb2927c048a00acee2ca71d7b78}\label{structte_1_1components_1_1Steering_a68761eb2927c048a00acee2ca71d7b78} 
+bool {\bfseries attack} = false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structte_1_1components_1_1Steering_ac1d220ea149ba0bcac4d354b968453cb}\label{structte_1_1components_1_1Steering_ac1d220ea149ba0bcac4d354b968453cb} 
+static const std\+::string {\bfseries name} = "{}Steering"{}
+\begin{DoxyCompactList}\small\item\em Name of component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+component with steering actions 
+
+stores which steering actions are activated 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{structte_1_1components_1_1Steering_aca95dc25bbc09b0c5d23988eaba1b8a6}\label{structte_1_1components_1_1Steering_aca95dc25bbc09b0c5d23988eaba1b8a6} 
+\index{te::components::Steering@{te::components::Steering}!Steering@{Steering}}
+\index{Steering@{Steering}!te::components::Steering@{te::components::Steering}}
+\doxysubsubsection{\texorpdfstring{Steering()}{Steering()}}
+{\footnotesize\ttfamily te\+::components\+::\+Steering\+::\+Steering (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Constructor. 
+
+creates the component 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structte_1_1components_1_1Steering_a50dd1fe9d842feb50c5eee0fd1321a37}\label{structte_1_1components_1_1Steering_a50dd1fe9d842feb50c5eee0fd1321a37} 
+\index{te::components::Steering@{te::components::Steering}!toString@{toString}}
+\index{toString@{toString}!te::components::Steering@{te::components::Steering}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string te\+::components\+::\+Steering\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+shows data as a string 
+
+converts the data into a string, components do override this method 
+
+Implements \mbox{\hyperlink{structte_1_1components_1_1Component_ab62e6b61f57db90657a5f0e67dcfc365}{te\+::components\+::\+Component}}.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\+Tenshi\+Engine/\+Engine/\+Components/Steering.\+hpp\end{DoxyCompactItemize}

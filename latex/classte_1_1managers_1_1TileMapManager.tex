@@ -2,50 +2,58 @@
 \hypertarget{classte_1_1managers_1_1TileMapManager}{}\label{classte_1_1managers_1_1TileMapManager}\index{te::managers::TileMapManager@{te::managers::TileMapManager}}
 
 
-Manager for creating tile maps.  
+\doxylink{classte_1_1managers_1_1Manager}{Manager} for creating tile maps.  
 
 
 
 
 {\ttfamily \#include $<$Tile\+Map\+Manager.\+hpp$>$}
 
+Inheritance diagram for te\+::managers\+::Tile\+Map\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classte_1_1managers_1_1TileMapManager}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classte_1_1managers_1_1TileMapManager_a66f6d6ca18a9647ce4dc617cdf82ccd4}{Tile\+Map\+Manager}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&registry)
-\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classte_1_1managers_1_1TileMapManager_aa9a97f96956e08959cdd52a8d4ba2a61}{create}} (\mbox{\hyperlink{classte_1_1Registry}{Registry}} \texorpdfstring{$\ast$}{*}registry)
+\begin{DoxyCompactList}\small\item\em Creates the manager. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classte_1_1managers_1_1TileMapManager_ab95f14918af13942cfe4a363bb737f09}{load\+Tileset}} (std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ tileset\+Texture, std\+::shared\+\_\+ptr$<$ json $>$ tileset\+Data)
 \begin{DoxyCompactList}\small\item\em Loads the tileset. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classte_1_1managers_1_1TileMapManager_a0cbe1fdd18b2f2a313f9a6e4add5cda7}{load\+Level}} (std\+::shared\+\_\+ptr$<$ json $>$ level\+Data)
 \begin{DoxyCompactList}\small\item\em loads the level \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classte_1_1managers_1_1Manager}{te\+::managers\+::\+Manager}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classte_1_1managers_1_1Manager_a1e03298f1a2727b280da3875ebbc12b9}{Manager}} ()=default
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Manager for creating tile maps. 
+\doxylink{classte_1_1managers_1_1Manager}{Manager} for creating tile maps. 
 
-loads leveldata and spritesheets from files and creates tile maps from them 
+loads leveldata and spritesheets from files and creates tile maps from them Is created automatically in the \doxylink{classte_1_1GameBase}{Game\+Base} 
 
-\doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classte_1_1managers_1_1TileMapManager_a66f6d6ca18a9647ce4dc617cdf82ccd4}\label{classte_1_1managers_1_1TileMapManager_a66f6d6ca18a9647ce4dc617cdf82ccd4} 
-\index{te::managers::TileMapManager@{te::managers::TileMapManager}!TileMapManager@{TileMapManager}}
-\index{TileMapManager@{TileMapManager}!te::managers::TileMapManager@{te::managers::TileMapManager}}
-\doxysubsubsection{\texorpdfstring{TileMapManager()}{TileMapManager()}}
-{\footnotesize\ttfamily te\+::managers\+::\+Tile\+Map\+Manager\+::\+Tile\+Map\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \&}]{registry }\end{DoxyParamCaption})}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classte_1_1managers_1_1TileMapManager_aa9a97f96956e08959cdd52a8d4ba2a61}\label{classte_1_1managers_1_1TileMapManager_aa9a97f96956e08959cdd52a8d4ba2a61} 
+\index{te::managers::TileMapManager@{te::managers::TileMapManager}!create@{create}}
+\index{create@{create}!te::managers::TileMapManager@{te::managers::TileMapManager}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily void te\+::managers\+::\+Tile\+Map\+Manager\+::create (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classte_1_1Registry}{Registry}} \texorpdfstring{$\ast$}{*}}]{registry }\end{DoxyParamCaption})}
 
 
 
-Constructor. 
+Creates the manager. 
 
-creates the Manager
+creates the \doxylink{classte_1_1managers_1_1TileMapManager}{Tile\+Map\+Manager}
 
 
 \begin{DoxyParams}{Parameters}
-{\em registry} & Reference to the registry \\
+{\em registry} & Pointer to the registry \\
 \hline
 \end{DoxyParams}
-
-
-\doxysubsection{Member Function Documentation}
 \Hypertarget{classte_1_1managers_1_1TileMapManager_a0cbe1fdd18b2f2a313f9a6e4add5cda7}\label{classte_1_1managers_1_1TileMapManager_a0cbe1fdd18b2f2a313f9a6e4add5cda7} 
 \index{te::managers::TileMapManager@{te::managers::TileMapManager}!loadLevel@{loadLevel}}
 \index{loadLevel@{loadLevel}!te::managers::TileMapManager@{te::managers::TileMapManager}}

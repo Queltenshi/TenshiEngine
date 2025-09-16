@@ -6,6 +6,5 @@ var searchData=
   ['addsystem_3',['addSystem',['../classte_1_1Registry.html#a4315b2e98a75c5648ef54220f652903e',1,'te::Registry']]],
   ['addtexture_4',['addTexture',['../classte_1_1managers_1_1ResourceManager.html#ad0095e60e437ee1258964cdf944116d7',1,'te::managers::ResourceManager']]],
   ['animation_5',['animation',['../structte_1_1components_1_1Animation.html',1,'te::components::Animation'],['../structte_1_1components_1_1Animation.html#a9251a3c60283895b6bfd1b53d28aaa61',1,'te::components::Animation::Animation(std::shared_ptr&lt; json &gt; animationData)']]],
-  ['animationdata_6',['animationData',['../structte_1_1components_1_1Animation.html#a6a4963a6a65fd9e3fde736256fbbdd36',1,'te::components::Animation']]],
-  ['animationsystem_7',['animationsystem',['../classte_1_1systems_1_1AnimationSystem.html',1,'te::systems::AnimationSystem'],['../classte_1_1systems_1_1AnimationSystem.html#af47e46fdafcf37ea0e73d44f5860e9c8',1,'te::systems::AnimationSystem::AnimationSystem()']]]
+  ['animationdata_6',['animationData',['../structte_1_1components_1_1Animation.html#a6a4963a6a65fd9e3fde736256fbbdd36',1,'te::components::Animation']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hascomponent_0',['hasComponent',['../classte_1_1Registry.html#abf5d8848453b9641593e81efa22fc442',1,'te::Registry']]],
-  ['horizontalmovement_1',['horizontalmovement',['../structte_1_1components_1_1HorizontalMovement.html#a4cc4293813f265f624568534e36bfd7b',1,'te::components::HorizontalMovement::HorizontalMovement()=default'],['../structte_1_1components_1_1HorizontalMovement.html#afef7d42f0882742725637caf7cd1564c',1,'te::components::HorizontalMovement::HorizontalMovement(float speed)']]]
+  ['info_0',['info',['../classte_1_1Logger.html#a24266633522825ed58a308f4334d8ae6',1,'te::Logger']]],
+  ['init_1',['init',['../classte_1_1GameBase.html#a0a8905a011a8ab2cd4b44ec611ff2aeb',1,'te::GameBase']]]
 ];

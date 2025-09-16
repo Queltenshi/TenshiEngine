@@ -22,7 +22,7 @@ Macros used for logging messages at different log levels.
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{do}\ \{\ \(\backslash\)}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (te::Logger::currentLevel\ ==\ te::LogLevel::DEBUG)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (te::Logger::debugMode\ ==\ \textcolor{keyword}{true})\ \{\ \(\backslash\)}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ te::Logger::debug(source,\ message);\ \(\backslash\)}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ \(\backslash\)}
 \DoxyCodeLine{\ \ \ \ \}\ \textcolor{keywordflow}{while}(0)}
@@ -48,7 +48,7 @@ Logs a debug message if the current\+Level is set to DEBUG
 {\bfseries Value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{do}\ \{\ \(\backslash\)}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (te::Logger::currentLevel\ ==\ te::LogLevel::DEBUG)\ \{\ \(\backslash\)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ if\ (te::Logger::debugMode\ ==\ \textcolor{keyword}{true})\ \{\ \(\backslash\)}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ te::Logger::debug(source,\ componentName,\ component,\ entityID);\ \(\backslash\)}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \}\ \(\backslash\)}
 \DoxyCodeLine{\ \ \ \ \}\ \textcolor{keywordflow}{while}(0)}

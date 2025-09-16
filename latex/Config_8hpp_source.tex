@@ -1,0 +1,75 @@
+\doxysection{Config.\+hpp}
+\hypertarget{Config_8hpp_source}{}\label{Config_8hpp_source}\index{include/TenshiEngine/Game/Config.hpp@{include/TenshiEngine/Game/Config.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}brofield/SimpleIni.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Systems/InputSystem.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ namespace\ }te::systems;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }Config\{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ Config();}
+\DoxyCodeLine{00013\ \ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ std::string\ getGameName();}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{bool}\ isDebugMode();}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ isFullscreen();}
+\DoxyCodeLine{00017\ \ \ \ \ uint\ getFPS();}
+\DoxyCodeLine{00018\ \ \ \ \ sf::Vector2u\ getResolution();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{float}\ getGravityForce();}
+\DoxyCodeLine{00020\ \ \ \ \ std::unordered\_map<InputSystem::Action,\ InputSystem::Key>\ getKeyBinds();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ loadFile();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ saveFile();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ loadVideoSection();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ loadInputSection();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ loadSystemSection();}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>\ T\ loadValue(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *section,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *key,\ \textcolor{keyword}{const}\ T\ defaultValue);\ }
+\DoxyCodeLine{00029\ \ \ \ \ std::optional<InputSystem::Key>\ charToKey(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ keyName);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ keyToChar(InputSystem::Key\ inputKey);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ CSimpleIniA\ mIni;}
+\DoxyCodeLine{00033\ \ \ \ \ std::string\ mGameName;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ mDebugMode;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ mFullscreen;}
+\DoxyCodeLine{00036\ \ \ \ \ uint\ mFPS;}
+\DoxyCodeLine{00037\ \ \ \ \ uint\ mResolutionWidth;}
+\DoxyCodeLine{00038\ \ \ \ \ uint\ mResolutionHeight;}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{float}\ mGravityForce;}
+\DoxyCodeLine{00040\ \ \ \ \ std::unordered\_map<InputSystem::Action,\ InputSystem::Key>\ mKeyBinds;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//Section\ names}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}*\ videoSection;}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}*\ inputSection;}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}*\ systemSection;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//Default\ settings}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ std::string\ defaultGameName;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ defaultDebugMode;}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ defaultFullscreen;}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ uint\ defaultFPS;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ uint\ defaultResolutionWidth;}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ uint\ defaultResolutionHeight;}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ defaultGravityForce;}
+\DoxyCodeLine{00055\ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//Default\ keyBinds}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ InputSystem::Key\ defaultMoveLeft;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ InputSystem::Key\ defaultMoveRight;}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ InputSystem::Key\ defaultJump;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ InputSystem::Key\ defaultSprint;}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ InputSystem::Key\ defaultCrouch;}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ InputSystem::Key\ defaultAttack;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}*\ fileName;}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ std::string\ name;}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \}}
+
+\end{DoxyCode}

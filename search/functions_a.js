@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['loadlevel_0',['loadLevel',['../classte_1_1managers_1_1TileMapManager.html#a0cbe1fdd18b2f2a313f9a6e4add5cda7',1,'te::managers::TileMapManager']]],
-  ['loadtileset_1',['loadTileset',['../classte_1_1managers_1_1TileMapManager.html#ab95f14918af13942cfe4a363bb737f09',1,'te::managers::TileMapManager']]]
+  ['manager_0',['Manager',['../classte_1_1managers_1_1Manager.html#a1e03298f1a2727b280da3875ebbc12b9',1,'te::managers::Manager']]]
 ];

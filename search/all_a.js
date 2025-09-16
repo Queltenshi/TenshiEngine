@@ -1,9 +1,12 @@
 var searchData=
 [
-  ['loadlevel_0',['loadLevel',['../classte_1_1managers_1_1TileMapManager.html#a0cbe1fdd18b2f2a313f9a6e4add5cda7',1,'te::managers::TileMapManager']]],
-  ['loadtileset_1',['loadTileset',['../classte_1_1managers_1_1TileMapManager.html#ab95f14918af13942cfe4a363bb737f09',1,'te::managers::TileMapManager']]],
-  ['log_5fdebug_2',['LOG_DEBUG',['../group__LoggingMacros.html#ga975082d766d9cdd6436c9c8c445610ec',1,'Logger.hpp']]],
-  ['log_5fdebug_5fcomponent_5fchanged_3',['LOG_DEBUG_COMPONENT_CHANGED',['../group__LoggingMacros.html#ga313ec8bf6425510ae0ce9d94d26cd2d9',1,'Logger.hpp']]],
-  ['logger_4',['Logger',['../classte_1_1Logger.html',1,'te']]],
-  ['logging_20macros_5',['Logging Macros',['../group__LoggingMacros.html',1,'']]]
+  ['macros_0',['Logging Macros',['../group__LoggingMacros.html',1,'']]],
+  ['manager_1',['manager',['../classte_1_1managers_1_1Manager.html',1,'te::managers::Manager'],['../classte_1_1managers_1_1Manager.html#a1e03298f1a2727b280da3875ebbc12b9',1,'te::managers::Manager::Manager()']]],
+  ['mass_2',['mass',['../structte_1_1components_1_1Rigidbody.html#afc31e6b290a83851f3b6f52645da0857',1,'te::components::Rigidbody']]],
+  ['mbackgroundmanager_3',['mBackgroundManager',['../classte_1_1GameBase.html#a2d3fcbfb9994cc4a2f841dc293ca482f',1,'te::GameBase']]],
+  ['mcameramanager_4',['mCameraManager',['../classte_1_1GameBase.html#aba0495395e1d1758d051b3d96b47c106',1,'te::GameBase']]],
+  ['mconfig_5',['mConfig',['../classte_1_1GameBase.html#ab21b72af652a8dc1c62abc887b71d214',1,'te::GameBase']]],
+  ['mregistry_6',['mRegistry',['../classte_1_1GameBase.html#ad88938b232f7f7f7d38850bce672cf89',1,'te::GameBase']]],
+  ['mresourcemanager_7',['mResourceManager',['../classte_1_1GameBase.html#ab0a32a29b9e620c5fe1cfdffe38ce2ae',1,'te::GameBase']]],
+  ['mtilemapmanager_8',['mTileMapManager',['../classte_1_1GameBase.html#ab9ee297bb2e4768cffeeab08e4a78729',1,'te::GameBase']]]
 ];

@@ -2,13 +2,19 @@
 \hypertarget{classte_1_1managers_1_1ResourceManager}{}\label{classte_1_1managers_1_1ResourceManager}\index{te::managers::ResourceManager@{te::managers::ResourceManager}}
 
 
-Manager for resources.  
+\doxylink{classte_1_1managers_1_1Manager}{Manager} for resources.  
 
 
 
 
 {\ttfamily \#include $<$Resource\+Manager.\+hpp$>$}
 
+Inheritance diagram for te\+::managers\+::Resource\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classte_1_1managers_1_1ResourceManager}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -22,12 +28,17 @@ std\+::shared\+\_\+ptr$<$ sf\+::\+Texture $>$ \mbox{\hyperlink{classte_1_1manage
 \begin{DoxyCompactList}\small\item\em gets texture \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ json $>$ \mbox{\hyperlink{classte_1_1managers_1_1ResourceManager_a4b8c4934672a6f350d93f073e7f612a1}{get\+Json}} (const std\+::string \&name)
 \begin{DoxyCompactList}\small\item\em gets json \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classte_1_1managers_1_1Manager}{te\+::managers\+::\+Manager}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classte_1_1managers_1_1Manager_a1e03298f1a2727b280da3875ebbc12b9}{Manager}} ()=default
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Manager for resources. 
+\doxylink{classte_1_1managers_1_1Manager}{Manager} for resources. 
 
-stores different types of resources 
+stores different types of resources Is created automatically in the \doxylink{classte_1_1GameBase}{Game\+Base} 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classte_1_1managers_1_1ResourceManager_a8b8987e5c6b87d01e06e343a6d77c158}\label{classte_1_1managers_1_1ResourceManager_a8b8987e5c6b87d01e06e343a6d77c158} 
@@ -40,7 +51,7 @@ stores different types of resources
 
 Constructor. 
 
-creates the Manager 
+Default constructor 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classte_1_1managers_1_1ResourceManager_acc2149df3000be3d51af8d82bf196af9}\label{classte_1_1managers_1_1ResourceManager_acc2149df3000be3d51af8d82bf196af9} 

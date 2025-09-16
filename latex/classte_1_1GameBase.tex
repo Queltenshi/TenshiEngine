@@ -12,7 +12,7 @@ Base class for a game.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classte_1_1GameBase_a85a4c02b8f6d348f7d5dd5193de3f233}{Game\+Base}} (std\+::string window\+Name, sf\+::\+Vector2u window\+Size)
+\mbox{\hyperlink{classte_1_1GameBase_a217162f35264e21476217a33f11a85ee}{Game\+Base}} ()
 \begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classte_1_1GameBase_accb4b63d1277e46131d66a66c0e1e63b}{run}} ()
 \begin{DoxyCompactList}\small\item\em starts the game loop \end{DoxyCompactList}\item 
@@ -21,6 +21,9 @@ virtual void \mbox{\hyperlink{classte_1_1GameBase_a0a8905a011a8ab2cd4b44ec611ff2
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
+\Hypertarget{classte_1_1GameBase_ab21b72af652a8dc1c62abc887b71d214}\label{classte_1_1GameBase_ab21b72af652a8dc1c62abc887b71d214} 
+Config {\bfseries m\+Config}
+\begin{DoxyCompactList}\small\item\em Config with data. \end{DoxyCompactList}\item 
 \Hypertarget{classte_1_1GameBase_ad88938b232f7f7f7d38850bce672cf89}\label{classte_1_1GameBase_ad88938b232f7f7f7d38850bce672cf89} 
 \mbox{\hyperlink{classte_1_1Registry}{Registry}} {\bfseries m\+Registry}
 \begin{DoxyCompactList}\small\item\em \doxylink{classte_1_1Registry}{Registry} used for managing entities, components and systems. \end{DoxyCompactList}\item 
@@ -51,26 +54,17 @@ Usage\+:
 \end{DoxyItemize}
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classte_1_1GameBase_a85a4c02b8f6d348f7d5dd5193de3f233}\label{classte_1_1GameBase_a85a4c02b8f6d348f7d5dd5193de3f233} 
+\Hypertarget{classte_1_1GameBase_a217162f35264e21476217a33f11a85ee}\label{classte_1_1GameBase_a217162f35264e21476217a33f11a85ee} 
 \index{te::GameBase@{te::GameBase}!GameBase@{GameBase}}
 \index{GameBase@{GameBase}!te::GameBase@{te::GameBase}}
 \doxysubsubsection{\texorpdfstring{GameBase()}{GameBase()}}
-{\footnotesize\ttfamily te\+::\+Game\+Base\+::\+Game\+Base (\begin{DoxyParamCaption}\item[{std\+::string}]{window\+Name,  }\item[{sf\+::\+Vector2u}]{window\+Size }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily te\+::\+Game\+Base\+::\+Game\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Constructor. 
 
-creates a window with given title and window\+Size
-
-
-\begin{DoxyParams}{Parameters}
-{\em window\+Name} & Title of the window to be created \\
-\hline
-{\em window\+Size} & Size of the window to be created \\
-\hline
-\end{DoxyParams}
-
+Default constructor 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classte_1_1GameBase_a0a8905a011a8ab2cd4b44ec611ff2aeb}\label{classte_1_1GameBase_a0a8905a011a8ab2cd4b44ec611ff2aeb} 

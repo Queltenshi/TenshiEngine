@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logger_0',['Logger',['../classte_1_1Logger.html',1,'te']]]
+  ['prefabs_0',['Prefabs',['../classte_1_1Prefabs.html',1,'te']]]
 ];

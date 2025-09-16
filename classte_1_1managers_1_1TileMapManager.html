@@ -96,55 +96,67 @@ $(document).ready(function(){initNavTree('classte_1_1managers_1_1TileMapManager.
 </div><!--header-->
 <div class="contents">
 
-<p>Manager for creating tile maps.  
+<p><a class="el" href="classte_1_1managers_1_1Manager.html" title="Base Manager.">Manager</a> for creating tile maps.  
  <a href="classte_1_1managers_1_1TileMapManager.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="TileMapManager_8hpp_source.html">TileMapManager.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for te::managers::TileMapManager:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classte_1_1managers_1_1TileMapManager.png" usemap="#te::managers::TileMapManager_map" alt=""/>
+  <map id="te::managers::TileMapManager_map" name="te::managers::TileMapManager_map">
+<area href="classte_1_1managers_1_1Manager.html" title="Base Manager." alt="te::managers::Manager" shape="rect" coords="0,0,185,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a66f6d6ca18a9647ce4dc617cdf82ccd4" id="r_a66f6d6ca18a9647ce4dc617cdf82ccd4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classte_1_1managers_1_1TileMapManager.html#a66f6d6ca18a9647ce4dc617cdf82ccd4">TileMapManager</a> (<a class="el" href="classte_1_1Registry.html">Registry</a> &amp;registry)</td></tr>
-<tr class="memdesc:a66f6d6ca18a9647ce4dc617cdf82ccd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <br /></td></tr>
-<tr class="separator:a66f6d6ca18a9647ce4dc617cdf82ccd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9a97f96956e08959cdd52a8d4ba2a61" id="r_aa9a97f96956e08959cdd52a8d4ba2a61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classte_1_1managers_1_1TileMapManager.html#aa9a97f96956e08959cdd52a8d4ba2a61">create</a> (<a class="el" href="classte_1_1Registry.html">Registry</a> *registry)</td></tr>
+<tr class="memdesc:aa9a97f96956e08959cdd52a8d4ba2a61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the manager.  <br /></td></tr>
+<tr class="separator:aa9a97f96956e08959cdd52a8d4ba2a61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab95f14918af13942cfe4a363bb737f09" id="r_ab95f14918af13942cfe4a363bb737f09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classte_1_1managers_1_1TileMapManager.html#ab95f14918af13942cfe4a363bb737f09">loadTileset</a> (std::shared_ptr&lt; sf::Texture &gt; tilesetTexture, std::shared_ptr&lt; json &gt; tilesetData)</td></tr>
 <tr class="memdesc:ab95f14918af13942cfe4a363bb737f09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the tileset.  <br /></td></tr>
 <tr class="separator:ab95f14918af13942cfe4a363bb737f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cbe1fdd18b2f2a313f9a6e4add5cda7" id="r_a0cbe1fdd18b2f2a313f9a6e4add5cda7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classte_1_1managers_1_1TileMapManager.html#a0cbe1fdd18b2f2a313f9a6e4add5cda7">loadLevel</a> (std::shared_ptr&lt; json &gt; levelData)</td></tr>
 <tr class="memdesc:a0cbe1fdd18b2f2a313f9a6e4add5cda7"><td class="mdescLeft">&#160;</td><td class="mdescRight">loads the level  <br /></td></tr>
 <tr class="separator:a0cbe1fdd18b2f2a313f9a6e4add5cda7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classte_1_1managers_1_1Manager"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classte_1_1managers_1_1Manager')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classte_1_1managers_1_1Manager.html">te::managers::Manager</a></td></tr>
+<tr class="memitem:a1e03298f1a2727b280da3875ebbc12b9 inherit pub_methods_classte_1_1managers_1_1Manager" id="r_a1e03298f1a2727b280da3875ebbc12b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classte_1_1managers_1_1Manager.html#a1e03298f1a2727b280da3875ebbc12b9">Manager</a> ()=default</td></tr>
+<tr class="memdesc:a1e03298f1a2727b280da3875ebbc12b9 inherit pub_methods_classte_1_1managers_1_1Manager"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor.  <br /></td></tr>
+<tr class="separator:a1e03298f1a2727b280da3875ebbc12b9 inherit pub_methods_classte_1_1managers_1_1Manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Manager for creating tile maps. </p>
-<p>loads leveldata and spritesheets from files and creates tile maps from them </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a66f6d6ca18a9647ce4dc617cdf82ccd4" name="a66f6d6ca18a9647ce4dc617cdf82ccd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66f6d6ca18a9647ce4dc617cdf82ccd4">&#9670;&#160;</a></span>TileMapManager()</h2>
+<div class="textblock"><p><a class="el" href="classte_1_1managers_1_1Manager.html" title="Base Manager.">Manager</a> for creating tile maps. </p>
+<p>loads leveldata and spritesheets from files and creates tile maps from them Is created automatically in the <a class="el" href="classte_1_1GameBase.html" title="Base class for a game.">GameBase</a> </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa9a97f96956e08959cdd52a8d4ba2a61" name="aa9a97f96956e08959cdd52a8d4ba2a61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9a97f96956e08959cdd52a8d4ba2a61">&#9670;&#160;</a></span>create()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">te::managers::TileMapManager::TileMapManager </td>
+          <td class="memname">void te::managers::TileMapManager::create </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classte_1_1Registry.html">Registry</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classte_1_1Registry.html">Registry</a> *&#160;</td>
           <td class="paramname"><em>registry</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor. </p>
-<p>creates the Manager</p>
+<p>Creates the manager. </p>
+<p>creates the <a class="el" href="classte_1_1managers_1_1TileMapManager.html" title="Manager for creating tile maps.">TileMapManager</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">registry</td><td>Reference to the registry </td></tr>
+    <tr><td class="paramname">registry</td><td>Pointer to the registry </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0cbe1fdd18b2f2a313f9a6e4add5cda7" name="a0cbe1fdd18b2f2a313f9a6e4add5cda7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0cbe1fdd18b2f2a313f9a6e4add5cda7">&#9670;&#160;</a></span>loadLevel()</h2>
 

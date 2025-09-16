@@ -15,22 +15,22 @@
 \DoxyCodeLine{00011\ }
 \DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }systems\{}
 \DoxyCodeLine{00013\ }
-\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1systems_1_1RenderSystem}{RenderSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classte_1_1systems_1_1VariableSystem}{VariableSystem}}\{}
-\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classte_1_1systems_1_1RenderSystem}{RenderSystem}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry,\ \textcolor{keywordtype}{float}\ \&deltaTime,\ sf::RenderWindow\ \&window,\ \mbox{\hyperlink{classte_1_1managers_1_1CameraManager}{managers::CameraManager}}\ \&cameraManager,\ \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager}{managers::BackgroundManager}}\ \&backgroundManager);}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1systems_1_1RenderSystem_a70523add6b7a258e117e3bdc2a9341d9}{update}}();}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classte_1_1systems_1_1RenderSystem_a1aad52ab29a5bbb383cac84eba8801cd}{name}};}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00040\ \ \ \ \ sf::RenderWindow\ \&mWindow;}
-\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{classte_1_1managers_1_1CameraManager}{managers::CameraManager}}\ \&mCameraManager;}
-\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager}{managers::BackgroundManager}}\ \&mBackgroundManager;}
-\DoxyCodeLine{00043\ \};}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \}}
-\DoxyCodeLine{00046\ \}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }RenderSystem\ :\ \textcolor{keyword}{public}\ VariableSystem\{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ RenderSystem(Registry\ \&registry,\ \textcolor{keywordtype}{float}\ \&deltaTime,\ sf::RenderWindow\ \&window,\ managers::CameraManager\ \&cameraManager,\ managers::BackgroundManager\ \&backgroundManager);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ update();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ name;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ sf::RenderWindow\ \&mWindow;}
+\DoxyCodeLine{00025\ \ \ \ \ managers::CameraManager\ \&mCameraManager;}
+\DoxyCodeLine{00026\ \ \ \ \ managers::BackgroundManager\ \&mBackgroundManager;}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \}}
+\DoxyCodeLine{00030\ \}}
 
 \end{DoxyCode}

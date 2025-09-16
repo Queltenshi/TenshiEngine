@@ -10,22 +10,22 @@
 \DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }te\{}
 \DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }systems\{}
 \DoxyCodeLine{00008\ }
-\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1systems_1_1MovementSystem}{MovementSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classte_1_1systems_1_1FixedSystem}{FixedSystem}}\{}
-\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classte_1_1systems_1_1MovementSystem}{MovementSystem}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ deltaTime);}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1systems_1_1MovementSystem_af6357cbf26b254991383fd4db488f358}{update}}();\ }
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{classte_1_1systems_1_1MovementSystem_ae27d9d38fdfc7e5c6044d403d02d79b7}{name}};}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ updateVelocity(EntityID\ entityID);}
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ updateHorizontalMovement(EntityID\ entityID,\ \mbox{\hyperlink{structte_1_1components_1_1PlayerInput}{components::PlayerInput}}\ *playerInput,\ \mbox{\hyperlink{structte_1_1components_1_1HorizontalMovement}{components::HorizontalMovement}}\ *horizontalMovement);}
-\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ updateState(EntityID\ entityID,\ \mbox{\hyperlink{structte_1_1components_1_1Velocity}{components::Velocity}}\ *velocity);}
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{float}\ updateJump(EntityID\ entityID,\ \mbox{\hyperlink{structte_1_1components_1_1PlayerInput}{components::PlayerInput}}\ *playerInput,\ \mbox{\hyperlink{structte_1_1components_1_1Velocity}{components::Velocity}}\ *velocity);}
-\DoxyCodeLine{00037\ \};}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \}}
-\DoxyCodeLine{00040\ \}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }MovementSystem\ :\ \textcolor{keyword}{public}\ FixedSystem\{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ MovementSystem(Registry\ \&registry,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ update();\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ name;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ updateVelocity(EntityID\ entityID);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{float}\ updateHorizontalMovement(EntityID\ entityID,\ components::Steering\ *playerInput,\ components::HorizontalMovement\ *horizontalMovement);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ updateState(EntityID\ entityID,\ components::Velocity\ *velocity);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{float}\ updateJump(EntityID\ entityID,\ components::Steering\ *playerInput,\ components::Velocity\ *velocity);}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \}}
+\DoxyCodeLine{00025\ \}}
 
 \end{DoxyCode}

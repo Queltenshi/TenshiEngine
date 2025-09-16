@@ -14,126 +14,126 @@
 \DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }RenderSystem;}
 \DoxyCodeLine{00011\ \}}
 \DoxyCodeLine{00012\ }
-\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1Registry}{Registry}}\{}
-\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry_ac9fde2f8cf63b88d955daff21299fa3e}{Registry}}():\ mNextId(0)\{\}}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ \mbox{\hyperlink{classte_1_1Registry_a321f4bcfdd4fc73ae50e710e71b6dc79}{createEntity}}(std::shared\_ptr<sf::Texture>\ texture)\{}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ entity(mNextId++);}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Sprite}{components::Sprite}}(texture));}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Transform}{components::Transform}}());}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ entity;}
-\DoxyCodeLine{00040\ \ \ \ \ \}}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ \mbox{\hyperlink{classte_1_1Registry_aad06cfa32937848e5c42ef9ae5813dc1}{createEntity}}(std::shared\_ptr<sf::Texture>\ texture,\ sf::Vector2i\ size)\{}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ entity(mNextId++);}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ sf::IntRect\ rectangle(\{0,\ 0\},\ size);}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Sprite}{components::Sprite}}(texture,\ rectangle));}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Transform}{components::Transform}}());}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ entity;}
-\DoxyCodeLine{00056\ \ \ \ \ \}}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ \mbox{\hyperlink{classte_1_1Registry_ac210af526e821dcd110cc9b57e95c109}{createEntity}}(std::shared\_ptr<sf::Texture>\ texture,\ std::shared\_ptr<json>\ animationData)\{}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ entity(mNextId++);}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ animation\ =\ \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Animation}{components::Animation}}(animationData));}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Sprite}{components::Sprite}}(texture,\ animation-\/>rectangle));}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Transform}{components::Transform}}());}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1State}{te::components::State}}());}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ entity;}
-\DoxyCodeLine{00074\ \ \ \ \ \}}
-\DoxyCodeLine{00075\ }
-\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Component>}
-\DoxyCodeLine{00085\ \ \ \ \ Component*\ \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(EntityID\ entityID,\ \textcolor{keyword}{const}\ Component\ \&component)\{}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{comment}{//LOG\_DEBUG(name,\ component.name\ \ +\ "{}\ added\ to\ Entity\ "{}\ +\ std::to\_string(entityID)\ +\ "{}\ "{}\ +\ component.toString());}}
-\DoxyCodeLine{00087\ }
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ mComponents[\textcolor{keyword}{typeid}(Component)][entityID]\ =\ std::make\_shared<Component>(component);}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}Component*\textcolor{keyword}{>}(mComponents[\textcolor{keyword}{typeid}(Component)][entityID].get());}
-\DoxyCodeLine{00090\ \ \ \ \ \}}
-\DoxyCodeLine{00091\ }
-\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Component>}
-\DoxyCodeLine{00100\ \ \ \ \ Component*\ \mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{getComponent}}(EntityID\ entityID)\{}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ mComponents.find(\textcolor{keyword}{typeid}(Component));}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(it\ !=\ mComponents.end())\{}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ entityIt\ =\ it-\/>second.find(entityID);}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(entityIt\ !=\ it-\/>second.end())\{}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::static\_pointer\_cast<Component>(entityIt-\/>second).get();}
-\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00109\ \ \ \ \ \}}
-\DoxyCodeLine{00110\ }
-\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Component>}
-\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classte_1_1Registry_abf5d8848453b9641593e81efa22fc442}{hasComponent}}(EntityID\ entityID)\textcolor{keyword}{\ const}\{}
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ mComponents.find(\textcolor{keyword}{typeid}(Component));}
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ it\ !=\ mComponents.end()\ \&\&\ it-\/>second.count(entityID)\ >\ 0;}
-\DoxyCodeLine{00122\ \ \ \ \ \}}
-\DoxyCodeLine{00123\ }
-\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Components>}
-\DoxyCodeLine{00130\ \ \ \ \ std::vector<EntityID>\ \mbox{\hyperlink{classte_1_1Registry_ab22d33126a0e011ab16c4eea13e33921}{view}}()\{}
-\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ std::vector<EntityID>\ result;}
-\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\textcolor{keyword}{sizeof}...(Components)\ ==\ 0)}
-\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
-\DoxyCodeLine{00134\ }
-\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }FirstComponent\ =\ std::tuple\_element\_t<0,\ std::tuple<Components...>>;}
-\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ firstComponentIt\ =\ mComponents.find(\textcolor{keyword}{typeid}(FirstComponent));}
-\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (firstComponentIt\ ==\ mComponents.end())}
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
-\DoxyCodeLine{00140\ }
-\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ firstComponentEntities\ =\ firstComponentIt-\/>second;}
-\DoxyCodeLine{00142\ }
-\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ [entityId,\ \_]\ :\ firstComponentEntities)\ \{}
-\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hasAll\ =\ (...\ \&\&\ (mComponents[\textcolor{keyword}{typeid}(Components)].count(entityId)\ >\ 0));}
-\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hasAll)}
-\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.push\_back(entityId);}
-\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00148\ }
-\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
-\DoxyCodeLine{00150\ \ \ \ \ \}}
-\DoxyCodeLine{00151\ }
-\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ TSystem,\ \textcolor{keyword}{typename}...\ Args>}
-\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1Registry_a4315b2e98a75c5648ef54220f652903e}{addSystem}}(Args\&\&...\ args)\ \{}
-\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<TSystem,\ systems::RenderSystem>)\{}
-\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ mRenderSystem\ =\ std::make\_unique<TSystem>(*\textcolor{keyword}{this},\ std::forward<Args>(args)...);}
-\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \}\ }
-\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_base\_of\_v<systems::FixedSystem,\ TSystem>)\ \{}
-\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ fixedSystem\ =\ std::make\_unique<TSystem>(*\textcolor{keyword}{this},\ std::forward<Args>(args)...);}
-\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ mFixedSystems.push\_back(std::move(fixedSystem));}
-\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_base\_of\_v<systems::VariableSystem,\ TSystem>)\ \{}
-\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ variableSystem\ =\ std::make\_unique<TSystem>(*\textcolor{keyword}{this},\ std::forward<Args>(args)...);}
-\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ mVariableSystems.push\_back(std::move(variableSystem));}
-\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00172\ \ \ \ \ \}}
-\DoxyCodeLine{00173\ }
-\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1Registry_a52459c675de567f3c2ac5d14a36a0c62}{updateFixedSystems}}()\ \{}
-\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ fixedSystem\ :\ mFixedSystems)\ \{}
-\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ fixedSystem-\/>update();}
-\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00183\ \ \ \ \ \}}
-\DoxyCodeLine{00184\ }
-\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1Registry_ad22bf6ce1bfcec1e3091d58916629c18}{updateVariableSystems}}()\ \{}
-\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ variableSystem\ :\ mVariableSystems)\ \{}
-\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ variableSystem-\/>update();}
-\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00194\ \ \ \ \ \}}
-\DoxyCodeLine{00195\ }
-\DoxyCodeLine{00201\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1Registry_a2d9d42450ca3a0e559448de226ff398c}{updateRenderSystem}}()\{}
-\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ mRenderSystem-\/>update();}
-\DoxyCodeLine{00203\ \ \ \ \ \}}
-\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1Registry}{Registry}}\{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry_ac9fde2f8cf63b88d955daff21299fa3e}{Registry}}():\ mNextId(0)\{\}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ \mbox{\hyperlink{classte_1_1Registry_a321f4bcfdd4fc73ae50e710e71b6dc79}{createEntity}}(std::shared\_ptr<sf::Texture>\ texture)\{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ entity(mNextId++);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Sprite}{components::Sprite}}(texture));}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Transform}{components::Transform}}());}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ entity;}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ \mbox{\hyperlink{classte_1_1Registry_aad06cfa32937848e5c42ef9ae5813dc1}{createEntity}}(std::shared\_ptr<sf::Texture>\ texture,\ sf::Vector2i\ size)\{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ entity(mNextId++);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ sf::IntRect\ rectangle(\{0,\ 0\},\ size);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Sprite}{components::Sprite}}(texture,\ rectangle));}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Transform}{components::Transform}}());}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ entity;}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ \mbox{\hyperlink{classte_1_1Registry_ac210af526e821dcd110cc9b57e95c109}{createEntity}}(std::shared\_ptr<sf::Texture>\ texture,\ std::shared\_ptr<json>\ animationData)\{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structte_1_1Entity}{Entity}}\ entity(mNextId++);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ animation\ =\ \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Animation}{components::Animation}}(animationData));}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Sprite}{components::Sprite}}(texture,\ animation-\/>rectangle));}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1Transform}{components::Transform}}());}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(entity.\mbox{\hyperlink{structte_1_1Entity_ac3af9d9e15deae2db02239518ff67f8d}{id}},\ \mbox{\hyperlink{structte_1_1components_1_1State}{te::components::State}}());}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ entity;}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Component>}
+\DoxyCodeLine{00086\ \ \ \ \ Component*\ \mbox{\hyperlink{classte_1_1Registry_a27b0fd1393d7382d6d38869801230f3d}{addComponent}}(EntityID\ entityID,\ \textcolor{keyword}{const}\ Component\ \&component)\{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{comment}{//LOG\_DEBUG(name,\ component.name\ \ +\ "{}\ added\ to\ Entity\ "{}\ +\ std::to\_string(entityID)\ +\ "{}\ "{}\ +\ component.toString());}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ mComponents[\textcolor{keyword}{typeid}(Component)][entityID]\ =\ std::make\_shared<Component>(component);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{static\_cast<}Component*\textcolor{keyword}{>}(mComponents[\textcolor{keyword}{typeid}(Component)][entityID].get());}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Component>}
+\DoxyCodeLine{00101\ \ \ \ \ Component*\ \mbox{\hyperlink{classte_1_1Registry_a710e6ffdf531dff9dd47e22206a3725a}{getComponent}}(EntityID\ entityID)\{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ mComponents.find(\textcolor{keyword}{typeid}(Component));}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(it\ !=\ mComponents.end())\{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ entityIt\ =\ it-\/>second.find(entityID);}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(entityIt\ !=\ it-\/>second.end())\{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::static\_pointer\_cast<Component>(entityIt-\/>second).get();}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00110\ \ \ \ \ \}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ Component>}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classte_1_1Registry_abf5d8848453b9641593e81efa22fc442}{hasComponent}}(EntityID\ entityID)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ it\ =\ mComponents.find(\textcolor{keyword}{typeid}(Component));}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ it\ !=\ mComponents.end()\ \&\&\ it-\/>second.count(entityID)\ >\ 0;}
+\DoxyCodeLine{00123\ \ \ \ \ \}}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}...\ Components>}
+\DoxyCodeLine{00131\ \ \ \ \ std::vector<EntityID>\ \mbox{\hyperlink{classte_1_1Registry_ab22d33126a0e011ab16c4eea13e33921}{view}}()\{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ std::vector<EntityID>\ result;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\textcolor{keyword}{sizeof}...(Components)\ ==\ 0)}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keyword}{using\ }FirstComponent\ =\ std::tuple\_element\_t<0,\ std::tuple<Components...>>;}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ firstComponentIt\ =\ mComponents.find(\textcolor{keyword}{typeid}(FirstComponent));}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (firstComponentIt\ ==\ mComponents.end())}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ firstComponentEntities\ =\ firstComponentIt-\/>second;}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ [entityId,\ \_]\ :\ firstComponentEntities)\ \{}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hasAll\ =\ (...\ \&\&\ (mComponents[\textcolor{keyword}{typeid}(Components)].count(entityId)\ >\ 0));}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hasAll)}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result.push\_back(entityId);}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00151\ \ \ \ \ \}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ TSystem,\ \textcolor{keyword}{typename}...\ Args>}
+\DoxyCodeLine{00161\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1Registry_a4315b2e98a75c5648ef54220f652903e}{addSystem}}(Args\&\&...\ args)\ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_same\_v<TSystem,\ systems::RenderSystem>)\{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ mRenderSystem\ =\ std::make\_unique<TSystem>(*\textcolor{keyword}{this},\ std::forward<Args>(args)...);}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_base\_of\_v<systems::FixedSystem,\ TSystem>)\ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ fixedSystem\ =\ std::make\_unique<TSystem>(*\textcolor{keyword}{this},\ std::forward<Args>(args)...);}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ mFixedSystems.push\_back(std::move(fixedSystem));}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ \textcolor{keyword}{constexpr}\ (std::is\_base\_of\_v<systems::VariableSystem,\ TSystem>)\ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ variableSystem\ =\ std::make\_unique<TSystem>(*\textcolor{keyword}{this},\ std::forward<Args>(args)...);}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ mVariableSystems.push\_back(std::move(variableSystem));}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00173\ \ \ \ \ \}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1Registry_a52459c675de567f3c2ac5d14a36a0c62}{updateFixedSystems}}()\ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ fixedSystem\ :\ mFixedSystems)\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ fixedSystem-\/>update();}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00184\ \ \ \ \ \}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1Registry_ad22bf6ce1bfcec1e3091d58916629c18}{updateVariableSystems}}()\ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ variableSystem\ :\ mVariableSystems)\ \{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ variableSystem-\/>update();}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \ \ \ \ \}}
+\DoxyCodeLine{00196\ }
+\DoxyCodeLine{00202\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1Registry_a2d9d42450ca3a0e559448de226ff398c}{updateRenderSystem}}()\{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ mRenderSystem-\/>update();}
+\DoxyCodeLine{00204\ \ \ \ \ \}}
 \DoxyCodeLine{00205\ }
-\DoxyCodeLine{00206\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00207\ \ \ \ \ EntityID\ mNextId;}
-\DoxyCodeLine{00208\ \ \ \ \ std::unordered\_map<std::type\_index,\ std::unordered\_map<EntityID,\ std::shared\_ptr<void>>>\ mComponents;}
-\DoxyCodeLine{00209\ \ \ \ \ std::vector<std::unique\_ptr<systems::FixedSystem>>\ mFixedSystems;}
-\DoxyCodeLine{00210\ \ \ \ \ std::vector<std::unique\_ptr<systems::VariableSystem>>\ mVariableSystems;}
-\DoxyCodeLine{00211\ \ \ \ \ std::unique\_ptr<systems::VariableSystem>\ mRenderSystem;}
-\DoxyCodeLine{00212\ }
-\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ std::string\ name\ =\ \textcolor{stringliteral}{"{}Registry"{}};}
-\DoxyCodeLine{00214\ \};}
-\DoxyCodeLine{00215\ }
-\DoxyCodeLine{00216\ \}}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00208\ \ \ \ \ EntityID\ mNextId;}
+\DoxyCodeLine{00209\ \ \ \ \ std::unordered\_map<std::type\_index,\ std::unordered\_map<EntityID,\ std::shared\_ptr<void>>>\ mComponents;}
+\DoxyCodeLine{00210\ \ \ \ \ std::vector<std::unique\_ptr<systems::FixedSystem>>\ mFixedSystems;}
+\DoxyCodeLine{00211\ \ \ \ \ std::vector<std::unique\_ptr<systems::VariableSystem>>\ mVariableSystems;}
+\DoxyCodeLine{00212\ \ \ \ \ std::unique\_ptr<systems::VariableSystem>\ mRenderSystem;}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{const}\ \textcolor{keyword}{static}\ std::string\ name\ =\ \textcolor{stringliteral}{"{}Registry"{}};}
+\DoxyCodeLine{00215\ \};}
+\DoxyCodeLine{00216\ }
+\DoxyCodeLine{00217\ \}}
 
 \end{DoxyCode}

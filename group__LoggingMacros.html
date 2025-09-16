@@ -133,7 +133,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> { \</div>
-<div class="line">        if (te::Logger::currentLevel == te::LogLevel::DEBUG) { \</div>
+<div class="line">        if (te::Logger::debugMode == <span class="keyword">true</span>) { \</div>
 <div class="line">            te::Logger::debug(source, message); \</div>
 <div class="line">        } \</div>
 <div class="line">    } <span class="keywordflow">while</span>(0)</div>
@@ -187,7 +187,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> { \</div>
-<div class="line">        if (te::Logger::currentLevel == te::LogLevel::DEBUG) { \</div>
+<div class="line">        if (te::Logger::debugMode == <span class="keyword">true</span>) { \</div>
 <div class="line">            te::Logger::debug(source, componentName, component, entityID); \</div>
 <div class="line">        } \</div>
 <div class="line">    } <span class="keywordflow">while</span>(0)</div>

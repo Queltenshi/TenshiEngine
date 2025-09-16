@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['jump_0',['jump',['../structte_1_1components_1_1Jump.html#a88902247436705ce164709163881a408',1,'te::components::Jump::Jump()=default'],['../structte_1_1components_1_1Jump.html#a70d263472245c77f1adf6a839dca7a8e',1,'te::components::Jump::Jump(float strength)']]]
+  ['loadlevel_0',['loadLevel',['../classte_1_1managers_1_1TileMapManager.html#a0cbe1fdd18b2f2a313f9a6e4add5cda7',1,'te::managers::TileMapManager']]],
+  ['loadtileset_1',['loadTileset',['../classte_1_1managers_1_1TileMapManager.html#ab95f14918af13942cfe4a363bb737f09',1,'te::managers::TileMapManager']]]
 ];

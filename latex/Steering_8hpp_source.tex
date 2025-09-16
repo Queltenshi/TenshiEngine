@@ -1,0 +1,39 @@
+\doxysection{Steering.\+hpp}
+\hypertarget{Steering_8hpp_source}{}\label{Steering_8hpp_source}\index{include/TenshiEngine/Engine/Components/Steering.hpp@{include/TenshiEngine/Engine/Components/Steering.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Components/Component.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }components\{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structte_1_1components_1_1Steering}{Steering}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{structte_1_1components_1_1Component}{Component}}\{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{structte_1_1components_1_1Steering_aca95dc25bbc09b0c5d23988eaba1b8a6}{Steering}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Steering_a50dd1fe9d842feb50c5eee0fd1321a37}{toString}}\ ()\textcolor{keyword}{\ const\ override}\{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}(left:\ "{}}\ +\ utils::boolToString(left)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}right:\ "{}}\ +\ utils::boolToString(right)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}jump:\ "{}}\ +\ utils::boolToString(jump)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}sprint:\ "{}}\ +\ utils::boolToString(sprint)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}crouch:\ "{}}\ +\ utils::boolToString(crouch)\ +\ \textcolor{stringliteral}{"{}\ |\ "{}}\ +}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}attack:\ "{}}\ +\ utils::boolToString(attack)\ +\ \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{00030\ \ \ \ \ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{bool}\ left\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ right\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ jump\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ sprint\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ crouch\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ attack\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ \mbox{\hyperlink{structte_1_1components_1_1Steering_ac1d220ea149ba0bcac4d354b968453cb}{name}}\ =\ \textcolor{stringliteral}{"{}Steering"{}};}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \}}
+\DoxyCodeLine{00044\ \}}
+
+\end{DoxyCode}

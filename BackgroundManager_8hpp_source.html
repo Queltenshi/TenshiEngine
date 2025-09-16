@@ -99,43 +99,48 @@ $(document).ready(function(){initNavTree('BackgroundManager_8hpp_source.html',''
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;TenshiEngine/Engine/Core/Logger.hpp&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>te{</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>managers{</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classte_1_1managers_1_1BackgroundManager.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="classte_1_1managers_1_1BackgroundManager.html">BackgroundManager</a>{</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_class" href="classte_1_1managers_1_1BackgroundManager.html">BackgroundManager</a>(std::shared_ptr&lt;sf::Texture&gt; defaultTexture, sf::Vector2f windowSize);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classte_1_1managers_1_1BackgroundManager.html#a6f4d531af08ba2154fd5afe69064f3f9">setBackground</a>(std::shared_ptr&lt;sf::Texture&gt; texture);</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;Manager.hpp&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;TenshiEngine/Engine/Core/Logger.hpp&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span>te{</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span>managers{</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classte_1_1managers_1_1BackgroundManager.html">   16</a></span><span class="keyword">class </span><a class="code hl_class" href="classte_1_1managers_1_1BackgroundManager.html">BackgroundManager</a> : <span class="keyword">public</span> <a class="code hl_class" href="classte_1_1managers_1_1Manager.html">Manager</a>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_class" href="classte_1_1managers_1_1BackgroundManager.html">BackgroundManager</a>(std::shared_ptr&lt;sf::Texture&gt; defaultTexture);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classte_1_1managers_1_1BackgroundManager.html#a2b8dd78b2c42d8e838f73cf36eaaad3e">create</a>(sf::Vector2f windowSize);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classte_1_1managers_1_1BackgroundManager.html#a6f4d531af08ba2154fd5afe69064f3f9">setBackground</a>(std::shared_ptr&lt;sf::Texture&gt; texture, <span class="keywordtype">float</span> parallaxFactor);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classte_1_1managers_1_1BackgroundManager.html#a6f4d531af08ba2154fd5afe69064f3f9">setBackground</a>(std::shared_ptr&lt;sf::Texture&gt; texture);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    sf::Sprite &amp;<a class="code hl_function" href="classte_1_1managers_1_1BackgroundManager.html#a80f559d92308973457810798210b48d5">getBackground</a>();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classte_1_1managers_1_1BackgroundManager.html#adbc205dc7d0099398c52abb7959f18eb">update</a>(sf::Vector2f &amp;move);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    sf::Vector2f changeScale();</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    sf::Vector2f mWindowSize;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    std::shared_ptr&lt;sf::Texture&gt; mTexture;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    sf::Sprite mBackground;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">float</span> mParallaxFactor;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">static</span> <span class="keyword">const</span> std::string name;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>};</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classte_1_1managers_1_1BackgroundManager.html#a6f4d531af08ba2154fd5afe69064f3f9">setBackground</a>(std::shared_ptr&lt;sf::Texture&gt; texture, <span class="keywordtype">float</span> parallaxFactor);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    sf::Sprite &amp;<a class="code hl_function" href="classte_1_1managers_1_1BackgroundManager.html#a80f559d92308973457810798210b48d5">getBackground</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classte_1_1managers_1_1BackgroundManager.html#adbc205dc7d0099398c52abb7959f18eb">update</a>(sf::Vector2f &amp;move);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    sf::Vector2f changeScale();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    sf::Vector2f mWindowSize;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    std::shared_ptr&lt;sf::Texture&gt; mTexture;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    sf::Sprite mBackground;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">float</span> mParallaxFactor;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keyword">static</span> <span class="keyword">const</span> std::string name;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>};</div>
 </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>}</div>
-<div class="ttc" id="aclasste_1_1managers_1_1BackgroundManager_html"><div class="ttname"><a href="classte_1_1managers_1_1BackgroundManager.html">te::managers::BackgroundManager</a></div><div class="ttdoc">Manager for background image.</div><div class="ttdef"><b>Definition</b> BackgroundManager.hpp:14</div></div>
-<div class="ttc" id="aclasste_1_1managers_1_1BackgroundManager_html_a6f4d531af08ba2154fd5afe69064f3f9"><div class="ttname"><a href="classte_1_1managers_1_1BackgroundManager.html#a6f4d531af08ba2154fd5afe69064f3f9">te::managers::BackgroundManager::setBackground</a></div><div class="ttdeci">void setBackground(std::shared_ptr&lt; sf::Texture &gt; texture)</div><div class="ttdoc">Sets the background.</div><div class="ttdef"><b>Definition</b> BackgroundManager.cpp:14</div></div>
-<div class="ttc" id="aclasste_1_1managers_1_1BackgroundManager_html_a80f559d92308973457810798210b48d5"><div class="ttname"><a href="classte_1_1managers_1_1BackgroundManager.html#a80f559d92308973457810798210b48d5">te::managers::BackgroundManager::getBackground</a></div><div class="ttdeci">sf::Sprite &amp; getBackground()</div><div class="ttdoc">Gets the background.</div><div class="ttdef"><b>Definition</b> BackgroundManager.cpp:42</div></div>
-<div class="ttc" id="aclasste_1_1managers_1_1BackgroundManager_html_adbc205dc7d0099398c52abb7959f18eb"><div class="ttname"><a href="classte_1_1managers_1_1BackgroundManager.html#adbc205dc7d0099398c52abb7959f18eb">te::managers::BackgroundManager::update</a></div><div class="ttdeci">void update(sf::Vector2f &amp;move)</div><div class="ttdoc">Updates the background.</div><div class="ttdef"><b>Definition</b> BackgroundManager.cpp:46</div></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
+<div class="ttc" id="aclasste_1_1managers_1_1BackgroundManager_html"><div class="ttname"><a href="classte_1_1managers_1_1BackgroundManager.html">te::managers::BackgroundManager</a></div><div class="ttdoc">Manager for background image.</div><div class="ttdef"><b>Definition</b> BackgroundManager.hpp:16</div></div>
+<div class="ttc" id="aclasste_1_1managers_1_1BackgroundManager_html_a2b8dd78b2c42d8e838f73cf36eaaad3e"><div class="ttname"><a href="classte_1_1managers_1_1BackgroundManager.html#a2b8dd78b2c42d8e838f73cf36eaaad3e">te::managers::BackgroundManager::create</a></div><div class="ttdeci">void create(sf::Vector2f windowSize)</div><div class="ttdoc">Creates the manager.</div><div class="ttdef"><b>Definition</b> BackgroundManager.cpp:8</div></div>
+<div class="ttc" id="aclasste_1_1managers_1_1BackgroundManager_html_a6f4d531af08ba2154fd5afe69064f3f9"><div class="ttname"><a href="classte_1_1managers_1_1BackgroundManager.html#a6f4d531af08ba2154fd5afe69064f3f9">te::managers::BackgroundManager::setBackground</a></div><div class="ttdeci">void setBackground(std::shared_ptr&lt; sf::Texture &gt; texture)</div><div class="ttdoc">Sets the background.</div><div class="ttdef"><b>Definition</b> BackgroundManager.cpp:16</div></div>
+<div class="ttc" id="aclasste_1_1managers_1_1BackgroundManager_html_a80f559d92308973457810798210b48d5"><div class="ttname"><a href="classte_1_1managers_1_1BackgroundManager.html#a80f559d92308973457810798210b48d5">te::managers::BackgroundManager::getBackground</a></div><div class="ttdeci">sf::Sprite &amp; getBackground()</div><div class="ttdoc">Gets the background.</div><div class="ttdef"><b>Definition</b> BackgroundManager.cpp:44</div></div>
+<div class="ttc" id="aclasste_1_1managers_1_1BackgroundManager_html_adbc205dc7d0099398c52abb7959f18eb"><div class="ttname"><a href="classte_1_1managers_1_1BackgroundManager.html#adbc205dc7d0099398c52abb7959f18eb">te::managers::BackgroundManager::update</a></div><div class="ttdeci">void update(sf::Vector2f &amp;move)</div><div class="ttdoc">Updates the background.</div><div class="ttdef"><b>Definition</b> BackgroundManager.cpp:48</div></div>
+<div class="ttc" id="aclasste_1_1managers_1_1Manager_html"><div class="ttname"><a href="classte_1_1managers_1_1Manager.html">te::managers::Manager</a></div><div class="ttdoc">Base Manager.</div><div class="ttdef"><b>Definition</b> Manager.hpp:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

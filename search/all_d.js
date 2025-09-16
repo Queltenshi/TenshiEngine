@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['physicssystem_0',['physicssystem',['../classte_1_1systems_1_1PhysicsSystem.html',1,'te::systems::PhysicsSystem'],['../classte_1_1systems_1_1PhysicsSystem.html#a9d662bbbd1d4810275314dc4bb4cf1f6',1,'te::systems::PhysicsSystem::PhysicsSystem(Registry &amp;registry, const float deltaTime)'],['../classte_1_1systems_1_1PhysicsSystem.html#acd245fd3ec64ee8787f2931745590f0d',1,'te::systems::PhysicsSystem::PhysicsSystem(Registry &amp;registry, float deltaTime, float gravity)']]],
-  ['platformerplayer_1',['platformerplayer',['../classte_1_1Prefabs.html#ae75c5bcd56d306419ca4d87f87e74235',1,'te::Prefabs::PlatformerPlayer(Registry &amp;registry, std::shared_ptr&lt; sf::Texture &gt; texture)'],['../classte_1_1Prefabs.html#a4df531bfdf5336d26f768d81a3ed195a',1,'te::Prefabs::PlatformerPlayer(Registry &amp;registry, std::shared_ptr&lt; sf::Texture &gt; texture, std::shared_ptr&lt; json &gt; animationData)']]],
-  ['playerinput_2',['playerinput',['../structte_1_1components_1_1PlayerInput.html',1,'te::components::PlayerInput'],['../structte_1_1components_1_1PlayerInput.html#a91190750e098ba6cdbd5aa9754099750',1,'te::components::PlayerInput::PlayerInput()']]],
-  ['position_3',['position',['../structte_1_1Camera.html#acd4ae4bf616d05557069bdacccd70a55',1,'te::Camera::position'],['../structte_1_1components_1_1Transform.html#a52a85252a692cd3fca6c3ad375ca8d61',1,'te::components::Transform::position']]],
-  ['positiondirty_4',['positionDirty',['../structte_1_1components_1_1Transform.html#a32a7677f4eda57399c43f5b140b7b14f',1,'te::components::Transform']]],
-  ['prefabs_5',['Prefabs',['../classte_1_1Prefabs.html',1,'te']]]
+  ['rectangle_0',['rectangle',['../structte_1_1components_1_1Animation.html#aebc50046bc4e84b0a2f5faa74f176eec',1,'te::components::Animation']]],
+  ['registry_1',['registry',['../classte_1_1Registry.html',1,'te::Registry'],['../classte_1_1Registry.html#ac9fde2f8cf63b88d955daff21299fa3e',1,'te::Registry::Registry()']]],
+  ['resourcemanager_2',['resourcemanager',['../classte_1_1managers_1_1ResourceManager.html',1,'te::managers::ResourceManager'],['../classte_1_1managers_1_1ResourceManager.html#a8b8987e5c6b87d01e06e343a6d77c158',1,'te::managers::ResourceManager::ResourceManager()']]],
+  ['rigidbody_3',['rigidbody',['../structte_1_1components_1_1Rigidbody.html',1,'te::components::Rigidbody'],['../structte_1_1components_1_1Rigidbody.html#ad0f144559b373a95727c482b1cdcdf67',1,'te::components::Rigidbody::Rigidbody()=default'],['../structte_1_1components_1_1Rigidbody.html#aa217b88ba64b7eab48bd232a68698d86',1,'te::components::Rigidbody::Rigidbody(float mass)']]],
+  ['run_4',['run',['../classte_1_1GameBase.html#accb4b63d1277e46131d66a66c0e1e63b',1,'te::GameBase']]]
 ];

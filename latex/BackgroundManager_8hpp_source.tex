@@ -4,36 +4,39 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Core/Logger.hpp"{}}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }te\{}
-\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }managers\{}
-\DoxyCodeLine{00008\ }
-\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager}{BackgroundManager}}\{}
-\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager}{BackgroundManager}}(std::shared\_ptr<sf::Texture>\ defaultTexture,\ sf::Vector2f\ windowSize);}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager_a6f4d531af08ba2154fd5afe69064f3f9}{setBackground}}(std::shared\_ptr<sf::Texture>\ texture);}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Manager.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Core/Logger.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }managers\{}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager}{BackgroundManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classte_1_1managers_1_1Manager}{Manager}}\{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager}{BackgroundManager}}(std::shared\_ptr<sf::Texture>\ defaultTexture);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager_a2b8dd78b2c42d8e838f73cf36eaaad3e}{create}}(sf::Vector2f\ windowSize);}
 \DoxyCodeLine{00035\ }
-\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager_a6f4d531af08ba2154fd5afe69064f3f9}{setBackground}}(std::shared\_ptr<sf::Texture>\ texture,\ \textcolor{keywordtype}{float}\ parallaxFactor);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager_a6f4d531af08ba2154fd5afe69064f3f9}{setBackground}}(std::shared\_ptr<sf::Texture>\ texture);}
 \DoxyCodeLine{00045\ }
-\DoxyCodeLine{00051\ \ \ \ \ sf::Sprite\ \&\mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager_a80f559d92308973457810798210b48d5}{getBackground}}();}
-\DoxyCodeLine{00052\ \ \ \ \ }
-\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager_adbc205dc7d0099398c52abb7959f18eb}{update}}(sf::Vector2f\ \&move);}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00063\ \ \ \ \ sf::Vector2f\ changeScale();}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ \ \ \ \ sf::Vector2f\ mWindowSize;}
-\DoxyCodeLine{00066\ \ \ \ \ std::shared\_ptr<sf::Texture>\ mTexture;}
-\DoxyCodeLine{00067\ \ \ \ \ sf::Sprite\ mBackground;}
-\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{float}\ mParallaxFactor;}
-\DoxyCodeLine{00069\ }
-\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ name;}
-\DoxyCodeLine{00071\ \};}
-\DoxyCodeLine{00072\ }
-\DoxyCodeLine{00073\ \}}
-\DoxyCodeLine{00074\ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager_a6f4d531af08ba2154fd5afe69064f3f9}{setBackground}}(std::shared\_ptr<sf::Texture>\ texture,\ \textcolor{keywordtype}{float}\ parallaxFactor);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \ \ \ \ sf::Sprite\ \&\mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager_a80f559d92308973457810798210b48d5}{getBackground}}();}
+\DoxyCodeLine{00062\ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager_adbc205dc7d0099398c52abb7959f18eb}{update}}(sf::Vector2f\ \&move);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00073\ \ \ \ \ sf::Vector2f\ changeScale();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ sf::Vector2f\ mWindowSize;}
+\DoxyCodeLine{00076\ \ \ \ \ std::shared\_ptr<sf::Texture>\ mTexture;}
+\DoxyCodeLine{00077\ \ \ \ \ sf::Sprite\ mBackground;}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{float}\ mParallaxFactor;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ name;}
+\DoxyCodeLine{00081\ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \}}
+\DoxyCodeLine{00084\ \}}
 
 \end{DoxyCode}

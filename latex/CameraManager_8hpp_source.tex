@@ -4,42 +4,43 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}BackgroundManager.hpp"{}}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Core/Registry.hpp"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Camera/Camera.hpp"{}}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{namespace\ }te\{}
-\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }managers\{}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1managers_1_1CameraManager}{CameraManager}}\{}
-\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classte_1_1managers_1_1CameraManager}{CameraManager}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry,\ \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager}{BackgroundManager}}\ \&backgroundManager,\ sf::Vector2f\ windowSize);}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1CameraManager_a96c6d428852c0af8f1a43adc8bab15f1}{update}}();}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1CameraManager_a87a457534ba638c21ad5c70934bbb79a}{setTriggerDistance}}(\textcolor{keyword}{const}\ sf::Vector2f\ triggerDistance);}
-\DoxyCodeLine{00042\ \ \ \ \ }
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1CameraManager_a7069ece4a4bf73be7ea25cb12404b429}{addCamera}}(EntityID\ entityID);}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1CameraManager_a7069ece4a4bf73be7ea25cb12404b429}{addCamera}}(EntityID\ entityID,\ Camera::Movement\ movement);}
-\DoxyCodeLine{00063\ }
-\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1CameraManager_aa87ec8fc6edc5a0f5be17da045ab0c36}{setCamera}}(EntityID\ entitiyID);}
-\DoxyCodeLine{00071\ }
-\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{structte_1_1Camera}{Camera}}\ *\mbox{\hyperlink{classte_1_1managers_1_1CameraManager_adabf32152cfb5532fb92fd7f67e46cfa}{getActiveCamera}}();}
-\DoxyCodeLine{00078\ }
-\DoxyCodeLine{00079\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&mRegistry;}
-\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager}{BackgroundManager}}\ \&mBackgroundManager;}
-\DoxyCodeLine{00082\ \ \ \ \ sf::Vector2f\ mWindowSize;}
-\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{structte_1_1Camera}{Camera}}\ *mActiveCamera;}
-\DoxyCodeLine{00084\ \ \ \ \ std::vector<Camera>\ mCameras;}
-\DoxyCodeLine{00085\ \ \ \ \ sf::Vector2f\ mTriggerDistance;}
-\DoxyCodeLine{00086\ }
-\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ sf::Vector2f\ defaultTriggerDistance;}
-\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ name;}
-\DoxyCodeLine{00089\ \};}
-\DoxyCodeLine{00090\ }
-\DoxyCodeLine{00091\ \}}
-\DoxyCodeLine{00092\ \}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Manager.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}BackgroundManager.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Core/Registry.hpp"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Camera/Camera.hpp"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }managers\{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1managers_1_1CameraManager}{CameraManager}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classte_1_1managers_1_1Manager}{Manager}}\{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1CameraManager_a61361d61bee32170a0aaabc717c2b219}{create}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ *registry,\ \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager}{BackgroundManager}}\ *backgroundManager,\ sf::Vector2f\ windowSize);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1CameraManager_a96c6d428852c0af8f1a43adc8bab15f1}{update}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1CameraManager_a87a457534ba638c21ad5c70934bbb79a}{setTriggerDistance}}(\textcolor{keyword}{const}\ sf::Vector2f\ triggerDistance);}
+\DoxyCodeLine{00044\ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1CameraManager_a7069ece4a4bf73be7ea25cb12404b429}{addCamera}}(EntityID\ entityID);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1CameraManager_a7069ece4a4bf73be7ea25cb12404b429}{addCamera}}(EntityID\ entityID,\ Camera::Movement\ movement);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1managers_1_1CameraManager_aa87ec8fc6edc5a0f5be17da045ab0c36}{setCamera}}(EntityID\ entitiyID);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ Camera\ *\mbox{\hyperlink{classte_1_1managers_1_1CameraManager_adabf32152cfb5532fb92fd7f67e46cfa}{getActiveCamera}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry}{Registry}}\ *mRegistry;}
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{classte_1_1managers_1_1BackgroundManager}{BackgroundManager}}\ *mBackgroundManager;}
+\DoxyCodeLine{00084\ \ \ \ \ sf::Vector2f\ mWindowSize;}
+\DoxyCodeLine{00085\ \ \ \ \ Camera\ *mActiveCamera;}
+\DoxyCodeLine{00086\ \ \ \ \ std::vector<Camera>\ mCameras;}
+\DoxyCodeLine{00087\ \ \ \ \ sf::Vector2f\ mTriggerDistance;}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ sf::Vector2f\ defaultTriggerDistance;}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ std::string\ name;}
+\DoxyCodeLine{00091\ \};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \}}
+\DoxyCodeLine{00094\ \}}
 
 \end{DoxyCode}

@@ -5,6 +5,5 @@ var searchData=
   ['addjson_2',['addJson',['../classte_1_1managers_1_1ResourceManager.html#acc2149df3000be3d51af8d82bf196af9',1,'te::managers::ResourceManager']]],
   ['addsystem_3',['addSystem',['../classte_1_1Registry.html#a4315b2e98a75c5648ef54220f652903e',1,'te::Registry']]],
   ['addtexture_4',['addTexture',['../classte_1_1managers_1_1ResourceManager.html#ad0095e60e437ee1258964cdf944116d7',1,'te::managers::ResourceManager']]],
-  ['animation_5',['Animation',['../structte_1_1components_1_1Animation.html#a9251a3c60283895b6bfd1b53d28aaa61',1,'te::components::Animation']]],
-  ['animationsystem_6',['AnimationSystem',['../classte_1_1systems_1_1AnimationSystem.html#af47e46fdafcf37ea0e73d44f5860e9c8',1,'te::systems::AnimationSystem']]]
+  ['animation_5',['Animation',['../structte_1_1components_1_1Animation.html#a9251a3c60283895b6bfd1b53d28aaa61',1,'te::components::Animation']]]
 ];

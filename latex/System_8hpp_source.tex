@@ -4,41 +4,40 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Entity/Entity.hpp"{}}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }te\{}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }Registry;}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }systems\{}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1systems_1_1System}{System}}\{}
-\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classte_1_1systems_1_1System_ad654c9da05efadd658f3d4a2eae90a35}{System}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry):\ \mbox{\hyperlink{classte_1_1systems_1_1System_aacef5c1d0b0ec002f21c7fcf8cc4a06b}{mRegistry}}(registry)\{\}}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classte_1_1systems_1_1System_a3640e994e8b9aad924d11ba67d07d421}{update}}()\ =\ 0;}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&\mbox{\hyperlink{classte_1_1systems_1_1System_aacef5c1d0b0ec002f21c7fcf8cc4a06b}{mRegistry}};}
-\DoxyCodeLine{00037\ \};}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00042\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1systems_1_1FixedSystem}{FixedSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classte_1_1systems_1_1System}{System}}\{}
-\DoxyCodeLine{00043\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{classte_1_1systems_1_1FixedSystem_a85040d49e6c6c69f907e43b544970af2}{FixedSystem}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ deltaTime):\ \mbox{\hyperlink{classte_1_1systems_1_1System}{System}}(registry),\ \mbox{\hyperlink{classte_1_1systems_1_1FixedSystem_a62f7877c87a68695a236b493ef4a42fd}{mDeltaTime}}(deltaTime)\{\}\ }
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classte_1_1systems_1_1FixedSystem_a62f7877c87a68695a236b493ef4a42fd}{mDeltaTime}};}
-\DoxyCodeLine{00057\ \};}
-\DoxyCodeLine{00058\ }
-\DoxyCodeLine{00062\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classte_1_1systems_1_1VariableSystem}{VariableSystem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classte_1_1systems_1_1System}{System}}\{}
-\DoxyCodeLine{00063\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{classte_1_1systems_1_1VariableSystem_a9994f6722a3988075df384004dd9a5a9}{VariableSystem}}(\mbox{\hyperlink{classte_1_1Registry}{Registry}}\ \&registry,\ \textcolor{keywordtype}{float}\ \&deltaTime):\ \mbox{\hyperlink{classte_1_1systems_1_1System}{System}}(registry),\ \mbox{\hyperlink{classte_1_1systems_1_1VariableSystem_a639a312d6ea69430b4d51e3f3af2d697}{mDeltaTime}}(deltaTime)\{\}\ }
-\DoxyCodeLine{00073\ }
-\DoxyCodeLine{00074\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{float}\ \&\mbox{\hyperlink{classte_1_1systems_1_1VariableSystem_a639a312d6ea69430b4d51e3f3af2d697}{mDeltaTime}};}
-\DoxyCodeLine{00077\ \};}
-\DoxyCodeLine{00078\ \}}
-\DoxyCodeLine{00079\ \}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}TenshiEngine/Engine/Entity/Entity.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{namespace\ }te\{}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }Registry;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }systems\{}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }System\{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ System(Registry\ \&registry):\ mRegistry(registry)\{\}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ update()\ =\ 0;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00018\ \ \ \ \ Registry\ \&mRegistry;}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }FixedSystem\ :\ \textcolor{keyword}{public}\ System\{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ FixedSystem(Registry\ \&registry,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ deltaTime):\ System(registry),\ mDeltaTime(deltaTime)\{\}\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ mDeltaTime;}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }VariableSystem\ :\ \textcolor{keyword}{public}\ System\{}
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ VariableSystem(Registry\ \&registry,\ \textcolor{keywordtype}{float}\ \&deltaTime):\ System(registry),\ mDeltaTime(deltaTime)\{\}\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ \&mDeltaTime;}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ \}}
+\DoxyCodeLine{00037\ \}}
 
 \end{DoxyCode}
