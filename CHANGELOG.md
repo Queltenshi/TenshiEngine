@@ -2,6 +2,20 @@
 
 ---
 
+## [0.5.0] - 2025-09-16
+### Added
+- **Config**: Loads and saves data from/to Config.ini file
+- **Ini**: Ini file support via brofield/simpleini header
+
+### Changed
+- **Components**
+    - **Steering**: Renamed from PlayerInput -> Steering
+- **Systems**
+    - **InputSystem**: Now gets keybinds from config file and has more keys (A-Z, 0-9, Space, LShift, LCtrl, Mouse-Left/Right)
+    - **PhysicsSystem** : Now gets GravityForce from config file
+- **GameBase**: Now gets window data from config file    
+- **Logger**: Now gets DebugMode from config file, has timestamp and saves to log file
+
 ## [0.4.0] - 2025-09-07
 ### Added
 - **Managers**

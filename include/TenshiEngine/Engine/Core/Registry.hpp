@@ -16,6 +16,7 @@ struct RenderSystem;
  * Creates entities, adds components,
  * shows components and entities,
  * adds systems, update systems
+ * Is created automatically in the GameBase
  */
 class Registry{
 public:

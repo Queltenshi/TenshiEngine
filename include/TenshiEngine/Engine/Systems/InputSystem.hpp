@@ -5,52 +5,38 @@
 #include <SFML/Window/Keyboard.hpp>
 #include <SFML/Window/Mouse.hpp>
 #include <cstdint>
-#include <string>
+
 
 namespace te{
 namespace systems{
 
-/**
- * @brief System for input handling
- *
- * Checks the pressed keys from the system and
- * changes the inputComponents depending on Hotkeys
- */
 class InputSystem : public VariableSystem{
 public:
+    enum class Action{MOVELEFT, MOVERIGHT, JUMP, SPRINT, CROUCH, ATTACK};
+    enum class Key{Q, W, E, R, T, Z, U, I, O, P, A, S, D, F, G, H, J, K, L, Y, X, C, V, B, N, M, NUM1, NUM2, NUM3, NUM4, NUM5, NUM6, NUM7, NUM8, NUM9, NUM0, SPACE, L_SHIFT, L_CONTROL, MOUSE_LEFT, MOUSE_RIGHT};
 
-    /**
-     * @brief Constructor
-     *
-     * creates the System
-     *
-     * @param registry reference to the registry
-     * @param deltaTime reference to the frame delta time
-     */
-    InputSystem(Registry &registry, float &deltaTime);
+    InputSystem(Registry &registry, float &deltaTime, std::unordered_map<Action, Key> configKeyBinds);
 
     void update() override; 
 
-    ///Name of system
     static const std::string name;
 
 private:
-    //Key gets loaded from File
     enum class InputType{MOUSE, KEYBOARD};
-    struct Key{
-        Key(InputType inputType, const std::string keyName, const std::string keyBind)
-            :inputType(inputType), keyName(keyName), keyBind(keyBind){}
+    struct KeyBind{
+        KeyBind(InputType inputType, Action action, Key key)
+            :inputType(inputType), action(action), key(key){}
         InputType inputType;
-        std::string keyName;
-        std::string keyBind;
+        Key key;
+        Action action;
         uint8_t keyCode;
     };
 
-    void keyPressed(Key &key, EntityID entityID);
-    uint8_t keyNameToCode(std::string &keyName);
-    void updatePlayerInput(std::string &keyBind, components::PlayerInput *inputComponent, EntityID entityID);
+    void keyPressed(KeyBind &keyBind, EntityID entityID);
+    uint8_t keyToCode(Key key);
+    void updateSteering(Action &action, components::Steering *steering, EntityID entityID);
 
-    Key keys[8];
+    std::vector<KeyBind> keyBinds;
 };
 
 }

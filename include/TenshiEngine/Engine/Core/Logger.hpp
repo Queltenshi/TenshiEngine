@@ -2,8 +2,10 @@
 
 #include "TenshiEngine/Engine/Components/Component.hpp"
 #include "TenshiEngine/Engine/Entity/Entity.hpp"
-#include <string>
-#include <iostream>
+#include <ctime>
+#include <sstream>
+#include <iomanip>
+#include <fstream>
 
 namespace te{
 
@@ -21,7 +23,7 @@ public:
     Logger(const Logger&)=delete;
     Logger(Logger&&)=delete; 
 
-    static LogLevel currentLevel;
+    static bool debugMode;
 
     ///Use LOG_DEBUG or LOG_DEBUG_COMPONENT_CHANGED instead to automatically check if currentLevel is debug
     static void debug(const std::string &source, const std::string &message);
@@ -70,12 +72,25 @@ public:
     static void critical(const std::string &source, const std::string &message);
 
 private:
-    static void log(LogLevel logLevel, const std::string &system, const std::string &message);
+    static void log(LogLevel logLevel, const std::string &source, const std::string &content);
+    static std::string currentTime();
     static std::string toString(LogLevel logLevel);
+    static std::string coloredMessage(LogLevel logLevel, const std::string &content);
+    static std::string message(LogLevel logLevel, const std::string &content);
+
+    const static std::string logFileName;
+
+    //Clearing log at the start of the game
+    struct ClearLog {
+        ClearLog() {
+            std::ofstream logFile(logFileName, std::ios::trunc);
+            info("Logger", logFileName + " cleared");
+        }
+    };
+    static ClearLog clearLog;
 };
 
 }
-
 
 /** 
  * @defgroup LoggingMacros Logging Macros
@@ -93,7 +108,7 @@ private:
  */
 #define LOG_DEBUG(source, message) \
     do { \
-        if (te::Logger::currentLevel == te::LogLevel::DEBUG) { \
+        if (te::Logger::debugMode == true) { \
             te::Logger::debug(source, message); \
         } \
     } while(0)
@@ -111,7 +126,7 @@ private:
  */
 #define LOG_DEBUG_COMPONENT_CHANGED(source, componentName, component, entityID) \
     do { \
-        if (te::Logger::currentLevel == te::LogLevel::DEBUG) { \
+        if (te::Logger::debugMode == true) { \
             te::Logger::debug(source, componentName, component, entityID); \
         } \
     } while(0)

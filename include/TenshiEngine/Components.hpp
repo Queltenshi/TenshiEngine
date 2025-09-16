@@ -4,7 +4,7 @@
 #include "TenshiEngine/Engine/Components/Rigidbody.hpp"
 #include "TenshiEngine/Engine/Components/Sprite.hpp"
 #include "TenshiEngine/Engine/Components/Transform.hpp"
-#include "TenshiEngine/Engine/Components/PlayerInput.hpp"
+#include "TenshiEngine/Engine/Components/Steering.hpp"
 #include "TenshiEngine/Engine/Components/Velocity.hpp"
 #include "TenshiEngine/Engine/Components/Grounded.hpp"
 #include "TenshiEngine/Engine/Components/Animation.hpp"

@@ -4,7 +4,6 @@
 namespace te{
 namespace systems{
 
-PhysicsSystem::PhysicsSystem(Registry &registry, float deltaTime) : FixedSystem(registry, deltaTime), mGravity(defaultGravity){}
 PhysicsSystem::PhysicsSystem(Registry &registry, float deltaTime, float gravity) : FixedSystem(registry, deltaTime), mGravity(gravity){}
 
 void PhysicsSystem::update(){
@@ -133,7 +132,6 @@ sf::FloatRect PhysicsSystem::getWorldBounds(components::Transform *transform, co
 }
 
 const std::string PhysicsSystem::name = "PhysicsSystem";
-const float PhysicsSystem::defaultGravity = 25.f;
 
 }
 }

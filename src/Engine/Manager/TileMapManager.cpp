@@ -8,7 +8,10 @@
 namespace te{
 namespace managers{
 
-TileMapManager::TileMapManager(Registry &registry): mRegistry(registry), mTileSize(0, 0){}
+void TileMapManager::create(Registry *registry){
+    mRegistry = registry;
+    mTileSize = {0, 0};
+}
 
 void TileMapManager::loadTileset(std::shared_ptr<sf::Texture> tilesetTexture, std::shared_ptr<json> tilesetData){
     mTilesetTexture = std::move(tilesetTexture);
@@ -97,19 +100,15 @@ void TileMapManager::loadLevel(std::shared_ptr<json> levelData){
 
 std::vector<std::vector<int>> TileMapManager::loadLevel(sf::Vector2i levelSize, std::shared_ptr<json> levelData){
     std::vector<std::vector<int>> level;
-    std::string logInfo;
     for(int i = 0; i < levelSize.y; i++){
         std::vector<int> levelRow;
         for(int j = 0; j < levelSize.x; j++){
             levelRow.push_back(levelData->at("layers")[0]["data"][i * levelSize.x + j]);
-            logInfo += std::to_string(levelRow[j]);
         }
         level.push_back(levelRow);
-        logInfo += "\n";
     }
-    Logger::info(name, "level created: (levelSize.x: " + std::to_string(levelSize.x) + " | " +
-                                      "(levelSize.y: " + std::to_string(levelSize.y) + ")\n" +
-            logInfo);
+    Logger::info(name, "level created: (tiles per width: " + std::to_string(levelSize.x) + " | " +
+                                       "tiles per height: " + std::to_string(levelSize.y) + ")");
     return level;
 }
 
@@ -124,17 +123,17 @@ void TileMapManager::createEntities(std::vector<std::vector<int>> &level, sf::Ve
                 continue;
             }
 
-            auto tile = mRegistry.createEntity(mTilesetTexture, mTileSize);
-            auto sprite = mRegistry.getComponent<components::Sprite>(tile.id);
+            auto tile = mRegistry->createEntity(mTilesetTexture, mTileSize);
+            auto sprite = mRegistry->getComponent<components::Sprite>(tile.id);
             for(auto collider : mColliders){
                 if(level[i][j] == collider){
-                    mRegistry.addComponent(tile.id, components::Collider(sprite->sprite.getGlobalBounds().size));
-                    auto rigidbody = mRegistry.addComponent(tile.id, components::Rigidbody());
+                    mRegistry->addComponent(tile.id, components::Collider(sprite->sprite.getGlobalBounds().size));
+                    auto rigidbody = mRegistry->addComponent(tile.id, components::Rigidbody());
                     rigidbody->isStatic = true;
                 }
             }
 
-            auto transform = mRegistry.getComponent<components::Transform>(tile.id);
+            auto transform = mRegistry->getComponent<components::Transform>(tile.id);
             float positionX = static_cast<float>(j * mTileSize.x + mTileSize.x / 2.f);
             float positionY = static_cast<float>(i * mTileSize.y + mTileSize.y / 2.f);
             transform->position = {positionX, positionY};

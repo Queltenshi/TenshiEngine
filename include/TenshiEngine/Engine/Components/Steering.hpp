@@ -6,24 +6,22 @@ namespace te{
 namespace components{
 
 /**
- * @brief component with input states
+ * @brief component with steering actions
  *
- * stores the input states of which actions are pressed
+ * stores which steering actions are activated
  */
-struct PlayerInput : public Component{
+struct Steering : public Component{
 public:
-
     /**
      * @brief Constructor
      *
      * creates the component
      */
-    PlayerInput() = default;
+    Steering() = default;
+
 
     std::string toString () const override{
-        return "(up: " + utils::boolToString(up) + " | " + 
-               "down: " + utils::boolToString(down) + " | " +
-               "left: " + utils::boolToString(left) + " | " +
+        return "(left: " + utils::boolToString(left) + " | " +
                "right: " + utils::boolToString(right) + " | " +
                "jump: " + utils::boolToString(jump) + " | " +
                "sprint: " + utils::boolToString(sprint) + " | " +
@@ -31,8 +29,6 @@ public:
                "attack: " + utils::boolToString(attack) + ")";
     };
 
-    bool up = false;
-    bool down = false;
     bool left = false;
     bool right = false;
     bool jump = false;
@@ -41,7 +37,7 @@ public:
     bool attack = false;
 
     ///Name of component
-    inline static const std::string name = "PlayerInput";
+    inline static const std::string name = "Steering";
 };
 
 }

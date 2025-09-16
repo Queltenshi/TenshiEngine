@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Manager.hpp"
 #include "TenshiEngine/Engine/Core/Logger.hpp"
 #include "TenshiEngine/Assets/Textures/DefaultTexture.h"
 #include <SFML/Graphics/Texture.hpp>
@@ -16,13 +17,14 @@ namespace managers{
  * @brief Manager for resources
  *
  * stores different types of resources
+ * Is created automatically in the GameBase
  */
-class ResourceManager{
+class ResourceManager : public Manager{
 public:
     /**
      * @brief Constructor
      *
-     * creates the Manager
+     * Default constructor
      */
     ResourceManager();
 

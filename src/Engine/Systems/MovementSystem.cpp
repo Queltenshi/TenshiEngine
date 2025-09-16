@@ -19,8 +19,8 @@ void MovementSystem::updateVelocity(EntityID entityID){
     if(mRegistry.hasComponent<components::HorizontalMovement>(entityID)){
         auto horizontalMovement = mRegistry.getComponent<components::HorizontalMovement>(entityID);
 
-        if(mRegistry.hasComponent<components::PlayerInput>(entityID)){
-            auto playerInput = mRegistry.getComponent<components::PlayerInput>(entityID);
+        if(mRegistry.hasComponent<components::Steering>(entityID)){
+            auto playerInput = mRegistry.getComponent<components::Steering>(entityID);
 
             velocity->value.x = updateHorizontalMovement(entityID, playerInput, horizontalMovement);
             if(mRegistry.hasComponent<components::Jump>(entityID)){
@@ -35,7 +35,7 @@ void MovementSystem::updateVelocity(EntityID entityID){
     }
 }
 
-float MovementSystem::updateHorizontalMovement(EntityID entityID, components::PlayerInput *playerInput, components::HorizontalMovement *horizontalMovement){
+float MovementSystem::updateHorizontalMovement(EntityID entityID, components::Steering *playerInput, components::HorizontalMovement *horizontalMovement){
     float newMovement = 0.f;
     if(playerInput->left){
         newMovement = -horizontalMovement->speed;
@@ -81,7 +81,7 @@ void MovementSystem::updateState(EntityID entityID, components::Velocity *veloci
     }
 }
 
-float MovementSystem::updateJump(EntityID entityID, components::PlayerInput *playerInput, components::Velocity *velocity){
+float MovementSystem::updateJump(EntityID entityID, components::Steering *playerInput, components::Velocity *velocity){
     auto jump = mRegistry.getComponent<components::Jump>(entityID);
     float newVelocityY = velocity->value.y;
 

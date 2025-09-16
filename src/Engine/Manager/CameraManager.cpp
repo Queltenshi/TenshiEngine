@@ -3,8 +3,12 @@
 namespace te{
 namespace managers{
 
-CameraManager::CameraManager(Registry &registry, BackgroundManager &backgroundManager, sf::Vector2f windowSize):
-    mRegistry(registry), mBackgroundManager(backgroundManager), mWindowSize(windowSize), mActiveCamera(nullptr), mTriggerDistance(defaultTriggerDistance){
+void CameraManager::create(Registry *registry, BackgroundManager *backgroundManager, sf::Vector2f windowSize){
+    mTriggerDistance = defaultTriggerDistance;
+    mActiveCamera = nullptr;
+    mRegistry = registry;
+    mBackgroundManager = backgroundManager;
+    mWindowSize = windowSize;
 }
 
 void CameraManager::update(){
@@ -14,7 +18,7 @@ void CameraManager::update(){
 
     sf::Vector2f oldCameraPosition = mActiveCamera->position;
     sf::Vector2f &cameraPosition = mActiveCamera->position;
-    auto &entityPosition = mRegistry.getComponent<components::Transform>(mActiveCamera->entityID)->position;
+    auto &entityPosition = mRegistry->getComponent<components::Transform>(mActiveCamera->entityID)->position;
 
     if(mActiveCamera->movement != Camera::Movement::VERTICAL){
         if(entityPosition.x < cameraPosition.x - (mWindowSize.x * mTriggerDistance.x)){
@@ -37,7 +41,7 @@ void CameraManager::update(){
     if(cameraPosition != oldCameraPosition){
         mActiveCamera->view.setCenter(cameraPosition);
         sf::Vector2f move = oldCameraPosition - cameraPosition;
-        mBackgroundManager.update(move);
+        mBackgroundManager->update(move);
     }
 }
 
@@ -46,7 +50,7 @@ void CameraManager::setTriggerDistance(const sf::Vector2f triggerDistance){
 }
 
 void CameraManager::addCamera(EntityID entityID){
-    auto transform = mRegistry.getComponent<components::Transform>(entityID);
+    auto transform = mRegistry->getComponent<components::Transform>(entityID);
     sf::Vector2f position = {transform->position.x, static_cast<float>(mWindowSize.y) / 2.f}; 
     Camera camera(position, mWindowSize, entityID);
     Logger::info(name, "Camera created: " + camera.toString());
@@ -58,7 +62,7 @@ void CameraManager::addCamera(EntityID entityID){
 }
 
 void CameraManager::addCamera(EntityID entityID, Camera::Movement movement){
-    auto transform = mRegistry.getComponent<components::Transform>(entityID);
+    auto transform = mRegistry->getComponent<components::Transform>(entityID);
     sf::Vector2f position = {transform->position.x, static_cast<float>(mWindowSize.y) / 2.f}; 
     Camera camera(position, mWindowSize, entityID, movement);
     Logger::info(name, "Camera created: " + camera.toString());

@@ -18,14 +18,14 @@ public:
      * @brief creates platformer player
      *
      * creates new entity with given texture and adds
-     * PlayerInput, HorizontalMovement, Jump, Velocity, Grounded, Rigidbody, Collider
+     * Steering, HorizontalMovement, Jump, Velocity, Grounded, Rigidbody, Collider
      *
      * @param registry Registry
      * @param texture Texture to display
      */
     static Entity PlatformerPlayer(Registry &registry, std::shared_ptr<sf::Texture> texture){
         Entity entity = registry.createEntity(texture);
-        registry.addComponent(entity.id, components::PlayerInput());
+        registry.addComponent(entity.id, components::Steering());
         registry.addComponent(entity.id, components::HorizontalMovement());
         registry.addComponent(entity.id, components::Jump());
         registry.addComponent(entity.id, components::Velocity());
@@ -40,7 +40,7 @@ public:
      * @brief creates platformer player with animation
      *
      * creates new entity with given texture and animationData and adds
-     * PlayerInput, HorizontalMovement, Jump, Velocity, Grounded, Rigidbody, Collider
+     * Steering, HorizontalMovement, Jump, Velocity, Grounded, Rigidbody, Collider
      *
      * @param registry Registry
      * @param texture Texture to display
@@ -48,7 +48,7 @@ public:
      */
     static Entity PlatformerPlayer(Registry &registry, std::shared_ptr<sf::Texture> texture, std::shared_ptr<json> animationData){
         Entity entity = registry.createEntity(texture, animationData);
-        registry.addComponent(entity.id, components::PlayerInput());
+        registry.addComponent(entity.id, components::Steering());
         registry.addComponent(entity.id, components::HorizontalMovement());
         registry.addComponent(entity.id, components::Jump());
         registry.addComponent(entity.id, components::Velocity());

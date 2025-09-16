@@ -6,38 +6,12 @@
 namespace te{
 namespace systems{
 
-/**
- * @brief System for physical calculations
- *
- * Checks velocity, rigidBody, collider and then calculates
- * new velocity and new sprite position
- */
 class PhysicsSystem : public FixedSystem{
 public:
-    /**
-     * @brief Constructor
-     *
-     * creates the System with defaultGravity(10.f)
-     *
-     * @param registry Reference to the registry
-     * @param deltaTime Fixed deltaTime
-     */
-    PhysicsSystem(Registry &registry, const float deltaTime);
-
-    /**
-     * @brief Constructor
-     *
-     * creates the System with given gravity
-     *
-     * @param registry reference to the registry
-     * @param deltaTime deltaTime
-     * @param gravity value of gravity
-     */
-    PhysicsSystem(Registry &registry, float deltaTime, float gravity);
+    PhysicsSystem(Registry &registry, const float deltaTime, const float gravity);
 
     void update(); 
 
-    ///Name of system
     static const std::string name;
 
 private:
@@ -50,8 +24,6 @@ private:
     sf::FloatRect getWorldBounds(components::Transform *transform, components::Collider *collider);
 
     float mGravity;
-
-    static const float defaultGravity;
 };
 
 }

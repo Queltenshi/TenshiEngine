@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Manager.hpp"
 #include <SFML/Graphics.hpp>
 #include "TenshiEngine/Engine/Core/Logger.hpp"
 
@@ -10,18 +11,27 @@ namespace managers{
  * @brief Manager for background image
  *
  * Creates and updates the background image
+ * Is created automatically in the GameBase
  */
-class BackgroundManager{
+class BackgroundManager : public Manager{
 public:
     /**
      * @brief Constructor
      *
-     * creates the BackgroundManager with given defaultTexture windowSize
+     * Default Constructor
      *
      * @param defaultTexture defaultTexture
+     */
+    BackgroundManager(std::shared_ptr<sf::Texture> defaultTexture);
+
+    /**
+     * @brief Creates the manager
+     *
+     * Creates the TileMapManager
+     *
      * @param windowSize Size of window
      */
-    BackgroundManager(std::shared_ptr<sf::Texture> defaultTexture, sf::Vector2f windowSize);
+    void create(sf::Vector2f windowSize);
 
     /**
      * @brief Sets the background

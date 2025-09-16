@@ -3,9 +3,11 @@
 namespace te{
 namespace managers{
 
-BackgroundManager::BackgroundManager(std::shared_ptr<sf::Texture> defaultTexture, sf::Vector2f windowSize)
-    : mWindowSize(windowSize), mTexture(std::move(defaultTexture)), mBackground(*mTexture), mParallaxFactor(0.f){
+BackgroundManager::BackgroundManager(std::shared_ptr<sf::Texture> defaultTexture): mTexture(std::move(defaultTexture)), mBackground(*mTexture){}
 
+void BackgroundManager::create(sf::Vector2f windowSize){
+    mWindowSize = windowSize;
+    mParallaxFactor = 0.f;
     mBackground.setScale(changeScale());
 
     Logger::info(name, "Default background created");

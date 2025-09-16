@@ -12,15 +12,15 @@ namespace components{
  */
 struct State : public Component{
 public:
+    enum class CurrentState{IDLE, WALK, JUMP, FALL, HIT};
+    enum class Direction{LEFT, RIGHT}; 
+
     /**
      * @brief Default Constructor
      *
      * creates the component
      */
     State() = default;
-
-    enum class CurrentState{IDLE, WALK, JUMP, FALL, HIT};
-    enum class Direction{LEFT, RIGHT}; 
 
     std::string toString() const override{
         return "(currentState: " + stateToString(currentState) + " | " + "direction: " + directionToString(direction) + ")";

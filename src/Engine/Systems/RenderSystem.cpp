@@ -34,7 +34,7 @@ void RenderSystem::update(){
         mWindow.draw(sprite->sprite);
 
         //Debug rendering
-        if(Logger::currentLevel == LogLevel::DEBUG && mRegistry.hasComponent<components::Collider>(entityID)){
+        if(Logger::debugMode == true && mRegistry.hasComponent<components::Collider>(entityID)){
             auto collider = mRegistry.getComponent<components::Collider>(entityID);
             sf::RectangleShape colliderRect({collider->size.x * transform->scale.x, collider->size.y * transform->scale.y});
             colliderRect.setOrigin(colliderRect.getSize() / 2.f);

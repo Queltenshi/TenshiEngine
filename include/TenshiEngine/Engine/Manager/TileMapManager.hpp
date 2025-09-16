@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Manager.hpp"
 #include "TenshiEngine/Engine/Core/Registry.hpp"
 #include <memory>
 
@@ -11,17 +12,18 @@ namespace managers{
  *
  * loads leveldata and spritesheets from files and
  * creates tile maps from them
+ * Is created automatically in the GameBase
  */
-class TileMapManager{
+class TileMapManager : public Manager{
 public:
     /**
-     * @brief Constructor
+     * @brief Creates the manager
      *
-     * creates the Manager
+     * creates the TileMapManager
      *
-     * @param registry Reference to the registry
+     * @param registry Pointer to the registry
      */
-    TileMapManager(Registry &registry);
+    void create(Registry *registry);
 
     /**
      * @brief Loads the tileset
@@ -46,7 +48,7 @@ private:
     std::vector<std::vector<int>> loadLevel(sf::Vector2i levelSize, std::shared_ptr<json> levelData);
     void createEntities(std::vector<std::vector<int>> &level, sf::Vector2i levelSize);
 
-    Registry &mRegistry;
+    Registry *mRegistry;
     std::shared_ptr<sf::Texture> mTilesetTexture;
     sf::Vector2i mTileSize;
     std::vector<int> mColliders;

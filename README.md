@@ -11,6 +11,7 @@
 - **Managers** - Handling various kinds of tasks
 - **GameBase** - A ready-to-use game loop and render window setup
 - **Prefabs** - Ready-to-use entities with components
+- **Config** - Config file for loading and saving data
 
 ---
 
@@ -21,14 +22,17 @@
   - [Linux](#Linux)
 - [Usage](#Usage)
   - [Quick Start](#Quick-Start)
-    - [main.cpp](#main.cpp)
-    - [Game.cpp](#Game.cpp)
+    - [main.cpp](#maincpp)
+    - [Game.cpp](#Gamecpp)
     - [Managing components](#Managing-components)
   - [Important Modules](#Important-Modules)
+  - [Config](#Config)
+	  - [Config.ini](#Configini)
   - [Json files](#Json-files)
-    - [TilesetData](#TilesetData)
-    - [LevelData](#LevelData)
-    - [AnimationData](#AnimationData)
+    - [Tileset.json](#Tilesetjson)
+    - [Level.json](#Leveljson )
+    - [Animation.json](#Animationjson)
+  - [Log file](#Log-file)
 - [Contributing](#Contributing)
 - [Changelog](#Changelog)
 - [License](#License)
@@ -56,12 +60,12 @@ You can find the latest API documentation here: [TenshiEngine API Docs](https://
 ---
 
 ## Installation
-**Requirements**:
+### Requirements 
 - C++ 17+
 - [SFML](https://www.sfml-dev.org/) 3.0+
 - [CMake](https://cmake.org/) 3.16+
 
-**Linux**:
+### Linux 
 ```bash
 git clone https://github.com/Queltenshi/TenshiEngine.git
 cd TenshiEngine
@@ -78,7 +82,7 @@ sudo cmake --install . --prefix /usr/local
 ## Usage
 
 ### Quick Start
-**main.cpp**
+#### main.cpp 
 ``` cpp
 #include <Game.h>
 
@@ -91,7 +95,7 @@ int main(){
 }
 ```
 
-**Game.cpp**
+#### Game.cpp 
 
 This will create a simple level with tilemap, moveable platformer character, camera and background
 
@@ -138,7 +142,7 @@ private:
 };
 ```
 
-**Managing components**
+#### Managing components 
 
 To add or change components from entities u can do this by using the registry
 
@@ -169,6 +173,40 @@ Example:
 - **Logger** - Logs messages with different log levels and is automatically used by other modules
 - **Prefabs** - Create ready-to-use entities with pre-defined components like PlatformerPlayer
 
+### Config file
+
+the config file gets automatically loaded when the game is started, if there is no file, one will be created
+
+Missing or corrupt data is set with default values
+
+Input can be set with the following keys: A-Z, NUM0-NUM9, Space, LShift, LControl, MouseLeft, MouseRight
+
+Below is the config file with default values
+
+#### Config.ini
+```ini
+[Video]
+ResolutionWidth = 1920
+ResolutionHeight = 1080
+FPS = 60
+Fullscreen = false
+
+
+[Input]
+Sprint = LShift
+Crouch = LControl
+Attack = MouseLeft
+MoveLeft = A
+MoveRight = D
+Jump = Space
+
+
+[System]
+GameName = Game
+GravityForce = 25.000000
+DebugMode = false
+```
+
 ### Json files
 
 [Tiled](https://www.mapeditor.org/) can be used to create json and texture files for tilesets
@@ -177,7 +215,7 @@ Example:
 
 Below are example files with important data to show how they should look like in order to be properly loaded
 
-**Tileset.json** 
+#### Tileset.json 
 ``` json
 {"tileheight":64,
  "tiles":[
@@ -212,7 +250,7 @@ Below are example files with important data to show how they should look like in
 }
 ```
 
-**Level.json**
+#### Level.json 
 ``` json
 {"height":17,
  "layers":[
@@ -237,10 +275,9 @@ Below are example files with important data to show how they should look like in
         }],
  "width":30
 }
-
 ```
 
-**Animation.json**
+#### Animation.json 
 ``` json
 {"animations": {
     "hit": [
@@ -261,8 +298,15 @@ Below are example files with important data to show how they should look like in
     ]
   }
 }
-
 ```
+
+### Log file
+
+A new log file is automatically created when starting the game
+
+Console messages will be written in this file on runtime
+
+---
 
 More Information to usage can be found at [TenshiEngine API Docs](https://Queltenshi.github.io/TenshiEngine/)
 
@@ -286,3 +330,4 @@ This project is licensed under the GNU GPL v3
 It uses:
 - [SFML](https://www.sfml-dev.org/) - licensed under the zlib/libpng license
 - [nlohmann/json](https://github.com/nlohmann/json) – licensed under the MIT license
+- [brofield/simpleini](https://github.com/brofield/simpleini) - licensed under the MIT license

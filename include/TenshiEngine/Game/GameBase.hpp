@@ -2,13 +2,12 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/System/Clock.hpp>
 #include "TenshiEngine/Engine/Core/Registry.hpp"
-#include "TenshiEngine/Engine/Manager/CameraManager.hpp"
 #include "TenshiEngine/Engine/Manager/ResourceManager.hpp"
 #include "TenshiEngine/Engine/Manager/TileMapManager.hpp"
 #include "TenshiEngine/Systems.hpp"
+#include "TenshiEngine/Game/Config.hpp"
 
 namespace te{
-
 /**
  * @brief Base class for a game
  *
@@ -25,12 +24,9 @@ public:
     /**
      * @brief Constructor
      *
-     * creates a window with given title and windowSize
-     *
-     * @param windowName Title of the window to be created
-     * @param windowSize Size of the window to be created
+     * Default constructor
      */
-    GameBase(std::string windowName, sf::Vector2u windowSize);
+    GameBase();
 
     /**
      * @brief starts the game loop
@@ -48,6 +44,9 @@ public:
     virtual void init();
 
 protected:
+    ///Config with data
+    Config mConfig;
+
     /// Registry used for managing entities, components and systems
     Registry mRegistry;
 
@@ -62,12 +61,15 @@ protected:
 
     ///BackgroundManager used for managing the background
     managers::BackgroundManager mBackgroundManager;
+
 private:
     sf::RenderWindow mWindow;
-    const float mFixedDeltaTime;
+    float mFixedDeltaTime;
     float mVariableDeltaTime;
     sf::Clock mClock;
     float mAccumulator;
+
+    const static std::string name;
 };
 
 }

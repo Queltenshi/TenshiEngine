@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Manager.hpp"
 #include "BackgroundManager.hpp"
 #include "TenshiEngine/Engine/Core/Registry.hpp"
 #include "TenshiEngine/Engine/Camera/Camera.hpp"
@@ -11,19 +12,20 @@ namespace managers{
  * @brief Manager for cameras
  *
  * Creates and updates the cameras for setting the view field
+ * Is created automatically in the GameBase
  */
-class CameraManager{
+class CameraManager : public Manager{
 public:
     /**
-     * @brief Constructor
+     * @brief Creates the manager
      *
      * creates the CameraManager with given windowSize
      *
-     * @param registry Reference to the registry
-     * @param backgroundManager Reference to the backgroundManager
+     * @param registry Pointer to the registry
+     * @param backgroundManager Pointer to the backgroundManager
      * @param windowSize Size of window
      */
-    CameraManager(Registry &registry, BackgroundManager &backgroundManager, sf::Vector2f windowSize);
+    void create(Registry *registry, BackgroundManager *backgroundManager, sf::Vector2f windowSize);
 
     /**
      * @brief updates the active camera
@@ -77,8 +79,8 @@ public:
     Camera *getActiveCamera();
 
 private:
-    Registry &mRegistry;
-    BackgroundManager &mBackgroundManager;
+    Registry *mRegistry;
+    BackgroundManager *mBackgroundManager;
     sf::Vector2f mWindowSize;
     Camera *mActiveCamera;
     std::vector<Camera> mCameras;
