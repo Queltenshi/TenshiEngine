@@ -26,7 +26,7 @@
     - [Game.cpp](#Gamecpp)
     - [Managing components](#Managing-components)
   - [Important Modules](#Important-Modules)
-  - [Config](#Config)
+  - [Config file](#Config-file)
 	  - [Config.ini](#Configini)
   - [Json files](#Json-files)
     - [Tileset.json](#Tilesetjson)
